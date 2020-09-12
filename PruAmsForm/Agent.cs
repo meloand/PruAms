@@ -9,27 +9,27 @@ namespace PruAmsForm
     class Agent
     {
         // properties 
-        private int Number
+        public string Number
         { get; set;  }
-        private string Username
+        public string Username
         { get; set; }
-        private string Password
+        public string Password
         { get; set; }
-        private string FirstName
+        public string FirstName
         { get; set; }
-        private string LastName
+        public string LastName
         { get; set; }
-        private string Email
+        public string Email
         { get; set; }
-        private string JoinDate
+        public string JoinDate
         { get; set; }
-        private string Level
+        public string Level
         { get; set; }
-        private string Leader
+        public string Leader
         { get; set; }
-        private string Religion
+        public string Religion
         { get; set; }
-        private string Sex
+        public string Sex
         { get; set; }
         private string Addr
         { get; set; }
@@ -44,7 +44,29 @@ namespace PruAmsForm
         private string DOB
         { get; set; }
 
-       // public Agent()
+       public Agent(string Number,string Username, string Password, string FirstName, string LastName, 
+           string Email, string JoinDate, string Level, string Leader, string Religion,string Sex, 
+           string Addr, int ZipCode, int HPhoneNum, int OPhoneNum, string POB, string DOB)
+        {
+            this.Number = Number;
+            this.Username = Username;
+            this.Password = Password;
+            this.FirstName = FirstName;
+            this.LastName = LastName;
+            this.Email = Email;
+            this.JoinDate = JoinDate;
+            this.Level = Level;
+            this.Leader = Leader;
+            this.Religion = Religion;
+            this.Sex = Sex;
+            this.Addr = Addr;
+            this.ZipCode = ZipCode;
+            this.HphoneNum = HPhoneNum;
+            this.OPhoneNum = OPhoneNum;
+            this.POB = POB;
+            this.DOB = DOB; 
+
+        }
 
 
     }

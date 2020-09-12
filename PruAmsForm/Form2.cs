@@ -40,14 +40,21 @@ namespace PruAmsForm
             string AgentName = textBoxSPAJAName.Text;
             int AgentNum = int.Parse(textBoxSPAJANum.Text);
             int PruFlyerNum = int.Parse(textBoxPRUFlyerNum.Text);
-            string SPAJSubmit = dateTimeSPAJSubmit.Text;
+            string SPAJSubmitDate = dateTimeSPAJSubmit.Text;
 
             // Insurer Info Form 
             string InsurerName = textBoxSPAJInsrName.Text;
             string InsurerGender = comboBoxSPAJInsrGender.Text;
             string InsurerDOB = dateTimeSPAJInsrDOB.Text;
             string InsurerMarried = comboBoxSPAJInsrMarriage.Text;
-            string InsurerNextBday = NextBday(DateTime.Today); 
+            int InsurerNextBday = NextBday(InsurerDOB);
+            int InsurerHeight = int.Parse(textBoxSPAJInsrHeight.Text);
+            int InsurerWeight = int.Parse(textBoxSPAJInsrWeight.Text);
+            bool InsurerSmoke = radioButtonSPAJInsrSmoke.Checked;
+            string InsurerJobClass = comboBoxSPAJJobClass.Text; 
+
+
+
 
 
             
@@ -97,9 +104,11 @@ namespace PruAmsForm
 
         private int NextBday(string InsurerDOB)
         {
-           DateTime Today = DateTime.Today; 
-           
-        
+            DateTime Today = DateTime.Today;
+            DateTime Bday = Convert.ToDateTime(InsurerDOB);
+
+            return (Today.Year - Bday.Year) + 1; ; 
+          
 
         }
 

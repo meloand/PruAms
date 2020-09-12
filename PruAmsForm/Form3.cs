@@ -12,7 +12,7 @@ namespace PruAmsForm
 {
     public partial class Form3 : Form
     {
-       // private List<Agent> NewAgents = new List<Agent>(); 
+       private List<Agent> NewAgents = new List<Agent>(); 
         public Form3()
         {
             InitializeComponent();
@@ -21,7 +21,7 @@ namespace PruAmsForm
         private void buttonAddAgents_Click(object sender, EventArgs e)
         {
             // declaring variables 
-            int AddAgentNum = int.Parse(textBoxAgentNum.Text);
+            string AddAgentNum = textBoxAgentNum.Text;
             string AddUsername = textBoxAgentUser.Text;
             string AddPassword = textBoxAgentPass.Text;
             string AddFirstName = textBoxAgentFirstN.Text;
@@ -38,9 +38,19 @@ namespace PruAmsForm
             int AddOPhoneNum = int.Parse(textBoxAgentOP.Text);
             string AddPOB = textBoxAgentPOB.Text;
             string AddDOB = dateTimeAgentDOB.Text;
-            // Agent NewAgent;
+            Agent NewAgent;
 
-           // NewAgent = new Agent()
+            NewAgent = new Agent(AddAgentNum, AddUsername, AddPassword, AddFirstName, AddLastName, AddEmail, AddJoinDate,
+                AddLevel, AddLeader, AddReligion, AddSex, AddAddr, AddZipCode, AddHphoneNum, AddOPhoneNum, AddPOB, AddDOB); 
+
+            if (NewAgents.Select(x => x.Number).Contains(AddAgentNum))
+            {
+                MessageBox.Show("This agent already exists in the database. ");
+            }
+            else
+            {
+                NewAgents.Add(NewAgent);
+            }
            
         }
 
@@ -49,6 +59,22 @@ namespace PruAmsForm
             Form1 AMS_Home = new Form1();
             AMS_Home.Show();
             this.Close(); 
+        }
+
+        private void buttonClearAdd_Click(object sender, EventArgs e)
+        {
+            foreach (TextBox control in tabPageAdd.Controls.OfType<TextBox>())
+            {
+                control.Text = "";
+            }
+            foreach (DateTimePicker control in tabPageAdd.Controls.OfType<DateTimePicker>())
+            {
+                control.Text = "";
+            }
+            foreach (ComboBox control in tabPageAdd.Controls.OfType<ComboBox>())
+            {
+                control.Text = "";
+            }
         }
     }
 }
