@@ -168,5 +168,62 @@ namespace PruAmsForm
             var bindingSource = new BindingSource(bindingList, null);
             dataGridView2.DataSource = bindingSource;
         }
+
+        private void textBoxViewAgentNum_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxViewAgentNum.Text != String.Empty)
+            {
+                foreach (Control c in new Control[] { textBoxViewAgentFirstN, textBoxViewAgentLastN, comboBoxViewAgentDateDay,
+                comboBoxViewAgentDateMonth, comboBoxViewAgentDateYear, comboBoxViewAgentLeader, comboBoxViewAgentLevel })
+                {
+                    c.Enabled = false;
+                }
+            } else
+            {
+                foreach (Control c in new Control[] { textBoxViewAgentFirstN, textBoxViewAgentLastN, comboBoxViewAgentDateDay,
+                comboBoxViewAgentDateMonth, comboBoxViewAgentDateYear, comboBoxViewAgentLeader, comboBoxViewAgentLevel })
+                {
+                    c.Enabled = true;
+                }
+            }
+        }
+
+        private void buttonViewAgent_Click(object sender, EventArgs e)
+        {
+            List<Agent> list = new List<Agent>();
+            list.AddRange(agentBindingSource.List.OfType<Agent>().ToList());
+            IEnumerable<Agent> source = list;
+            if (textBoxViewAgentNum.Text != String.Empty)
+            {
+                source.First(x => x.Number == textBoxViewAgentNum.Text);
+            }
+            else
+            {
+                if (textBoxViewAgentFirstN.Text != String.Empty)
+                {
+                    source = source.Where(x => x.FirstName == textBoxViewAgentFirstN.Text).ToList();
+                }
+                if (textBoxViewAgentLastN.Text != String.Empty)
+                {
+                    source = source.Where(x => x.LastName == textBoxViewAgentLastN.Text).ToList();
+                }
+                if (comboBoxViewAgentDateDay.Text != String.Empty)
+                {
+                    source = source.Where(x => x.DayOfBirth == comboBoxViewAgentDateDay.Text).ToList();
+                }
+                if (comboBoxViewAgentDateMonth.Text != String.Empty)
+                {
+                    source = source.Where(x => x.MonthOfBirth == comboBoxViewAgentDateMonth.Text).ToList();
+                }
+                if (comboBoxViewAgentDateYear.Text != String.Empty)
+                {
+                    source = source.Where(x => x.YearOfBirth == comboBoxViewAgentDateYear.Text).ToList();
+                }
+                if (comboBoxViewAgentLeader.Text != String.Empty) {
+                    source = source.Where(x => x.Leader == comboBoxViewAgentLeader.Text).ToList();
+                }
+            }
+            dataGridView1.DataSource = source;
+        }
     }
 }
