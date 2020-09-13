@@ -31,22 +31,24 @@ namespace PruAmsForm
         { get; set; }
         public string Sex
         { get; set; }
-        private string Addr
+        public string Addr
         { get; set; }
-        private int ZipCode
+        public int ZipCode
         { get; set; }
-        private int HphoneNum
+        public long HphoneNum
         { get; set; }
-        private int OPhoneNum
+        public long OPhoneNum
         { get; set; }
-        private string POB
+        public string POB
         { get; set; }
-        private string DOB
+        public string DOB
         { get; set; }
+
+        public string FullName { get { return FirstName + " " + LastName; } }
 
        public Agent(string Number,string Username, string Password, string FirstName, string LastName, 
            string Email, string JoinDate, string Level, string Leader, string Religion,string Sex, 
-           string Addr, int ZipCode, int HPhoneNum, int OPhoneNum, string POB, string DOB)
+           string Addr, int ZipCode, long HPhoneNum, long OPhoneNum, string POB, string DOB)
         {
             this.Number = Number;
             this.Username = Username;
