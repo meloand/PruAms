@@ -44,7 +44,11 @@ namespace PruAmsForm
         public string DOB
         { get; set; }
 
-        public string FullName { get { return FirstName + " " + LastName; } }
+        public string FullName
+        {
+            get
+            { return FirstName + " " + LastName; }
+        }
 
        public Agent(string Number,string Username, string Password, string FirstName, string LastName, 
            string Email, string JoinDate, string Level, string Leader, string Religion,string Sex, 
