@@ -15,6 +15,7 @@ namespace PruAmsForm
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
@@ -28,6 +29,15 @@ namespace PruAmsForm
             
             Form2 AMS_SPAJ = new Form2();
 
+            // Create a one-off event that re-shows the main form when the Agent
+            // form is closed.
+            FormClosedEventHandler handler = null;
+            AMS_SPAJ.FormClosed += handler = (s, ev) =>
+            {
+                AMS_SPAJ.FormClosed -= handler;
+                this.Show();
+            };
+
             AMS_SPAJ.Show();
             this.Hide(); 
             
@@ -38,11 +48,20 @@ namespace PruAmsForm
 
             Form3 AMS_Agent = new Form3();
 
+            // Create a one-off event that re-shows the main form when the Agent
+            // form is closed.
+            FormClosedEventHandler handler = null;
+            AMS_Agent.FormClosed += handler = (s, ev) =>
+            {
+                AMS_Agent.FormClosed -= handler;
+                this.Show();
+            };
+
+
             AMS_Agent.Show();
+            
             this.Hide(); 
             
         }
-
-       
     }
 }
