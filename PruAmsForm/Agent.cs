@@ -43,6 +43,12 @@ namespace PruAmsForm
         { get; set; }
         public string DOB
         { get; set; }
+        public string MonthOfBirth
+        { get { return new string[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" }[(DateTime.Parse(DOB)).Month]; } }
+        public string DayOfBirth
+        { get { return DateTime.Parse(DOB).Day.ToString(); } }
+        public string YearOfBirth
+        { get { return DateTime.Parse(DOB).Year.ToString(); } }
 
         public string FullName
         {
