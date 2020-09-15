@@ -46,8 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddressForm.cs" />
     <Compile Include="Agent.cs" />
     <Compile Include="AgentLevelChange.cs" />
+    <Compile Include="BeneficiaryForm.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,8 +68,14 @@
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
+    <Compile Include="InsurerForm.cs" />
+    <Compile Include="ParentForm.cs" />
+    <Compile Include="PengajuanForm.cs" />
+    <Compile Include="PolisForm.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SPAJForm.cs" />
+    <Compile Include="SpouseForm.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

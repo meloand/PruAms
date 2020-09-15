@@ -56,6 +56,7 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.tabPageAdd = new System.Windows.Forms.TabPage();
+            this.labelAddSuccess = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.textBoxAgentReligion = new System.Windows.Forms.TextBox();
             this.buttonClearAdd = new System.Windows.Forms.Button();
@@ -94,6 +95,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPageEdit = new System.Windows.Forms.TabPage();
+            this.labelUpdateSuccess = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.textBoxAgentEditReligion = new System.Windows.Forms.TextBox();
             this.buttonAgentEditSearch = new System.Windows.Forms.Button();
@@ -159,7 +161,7 @@
             this.tabControlAgent.Controls.Add(this.tabPageEdit);
             this.tabControlAgent.Controls.Add(this.tabPage1);
             this.tabControlAgent.Location = new System.Drawing.Point(0, 42);
-            this.tabControlAgent.Margin = new System.Windows.Forms.Padding(2);
+            this.tabControlAgent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControlAgent.Name = "tabControlAgent";
             this.tabControlAgent.SelectedIndex = 0;
             this.tabControlAgent.Size = new System.Drawing.Size(760, 362);
@@ -187,13 +189,14 @@
             this.tabPageView.Controls.Add(this.label21);
             this.tabPageView.Controls.Add(this.label22);
             this.tabPageView.Location = new System.Drawing.Point(4, 22);
-            this.tabPageView.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPageView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageView.Name = "tabPageView";
-            this.tabPageView.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPageView.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageView.Size = new System.Drawing.Size(752, 336);
             this.tabPageView.TabIndex = 2;
             this.tabPageView.Text = "View Agents";
             this.tabPageView.UseVisualStyleBackColor = true;
+            this.tabPageView.Enter += new System.EventHandler(this.tabPageView_Enter);
             // 
             // comboBoxViewAgentDateYear
             // 
@@ -350,7 +353,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(276, 18);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 33;
             this.dataGridView1.Size = new System.Drawing.Size(467, 279);
@@ -359,7 +362,7 @@
             // buttonExportView
             // 
             this.buttonExportView.Location = new System.Drawing.Point(563, 308);
-            this.buttonExportView.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonExportView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonExportView.Name = "buttonExportView";
             this.buttonExportView.Size = new System.Drawing.Size(78, 21);
             this.buttonExportView.TabIndex = 38;
@@ -369,17 +372,18 @@
             // buttonClearView
             // 
             this.buttonClearView.Location = new System.Drawing.Point(372, 308);
-            this.buttonClearView.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonClearView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonClearView.Name = "buttonClearView";
             this.buttonClearView.Size = new System.Drawing.Size(78, 21);
             this.buttonClearView.TabIndex = 37;
             this.buttonClearView.Text = "Clear";
             this.buttonClearView.UseVisualStyleBackColor = true;
+            this.buttonClearView.Click += new System.EventHandler(this.buttonClearView_Click);
             // 
             // buttonViewAgent
             // 
             this.buttonViewAgent.Location = new System.Drawing.Point(136, 292);
-            this.buttonViewAgent.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonViewAgent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonViewAgent.Name = "buttonViewAgent";
             this.buttonViewAgent.Size = new System.Drawing.Size(78, 21);
             this.buttonViewAgent.TabIndex = 36;
@@ -393,7 +397,7 @@
             this.comboBoxViewAgentLeader.DisplayMember = "FullName";
             this.comboBoxViewAgentLeader.FormattingEnabled = true;
             this.comboBoxViewAgentLeader.Location = new System.Drawing.Point(130, 213);
-            this.comboBoxViewAgentLeader.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxViewAgentLeader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxViewAgentLeader.Name = "comboBoxViewAgentLeader";
             this.comboBoxViewAgentLeader.Size = new System.Drawing.Size(141, 21);
             this.comboBoxViewAgentLeader.TabIndex = 20;
@@ -411,7 +415,7 @@
             "AAD",
             "AD"});
             this.comboBoxViewAgentLevel.Location = new System.Drawing.Point(130, 181);
-            this.comboBoxViewAgentLevel.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxViewAgentLevel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxViewAgentLevel.Name = "comboBoxViewAgentLevel";
             this.comboBoxViewAgentLevel.Size = new System.Drawing.Size(141, 21);
             this.comboBoxViewAgentLevel.TabIndex = 19;
@@ -419,7 +423,7 @@
             // textBoxViewAgentLastN
             // 
             this.textBoxViewAgentLastN.Location = new System.Drawing.Point(130, 115);
-            this.textBoxViewAgentLastN.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxViewAgentLastN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxViewAgentLastN.Name = "textBoxViewAgentLastN";
             this.textBoxViewAgentLastN.Size = new System.Drawing.Size(141, 20);
             this.textBoxViewAgentLastN.TabIndex = 14;
@@ -427,7 +431,7 @@
             // textBoxViewAgentFirstN
             // 
             this.textBoxViewAgentFirstN.Location = new System.Drawing.Point(130, 90);
-            this.textBoxViewAgentFirstN.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxViewAgentFirstN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxViewAgentFirstN.Name = "textBoxViewAgentFirstN";
             this.textBoxViewAgentFirstN.Size = new System.Drawing.Size(142, 20);
             this.textBoxViewAgentFirstN.TabIndex = 13;
@@ -435,7 +439,7 @@
             // textBoxViewAgentNum
             // 
             this.textBoxViewAgentNum.Location = new System.Drawing.Point(130, 64);
-            this.textBoxViewAgentNum.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxViewAgentNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxViewAgentNum.Name = "textBoxViewAgentNum";
             this.textBoxViewAgentNum.Size = new System.Drawing.Size(141, 20);
             this.textBoxViewAgentNum.TabIndex = 10;
@@ -515,6 +519,7 @@
             // 
             // tabPageAdd
             // 
+            this.tabPageAdd.Controls.Add(this.labelAddSuccess);
             this.tabPageAdd.Controls.Add(this.label49);
             this.tabPageAdd.Controls.Add(this.textBoxAgentReligion);
             this.tabPageAdd.Controls.Add(this.buttonClearAdd);
@@ -553,13 +558,24 @@
             this.tabPageAdd.Controls.Add(this.label4);
             this.tabPageAdd.Controls.Add(this.label2);
             this.tabPageAdd.Location = new System.Drawing.Point(4, 22);
-            this.tabPageAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPageAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageAdd.Name = "tabPageAdd";
-            this.tabPageAdd.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPageAdd.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageAdd.Size = new System.Drawing.Size(752, 336);
             this.tabPageAdd.TabIndex = 0;
             this.tabPageAdd.Text = "Add Agents";
             this.tabPageAdd.UseVisualStyleBackColor = true;
+            // 
+            // labelAddSuccess
+            // 
+            this.labelAddSuccess.AutoSize = true;
+            this.labelAddSuccess.Location = new System.Drawing.Point(504, 285);
+            this.labelAddSuccess.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelAddSuccess.Name = "labelAddSuccess";
+            this.labelAddSuccess.Size = new System.Drawing.Size(134, 13);
+            this.labelAddSuccess.TabIndex = 39;
+            this.labelAddSuccess.Text = "Agent successfully added! ";
+            this.labelAddSuccess.Visible = false;
             // 
             // label49
             // 
@@ -574,7 +590,7 @@
             // textBoxAgentReligion
             // 
             this.textBoxAgentReligion.Location = new System.Drawing.Point(366, 64);
-            this.textBoxAgentReligion.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAgentReligion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAgentReligion.Name = "textBoxAgentReligion";
             this.textBoxAgentReligion.Size = new System.Drawing.Size(100, 20);
             this.textBoxAgentReligion.TabIndex = 37;
@@ -582,7 +598,7 @@
             // buttonClearAdd
             // 
             this.buttonClearAdd.Location = new System.Drawing.Point(42, 285);
-            this.buttonClearAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonClearAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonClearAdd.Name = "buttonClearAdd";
             this.buttonClearAdd.Size = new System.Drawing.Size(78, 21);
             this.buttonClearAdd.TabIndex = 36;
@@ -593,7 +609,7 @@
             // buttonAddAgents
             // 
             this.buttonAddAgents.Location = new System.Drawing.Point(386, 285);
-            this.buttonAddAgents.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAddAgents.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAddAgents.Name = "buttonAddAgents";
             this.buttonAddAgents.Size = new System.Drawing.Size(78, 21);
             this.buttonAddAgents.TabIndex = 35;
@@ -645,7 +661,7 @@
             // 
             this.dateTimeAgentDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeAgentDOB.Location = new System.Drawing.Point(366, 259);
-            this.dateTimeAgentDOB.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimeAgentDOB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimeAgentDOB.Name = "dateTimeAgentDOB";
             this.dateTimeAgentDOB.Size = new System.Drawing.Size(100, 20);
             this.dateTimeAgentDOB.TabIndex = 30;
@@ -653,7 +669,7 @@
             // textBoxAgentPOB
             // 
             this.textBoxAgentPOB.Location = new System.Drawing.Point(366, 232);
-            this.textBoxAgentPOB.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAgentPOB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAgentPOB.Name = "textBoxAgentPOB";
             this.textBoxAgentPOB.Size = new System.Drawing.Size(100, 20);
             this.textBoxAgentPOB.TabIndex = 29;
@@ -661,7 +677,7 @@
             // textBoxAgentOP
             // 
             this.textBoxAgentOP.Location = new System.Drawing.Point(366, 203);
-            this.textBoxAgentOP.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAgentOP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAgentOP.Name = "textBoxAgentOP";
             this.textBoxAgentOP.Size = new System.Drawing.Size(100, 20);
             this.textBoxAgentOP.TabIndex = 28;
@@ -669,7 +685,7 @@
             // textBoxAgentHP
             // 
             this.textBoxAgentHP.Location = new System.Drawing.Point(366, 179);
-            this.textBoxAgentHP.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAgentHP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAgentHP.Name = "textBoxAgentHP";
             this.textBoxAgentHP.Size = new System.Drawing.Size(100, 20);
             this.textBoxAgentHP.TabIndex = 27;
@@ -677,7 +693,7 @@
             // textBoxAgentZip
             // 
             this.textBoxAgentZip.Location = new System.Drawing.Point(366, 153);
-            this.textBoxAgentZip.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAgentZip.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAgentZip.Name = "textBoxAgentZip";
             this.textBoxAgentZip.Size = new System.Drawing.Size(100, 20);
             this.textBoxAgentZip.TabIndex = 18;
@@ -685,7 +701,7 @@
             // textBoxAgentAddr
             // 
             this.textBoxAgentAddr.Location = new System.Drawing.Point(366, 124);
-            this.textBoxAgentAddr.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAgentAddr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAgentAddr.Name = "textBoxAgentAddr";
             this.textBoxAgentAddr.Size = new System.Drawing.Size(100, 20);
             this.textBoxAgentAddr.TabIndex = 17;
@@ -693,7 +709,7 @@
             // textBoxAgentEmail
             // 
             this.textBoxAgentEmail.Location = new System.Drawing.Point(130, 189);
-            this.textBoxAgentEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAgentEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAgentEmail.Name = "textBoxAgentEmail";
             this.textBoxAgentEmail.Size = new System.Drawing.Size(100, 20);
             this.textBoxAgentEmail.TabIndex = 15;
@@ -701,7 +717,7 @@
             // textBoxAgentLastN
             // 
             this.textBoxAgentLastN.Location = new System.Drawing.Point(130, 161);
-            this.textBoxAgentLastN.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAgentLastN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAgentLastN.Name = "textBoxAgentLastN";
             this.textBoxAgentLastN.Size = new System.Drawing.Size(100, 20);
             this.textBoxAgentLastN.TabIndex = 14;
@@ -709,7 +725,7 @@
             // textBoxAgentFirstN
             // 
             this.textBoxAgentFirstN.Location = new System.Drawing.Point(130, 138);
-            this.textBoxAgentFirstN.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAgentFirstN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAgentFirstN.Name = "textBoxAgentFirstN";
             this.textBoxAgentFirstN.Size = new System.Drawing.Size(100, 20);
             this.textBoxAgentFirstN.TabIndex = 13;
@@ -717,7 +733,7 @@
             // textBoxAgentPass
             // 
             this.textBoxAgentPass.Location = new System.Drawing.Point(130, 113);
-            this.textBoxAgentPass.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAgentPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAgentPass.Name = "textBoxAgentPass";
             this.textBoxAgentPass.PasswordChar = '*';
             this.textBoxAgentPass.Size = new System.Drawing.Size(100, 20);
@@ -726,7 +742,7 @@
             // textBoxAgentUser
             // 
             this.textBoxAgentUser.Location = new System.Drawing.Point(130, 87);
-            this.textBoxAgentUser.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAgentUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAgentUser.Name = "textBoxAgentUser";
             this.textBoxAgentUser.Size = new System.Drawing.Size(100, 20);
             this.textBoxAgentUser.TabIndex = 11;
@@ -734,7 +750,7 @@
             // textBoxAgentNum
             // 
             this.textBoxAgentNum.Location = new System.Drawing.Point(130, 64);
-            this.textBoxAgentNum.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAgentNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAgentNum.Name = "textBoxAgentNum";
             this.textBoxAgentNum.Size = new System.Drawing.Size(100, 20);
             this.textBoxAgentNum.TabIndex = 10;
@@ -773,7 +789,7 @@
             // 
             this.dateTimeAgentJoin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeAgentJoin.Location = new System.Drawing.Point(130, 213);
-            this.dateTimeAgentJoin.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimeAgentJoin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimeAgentJoin.Name = "dateTimeAgentJoin";
             this.dateTimeAgentJoin.Size = new System.Drawing.Size(100, 20);
             this.dateTimeAgentJoin.TabIndex = 22;
@@ -785,7 +801,7 @@
             "Male",
             "Female"});
             this.comboBoxAgentSex.Location = new System.Drawing.Point(366, 93);
-            this.comboBoxAgentSex.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxAgentSex.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxAgentSex.Name = "comboBoxAgentSex";
             this.comboBoxAgentSex.Size = new System.Drawing.Size(100, 21);
             this.comboBoxAgentSex.TabIndex = 21;
@@ -796,7 +812,7 @@
             this.comboBoxAgentLeader.DisplayMember = "FullName";
             this.comboBoxAgentLeader.FormattingEnabled = true;
             this.comboBoxAgentLeader.Location = new System.Drawing.Point(130, 258);
-            this.comboBoxAgentLeader.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxAgentLeader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxAgentLeader.Name = "comboBoxAgentLeader";
             this.comboBoxAgentLeader.Size = new System.Drawing.Size(100, 21);
             this.comboBoxAgentLeader.TabIndex = 20;
@@ -810,7 +826,7 @@
             "AAD",
             "AD"});
             this.comboBoxAgentLevel.Location = new System.Drawing.Point(130, 235);
-            this.comboBoxAgentLevel.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxAgentLevel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxAgentLevel.Name = "comboBoxAgentLevel";
             this.comboBoxAgentLevel.Size = new System.Drawing.Size(100, 21);
             this.comboBoxAgentLevel.TabIndex = 19;
@@ -919,6 +935,7 @@
             // 
             // tabPageEdit
             // 
+            this.tabPageEdit.Controls.Add(this.labelUpdateSuccess);
             this.tabPageEdit.Controls.Add(this.label50);
             this.tabPageEdit.Controls.Add(this.textBoxAgentEditReligion);
             this.tabPageEdit.Controls.Add(this.buttonAgentEditSearch);
@@ -960,13 +977,24 @@
             this.tabPageEdit.Controls.Add(this.label46);
             this.tabPageEdit.Controls.Add(this.label47);
             this.tabPageEdit.Location = new System.Drawing.Point(4, 22);
-            this.tabPageEdit.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPageEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageEdit.Name = "tabPageEdit";
-            this.tabPageEdit.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPageEdit.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageEdit.Size = new System.Drawing.Size(752, 336);
             this.tabPageEdit.TabIndex = 3;
             this.tabPageEdit.Text = "Edit Agents";
             this.tabPageEdit.UseVisualStyleBackColor = true;
+            // 
+            // labelUpdateSuccess
+            // 
+            this.labelUpdateSuccess.AutoSize = true;
+            this.labelUpdateSuccess.Location = new System.Drawing.Point(548, 302);
+            this.labelUpdateSuccess.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelUpdateSuccess.Name = "labelUpdateSuccess";
+            this.labelUpdateSuccess.Size = new System.Drawing.Size(137, 13);
+            this.labelUpdateSuccess.TabIndex = 43;
+            this.labelUpdateSuccess.Text = "Agent successfully updated";
+            this.labelUpdateSuccess.Visible = false;
             // 
             // label50
             // 
@@ -981,7 +1009,7 @@
             // textBoxAgentEditReligion
             // 
             this.textBoxAgentEditReligion.Location = new System.Drawing.Point(366, 64);
-            this.textBoxAgentEditReligion.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAgentEditReligion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAgentEditReligion.Name = "textBoxAgentEditReligion";
             this.textBoxAgentEditReligion.Size = new System.Drawing.Size(100, 20);
             this.textBoxAgentEditReligion.TabIndex = 41;
@@ -989,7 +1017,7 @@
             // buttonAgentEditSearch
             // 
             this.buttonAgentEditSearch.Location = new System.Drawing.Point(375, 22);
-            this.buttonAgentEditSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAgentEditSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAgentEditSearch.Name = "buttonAgentEditSearch";
             this.buttonAgentEditSearch.Size = new System.Drawing.Size(60, 26);
             this.buttonAgentEditSearch.TabIndex = 40;
@@ -1003,7 +1031,7 @@
             this.comboBoxAgentModify.DisplayMember = "Number";
             this.comboBoxAgentModify.FormattingEnabled = true;
             this.comboBoxAgentModify.Location = new System.Drawing.Point(227, 26);
-            this.comboBoxAgentModify.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxAgentModify.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxAgentModify.Name = "comboBoxAgentModify";
             this.comboBoxAgentModify.Size = new System.Drawing.Size(132, 21);
             this.comboBoxAgentModify.TabIndex = 39;
@@ -1022,7 +1050,7 @@
             // buttonClearEdit
             // 
             this.buttonClearEdit.Location = new System.Drawing.Point(42, 295);
-            this.buttonClearEdit.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonClearEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonClearEdit.Name = "buttonClearEdit";
             this.buttonClearEdit.Size = new System.Drawing.Size(78, 21);
             this.buttonClearEdit.TabIndex = 36;
@@ -1033,7 +1061,7 @@
             // buttonEditAgents
             // 
             this.buttonEditAgents.Location = new System.Drawing.Point(436, 295);
-            this.buttonEditAgents.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonEditAgents.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonEditAgents.Name = "buttonEditAgents";
             this.buttonEditAgents.Size = new System.Drawing.Size(78, 21);
             this.buttonEditAgents.TabIndex = 35;
@@ -1085,7 +1113,7 @@
             // 
             this.dateTimeAgentEditDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeAgentEditDOB.Location = new System.Drawing.Point(366, 249);
-            this.dateTimeAgentEditDOB.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimeAgentEditDOB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimeAgentEditDOB.Name = "dateTimeAgentEditDOB";
             this.dateTimeAgentEditDOB.Size = new System.Drawing.Size(100, 20);
             this.dateTimeAgentEditDOB.TabIndex = 30;
@@ -1093,7 +1121,7 @@
             // textBoxAgentEditPOB
             // 
             this.textBoxAgentEditPOB.Location = new System.Drawing.Point(366, 223);
-            this.textBoxAgentEditPOB.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAgentEditPOB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAgentEditPOB.Name = "textBoxAgentEditPOB";
             this.textBoxAgentEditPOB.Size = new System.Drawing.Size(100, 20);
             this.textBoxAgentEditPOB.TabIndex = 29;
@@ -1101,7 +1129,7 @@
             // textBoxAgentEditOP
             // 
             this.textBoxAgentEditOP.Location = new System.Drawing.Point(366, 200);
-            this.textBoxAgentEditOP.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAgentEditOP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAgentEditOP.Name = "textBoxAgentEditOP";
             this.textBoxAgentEditOP.Size = new System.Drawing.Size(100, 20);
             this.textBoxAgentEditOP.TabIndex = 28;
@@ -1109,7 +1137,7 @@
             // textBoxAgentEditHP
             // 
             this.textBoxAgentEditHP.Location = new System.Drawing.Point(366, 171);
-            this.textBoxAgentEditHP.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAgentEditHP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAgentEditHP.Name = "textBoxAgentEditHP";
             this.textBoxAgentEditHP.Size = new System.Drawing.Size(100, 20);
             this.textBoxAgentEditHP.TabIndex = 27;
@@ -1117,7 +1145,7 @@
             // textBoxAgentEditZip
             // 
             this.textBoxAgentEditZip.Location = new System.Drawing.Point(366, 141);
-            this.textBoxAgentEditZip.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAgentEditZip.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAgentEditZip.Name = "textBoxAgentEditZip";
             this.textBoxAgentEditZip.Size = new System.Drawing.Size(100, 20);
             this.textBoxAgentEditZip.TabIndex = 18;
@@ -1125,7 +1153,7 @@
             // textBoxAgentEditAddr
             // 
             this.textBoxAgentEditAddr.Location = new System.Drawing.Point(366, 116);
-            this.textBoxAgentEditAddr.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAgentEditAddr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAgentEditAddr.Name = "textBoxAgentEditAddr";
             this.textBoxAgentEditAddr.Size = new System.Drawing.Size(100, 20);
             this.textBoxAgentEditAddr.TabIndex = 17;
@@ -1133,7 +1161,7 @@
             // textBoxAgentEditEmail
             // 
             this.textBoxAgentEditEmail.Location = new System.Drawing.Point(130, 189);
-            this.textBoxAgentEditEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAgentEditEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAgentEditEmail.Name = "textBoxAgentEditEmail";
             this.textBoxAgentEditEmail.Size = new System.Drawing.Size(100, 20);
             this.textBoxAgentEditEmail.TabIndex = 15;
@@ -1141,7 +1169,7 @@
             // textBoxAgentEditLName
             // 
             this.textBoxAgentEditLName.Location = new System.Drawing.Point(130, 161);
-            this.textBoxAgentEditLName.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAgentEditLName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAgentEditLName.Name = "textBoxAgentEditLName";
             this.textBoxAgentEditLName.Size = new System.Drawing.Size(100, 20);
             this.textBoxAgentEditLName.TabIndex = 14;
@@ -1149,7 +1177,7 @@
             // textBoxAgentEditFName
             // 
             this.textBoxAgentEditFName.Location = new System.Drawing.Point(130, 138);
-            this.textBoxAgentEditFName.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAgentEditFName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAgentEditFName.Name = "textBoxAgentEditFName";
             this.textBoxAgentEditFName.Size = new System.Drawing.Size(100, 20);
             this.textBoxAgentEditFName.TabIndex = 13;
@@ -1157,7 +1185,7 @@
             // textBoxAgentEditPass
             // 
             this.textBoxAgentEditPass.Location = new System.Drawing.Point(130, 113);
-            this.textBoxAgentEditPass.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAgentEditPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAgentEditPass.Name = "textBoxAgentEditPass";
             this.textBoxAgentEditPass.Size = new System.Drawing.Size(100, 20);
             this.textBoxAgentEditPass.TabIndex = 12;
@@ -1165,7 +1193,7 @@
             // textBoxAgentEditUser
             // 
             this.textBoxAgentEditUser.Location = new System.Drawing.Point(130, 87);
-            this.textBoxAgentEditUser.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAgentEditUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAgentEditUser.Name = "textBoxAgentEditUser";
             this.textBoxAgentEditUser.Size = new System.Drawing.Size(100, 20);
             this.textBoxAgentEditUser.TabIndex = 11;
@@ -1173,7 +1201,7 @@
             // textBoxAgentEditNum
             // 
             this.textBoxAgentEditNum.Location = new System.Drawing.Point(130, 64);
-            this.textBoxAgentEditNum.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAgentEditNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAgentEditNum.Name = "textBoxAgentEditNum";
             this.textBoxAgentEditNum.Size = new System.Drawing.Size(100, 20);
             this.textBoxAgentEditNum.TabIndex = 10;
@@ -1212,7 +1240,7 @@
             // 
             this.dateTimeAgentEditJoin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeAgentEditJoin.Location = new System.Drawing.Point(130, 213);
-            this.dateTimeAgentEditJoin.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimeAgentEditJoin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimeAgentEditJoin.Name = "dateTimeAgentEditJoin";
             this.dateTimeAgentEditJoin.Size = new System.Drawing.Size(100, 20);
             this.dateTimeAgentEditJoin.TabIndex = 22;
@@ -1224,7 +1252,7 @@
             "Male",
             "Female"});
             this.comboBoxAgentEditSex.Location = new System.Drawing.Point(366, 90);
-            this.comboBoxAgentEditSex.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxAgentEditSex.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxAgentEditSex.Name = "comboBoxAgentEditSex";
             this.comboBoxAgentEditSex.Size = new System.Drawing.Size(100, 21);
             this.comboBoxAgentEditSex.TabIndex = 21;
@@ -1235,7 +1263,7 @@
             this.comboBoxAgentEditLeader.DisplayMember = "FullName";
             this.comboBoxAgentEditLeader.FormattingEnabled = true;
             this.comboBoxAgentEditLeader.Location = new System.Drawing.Point(130, 258);
-            this.comboBoxAgentEditLeader.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxAgentEditLeader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxAgentEditLeader.Name = "comboBoxAgentEditLeader";
             this.comboBoxAgentEditLeader.Size = new System.Drawing.Size(100, 21);
             this.comboBoxAgentEditLeader.TabIndex = 20;
@@ -1249,7 +1277,7 @@
             "AAD",
             "AD"});
             this.comboBoxAgentEditLevel.Location = new System.Drawing.Point(130, 235);
-            this.comboBoxAgentEditLevel.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxAgentEditLevel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxAgentEditLevel.Name = "comboBoxAgentEditLevel";
             this.comboBoxAgentEditLevel.Size = new System.Drawing.Size(100, 21);
             this.comboBoxAgentEditLevel.TabIndex = 19;
@@ -1364,7 +1392,7 @@
             this.tabPage1.Controls.Add(this.comboBoxAgentLevelHist);
             this.tabPage1.Controls.Add(this.label23);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Size = new System.Drawing.Size(752, 336);
             this.tabPage1.TabIndex = 4;
@@ -1374,7 +1402,7 @@
             // buttonAgentLevelHistory
             // 
             this.buttonAgentLevelHistory.Location = new System.Drawing.Point(172, 122);
-            this.buttonAgentLevelHistory.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAgentLevelHistory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAgentLevelHistory.Name = "buttonAgentLevelHistory";
             this.buttonAgentLevelHistory.Size = new System.Drawing.Size(70, 28);
             this.buttonAgentLevelHistory.TabIndex = 5;
@@ -1402,7 +1430,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView2.Location = new System.Drawing.Point(339, 44);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 33;
             this.dataGridView2.Size = new System.Drawing.Size(380, 269);
@@ -1421,10 +1449,10 @@
             // comboBoxAgentLevelHist
             // 
             this.comboBoxAgentLevelHist.DataSource = this.agentBindingSource;
-            this.comboBoxAgentLevelHist.DisplayMember = "Number";
+            this.comboBoxAgentLevelHist.DisplayMember = "FullName";
             this.comboBoxAgentLevelHist.FormattingEnabled = true;
             this.comboBoxAgentLevelHist.Location = new System.Drawing.Point(144, 79);
-            this.comboBoxAgentLevelHist.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxAgentLevelHist.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxAgentLevelHist.Name = "comboBoxAgentLevelHist";
             this.comboBoxAgentLevelHist.Size = new System.Drawing.Size(140, 21);
             this.comboBoxAgentLevelHist.TabIndex = 2;
@@ -1456,7 +1484,7 @@
             // buttonAgentBackMenu
             // 
             this.buttonAgentBackMenu.Location = new System.Drawing.Point(0, 1);
-            this.buttonAgentBackMenu.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAgentBackMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAgentBackMenu.Name = "buttonAgentBackMenu";
             this.buttonAgentBackMenu.Size = new System.Drawing.Size(87, 23);
             this.buttonAgentBackMenu.TabIndex = 11;
@@ -1468,11 +1496,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(758, 411);
+            this.ClientSize = new System.Drawing.Size(759, 401);
             this.Controls.Add(this.buttonAgentBackMenu);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControlAgent);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form3";
             this.Text = "AMS Agent";
             this.tabControlAgent.ResumeLayout(false);
@@ -1603,5 +1631,7 @@
         private System.Windows.Forms.ComboBox comboBoxViewAgentDateYear;
         private System.Windows.Forms.ComboBox comboBoxViewAgentDateDay;
         private System.Windows.Forms.ComboBox comboBoxViewAgentDateMonth;
+        private System.Windows.Forms.Label labelAddSuccess;
+        private System.Windows.Forms.Label labelUpdateSuccess;
     }
 }

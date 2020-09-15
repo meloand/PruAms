@@ -71,6 +71,7 @@ namespace PruAmsForm
             {
                 NewAgents.Add(NewAgent);
                 agentBindingSource.Add(NewAgent);
+                labelAddSuccess.Visible = true; 
             }
            
         }
@@ -146,7 +147,10 @@ namespace PruAmsForm
             agent.HphoneNum = long.Parse(textBoxAgentEditHP.Text);
             agent.OPhoneNum = long.Parse(textBoxAgentEditOP.Text);
             agent.POB = textBoxAgentEditPOB.Text;
-            agent.DOB = dateTimeAgentEditDOB.Text; 
+            agent.DOB = dateTimeAgentEditDOB.Text;
+
+            labelUpdateSuccess.Visible = true; 
+
 
         }
 
@@ -195,7 +199,7 @@ namespace PruAmsForm
             IEnumerable<Agent> source = list;
             if (textBoxViewAgentNum.Text != String.Empty)
             {
-                source.First(x => x.Number == textBoxViewAgentNum.Text);
+                source = new List<Agent>() { source.First(x => x.Number == textBoxViewAgentNum.Text) };
             }
             else
             {
@@ -225,5 +229,23 @@ namespace PruAmsForm
             }
             dataGridView1.DataSource = source;
         }
+
+        private void tabPageView_Enter(object sender, EventArgs e)
+        {
+            comboBoxViewAgentLeader.DataSource = NewAgents.Select(x => x.FullName).ToList();
+        }
+       
+       private void buttonClearView_Click(object sender, EventArgs e)
+       {
+          foreach (TextBox control in tabPageView.Controls.OfType<TextBox>())
+          {
+               control.Text = "";
+          }
+          foreach (ComboBox control in tabPageView.Controls.OfType<ComboBox>())
+          {
+             control.Text = "";
+          }
+       } 
+        
     }
 }
