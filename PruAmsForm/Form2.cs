@@ -12,6 +12,9 @@ namespace PruAmsForm
 {
     public partial class Form2 : Form
     {
+        private List<SPAJ> spajFiles = new List<SPAJ>();
+        private SPAJ spaj = new SPAJ();
+
         public Form2()
         {
             InitializeComponent();
@@ -42,7 +45,8 @@ namespace PruAmsForm
             string SPAJSubmitDate = dateTimeSPAJSubmit.Text;
             SPAJForm NewSPAJ;
 
-            NewSPAJ = new SPAJForm(SPAJNum, SPAJType, AgentName, AgentNum, PruFlyerNum, SPAJSubmitDate); 
+            NewSPAJ = new SPAJForm(SPAJNum, SPAJType, AgentName, AgentNum, PruFlyerNum, SPAJSubmitDate);
+            spaj.SPAJForm = NewSPAJ;
 
             // Insurer Info Form 
             string InsurerName = textBoxSPAJInsrName.Text;
@@ -61,6 +65,7 @@ namespace PruAmsForm
 
             NewInsurer = new InsurerForm(InsurerName,InsurerGender, InsurerDOB, InsurerMarried, InsurerNextBday, 
                                          InsurerHeight, InsurerWeight, InsurerSmoke, InsurerJobClass);
+            spaj.InsurerForm = NewInsurer;
 
             tabControlAddSPAJ.SelectTab(tabPagePolisHolder);
 
@@ -79,6 +84,7 @@ namespace PruAmsForm
            // {  }
 
             NewPolis = new PolisForm(PolisName, PolisGender, PolisDOB, PolisMarriage, PolisRs);
+            spaj.PolisForm = NewPolis;
             tabControlAddSPAJ.SelectTab(tabPageSpouseInfo);
 
         }
@@ -98,7 +104,8 @@ namespace PruAmsForm
             SpouseForm NewSpouse;
 
             NewSpouse = new SpouseForm(SpouseName, SpouseGender, SpouseDOB, SpouseMarriage, SpouseNextBday,
-                SpouseHeight, SpouseWeight, SpouseSmoke); 
+                SpouseHeight, SpouseWeight, SpouseSmoke);
+            spaj.SpouseForm = NewSpouse;
 
             tabControlAddSPAJ.SelectTab(tabPageParentInfo); 
         }
@@ -118,6 +125,7 @@ namespace PruAmsForm
             ParentForm NewParent;
 
             NewParent = new ParentForm(ParentName, ParentGender, ParentDOB, ParentMarriage, ParentNextBday, ParentHeight, ParentWeight, ParentSmoke);
+            spaj.ParentForm = NewParent;
 
             tabControlAddSPAJ.SelectTab(tabPageAddressInfo);
         }
@@ -133,6 +141,7 @@ namespace PruAmsForm
             AddressForm NewAddress;
 
             NewAddress = new AddressForm(Address, AddrCity, AddrZipCode, AddrEmail, AddrHPNumber, AddrOPNumber);
+            spaj.AddressForm = NewAddress;
 
             tabControlAddSPAJ.SelectTab(tabPagePengajuanInfo);
 
@@ -143,88 +152,31 @@ namespace PruAmsForm
             string PengajuanFrequency = comboBoxSPAJPengajuanFreq.Text;
 
             string PengajuanPay = comboBoxSPAJPengajuanPay.Text;
-            if (PengajuanPay == "Credit Card")
-            {
-                labelPengajuanCCBankOther.Enabled = true;
-                labelPengajuanCCExpDate.Enabled = true;
-                textBoxSPAJPengajuanCCBank.Enabled = true;
-                textBoxSPAJPengajuanExpDate.Enabled = true;
-                labelPengajuanCCBankOther.Text = "Credit Card Num: ";
-                labelPengajuanCCExpDate.Text = "Exp. Date: "; 
-
-            }
-            else if (PengajuanPay == "Bank Transfer")
-            {
-                labelPengajuanCCBankOther.Enabled = true;
-                labelPengajuanCCExpDate.Enabled = true;
-                textBoxSPAJPengajuanCCBank.Enabled = true;
-                textBoxSPAJPengajuanExpDate.Enabled = true; 
-                labelPengajuanCCBankOther.Text = "Bank Account Num: ";
-                labelPengajuanCCExpDate.Text = "Bank Account Name: "; } 
-            else if (PengajuanPay == "Other")
-            {
-                labelPengajuanCCBankOther.Enabled = true;
-                textBoxSPAJPengajuanCCBank.Enabled = true;
-                labelPengajuanCCBankOther.Text = "Other Type of Payment: "; }
             string PengajuanCCBankOther = textBoxSPAJPengajuanCCBank.Text;
             string PengajuanExpDate = textBoxSPAJPengajuanExpDate.Text; 
 
             string PengajuanCurrency = comboBoxSPAJPengajuanCurrency.Text; 
-            if (PengajuanCurrency == "USD")
-            { labelSPAJPengajuanExchRate.Enabled = true;
-              textBoxSPAJPengajuanExchange.Enabled = true; 
-            }
             float PengajuanExchange = float.Parse(textBoxSPAJPengajuanExchange.Text); 
 
             string PengajuanBasic = textBoxSPAJPengajuanBasic.Text;
             float PengajuanPertanggungan = float.Parse(textBoxSPAJPengajuanPrtanggung.Text) / BasicPertanggungan(PengajuanFrequency); // total premi per tahun/ frequency
 
-            
-            if(checkBoxSPAJPengajuanPruHosp.Checked == true)
-            { labelPruHospitalandSurgical.Enabled = true;
-              textBoxSPAJPengajuanPruHosp.Enabled = true; 
-            }
+ 
             float PengajuanPruHosp = float.Parse(textBoxSPAJPengajuanPruHosp.Text) / BasicPertanggungan(PengajuanFrequency);
 
-            if(checkBoxSPAJPengajuanPruPayor.Checked == true)
-            {
-                textBoxSPAJPengajuanPruPayorAmnt.Enabled = true;
-                textBoxSPAJPengajuanPruPayorAmnt.Enabled = true; 
-            }
             string PengajuanPruPayor = textBoxSPAJPengajuanPruPayorAmnt.Text;
             float PengajuanPruPayorAmnt = float.Parse(textBoxSPAJPengajuanPruPayorAmnt.Text)/BasicPertanggungan(PengajuanFrequency);
 
-      
-            if(checkBoxSPAJPengajuanPruCC.Checked == true)
-            {
-                textBoxSPAJPengajuanPruCC.Enabled = true;
-                textBoxSPAJPengajuanPruCCAmnt.Enabled = true;
-            }
             string PengajuanPruCC = textBoxSPAJPengajuanPruCC.Text;
             float PengajuanPruCCAmnt = float.Parse(textBoxSPAJPengajuanPruCCAmnt.Text)/BasicPertanggungan(PengajuanFrequency);
-
-            
-            if(checkBoxSPAJPengajuanADD.Checked == true)
-            {
-                textBoxSPAJPengajuanPruADD.Enabled = true;
-                textBoxSPAJPengajuanPruADDAmnt.Enabled = true; 
-            }
+  
             string PengajuanPruADD = textBoxSPAJPengajuanPruADD.Text;
             float PengajuanPruADDAmnt = float.Parse(textBoxSPAJPengajuanPruADDAmnt.Text)/ BasicPertanggungan(PengajuanFrequency);
 
-            if(checkBoxSPAJPengajuanPruMed.Checked == true)
-            {
-                textBoxSPAJPengajuanPruMed.Enabled = true;
-                textBoxSPAJPengajuanPruMedAmnt.Enabled = true; 
-            }
+ 
             string PengajuanPruMed = textBoxSPAJPengajuanPruMed.Text;
             float PengajuanPruMedAmnt = float.Parse(textBoxSPAJPengajuanPruMedAmnt.Text)/ BasicPertanggungan(PengajuanFrequency); 
 
-            if (checkBoxSPAJPengajuanPruPPayor.Checked == true)
-            {
-                textBoxSPAJPengajuanPruPPayor.Enabled = true;
-                textBoxSPAJPengajuanPruPPayorAmnt.Enabled = true; 
-            }
             string PengajuanPruPPayor = textBoxSPAJPengajuanPruPPayor.Text;
             float PengajuanPruPPayorAmnt = float.Parse(textBoxSPAJPengajuanPruPPayorAmnt.Text) / BasicPertanggungan(PengajuanFrequency);
 
@@ -241,6 +193,7 @@ namespace PruAmsForm
             PengajuanPruCC, PengajuanPruCCAmnt, PengajuanPruADD, PengajuanPruADDAmnt,
             PengajuanPruMed, PengajuanPruMedAmnt, PengajuanPruPPayor, PengajuanPruPPayorAmnt,
             PengajuanPremi, PengajuanPruSaver, PengajuanTotalPremi);
+            spaj.PengajuanForm = NewPengajuan;
 
             tabControlAddSPAJ.SelectTab(tabPageBeneficiaryInfo);
         }
@@ -304,7 +257,7 @@ namespace PruAmsForm
                 beneficiaryForm.Beneficiary6 = new Beneficiary(BeneficiaryFName6, BeneficiaryLName6, BeneficiaryDOB6, BeneficiaryRs6, BeneficiaryDetail6);
             }
 
-
+            spaj.BeneficiaryForm = beneficiaryForm;
             buttonSPAJNewCreate.Enabled = true; 
 
         }
@@ -313,7 +266,10 @@ namespace PruAmsForm
         {
             buttonSPAJNewStoreFiles.Enabled = true;
             buttonSPAJNewCreate.Enabled = false;
-            buttonSPAJNewClear.Enabled = false; 
+            buttonSPAJNewClear.Enabled = false;
+
+            // spaj now has all completed forms as its properties
+            spajFiles.Add(spaj);
         }
 
 
@@ -418,6 +374,153 @@ namespace PruAmsForm
         private void comboBoxSPAJBeneficiaryRs6_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBoxSPAJBeneficiaryDetail6.Enabled = comboBoxSPAJBeneficiaryRs6.Text == "Other";
+        }
+
+        private void comboBoxSPAJPengajuanPay_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxSPAJPengajuanPay.Text == "Credit Card")
+            {
+                labelPengajuanCCBankOther.Text = "Credit Card Num:";
+                labelPengajuanCCExpDate.Text = "Exp. Date:";
+                textBoxSPAJPengajuanCCBank.Enabled = true;
+                textBoxSPAJPengajuanExpDate.Enabled = true;
+            }
+            else if (comboBoxSPAJPengajuanPay.Text == "Bank Transfer")
+            {
+                labelPengajuanCCBankOther.Text = "Account Number:";
+                labelPengajuanCCExpDate.Text = "Account Name:";
+                textBoxSPAJPengajuanCCBank.Enabled = true;
+                textBoxSPAJPengajuanExpDate.Enabled = true;
+            }
+            else if (comboBoxSPAJPengajuanPay.Text == "Other")
+            {
+                labelPengajuanCCBankOther.Text = "Type of Payment:";
+                labelPengajuanCCExpDate.Enabled = false;
+                textBoxSPAJPengajuanCCBank.Enabled = true;
+                textBoxSPAJPengajuanExpDate.Enabled = false;
+            }
+            else
+            {
+                labelPengajuanCCBankOther.Enabled = false;
+                labelPengajuanCCExpDate.Enabled = false;
+                textBoxSPAJPengajuanCCBank.Enabled = false;
+                textBoxSPAJPengajuanExpDate.Enabled = false;
+            }
+        }
+
+        private void comboBoxSPAJPengajuanCurrency_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxSPAJPengajuanCurrency.Text == "Rupiah")
+            {
+                labelSPAJPengajuanExchRate.Enabled = false;
+                textBoxSPAJPengajuanExchange.Enabled = false;
+            }
+            else if (comboBoxSPAJPengajuanCurrency.Text == "USD")
+            {
+                labelSPAJPengajuanExchRate.Enabled = true;
+                textBoxSPAJPengajuanExchange.Enabled = true;
+            }
+        }
+
+        private void checkBoxSPAJPengajuanPruHosp_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxSPAJPengajuanPruHosp.Enabled = checkBoxSPAJPengajuanPruHosp.Checked;
+        }
+
+        private void checkBoxSPAJPengajuanPruPayor_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxSPAJPengajuanPruPayor.Enabled = checkBoxSPAJPengajuanPruPayor.Checked;
+            textBoxSPAJPengajuanPruPayorAmnt.Enabled = checkBoxSPAJPengajuanPruPayor.Checked;
+        }
+
+        private void checkBoxSPAJPengajuanPruCC_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxSPAJPengajuanPruCC.Enabled = checkBoxSPAJPengajuanPruCC.Checked;
+            textBoxSPAJPengajuanPruCCAmnt.Enabled = checkBoxSPAJPengajuanPruCC.Checked;
+        }
+
+        private void checkBoxSPAJPengajuanADD_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxSPAJPengajuanPruADD.Enabled = checkBoxSPAJPengajuanADD.Checked;
+            textBoxSPAJPengajuanPruADDAmnt.Enabled = checkBoxSPAJPengajuanADD.Checked;
+        }
+
+        private void checkBoxSPAJPengajuanPruMed_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxSPAJPengajuanPruMed.Enabled = checkBoxSPAJPengajuanPruMed.Checked;
+            textBoxSPAJPengajuanPruMedAmnt.Enabled = checkBoxSPAJPengajuanPruMed.Checked;
+        }
+
+        private void checkBoxSPAJPengajuanPruPPayor_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxSPAJPengajuanPruPPayor.Enabled = checkBoxSPAJPengajuanPruPPayor.Checked;
+            textBoxSPAJPengajuanPruPPayorAmnt.Enabled = checkBoxSPAJPengajuanPruPPayor.Checked;
+        }
+
+        private void buttonSPAJNewClear_Click(object sender, EventArgs e)
+        {
+            spaj = new SPAJ();
+        }
+
+        private void buttonSpouseIgnore_Click(object sender, EventArgs e)
+        {
+            buttonSpouseClear_Click(null, null);
+            buttonSpouseAccept_Click(null, null);
+        }
+
+        private void buttonParentIgnore_Click(object sender, EventArgs e)
+        {
+            buttonParentClear_Click(null, null);
+            buttonParentAccept_Click(null, null);
+        }
+
+        private void buttonSpouseClear_Click(object sender, EventArgs e)
+        {
+            clearTabPage(tabPageSpouseInfo);
+        }
+
+        private void buttonParentClear_Click(object sender, EventArgs e)
+        {
+            clearTabPage(tabPageParentInfo);
+        }
+
+        private void buttonPolisHolderClear_Click(object sender, EventArgs e)
+        {
+            clearTabPage(tabPagePolisHolder);
+        }
+
+        private void buttonAddressClear_Click(object sender, EventArgs e)
+        {
+            clearTabPage(tabPageAddressInfo);
+        }
+
+        private void buttonPengajuanClear_Click(object sender, EventArgs e)
+        {
+            clearTabPage(tabPagePengajuanInfo);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            clearTabPage(tabPageBeneficiaryInfo);
+        }
+
+        private void clearTabPage(TabPage page)
+        {
+            foreach (Control c in page.Controls)
+            {
+                if (c is TextBox || c is ComboBox || c is DateTimePicker || c is CheckBox)
+                {
+                    if (c.Text != "0.00")
+                    {
+                        c.ResetText();
+                    }
+                }
+            }
+        }
+
+        private void buttonSPAJEditLoad_Click(object sender, EventArgs e)
+        {
+            SPAJ spajFile = spajFiles.First(x => x.SPAJForm.SPAJNum == Int32.Parse(textBoxSPAJEditNumber.Text));
         }
     }
 }

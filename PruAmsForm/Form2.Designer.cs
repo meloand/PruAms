@@ -275,7 +275,7 @@
             this.label46 = new System.Windows.Forms.Label();
             this.comboBoxSPAJEditType = new System.Windows.Forms.ComboBox();
             this.textBoxEditPruFlyerNum = new System.Windows.Forms.TextBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabControlEditSPAJ = new System.Windows.Forms.TabControl();
             this.tabPageEditInsInfo = new System.Windows.Forms.TabPage();
             this.label156 = new System.Windows.Forms.Label();
             this.label155 = new System.Windows.Forms.Label();
@@ -502,7 +502,7 @@
             this.tabPagePengajuanInfo.SuspendLayout();
             this.tabPageBeneficiaryInfo.SuspendLayout();
             this.tabPageSPAJEdit.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.tabControlEditSPAJ.SuspendLayout();
             this.tabPageEditInsInfo.SuspendLayout();
             this.tabPageEditPolisInfo.SuspendLayout();
             this.tabPageEditSpouseInfo.SuspendLayout();
@@ -836,6 +836,7 @@
             this.buttonSPAJNewClear.TabIndex = 15;
             this.buttonSPAJNewClear.Text = "Clear All";
             this.buttonSPAJNewClear.UseVisualStyleBackColor = true;
+            this.buttonSPAJNewClear.Click += new System.EventHandler(this.buttonSPAJNewClear_Click);
             // 
             // dateTimeSPAJSubmit
             // 
@@ -1219,6 +1220,7 @@
             this.buttonPolisHolderClear.TabIndex = 13;
             this.buttonPolisHolderClear.Text = "Clear";
             this.buttonPolisHolderClear.UseVisualStyleBackColor = true;
+            this.buttonPolisHolderClear.Click += new System.EventHandler(this.buttonPolisHolderClear_Click);
             // 
             // radioButtonSPAJEQIns
             // 
@@ -1404,6 +1406,7 @@
             this.buttonSpouseIgnore.TabIndex = 25;
             this.buttonSpouseIgnore.Text = "Ignore";
             this.buttonSpouseIgnore.UseVisualStyleBackColor = true;
+            this.buttonSpouseIgnore.Click += new System.EventHandler(this.buttonSpouseIgnore_Click);
             // 
             // buttonSpouseAccept
             // 
@@ -1425,6 +1428,7 @@
             this.buttonSpouseClear.TabIndex = 23;
             this.buttonSpouseClear.Text = "Clear";
             this.buttonSpouseClear.UseVisualStyleBackColor = true;
+            this.buttonSpouseClear.Click += new System.EventHandler(this.buttonSpouseClear_Click);
             // 
             // dateTimeSPAJSpouseDOB
             // 
@@ -1660,6 +1664,7 @@
             this.buttonParentIgnore.TabIndex = 23;
             this.buttonParentIgnore.Text = "Ignore";
             this.buttonParentIgnore.UseVisualStyleBackColor = true;
+            this.buttonParentIgnore.Click += new System.EventHandler(this.buttonParentIgnore_Click);
             // 
             // buttonParentAccept
             // 
@@ -1681,6 +1686,7 @@
             this.buttonParentClear.TabIndex = 21;
             this.buttonParentClear.Text = "Clear";
             this.buttonParentClear.UseVisualStyleBackColor = true;
+            this.buttonParentClear.Click += new System.EventHandler(this.buttonParentClear_Click);
             // 
             // dateTimeSPAJParentDOB
             // 
@@ -1898,6 +1904,7 @@
             this.buttonAddressClear.TabIndex = 16;
             this.buttonAddressClear.Text = "Clear";
             this.buttonAddressClear.UseVisualStyleBackColor = true;
+            this.buttonAddressClear.Click += new System.EventHandler(this.buttonAddressClear_Click);
             // 
             // label28
             // 
@@ -2094,6 +2101,7 @@
             // 
             // textBoxSPAJPengajuanPruPPayor
             // 
+            this.textBoxSPAJPengajuanPruPPayor.Enabled = false;
             this.textBoxSPAJPengajuanPruPPayor.Location = new System.Drawing.Point(292, 181);
             this.textBoxSPAJPengajuanPruPPayor.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJPengajuanPruPPayor.Multiline = true;
@@ -2103,6 +2111,7 @@
             // 
             // textBoxSPAJPengajuanPruMed
             // 
+            this.textBoxSPAJPengajuanPruMed.Enabled = false;
             this.textBoxSPAJPengajuanPruMed.Location = new System.Drawing.Point(292, 152);
             this.textBoxSPAJPengajuanPruMed.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJPengajuanPruMed.Multiline = true;
@@ -2112,6 +2121,7 @@
             // 
             // textBoxSPAJPengajuanPruADD
             // 
+            this.textBoxSPAJPengajuanPruADD.Enabled = false;
             this.textBoxSPAJPengajuanPruADD.Location = new System.Drawing.Point(292, 123);
             this.textBoxSPAJPengajuanPruADD.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJPengajuanPruADD.Multiline = true;
@@ -2121,6 +2131,7 @@
             // 
             // textBoxSPAJPengajuanPruCC
             // 
+            this.textBoxSPAJPengajuanPruCC.Enabled = false;
             this.textBoxSPAJPengajuanPruCC.Location = new System.Drawing.Point(292, 94);
             this.textBoxSPAJPengajuanPruCC.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJPengajuanPruCC.Multiline = true;
@@ -2130,6 +2141,7 @@
             // 
             // textBoxSPAJPengajuanPruPayor
             // 
+            this.textBoxSPAJPengajuanPruPayor.Enabled = false;
             this.textBoxSPAJPengajuanPruPayor.Location = new System.Drawing.Point(292, 63);
             this.textBoxSPAJPengajuanPruPayor.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJPengajuanPruPayor.Multiline = true;
@@ -2139,6 +2151,7 @@
             // 
             // textBoxSPAJPengajuanPruHosp
             // 
+            this.textBoxSPAJPengajuanPruHosp.Enabled = false;
             this.textBoxSPAJPengajuanPruHosp.Location = new System.Drawing.Point(386, 37);
             this.textBoxSPAJPengajuanPruHosp.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJPengajuanPruHosp.Name = "textBoxSPAJPengajuanPruHosp";
@@ -2177,6 +2190,7 @@
             this.buttonPengajuanClear.TabIndex = 42;
             this.buttonPengajuanClear.Text = "Clear";
             this.buttonPengajuanClear.UseVisualStyleBackColor = true;
+            this.buttonPengajuanClear.Click += new System.EventHandler(this.buttonPengajuanClear_Click);
             // 
             // textBoxSPAJPengajuanPremiTotal
             // 
@@ -2331,6 +2345,7 @@
             this.checkBoxSPAJPengajuanPruPPayor.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJPengajuanPruPPayor.TabIndex = 22;
             this.checkBoxSPAJPengajuanPruPPayor.UseVisualStyleBackColor = true;
+            this.checkBoxSPAJPengajuanPruPPayor.CheckedChanged += new System.EventHandler(this.checkBoxSPAJPengajuanPruPPayor_CheckedChanged);
             // 
             // checkBoxSPAJPengajuanPruMed
             // 
@@ -2341,6 +2356,7 @@
             this.checkBoxSPAJPengajuanPruMed.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJPengajuanPruMed.TabIndex = 21;
             this.checkBoxSPAJPengajuanPruMed.UseVisualStyleBackColor = true;
+            this.checkBoxSPAJPengajuanPruMed.CheckedChanged += new System.EventHandler(this.checkBoxSPAJPengajuanPruMed_CheckedChanged);
             // 
             // checkBoxSPAJPengajuanADD
             // 
@@ -2351,6 +2367,7 @@
             this.checkBoxSPAJPengajuanADD.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJPengajuanADD.TabIndex = 20;
             this.checkBoxSPAJPengajuanADD.UseVisualStyleBackColor = true;
+            this.checkBoxSPAJPengajuanADD.CheckedChanged += new System.EventHandler(this.checkBoxSPAJPengajuanADD_CheckedChanged);
             // 
             // checkBoxSPAJPengajuanPruCC
             // 
@@ -2361,6 +2378,7 @@
             this.checkBoxSPAJPengajuanPruCC.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJPengajuanPruCC.TabIndex = 19;
             this.checkBoxSPAJPengajuanPruCC.UseVisualStyleBackColor = true;
+            this.checkBoxSPAJPengajuanPruCC.CheckedChanged += new System.EventHandler(this.checkBoxSPAJPengajuanPruCC_CheckedChanged);
             // 
             // checkBoxSPAJPengajuanPruPayor
             // 
@@ -2371,6 +2389,7 @@
             this.checkBoxSPAJPengajuanPruPayor.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJPengajuanPruPayor.TabIndex = 17;
             this.checkBoxSPAJPengajuanPruPayor.UseVisualStyleBackColor = true;
+            this.checkBoxSPAJPengajuanPruPayor.CheckedChanged += new System.EventHandler(this.checkBoxSPAJPengajuanPruPayor_CheckedChanged);
             // 
             // checkBoxSPAJPengajuanPruHosp
             // 
@@ -2381,6 +2400,7 @@
             this.checkBoxSPAJPengajuanPruHosp.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJPengajuanPruHosp.TabIndex = 16;
             this.checkBoxSPAJPengajuanPruHosp.UseVisualStyleBackColor = true;
+            this.checkBoxSPAJPengajuanPruHosp.CheckedChanged += new System.EventHandler(this.checkBoxSPAJPengajuanPruHosp_CheckedChanged);
             // 
             // comboBoxSPAJPengajuanCurrency
             // 
@@ -2393,6 +2413,7 @@
             this.comboBoxSPAJPengajuanCurrency.Name = "comboBoxSPAJPengajuanCurrency";
             this.comboBoxSPAJPengajuanCurrency.Size = new System.Drawing.Size(106, 21);
             this.comboBoxSPAJPengajuanCurrency.TabIndex = 12;
+            this.comboBoxSPAJPengajuanCurrency.SelectedIndexChanged += new System.EventHandler(this.comboBoxSPAJPengajuanCurrency_SelectedIndexChanged);
             // 
             // comboBoxSPAJPengajuanPay
             // 
@@ -2406,6 +2427,7 @@
             this.comboBoxSPAJPengajuanPay.Name = "comboBoxSPAJPengajuanPay";
             this.comboBoxSPAJPengajuanPay.Size = new System.Drawing.Size(106, 21);
             this.comboBoxSPAJPengajuanPay.TabIndex = 11;
+            this.comboBoxSPAJPengajuanPay.SelectedIndexChanged += new System.EventHandler(this.comboBoxSPAJPengajuanPay_SelectedIndexChanged);
             // 
             // comboBoxSPAJPengajuanFreq
             // 
@@ -2605,6 +2627,7 @@
             this.button2.TabIndex = 44;
             this.button2.Text = "Clear";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // comboBoxSPAJBeneficiaryRs6
             // 
@@ -3149,7 +3172,7 @@
             this.tabPageSPAJEdit.Controls.Add(this.label46);
             this.tabPageSPAJEdit.Controls.Add(this.comboBoxSPAJEditType);
             this.tabPageSPAJEdit.Controls.Add(this.textBoxEditPruFlyerNum);
-            this.tabPageSPAJEdit.Controls.Add(this.tabControl1);
+            this.tabPageSPAJEdit.Controls.Add(this.tabControlEditSPAJ);
             this.tabPageSPAJEdit.Controls.Add(this.label135);
             this.tabPageSPAJEdit.Controls.Add(this.textBoxSPAJEditANumber);
             this.tabPageSPAJEdit.Controls.Add(this.label136);
@@ -3176,6 +3199,7 @@
             this.buttonSPAJEditLoad.TabIndex = 18;
             this.buttonSPAJEditLoad.Text = "Load";
             this.buttonSPAJEditLoad.UseVisualStyleBackColor = true;
+            this.buttonSPAJEditLoad.Click += new System.EventHandler(this.buttonSPAJEditLoad_Click);
             // 
             // buttonSPAJEditStoreFiles
             // 
@@ -3264,21 +3288,21 @@
             this.textBoxEditPruFlyerNum.Size = new System.Drawing.Size(95, 20);
             this.textBoxEditPruFlyerNum.TabIndex = 11;
             // 
-            // tabControl1
+            // tabControlEditSPAJ
             // 
-            this.tabControl1.Controls.Add(this.tabPageEditInsInfo);
-            this.tabControl1.Controls.Add(this.tabPageEditPolisInfo);
-            this.tabControl1.Controls.Add(this.tabPageEditSpouseInfo);
-            this.tabControl1.Controls.Add(this.tabPageEditParentInfo);
-            this.tabControl1.Controls.Add(this.tabPageEditAddrInfo);
-            this.tabControl1.Controls.Add(this.tabPageEditPengajuanInfo);
-            this.tabControl1.Controls.Add(this.tabPageEditBeneficiaryInfo);
-            this.tabControl1.Location = new System.Drawing.Point(240, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(512, 352);
-            this.tabControl1.TabIndex = 14;
+            this.tabControlEditSPAJ.Controls.Add(this.tabPageEditInsInfo);
+            this.tabControlEditSPAJ.Controls.Add(this.tabPageEditPolisInfo);
+            this.tabControlEditSPAJ.Controls.Add(this.tabPageEditSpouseInfo);
+            this.tabControlEditSPAJ.Controls.Add(this.tabPageEditParentInfo);
+            this.tabControlEditSPAJ.Controls.Add(this.tabPageEditAddrInfo);
+            this.tabControlEditSPAJ.Controls.Add(this.tabPageEditPengajuanInfo);
+            this.tabControlEditSPAJ.Controls.Add(this.tabPageEditBeneficiaryInfo);
+            this.tabControlEditSPAJ.Location = new System.Drawing.Point(240, 0);
+            this.tabControlEditSPAJ.Margin = new System.Windows.Forms.Padding(2);
+            this.tabControlEditSPAJ.Name = "tabControlEditSPAJ";
+            this.tabControlEditSPAJ.SelectedIndex = 0;
+            this.tabControlEditSPAJ.Size = new System.Drawing.Size(512, 352);
+            this.tabControlEditSPAJ.TabIndex = 14;
             // 
             // tabPageEditInsInfo
             // 
@@ -5687,7 +5711,7 @@
             this.tabPageBeneficiaryInfo.PerformLayout();
             this.tabPageSPAJEdit.ResumeLayout(false);
             this.tabPageSPAJEdit.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
+            this.tabControlEditSPAJ.ResumeLayout(false);
             this.tabPageEditInsInfo.ResumeLayout(false);
             this.tabPageEditInsInfo.PerformLayout();
             this.tabPageEditPolisInfo.ResumeLayout(false);
@@ -5925,7 +5949,7 @@
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.ComboBox comboBoxSPAJEditType;
         private System.Windows.Forms.TextBox textBoxEditPruFlyerNum;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabControlEditSPAJ;
         private System.Windows.Forms.TabPage tabPageEditInsInfo;
         private System.Windows.Forms.Button buttonInsInfoEdit;
         private System.Windows.Forms.Button buttonSPAJEditInsrClear;
@@ -5975,7 +5999,6 @@
         private System.Windows.Forms.RadioButton radioButtonSPAJEditSpouseSmoke;
         private System.Windows.Forms.TextBox textBoxSPAJEditSpouseWeight;
         private System.Windows.Forms.TextBox textBoxSPAJEditSpouseHeight;
-        private System.Windows.Forms.TextBox textBox1SPAJEditSpouseName;
         private System.Windows.Forms.Label label65;
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.Label label67;
@@ -6173,5 +6196,6 @@
         private System.Windows.Forms.TextBox textBoxSPAJPengajuanPruHosp;
         private System.Windows.Forms.TextBox textBoxSPAJPengajuanBasic;
         private System.Windows.Forms.Label label161;
+        private System.Windows.Forms.TextBox textBox1SPAJEditSpouseName;
     }
 }
