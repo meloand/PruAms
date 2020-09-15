@@ -8,16 +8,11 @@ namespace PruAmsForm
 {
     class BeneficiaryForm
     {
-       public string BeneficiaryFName1
-        { get; set; }
-       public string BeneficiaryLName1
-        { get; set; }
-       public string BeneficiaryDOB1
-        { get; set;  }
-       public string BeneficiaryRs1
-        { get; set; } 
-       public string BeneficiaryDetail1
-        { get; set; }
-
-}
+        public Beneficiary Beneficiary1 { get; set; }
+        public Beneficiary Beneficiary2 { get; set; }
+        public Beneficiary Beneficiary3 { get; set; }
+        public Beneficiary Beneficiary4 { get; set; }
+        public Beneficiary Beneficiary5 { get; set; }
+        public Beneficiary Beneficiary6 { get; set; }
+    }
 }

@@ -49,6 +49,7 @@
     <Compile Include="AddressForm.cs" />
     <Compile Include="Agent.cs" />
     <Compile Include="AgentLevelChange.cs" />
+    <Compile Include="Beneficiary.cs" />
     <Compile Include="BeneficiaryForm.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

@@ -247,96 +247,62 @@ namespace PruAmsForm
 
         private void buttonBeneficiaryAccept_Click(object sender, EventArgs e)
         {
-            if(checkBoxSPAJBeneficiary1.Checked == true)
+            BeneficiaryForm beneficiaryForm = new BeneficiaryForm();
+            if (checkBoxSPAJBeneficiary1.Checked)
             {
-              textBoxSPAJBeneficiaryFName1.Enabled = true;
-              textBoxSPAJBeneficiaryLName1.Enabled = true;
-              dateTimeSPAJBeneficiary1.Enabled = true;
-              comboBoxSPAJBeneficiaryRs1.Enabled = true;
+                string BeneficiaryFName1 = textBoxSPAJBeneficiaryFName1.Text;
+                string BeneficiaryLName1 = textBoxSPAJBeneficiaryLName1.Text;
+                string BeneficiaryDOB1 = dateTimeSPAJBeneficiary1.Text;
+                string BeneficiaryRs1 = comboBoxSPAJBeneficiaryRs1.Text;
+                string BeneficiaryDetail1 = textBoxSPAJBeneficiaryDetail1.Text;
+                beneficiaryForm.Beneficiary1 = new Beneficiary(BeneficiaryFName1, BeneficiaryLName1, BeneficiaryDOB1, BeneficiaryRs1, BeneficiaryDetail1);
             }
-            string BeneficiaryFName1 = textBoxSPAJBeneficiaryFName1.Text;
-            string BeneficiaryLName1 = textBoxSPAJBeneficiaryLName1.Text;
-            string BeneficiaryDOB1 = dateTimeSPAJBeneficiary1.Text;
-            string BeneficiaryRs1 = comboBoxSPAJBeneficiaryRs1.Text;
-            if (BeneficiaryRs1 == "Other")
-            { comboBoxSPAJBeneficiaryRs1.Enabled = true; }
-            string BeneficiaryDetail1 = textBoxSPAJBeneficiaryDetail1.Text;
 
-            if (checkBoxSPAJBeneficiary2.Checked == true)
+            if (checkBoxSPAJBeneficiary2.Checked)
             {
-                textBoxSPAJBeneficiaryFName2.Enabled = true;
-                textBoxSPAJBeneficiaryLName2.Enabled = true;
-                dateTimeSPAJBeneficiary2.Enabled = true;
-                comboBoxSPAJBeneficiaryRs2.Enabled = true;
+                string BeneficiaryFName2 = textBoxSPAJBeneficiaryFName2.Text;
+                string BeneficiaryLName2 = textBoxSPAJBeneficiaryLName2.Text;
+                string BeneficiaryDOB2 = dateTimeSPAJBeneficiary2.Text;
+                string BeneficiaryRs2 = comboBoxSPAJBeneficiaryRs2.Text;
+                string BeneficiaryDetail2 = textBoxSPAJBeneficiaryDetail2.Text;
+                beneficiaryForm.Beneficiary2 = new Beneficiary(BeneficiaryFName2, BeneficiaryLName2, BeneficiaryDOB2, BeneficiaryRs2, BeneficiaryDetail2);
             }
-            string BeneficiaryFName2 = textBoxSPAJBeneficiaryFName2.Text;
-            string BeneficiaryLName2 = textBoxSPAJBeneficiaryLName2.Text;
-            string BeneficiaryDOB2 = dateTimeSPAJBeneficiary2.Text;
-            string BeneficiaryRs2 = comboBoxSPAJBeneficiaryRs2.Text;
-            if (BeneficiaryRs2 == "Other")
-            { comboBoxSPAJBeneficiaryRs2.Enabled = true; }
-            string BeneficiaryDetail2 = textBoxSPAJBeneficiaryDetail2.Text;
-
-            if (checkBoxSPAJBeneficiary3.Checked == true)
+            if (checkBoxSPAJBeneficiary3.Checked)
             {
-                textBoxSPAJBeneficiaryFName3.Enabled = true;
-                textBoxSPAJBeneficiaryLName3.Enabled = true;
-                dateTimeSPAJBeneficiary3.Enabled = true;
-                comboBoxSPAJBeneficiaryRs3.Enabled = true;
+                string BeneficiaryFName3 = textBoxSPAJBeneficiaryFName3.Text;
+                string BeneficiaryLName3 = textBoxSPAJBeneficiaryLName3.Text;
+                string BeneficiaryDOB3 = dateTimeSPAJBeneficiary3.Text;
+                string BeneficiaryRs3 = comboBoxSPAJBeneficiaryRs3.Text;
+                string BeneficiaryDetail3 = textBoxSPAJBeneficiaryDetail3.Text;
+                beneficiaryForm.Beneficiary3 = new Beneficiary(BeneficiaryFName3, BeneficiaryLName3, BeneficiaryDOB3, BeneficiaryRs3, BeneficiaryDetail3);
             }
-            string BeneficiaryFName3 = textBoxSPAJBeneficiaryFName3.Text;
-            string BeneficiaryLName3 = textBoxSPAJBeneficiaryLName3.Text;
-            string BeneficiaryDOB3 = dateTimeSPAJBeneficiary3.Text;
-            string BeneficiaryRs3 = comboBoxSPAJBeneficiaryRs3.Text;
-            if (BeneficiaryRs3 == "Other")
-            { comboBoxSPAJBeneficiaryRs3.Enabled = true; }
-            string BeneficiaryDetail3 = textBoxSPAJBeneficiaryDetail3.Text;
-
-            if (checkBoxSPAJBeneficiary4.Checked == true)
+            if (checkBoxSPAJBeneficiary4.Checked)
             {
-                textBoxSPAJBeneficiaryFName4.Enabled = true;
-                textBoxSPAJBeneficiaryLName4.Enabled = true;
-                dateTimeSPAJBeneficiary4.Enabled = true;
-                comboBoxSPAJBeneficiaryRs4.Enabled = true;
+                string BeneficiaryFName4 = textBoxSPAJBeneficiaryFName4.Text;
+                string BeneficiaryLName4 = textBoxSPAJBeneficiaryLName4.Text;
+                string BeneficiaryDOB4 = dateTimeSPAJBeneficiary4.Text;
+                string BeneficiaryRs4 = comboBoxSPAJBeneficiaryRs4.Text;
+                string BeneficiaryDetail4 = textBoxSPAJBeneficiaryDetail4.Text;
+                beneficiaryForm.Beneficiary4 = new Beneficiary(BeneficiaryFName4, BeneficiaryLName4, BeneficiaryDOB4, BeneficiaryRs4, BeneficiaryDetail4);
             }
-            string BeneficiaryFName4 = textBoxSPAJBeneficiaryFName4.Text;
-            string BeneficiaryLName4 = textBoxSPAJBeneficiaryLName4.Text;
-            string BeneficiaryDOB4 = dateTimeSPAJBeneficiary4.Text;
-            string BeneficiaryRs4 = comboBoxSPAJBeneficiaryRs4.Text;
-            if (BeneficiaryRs4 == "Other")
-            { comboBoxSPAJBeneficiaryRs4.Enabled = true; }
-            string BeneficiaryDetail4 = textBoxSPAJBeneficiaryDetail4.Text;
-
-            if (checkBoxSPAJBeneficiary5.Checked == true)
+            if (checkBoxSPAJBeneficiary5.Checked)
             {
-                textBoxSPAJBeneficiaryFName5.Enabled = true;
-                textBoxSPAJBeneficiaryLName5.Enabled = true;
-                dateTimeSPAJBeneficiary5.Enabled = true;
-                comboBoxSPAJBeneficiaryRs5.Enabled = true;
+                string BeneficiaryFName5 = textBoxSPAJBeneficiaryFName5.Text;
+                string BeneficiaryLName5 = textBoxSPAJBeneficiaryLName5.Text;
+                string BeneficiaryDOB5 = dateTimeSPAJBeneficiary5.Text;
+                string BeneficiaryRs5 = comboBoxSPAJBeneficiaryRs5.Text;
+                string BeneficiaryDetail5 = textBoxSPAJBeneficiaryDetail5.Text;
+                beneficiaryForm.Beneficiary5 = new Beneficiary(BeneficiaryFName5, BeneficiaryLName5, BeneficiaryDOB5, BeneficiaryRs5, BeneficiaryDetail5);
             }
-            string BeneficiaryFName5 = textBoxSPAJBeneficiaryFName5.Text;
-            string BeneficiaryLName5 = textBoxSPAJBeneficiaryLName5.Text;
-            string BeneficiaryDOB5 = dateTimeSPAJBeneficiary5.Text;
-            string BeneficiaryRs5 = comboBoxSPAJBeneficiaryRs5.Text;
-            if (BeneficiaryRs5 == "Other")
-            { comboBoxSPAJBeneficiaryRs5.Enabled = true; }
-            string BeneficiaryDetail5 = textBoxSPAJBeneficiaryDetail5.Text;
-
-            if (checkBoxSPAJBeneficiary6.Checked == true)
+            if (checkBoxSPAJBeneficiary6.Checked)
             {
-                textBoxSPAJBeneficiaryFName6.Enabled = true;
-                textBoxSPAJBeneficiaryLName6.Enabled = true;
-                dateTimeSPAJBeneficiary6.Enabled = true;
-                comboBoxSPAJBeneficiaryRs6.Enabled = true;
+                string BeneficiaryFName6 = textBoxSPAJBeneficiaryFName6.Text;
+                string BeneficiaryLName6 = textBoxSPAJBeneficiaryLName6.Text;
+                string BeneficiaryDOB6 = dateTimeSPAJBeneficiary6.Text;
+                string BeneficiaryRs6 = comboBoxSPAJBeneficiaryRs6.Text;
+                string BeneficiaryDetail6 = textBoxSPAJBeneficiaryDetail6.Text;
+                beneficiaryForm.Beneficiary6 = new Beneficiary(BeneficiaryFName6, BeneficiaryLName6, BeneficiaryDOB6, BeneficiaryRs6, BeneficiaryDetail6);
             }
-            string BeneficiaryFName6 = textBoxSPAJBeneficiaryFName6.Text;
-            string BeneficiaryLName6 = textBoxSPAJBeneficiaryLName6.Text;
-            string BeneficiaryDOB6 = dateTimeSPAJBeneficiary6.Text;
-            string BeneficiaryRs6 = comboBoxSPAJBeneficiaryRs6.Text;
-            if (BeneficiaryRs6 == "Other")
-            { comboBoxSPAJBeneficiaryRs6.Enabled = true; }
-            string BeneficiaryDetail6 = textBoxSPAJBeneficiaryDetail6.Text;
-
 
 
             buttonSPAJNewCreate.Enabled = true; 
@@ -374,6 +340,84 @@ namespace PruAmsForm
             { return 2;  } 
             else // yearly 
             { return 1; }
+        }
+
+        private void checkBoxSPAJBeneficiary1_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxSPAJBeneficiaryFName1.Enabled = checkBoxSPAJBeneficiary1.Checked;
+            textBoxSPAJBeneficiaryLName1.Enabled = checkBoxSPAJBeneficiary1.Checked;
+            dateTimeSPAJBeneficiary1.Enabled = checkBoxSPAJBeneficiary1.Checked;
+            comboBoxSPAJBeneficiaryRs1.Enabled = checkBoxSPAJBeneficiary1.Checked;
+        }
+
+        private void checkBoxSPAJBeneficiary2_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxSPAJBeneficiaryFName2.Enabled = checkBoxSPAJBeneficiary2.Checked;
+            textBoxSPAJBeneficiaryLName2.Enabled = checkBoxSPAJBeneficiary2.Checked;
+            dateTimeSPAJBeneficiary2.Enabled = checkBoxSPAJBeneficiary2.Checked;
+            comboBoxSPAJBeneficiaryRs2.Enabled = checkBoxSPAJBeneficiary2.Checked;
+        }
+
+        private void checkBoxSPAJBeneficiary3_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxSPAJBeneficiaryFName3.Enabled = checkBoxSPAJBeneficiary3.Checked;
+            textBoxSPAJBeneficiaryLName3.Enabled = checkBoxSPAJBeneficiary3.Checked;
+            dateTimeSPAJBeneficiary3.Enabled = checkBoxSPAJBeneficiary3.Checked;
+            comboBoxSPAJBeneficiaryRs3.Enabled = checkBoxSPAJBeneficiary3.Checked;
+        }
+
+        private void checkBoxSPAJBeneficiary4_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxSPAJBeneficiaryFName4.Enabled = checkBoxSPAJBeneficiary4.Checked;
+            textBoxSPAJBeneficiaryLName4.Enabled = checkBoxSPAJBeneficiary4.Checked;
+            dateTimeSPAJBeneficiary4.Enabled = checkBoxSPAJBeneficiary4.Checked;
+            comboBoxSPAJBeneficiaryRs4.Enabled = checkBoxSPAJBeneficiary4.Checked;
+        }
+
+        private void checkBoxSPAJBeneficiary5_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxSPAJBeneficiaryFName5.Enabled = checkBoxSPAJBeneficiary5.Checked;
+            textBoxSPAJBeneficiaryLName5.Enabled = checkBoxSPAJBeneficiary5.Checked;
+            dateTimeSPAJBeneficiary5.Enabled = checkBoxSPAJBeneficiary5.Checked;
+            comboBoxSPAJBeneficiaryRs5.Enabled = checkBoxSPAJBeneficiary5.Checked;
+        }
+
+        private void checkBoxSPAJBeneficiary6_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxSPAJBeneficiaryFName6.Enabled = checkBoxSPAJBeneficiary6.Checked;
+            textBoxSPAJBeneficiaryLName6.Enabled = checkBoxSPAJBeneficiary6.Checked;
+            dateTimeSPAJBeneficiary6.Enabled = checkBoxSPAJBeneficiary6.Checked;
+            comboBoxSPAJBeneficiaryRs6.Enabled = checkBoxSPAJBeneficiary6.Checked;
+        }
+
+        private void comboBoxSPAJBeneficiaryRs1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            textBoxSPAJBeneficiaryDetail1.Enabled = comboBoxSPAJBeneficiaryRs1.Text == "Other";
+        }
+
+        private void comboBoxSPAJBeneficiaryRs2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBoxSPAJBeneficiaryDetail2.Enabled = comboBoxSPAJBeneficiaryRs2.Text == "Other";
+        }
+
+        private void comboBoxSPAJBeneficiaryRs3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBoxSPAJBeneficiaryDetail3.Enabled = comboBoxSPAJBeneficiaryRs3.Text == "Other";
+        }
+
+        private void comboBoxSPAJBeneficiaryRs4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBoxSPAJBeneficiaryDetail4.Enabled = comboBoxSPAJBeneficiaryRs4.Text == "Other";
+        }
+
+        private void comboBoxSPAJBeneficiaryRs5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBoxSPAJBeneficiaryDetail5.Enabled = comboBoxSPAJBeneficiaryRs5.Text == "Other";
+        }
+
+        private void comboBoxSPAJBeneficiaryRs6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBoxSPAJBeneficiaryDetail6.Enabled = comboBoxSPAJBeneficiaryRs6.Text == "Other";
         }
     }
 }

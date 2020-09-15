@@ -521,7 +521,7 @@
             this.tabControlSPAJ.Controls.Add(this.tabPageSPAJEdit);
             this.tabControlSPAJ.Controls.Add(this.tabPageSPAJDelete);
             this.tabControlSPAJ.Location = new System.Drawing.Point(1, 34);
-            this.tabControlSPAJ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControlSPAJ.Margin = new System.Windows.Forms.Padding(2);
             this.tabControlSPAJ.Name = "tabControlSPAJ";
             this.tabControlSPAJ.SelectedIndex = 0;
             this.tabControlSPAJ.Size = new System.Drawing.Size(752, 377);
@@ -552,10 +552,10 @@
             this.tabPageSPAJUpdate.Controls.Add(this.label140);
             this.tabPageSPAJUpdate.Controls.Add(this.label50);
             this.tabPageSPAJUpdate.Location = new System.Drawing.Point(4, 22);
-            this.tabPageSPAJUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageSPAJUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageSPAJUpdate.Name = "tabPageSPAJUpdate";
-            this.tabPageSPAJUpdate.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPageSPAJUpdate.Size = new System.Drawing.Size(745, 351);
+            this.tabPageSPAJUpdate.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPageSPAJUpdate.Size = new System.Drawing.Size(744, 351);
             this.tabPageSPAJUpdate.TabIndex = 1;
             this.tabPageSPAJUpdate.Text = "Update Status";
             this.tabPageSPAJUpdate.UseVisualStyleBackColor = true;
@@ -563,7 +563,7 @@
             // buttonSPAJUpdateLoad
             // 
             this.buttonSPAJUpdateLoad.Location = new System.Drawing.Point(262, 48);
-            this.buttonSPAJUpdateLoad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSPAJUpdateLoad.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSPAJUpdateLoad.Name = "buttonSPAJUpdateLoad";
             this.buttonSPAJUpdateLoad.Size = new System.Drawing.Size(60, 23);
             this.buttonSPAJUpdateLoad.TabIndex = 30;
@@ -577,7 +577,7 @@
             "SPAJ",
             "Polis"});
             this.comboBoxSPAJUpdateType.Location = new System.Drawing.Point(85, 52);
-            this.comboBoxSPAJUpdateType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJUpdateType.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJUpdateType.Name = "comboBoxSPAJUpdateType";
             this.comboBoxSPAJUpdateType.Size = new System.Drawing.Size(65, 21);
             this.comboBoxSPAJUpdateType.TabIndex = 29;
@@ -585,7 +585,7 @@
             // buttonSPAJUpdateClear
             // 
             this.buttonSPAJUpdateClear.Location = new System.Drawing.Point(154, 310);
-            this.buttonSPAJUpdateClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSPAJUpdateClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSPAJUpdateClear.Name = "buttonSPAJUpdateClear";
             this.buttonSPAJUpdateClear.Size = new System.Drawing.Size(60, 23);
             this.buttonSPAJUpdateClear.TabIndex = 28;
@@ -595,7 +595,7 @@
             // buttonSPAJUpdateUpdate
             // 
             this.buttonSPAJUpdateUpdate.Location = new System.Drawing.Point(252, 310);
-            this.buttonSPAJUpdateUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSPAJUpdateUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSPAJUpdateUpdate.Name = "buttonSPAJUpdateUpdate";
             this.buttonSPAJUpdateUpdate.Size = new System.Drawing.Size(60, 23);
             this.buttonSPAJUpdateUpdate.TabIndex = 27;
@@ -611,7 +611,7 @@
             "Pending",
             "Surrender"});
             this.comboBoxSPAJUpdateStatus.Location = new System.Drawing.Point(154, 147);
-            this.comboBoxSPAJUpdateStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJUpdateStatus.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJUpdateStatus.Name = "comboBoxSPAJUpdateStatus";
             this.comboBoxSPAJUpdateStatus.Size = new System.Drawing.Size(97, 21);
             this.comboBoxSPAJUpdateStatus.TabIndex = 26;
@@ -620,7 +620,7 @@
             // 
             this.dateTimeSPAJUpdateInforce.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeSPAJUpdateInforce.Location = new System.Drawing.Point(154, 172);
-            this.dateTimeSPAJUpdateInforce.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimeSPAJUpdateInforce.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeSPAJUpdateInforce.Name = "dateTimeSPAJUpdateInforce";
             this.dateTimeSPAJUpdateInforce.Size = new System.Drawing.Size(97, 20);
             this.dateTimeSPAJUpdateInforce.TabIndex = 25;
@@ -628,7 +628,7 @@
             // textBoxSPAJUpdateInsDOB
             // 
             this.textBoxSPAJUpdateInsDOB.Location = new System.Drawing.Point(154, 114);
-            this.textBoxSPAJUpdateInsDOB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJUpdateInsDOB.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJUpdateInsDOB.Name = "textBoxSPAJUpdateInsDOB";
             this.textBoxSPAJUpdateInsDOB.Size = new System.Drawing.Size(133, 20);
             this.textBoxSPAJUpdateInsDOB.TabIndex = 24;
@@ -636,7 +636,7 @@
             // textBoxSPAJUpdateInfo
             // 
             this.textBoxSPAJUpdateInfo.Location = new System.Drawing.Point(154, 218);
-            this.textBoxSPAJUpdateInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJUpdateInfo.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJUpdateInfo.Multiline = true;
             this.textBoxSPAJUpdateInfo.Name = "textBoxSPAJUpdateInfo";
             this.textBoxSPAJUpdateInfo.Size = new System.Drawing.Size(169, 82);
@@ -645,7 +645,7 @@
             // textBoxSPAJUpdatePolisNum
             // 
             this.textBoxSPAJUpdatePolisNum.Location = new System.Drawing.Point(154, 197);
-            this.textBoxSPAJUpdatePolisNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJUpdatePolisNum.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJUpdatePolisNum.Name = "textBoxSPAJUpdatePolisNum";
             this.textBoxSPAJUpdatePolisNum.Size = new System.Drawing.Size(97, 20);
             this.textBoxSPAJUpdatePolisNum.TabIndex = 22;
@@ -653,7 +653,7 @@
             // textBoxSPAJUpdateInsName
             // 
             this.textBoxSPAJUpdateInsName.Location = new System.Drawing.Point(154, 84);
-            this.textBoxSPAJUpdateInsName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJUpdateInsName.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJUpdateInsName.Name = "textBoxSPAJUpdateInsName";
             this.textBoxSPAJUpdateInsName.Size = new System.Drawing.Size(133, 20);
             this.textBoxSPAJUpdateInsName.TabIndex = 21;
@@ -661,7 +661,7 @@
             // textBoxSPAJUpdateNumber
             // 
             this.textBoxSPAJUpdateNumber.Location = new System.Drawing.Point(154, 52);
-            this.textBoxSPAJUpdateNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJUpdateNumber.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJUpdateNumber.Name = "textBoxSPAJUpdateNumber";
             this.textBoxSPAJUpdateNumber.Size = new System.Drawing.Size(97, 20);
             this.textBoxSPAJUpdateNumber.TabIndex = 20;
@@ -670,7 +670,7 @@
             // 
             this.dataGridViewSPAJUpdate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewSPAJUpdate.Location = new System.Drawing.Point(338, 43);
-            this.dataGridViewSPAJUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewSPAJUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewSPAJUpdate.Name = "dataGridViewSPAJUpdate";
             this.dataGridViewSPAJUpdate.RowTemplate.Height = 33;
             this.dataGridViewSPAJUpdate.Size = new System.Drawing.Size(390, 271);
@@ -796,9 +796,9 @@
             this.tabPageSPAJAdd.Controls.Add(this.textBoxSPAJNum);
             this.tabPageSPAJAdd.Controls.Add(this.label79);
             this.tabPageSPAJAdd.Location = new System.Drawing.Point(4, 22);
-            this.tabPageSPAJAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageSPAJAdd.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageSPAJAdd.Name = "tabPageSPAJAdd";
-            this.tabPageSPAJAdd.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageSPAJAdd.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageSPAJAdd.Size = new System.Drawing.Size(744, 351);
             this.tabPageSPAJAdd.TabIndex = 2;
             this.tabPageSPAJAdd.Text = "Add SPAJ";
@@ -808,7 +808,7 @@
             // 
             this.buttonSPAJNewStoreFiles.Enabled = false;
             this.buttonSPAJNewStoreFiles.Location = new System.Drawing.Point(56, 307);
-            this.buttonSPAJNewStoreFiles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSPAJNewStoreFiles.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSPAJNewStoreFiles.Name = "buttonSPAJNewStoreFiles";
             this.buttonSPAJNewStoreFiles.Size = new System.Drawing.Size(96, 20);
             this.buttonSPAJNewStoreFiles.TabIndex = 17;
@@ -819,7 +819,7 @@
             // 
             this.buttonSPAJNewCreate.Enabled = false;
             this.buttonSPAJNewCreate.Location = new System.Drawing.Point(136, 268);
-            this.buttonSPAJNewCreate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSPAJNewCreate.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSPAJNewCreate.Name = "buttonSPAJNewCreate";
             this.buttonSPAJNewCreate.Size = new System.Drawing.Size(54, 20);
             this.buttonSPAJNewCreate.TabIndex = 16;
@@ -830,7 +830,7 @@
             // buttonSPAJNewClear
             // 
             this.buttonSPAJNewClear.Location = new System.Drawing.Point(21, 268);
-            this.buttonSPAJNewClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSPAJNewClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSPAJNewClear.Name = "buttonSPAJNewClear";
             this.buttonSPAJNewClear.Size = new System.Drawing.Size(54, 20);
             this.buttonSPAJNewClear.TabIndex = 15;
@@ -841,7 +841,7 @@
             // 
             this.dateTimeSPAJSubmit.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeSPAJSubmit.Location = new System.Drawing.Point(102, 228);
-            this.dateTimeSPAJSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimeSPAJSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeSPAJSubmit.Name = "dateTimeSPAJSubmit";
             this.dateTimeSPAJSubmit.Size = new System.Drawing.Size(95, 20);
             this.dateTimeSPAJSubmit.TabIndex = 12;
@@ -878,7 +878,7 @@
             "PIA",
             "PIA Syariah"});
             this.comboBoxSPAJInsType.Location = new System.Drawing.Point(102, 89);
-            this.comboBoxSPAJInsType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJInsType.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJInsType.Name = "comboBoxSPAJInsType";
             this.comboBoxSPAJInsType.Size = new System.Drawing.Size(95, 21);
             this.comboBoxSPAJInsType.TabIndex = 13;
@@ -886,7 +886,7 @@
             // textBoxPRUFlyerNum
             // 
             this.textBoxPRUFlyerNum.Location = new System.Drawing.Point(102, 195);
-            this.textBoxPRUFlyerNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPRUFlyerNum.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPRUFlyerNum.Name = "textBoxPRUFlyerNum";
             this.textBoxPRUFlyerNum.Size = new System.Drawing.Size(95, 20);
             this.textBoxPRUFlyerNum.TabIndex = 11;
@@ -901,7 +901,7 @@
             this.tabControlAddSPAJ.Controls.Add(this.tabPagePengajuanInfo);
             this.tabControlAddSPAJ.Controls.Add(this.tabPageBeneficiaryInfo);
             this.tabControlAddSPAJ.Location = new System.Drawing.Point(226, 0);
-            this.tabControlAddSPAJ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControlAddSPAJ.Margin = new System.Windows.Forms.Padding(2);
             this.tabControlAddSPAJ.Name = "tabControlAddSPAJ";
             this.tabControlAddSPAJ.SelectedIndex = 0;
             this.tabControlAddSPAJ.Size = new System.Drawing.Size(526, 352);
@@ -934,9 +934,9 @@
             this.tabPageInsInfo.Controls.Add(this.label87);
             this.tabPageInsInfo.Controls.Add(this.label91);
             this.tabPageInsInfo.Location = new System.Drawing.Point(4, 22);
-            this.tabPageInsInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageInsInfo.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageInsInfo.Name = "tabPageInsInfo";
-            this.tabPageInsInfo.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageInsInfo.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageInsInfo.Size = new System.Drawing.Size(518, 326);
             this.tabPageInsInfo.TabIndex = 1;
             this.tabPageInsInfo.Text = "Insurer Info";
@@ -965,7 +965,7 @@
             // buttonInsInfoAccept
             // 
             this.buttonInsInfoAccept.Location = new System.Drawing.Point(264, 248);
-            this.buttonInsInfoAccept.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonInsInfoAccept.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInsInfoAccept.Name = "buttonInsInfoAccept";
             this.buttonInsInfoAccept.Size = new System.Drawing.Size(72, 24);
             this.buttonInsInfoAccept.TabIndex = 22;
@@ -976,7 +976,7 @@
             // buttonInsInfoClear
             // 
             this.buttonInsInfoClear.Location = new System.Drawing.Point(164, 248);
-            this.buttonInsInfoClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonInsInfoClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInsInfoClear.Name = "buttonInsInfoClear";
             this.buttonInsInfoClear.Size = new System.Drawing.Size(72, 24);
             this.buttonInsInfoClear.TabIndex = 21;
@@ -1202,7 +1202,7 @@
             // buttonPolisHolderAccept
             // 
             this.buttonPolisHolderAccept.Location = new System.Drawing.Point(266, 243);
-            this.buttonPolisHolderAccept.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonPolisHolderAccept.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPolisHolderAccept.Name = "buttonPolisHolderAccept";
             this.buttonPolisHolderAccept.Size = new System.Drawing.Size(60, 25);
             this.buttonPolisHolderAccept.TabIndex = 14;
@@ -1213,7 +1213,7 @@
             // buttonPolisHolderClear
             // 
             this.buttonPolisHolderClear.Location = new System.Drawing.Point(160, 243);
-            this.buttonPolisHolderClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonPolisHolderClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPolisHolderClear.Name = "buttonPolisHolderClear";
             this.buttonPolisHolderClear.Size = new System.Drawing.Size(60, 25);
             this.buttonPolisHolderClear.TabIndex = 13;
@@ -1224,7 +1224,7 @@
             // 
             this.radioButtonSPAJEQIns.AutoSize = true;
             this.radioButtonSPAJEQIns.Location = new System.Drawing.Point(326, 42);
-            this.radioButtonSPAJEQIns.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonSPAJEQIns.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonSPAJEQIns.Name = "radioButtonSPAJEQIns";
             this.radioButtonSPAJEQIns.Size = new System.Drawing.Size(137, 17);
             this.radioButtonSPAJEQIns.TabIndex = 12;
@@ -1367,9 +1367,9 @@
             this.tabPageSpouseInfo.Controls.Add(this.label11);
             this.tabPageSpouseInfo.Controls.Add(this.label12);
             this.tabPageSpouseInfo.Location = new System.Drawing.Point(4, 22);
-            this.tabPageSpouseInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageSpouseInfo.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageSpouseInfo.Name = "tabPageSpouseInfo";
-            this.tabPageSpouseInfo.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageSpouseInfo.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageSpouseInfo.Size = new System.Drawing.Size(518, 326);
             this.tabPageSpouseInfo.TabIndex = 4;
             this.tabPageSpouseInfo.Text = "Spouse/Parent 1 Info";
@@ -1398,7 +1398,7 @@
             // buttonSpouseIgnore
             // 
             this.buttonSpouseIgnore.Location = new System.Drawing.Point(89, 243);
-            this.buttonSpouseIgnore.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSpouseIgnore.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSpouseIgnore.Name = "buttonSpouseIgnore";
             this.buttonSpouseIgnore.Size = new System.Drawing.Size(60, 25);
             this.buttonSpouseIgnore.TabIndex = 25;
@@ -1408,7 +1408,7 @@
             // buttonSpouseAccept
             // 
             this.buttonSpouseAccept.Location = new System.Drawing.Point(298, 243);
-            this.buttonSpouseAccept.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSpouseAccept.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSpouseAccept.Name = "buttonSpouseAccept";
             this.buttonSpouseAccept.Size = new System.Drawing.Size(60, 25);
             this.buttonSpouseAccept.TabIndex = 24;
@@ -1419,7 +1419,7 @@
             // buttonSpouseClear
             // 
             this.buttonSpouseClear.Location = new System.Drawing.Point(190, 243);
-            this.buttonSpouseClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSpouseClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSpouseClear.Name = "buttonSpouseClear";
             this.buttonSpouseClear.Size = new System.Drawing.Size(64, 25);
             this.buttonSpouseClear.TabIndex = 23;
@@ -1623,9 +1623,9 @@
             this.tabPageParentInfo.Controls.Add(this.label20);
             this.tabPageParentInfo.Controls.Add(this.label21);
             this.tabPageParentInfo.Location = new System.Drawing.Point(4, 22);
-            this.tabPageParentInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageParentInfo.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageParentInfo.Name = "tabPageParentInfo";
-            this.tabPageParentInfo.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageParentInfo.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageParentInfo.Size = new System.Drawing.Size(518, 326);
             this.tabPageParentInfo.TabIndex = 6;
             this.tabPageParentInfo.Text = "Parent 2 Info";
@@ -1654,7 +1654,7 @@
             // buttonParentIgnore
             // 
             this.buttonParentIgnore.Location = new System.Drawing.Point(100, 243);
-            this.buttonParentIgnore.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonParentIgnore.Margin = new System.Windows.Forms.Padding(2);
             this.buttonParentIgnore.Name = "buttonParentIgnore";
             this.buttonParentIgnore.Size = new System.Drawing.Size(60, 25);
             this.buttonParentIgnore.TabIndex = 23;
@@ -1664,7 +1664,7 @@
             // buttonParentAccept
             // 
             this.buttonParentAccept.Location = new System.Drawing.Point(300, 243);
-            this.buttonParentAccept.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonParentAccept.Margin = new System.Windows.Forms.Padding(2);
             this.buttonParentAccept.Name = "buttonParentAccept";
             this.buttonParentAccept.Size = new System.Drawing.Size(60, 25);
             this.buttonParentAccept.TabIndex = 22;
@@ -1675,7 +1675,7 @@
             // buttonParentClear
             // 
             this.buttonParentClear.Location = new System.Drawing.Point(201, 243);
-            this.buttonParentClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonParentClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonParentClear.Name = "buttonParentClear";
             this.buttonParentClear.Size = new System.Drawing.Size(60, 25);
             this.buttonParentClear.TabIndex = 21;
@@ -1871,7 +1871,7 @@
             this.tabPageAddressInfo.Controls.Add(this.textBoxSPAJAddrAddress);
             this.tabPageAddressInfo.Controls.Add(this.label22);
             this.tabPageAddressInfo.Location = new System.Drawing.Point(4, 22);
-            this.tabPageAddressInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageAddressInfo.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageAddressInfo.Name = "tabPageAddressInfo";
             this.tabPageAddressInfo.Size = new System.Drawing.Size(518, 326);
             this.tabPageAddressInfo.TabIndex = 5;
@@ -1881,7 +1881,7 @@
             // buttonAddressAccept
             // 
             this.buttonAddressAccept.Location = new System.Drawing.Point(274, 263);
-            this.buttonAddressAccept.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAddressAccept.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAddressAccept.Name = "buttonAddressAccept";
             this.buttonAddressAccept.Size = new System.Drawing.Size(60, 25);
             this.buttonAddressAccept.TabIndex = 17;
@@ -1892,7 +1892,7 @@
             // buttonAddressClear
             // 
             this.buttonAddressClear.Location = new System.Drawing.Point(174, 263);
-            this.buttonAddressClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAddressClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAddressClear.Name = "buttonAddressClear";
             this.buttonAddressClear.Size = new System.Drawing.Size(60, 25);
             this.buttonAddressClear.TabIndex = 16;
@@ -1962,7 +1962,7 @@
             // textBoxSPAJAddrOP
             // 
             this.textBoxSPAJAddrOP.Location = new System.Drawing.Point(212, 211);
-            this.textBoxSPAJAddrOP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJAddrOP.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJAddrOP.Name = "textBoxSPAJAddrOP";
             this.textBoxSPAJAddrOP.Size = new System.Drawing.Size(102, 20);
             this.textBoxSPAJAddrOP.TabIndex = 8;
@@ -1970,7 +1970,7 @@
             // textBoxSPAJAddrHP
             // 
             this.textBoxSPAJAddrHP.Location = new System.Drawing.Point(212, 175);
-            this.textBoxSPAJAddrHP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJAddrHP.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJAddrHP.Name = "textBoxSPAJAddrHP";
             this.textBoxSPAJAddrHP.Size = new System.Drawing.Size(102, 20);
             this.textBoxSPAJAddrHP.TabIndex = 7;
@@ -1978,7 +1978,7 @@
             // textBoxSPAJAddrEmail
             // 
             this.textBoxSPAJAddrEmail.Location = new System.Drawing.Point(212, 144);
-            this.textBoxSPAJAddrEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJAddrEmail.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJAddrEmail.Name = "textBoxSPAJAddrEmail";
             this.textBoxSPAJAddrEmail.Size = new System.Drawing.Size(102, 20);
             this.textBoxSPAJAddrEmail.TabIndex = 6;
@@ -1986,7 +1986,7 @@
             // textBoxSPAJAddrZip
             // 
             this.textBoxSPAJAddrZip.Location = new System.Drawing.Point(211, 114);
-            this.textBoxSPAJAddrZip.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJAddrZip.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJAddrZip.Name = "textBoxSPAJAddrZip";
             this.textBoxSPAJAddrZip.Size = new System.Drawing.Size(102, 20);
             this.textBoxSPAJAddrZip.TabIndex = 5;
@@ -1994,7 +1994,7 @@
             // textBoxSPAJAddrCity
             // 
             this.textBoxSPAJAddrCity.Location = new System.Drawing.Point(211, 82);
-            this.textBoxSPAJAddrCity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJAddrCity.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJAddrCity.Name = "textBoxSPAJAddrCity";
             this.textBoxSPAJAddrCity.Size = new System.Drawing.Size(102, 20);
             this.textBoxSPAJAddrCity.TabIndex = 4;
@@ -2002,7 +2002,7 @@
             // textBoxSPAJAddrAddress
             // 
             this.textBoxSPAJAddrAddress.Location = new System.Drawing.Point(211, 54);
-            this.textBoxSPAJAddrAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJAddrAddress.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJAddrAddress.Name = "textBoxSPAJAddrAddress";
             this.textBoxSPAJAddrAddress.Size = new System.Drawing.Size(102, 20);
             this.textBoxSPAJAddrAddress.TabIndex = 3;
@@ -2067,7 +2067,7 @@
             this.tabPagePengajuanInfo.Controls.Add(this.label30);
             this.tabPagePengajuanInfo.Controls.Add(this.label29);
             this.tabPagePengajuanInfo.Location = new System.Drawing.Point(4, 22);
-            this.tabPagePengajuanInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPagePengajuanInfo.Margin = new System.Windows.Forms.Padding(2);
             this.tabPagePengajuanInfo.Name = "tabPagePengajuanInfo";
             this.tabPagePengajuanInfo.Size = new System.Drawing.Size(518, 326);
             this.tabPagePengajuanInfo.TabIndex = 7;
@@ -2087,7 +2087,7 @@
             // textBoxSPAJPengajuanBasic
             // 
             this.textBoxSPAJPengajuanBasic.Location = new System.Drawing.Point(34, 222);
-            this.textBoxSPAJPengajuanBasic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJPengajuanBasic.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJPengajuanBasic.Name = "textBoxSPAJPengajuanBasic";
             this.textBoxSPAJPengajuanBasic.Size = new System.Drawing.Size(101, 20);
             this.textBoxSPAJPengajuanBasic.TabIndex = 51;
@@ -2095,7 +2095,7 @@
             // textBoxSPAJPengajuanPruPPayor
             // 
             this.textBoxSPAJPengajuanPruPPayor.Location = new System.Drawing.Point(292, 181);
-            this.textBoxSPAJPengajuanPruPPayor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJPengajuanPruPPayor.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJPengajuanPruPPayor.Multiline = true;
             this.textBoxSPAJPengajuanPruPPayor.Name = "textBoxSPAJPengajuanPruPPayor";
             this.textBoxSPAJPengajuanPruPPayor.Size = new System.Drawing.Size(84, 28);
@@ -2104,7 +2104,7 @@
             // textBoxSPAJPengajuanPruMed
             // 
             this.textBoxSPAJPengajuanPruMed.Location = new System.Drawing.Point(292, 152);
-            this.textBoxSPAJPengajuanPruMed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJPengajuanPruMed.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJPengajuanPruMed.Multiline = true;
             this.textBoxSPAJPengajuanPruMed.Name = "textBoxSPAJPengajuanPruMed";
             this.textBoxSPAJPengajuanPruMed.Size = new System.Drawing.Size(84, 28);
@@ -2113,7 +2113,7 @@
             // textBoxSPAJPengajuanPruADD
             // 
             this.textBoxSPAJPengajuanPruADD.Location = new System.Drawing.Point(292, 123);
-            this.textBoxSPAJPengajuanPruADD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJPengajuanPruADD.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJPengajuanPruADD.Multiline = true;
             this.textBoxSPAJPengajuanPruADD.Name = "textBoxSPAJPengajuanPruADD";
             this.textBoxSPAJPengajuanPruADD.Size = new System.Drawing.Size(84, 28);
@@ -2122,7 +2122,7 @@
             // textBoxSPAJPengajuanPruCC
             // 
             this.textBoxSPAJPengajuanPruCC.Location = new System.Drawing.Point(292, 94);
-            this.textBoxSPAJPengajuanPruCC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJPengajuanPruCC.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJPengajuanPruCC.Multiline = true;
             this.textBoxSPAJPengajuanPruCC.Name = "textBoxSPAJPengajuanPruCC";
             this.textBoxSPAJPengajuanPruCC.Size = new System.Drawing.Size(84, 28);
@@ -2131,7 +2131,7 @@
             // textBoxSPAJPengajuanPruPayor
             // 
             this.textBoxSPAJPengajuanPruPayor.Location = new System.Drawing.Point(292, 63);
-            this.textBoxSPAJPengajuanPruPayor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJPengajuanPruPayor.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJPengajuanPruPayor.Multiline = true;
             this.textBoxSPAJPengajuanPruPayor.Name = "textBoxSPAJPengajuanPruPayor";
             this.textBoxSPAJPengajuanPruPayor.Size = new System.Drawing.Size(84, 28);
@@ -2140,7 +2140,7 @@
             // textBoxSPAJPengajuanPruHosp
             // 
             this.textBoxSPAJPengajuanPruHosp.Location = new System.Drawing.Point(386, 37);
-            this.textBoxSPAJPengajuanPruHosp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJPengajuanPruHosp.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJPengajuanPruHosp.Name = "textBoxSPAJPengajuanPruHosp";
             this.textBoxSPAJPengajuanPruHosp.Size = new System.Drawing.Size(100, 20);
             this.textBoxSPAJPengajuanPruHosp.TabIndex = 45;
@@ -2160,7 +2160,7 @@
             // buttonPengajuanAccept
             // 
             this.buttonPengajuanAccept.Location = new System.Drawing.Point(164, 281);
-            this.buttonPengajuanAccept.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonPengajuanAccept.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPengajuanAccept.Name = "buttonPengajuanAccept";
             this.buttonPengajuanAccept.Size = new System.Drawing.Size(60, 25);
             this.buttonPengajuanAccept.TabIndex = 43;
@@ -2171,7 +2171,7 @@
             // buttonPengajuanClear
             // 
             this.buttonPengajuanClear.Location = new System.Drawing.Point(34, 281);
-            this.buttonPengajuanClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonPengajuanClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPengajuanClear.Name = "buttonPengajuanClear";
             this.buttonPengajuanClear.Size = new System.Drawing.Size(60, 25);
             this.buttonPengajuanClear.TabIndex = 42;
@@ -2181,7 +2181,7 @@
             // textBoxSPAJPengajuanPremiTotal
             // 
             this.textBoxSPAJPengajuanPremiTotal.Location = new System.Drawing.Point(386, 281);
-            this.textBoxSPAJPengajuanPremiTotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJPengajuanPremiTotal.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJPengajuanPremiTotal.Name = "textBoxSPAJPengajuanPremiTotal";
             this.textBoxSPAJPengajuanPremiTotal.Size = new System.Drawing.Size(100, 20);
             this.textBoxSPAJPengajuanPremiTotal.TabIndex = 41;
@@ -2222,7 +2222,7 @@
             // textBoxSPAJPengajuanPruSaver
             // 
             this.textBoxSPAJPengajuanPruSaver.Location = new System.Drawing.Point(386, 252);
-            this.textBoxSPAJPengajuanPruSaver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJPengajuanPruSaver.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJPengajuanPruSaver.Name = "textBoxSPAJPengajuanPruSaver";
             this.textBoxSPAJPengajuanPruSaver.Size = new System.Drawing.Size(100, 20);
             this.textBoxSPAJPengajuanPruSaver.TabIndex = 37;
@@ -2230,7 +2230,7 @@
             // textBoxSPAJPengajuanPremi
             // 
             this.textBoxSPAJPengajuanPremi.Location = new System.Drawing.Point(386, 220);
-            this.textBoxSPAJPengajuanPremi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJPengajuanPremi.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJPengajuanPremi.Name = "textBoxSPAJPengajuanPremi";
             this.textBoxSPAJPengajuanPremi.Size = new System.Drawing.Size(100, 20);
             this.textBoxSPAJPengajuanPremi.TabIndex = 36;
@@ -2238,7 +2238,7 @@
             // textBoxSPAJPengajuanPrtanggung
             // 
             this.textBoxSPAJPengajuanPrtanggung.Location = new System.Drawing.Point(155, 222);
-            this.textBoxSPAJPengajuanPrtanggung.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJPengajuanPrtanggung.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJPengajuanPrtanggung.Name = "textBoxSPAJPengajuanPrtanggung";
             this.textBoxSPAJPengajuanPrtanggung.Size = new System.Drawing.Size(106, 20);
             this.textBoxSPAJPengajuanPrtanggung.TabIndex = 35;
@@ -2248,7 +2248,7 @@
             // 
             this.textBoxSPAJPengajuanExchange.Enabled = false;
             this.textBoxSPAJPengajuanExchange.Location = new System.Drawing.Point(154, 175);
-            this.textBoxSPAJPengajuanExchange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJPengajuanExchange.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJPengajuanExchange.Name = "textBoxSPAJPengajuanExchange";
             this.textBoxSPAJPengajuanExchange.Size = new System.Drawing.Size(108, 20);
             this.textBoxSPAJPengajuanExchange.TabIndex = 34;
@@ -2258,7 +2258,7 @@
             // 
             this.textBoxSPAJPengajuanExpDate.Enabled = false;
             this.textBoxSPAJPengajuanExpDate.Location = new System.Drawing.Point(155, 118);
-            this.textBoxSPAJPengajuanExpDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJPengajuanExpDate.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJPengajuanExpDate.Name = "textBoxSPAJPengajuanExpDate";
             this.textBoxSPAJPengajuanExpDate.Size = new System.Drawing.Size(106, 20);
             this.textBoxSPAJPengajuanExpDate.TabIndex = 33;
@@ -2267,7 +2267,7 @@
             // 
             this.textBoxSPAJPengajuanCCBank.Enabled = false;
             this.textBoxSPAJPengajuanCCBank.Location = new System.Drawing.Point(155, 99);
-            this.textBoxSPAJPengajuanCCBank.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJPengajuanCCBank.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJPengajuanCCBank.Name = "textBoxSPAJPengajuanCCBank";
             this.textBoxSPAJPengajuanCCBank.Size = new System.Drawing.Size(106, 20);
             this.textBoxSPAJPengajuanCCBank.TabIndex = 32;
@@ -2276,7 +2276,7 @@
             // 
             this.textBoxSPAJPengajuanPruPPayorAmnt.Enabled = false;
             this.textBoxSPAJPengajuanPruPPayorAmnt.Location = new System.Drawing.Point(386, 181);
-            this.textBoxSPAJPengajuanPruPPayorAmnt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJPengajuanPruPPayorAmnt.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJPengajuanPruPPayorAmnt.Name = "textBoxSPAJPengajuanPruPPayorAmnt";
             this.textBoxSPAJPengajuanPruPPayorAmnt.Size = new System.Drawing.Size(100, 20);
             this.textBoxSPAJPengajuanPruPPayorAmnt.TabIndex = 31;
@@ -2286,7 +2286,7 @@
             // 
             this.textBoxSPAJPengajuanPruMedAmnt.Enabled = false;
             this.textBoxSPAJPengajuanPruMedAmnt.Location = new System.Drawing.Point(386, 152);
-            this.textBoxSPAJPengajuanPruMedAmnt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJPengajuanPruMedAmnt.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJPengajuanPruMedAmnt.Name = "textBoxSPAJPengajuanPruMedAmnt";
             this.textBoxSPAJPengajuanPruMedAmnt.Size = new System.Drawing.Size(100, 20);
             this.textBoxSPAJPengajuanPruMedAmnt.TabIndex = 30;
@@ -2296,7 +2296,7 @@
             // 
             this.textBoxSPAJPengajuanPruADDAmnt.Enabled = false;
             this.textBoxSPAJPengajuanPruADDAmnt.Location = new System.Drawing.Point(386, 125);
-            this.textBoxSPAJPengajuanPruADDAmnt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJPengajuanPruADDAmnt.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJPengajuanPruADDAmnt.Name = "textBoxSPAJPengajuanPruADDAmnt";
             this.textBoxSPAJPengajuanPruADDAmnt.Size = new System.Drawing.Size(100, 20);
             this.textBoxSPAJPengajuanPruADDAmnt.TabIndex = 29;
@@ -2306,7 +2306,7 @@
             // 
             this.textBoxSPAJPengajuanPruCCAmnt.Enabled = false;
             this.textBoxSPAJPengajuanPruCCAmnt.Location = new System.Drawing.Point(386, 94);
-            this.textBoxSPAJPengajuanPruCCAmnt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJPengajuanPruCCAmnt.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJPengajuanPruCCAmnt.Name = "textBoxSPAJPengajuanPruCCAmnt";
             this.textBoxSPAJPengajuanPruCCAmnt.Size = new System.Drawing.Size(100, 20);
             this.textBoxSPAJPengajuanPruCCAmnt.TabIndex = 28;
@@ -2316,7 +2316,7 @@
             // 
             this.textBoxSPAJPengajuanPruPayorAmnt.Enabled = false;
             this.textBoxSPAJPengajuanPruPayorAmnt.Location = new System.Drawing.Point(386, 66);
-            this.textBoxSPAJPengajuanPruPayorAmnt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJPengajuanPruPayorAmnt.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJPengajuanPruPayorAmnt.Name = "textBoxSPAJPengajuanPruPayorAmnt";
             this.textBoxSPAJPengajuanPruPayorAmnt.Size = new System.Drawing.Size(100, 20);
             this.textBoxSPAJPengajuanPruPayorAmnt.TabIndex = 27;
@@ -2326,7 +2326,7 @@
             // 
             this.checkBoxSPAJPengajuanPruPPayor.AutoSize = true;
             this.checkBoxSPAJPengajuanPruPPayor.Location = new System.Drawing.Point(275, 177);
-            this.checkBoxSPAJPengajuanPruPPayor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxSPAJPengajuanPruPPayor.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSPAJPengajuanPruPPayor.Name = "checkBoxSPAJPengajuanPruPPayor";
             this.checkBoxSPAJPengajuanPruPPayor.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJPengajuanPruPPayor.TabIndex = 22;
@@ -2336,7 +2336,7 @@
             // 
             this.checkBoxSPAJPengajuanPruMed.AutoSize = true;
             this.checkBoxSPAJPengajuanPruMed.Location = new System.Drawing.Point(275, 149);
-            this.checkBoxSPAJPengajuanPruMed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxSPAJPengajuanPruMed.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSPAJPengajuanPruMed.Name = "checkBoxSPAJPengajuanPruMed";
             this.checkBoxSPAJPengajuanPruMed.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJPengajuanPruMed.TabIndex = 21;
@@ -2346,7 +2346,7 @@
             // 
             this.checkBoxSPAJPengajuanADD.AutoSize = true;
             this.checkBoxSPAJPengajuanADD.Location = new System.Drawing.Point(275, 125);
-            this.checkBoxSPAJPengajuanADD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxSPAJPengajuanADD.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSPAJPengajuanADD.Name = "checkBoxSPAJPengajuanADD";
             this.checkBoxSPAJPengajuanADD.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJPengajuanADD.TabIndex = 20;
@@ -2356,7 +2356,7 @@
             // 
             this.checkBoxSPAJPengajuanPruCC.AutoSize = true;
             this.checkBoxSPAJPengajuanPruCC.Location = new System.Drawing.Point(275, 98);
-            this.checkBoxSPAJPengajuanPruCC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxSPAJPengajuanPruCC.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSPAJPengajuanPruCC.Name = "checkBoxSPAJPengajuanPruCC";
             this.checkBoxSPAJPengajuanPruCC.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJPengajuanPruCC.TabIndex = 19;
@@ -2366,7 +2366,7 @@
             // 
             this.checkBoxSPAJPengajuanPruPayor.AutoSize = true;
             this.checkBoxSPAJPengajuanPruPayor.Location = new System.Drawing.Point(275, 69);
-            this.checkBoxSPAJPengajuanPruPayor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxSPAJPengajuanPruPayor.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSPAJPengajuanPruPayor.Name = "checkBoxSPAJPengajuanPruPayor";
             this.checkBoxSPAJPengajuanPruPayor.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJPengajuanPruPayor.TabIndex = 17;
@@ -2376,7 +2376,7 @@
             // 
             this.checkBoxSPAJPengajuanPruHosp.AutoSize = true;
             this.checkBoxSPAJPengajuanPruHosp.Location = new System.Drawing.Point(275, 37);
-            this.checkBoxSPAJPengajuanPruHosp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxSPAJPengajuanPruHosp.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSPAJPengajuanPruHosp.Name = "checkBoxSPAJPengajuanPruHosp";
             this.checkBoxSPAJPengajuanPruHosp.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJPengajuanPruHosp.TabIndex = 16;
@@ -2389,7 +2389,7 @@
             "Rupiah",
             "USD"});
             this.comboBoxSPAJPengajuanCurrency.Location = new System.Drawing.Point(155, 149);
-            this.comboBoxSPAJPengajuanCurrency.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJPengajuanCurrency.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJPengajuanCurrency.Name = "comboBoxSPAJPengajuanCurrency";
             this.comboBoxSPAJPengajuanCurrency.Size = new System.Drawing.Size(106, 21);
             this.comboBoxSPAJPengajuanCurrency.TabIndex = 12;
@@ -2402,7 +2402,7 @@
             "Bank Transfer",
             "Other"});
             this.comboBoxSPAJPengajuanPay.Location = new System.Drawing.Point(154, 75);
-            this.comboBoxSPAJPengajuanPay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJPengajuanPay.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJPengajuanPay.Name = "comboBoxSPAJPengajuanPay";
             this.comboBoxSPAJPengajuanPay.Size = new System.Drawing.Size(106, 21);
             this.comboBoxSPAJPengajuanPay.TabIndex = 11;
@@ -2416,7 +2416,7 @@
             "Quarterly",
             "Monthly"});
             this.comboBoxSPAJPengajuanFreq.Location = new System.Drawing.Point(154, 53);
-            this.comboBoxSPAJPengajuanFreq.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJPengajuanFreq.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJPengajuanFreq.Name = "comboBoxSPAJPengajuanFreq";
             this.comboBoxSPAJPengajuanFreq.Size = new System.Drawing.Size(106, 21);
             this.comboBoxSPAJPengajuanFreq.TabIndex = 10;
@@ -2578,7 +2578,7 @@
             this.tabPageBeneficiaryInfo.Controls.Add(this.label40);
             this.tabPageBeneficiaryInfo.Controls.Add(this.label39);
             this.tabPageBeneficiaryInfo.Location = new System.Drawing.Point(4, 22);
-            this.tabPageBeneficiaryInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageBeneficiaryInfo.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageBeneficiaryInfo.Name = "tabPageBeneficiaryInfo";
             this.tabPageBeneficiaryInfo.Size = new System.Drawing.Size(518, 326);
             this.tabPageBeneficiaryInfo.TabIndex = 8;
@@ -2588,7 +2588,7 @@
             // buttonBeneficiaryAccept
             // 
             this.buttonBeneficiaryAccept.Location = new System.Drawing.Point(274, 284);
-            this.buttonBeneficiaryAccept.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBeneficiaryAccept.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBeneficiaryAccept.Name = "buttonBeneficiaryAccept";
             this.buttonBeneficiaryAccept.Size = new System.Drawing.Size(60, 25);
             this.buttonBeneficiaryAccept.TabIndex = 45;
@@ -2599,7 +2599,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(178, 284);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(60, 25);
             this.button2.TabIndex = 44;
@@ -2618,10 +2618,11 @@
             "Spouse",
             "Other"});
             this.comboBoxSPAJBeneficiaryRs6.Location = new System.Drawing.Point(338, 248);
-            this.comboBoxSPAJBeneficiaryRs6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJBeneficiaryRs6.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJBeneficiaryRs6.Name = "comboBoxSPAJBeneficiaryRs6";
             this.comboBoxSPAJBeneficiaryRs6.Size = new System.Drawing.Size(76, 21);
             this.comboBoxSPAJBeneficiaryRs6.TabIndex = 43;
+            this.comboBoxSPAJBeneficiaryRs6.SelectedIndexChanged += new System.EventHandler(this.comboBoxSPAJBeneficiaryRs6_SelectedIndexChanged);
             // 
             // comboBoxSPAJBeneficiaryRs5
             // 
@@ -2635,10 +2636,11 @@
             "Spouse",
             "Other"});
             this.comboBoxSPAJBeneficiaryRs5.Location = new System.Drawing.Point(338, 210);
-            this.comboBoxSPAJBeneficiaryRs5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJBeneficiaryRs5.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJBeneficiaryRs5.Name = "comboBoxSPAJBeneficiaryRs5";
             this.comboBoxSPAJBeneficiaryRs5.Size = new System.Drawing.Size(76, 21);
             this.comboBoxSPAJBeneficiaryRs5.TabIndex = 42;
+            this.comboBoxSPAJBeneficiaryRs5.SelectedIndexChanged += new System.EventHandler(this.comboBoxSPAJBeneficiaryRs5_SelectedIndexChanged);
             // 
             // comboBoxSPAJBeneficiaryRs4
             // 
@@ -2652,10 +2654,11 @@
             "Spouse",
             "Other"});
             this.comboBoxSPAJBeneficiaryRs4.Location = new System.Drawing.Point(338, 177);
-            this.comboBoxSPAJBeneficiaryRs4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJBeneficiaryRs4.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJBeneficiaryRs4.Name = "comboBoxSPAJBeneficiaryRs4";
             this.comboBoxSPAJBeneficiaryRs4.Size = new System.Drawing.Size(76, 21);
             this.comboBoxSPAJBeneficiaryRs4.TabIndex = 41;
+            this.comboBoxSPAJBeneficiaryRs4.SelectedIndexChanged += new System.EventHandler(this.comboBoxSPAJBeneficiaryRs4_SelectedIndexChanged);
             // 
             // comboBoxSPAJBeneficiaryRs3
             // 
@@ -2669,10 +2672,11 @@
             "Spouse",
             "Other"});
             this.comboBoxSPAJBeneficiaryRs3.Location = new System.Drawing.Point(338, 144);
-            this.comboBoxSPAJBeneficiaryRs3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJBeneficiaryRs3.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJBeneficiaryRs3.Name = "comboBoxSPAJBeneficiaryRs3";
             this.comboBoxSPAJBeneficiaryRs3.Size = new System.Drawing.Size(76, 21);
             this.comboBoxSPAJBeneficiaryRs3.TabIndex = 40;
+            this.comboBoxSPAJBeneficiaryRs3.SelectedIndexChanged += new System.EventHandler(this.comboBoxSPAJBeneficiaryRs3_SelectedIndexChanged);
             // 
             // comboBoxSPAJBeneficiaryRs2
             // 
@@ -2686,10 +2690,11 @@
             "Spouse",
             "Other"});
             this.comboBoxSPAJBeneficiaryRs2.Location = new System.Drawing.Point(338, 106);
-            this.comboBoxSPAJBeneficiaryRs2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJBeneficiaryRs2.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJBeneficiaryRs2.Name = "comboBoxSPAJBeneficiaryRs2";
             this.comboBoxSPAJBeneficiaryRs2.Size = new System.Drawing.Size(76, 21);
             this.comboBoxSPAJBeneficiaryRs2.TabIndex = 39;
+            this.comboBoxSPAJBeneficiaryRs2.SelectedIndexChanged += new System.EventHandler(this.comboBoxSPAJBeneficiaryRs2_SelectedIndexChanged);
             // 
             // comboBoxSPAJBeneficiaryRs1
             // 
@@ -2702,17 +2707,18 @@
             "Spouse",
             "Other"});
             this.comboBoxSPAJBeneficiaryRs1.Location = new System.Drawing.Point(338, 69);
-            this.comboBoxSPAJBeneficiaryRs1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJBeneficiaryRs1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJBeneficiaryRs1.Name = "comboBoxSPAJBeneficiaryRs1";
             this.comboBoxSPAJBeneficiaryRs1.Size = new System.Drawing.Size(76, 21);
             this.comboBoxSPAJBeneficiaryRs1.TabIndex = 38;
+            this.comboBoxSPAJBeneficiaryRs1.SelectedValueChanged += new System.EventHandler(this.comboBoxSPAJBeneficiaryRs1_SelectedValueChanged);
             // 
             // dateTimeSPAJBeneficiary6
             // 
             this.dateTimeSPAJBeneficiary6.Enabled = false;
             this.dateTimeSPAJBeneficiary6.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeSPAJBeneficiary6.Location = new System.Drawing.Point(234, 246);
-            this.dateTimeSPAJBeneficiary6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimeSPAJBeneficiary6.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeSPAJBeneficiary6.Name = "dateTimeSPAJBeneficiary6";
             this.dateTimeSPAJBeneficiary6.Size = new System.Drawing.Size(88, 20);
             this.dateTimeSPAJBeneficiary6.TabIndex = 37;
@@ -2722,7 +2728,7 @@
             this.dateTimeSPAJBeneficiary5.Enabled = false;
             this.dateTimeSPAJBeneficiary5.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeSPAJBeneficiary5.Location = new System.Drawing.Point(234, 211);
-            this.dateTimeSPAJBeneficiary5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimeSPAJBeneficiary5.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeSPAJBeneficiary5.Name = "dateTimeSPAJBeneficiary5";
             this.dateTimeSPAJBeneficiary5.Size = new System.Drawing.Size(88, 20);
             this.dateTimeSPAJBeneficiary5.TabIndex = 36;
@@ -2732,7 +2738,7 @@
             this.dateTimeSPAJBeneficiary4.Enabled = false;
             this.dateTimeSPAJBeneficiary4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeSPAJBeneficiary4.Location = new System.Drawing.Point(234, 177);
-            this.dateTimeSPAJBeneficiary4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimeSPAJBeneficiary4.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeSPAJBeneficiary4.Name = "dateTimeSPAJBeneficiary4";
             this.dateTimeSPAJBeneficiary4.Size = new System.Drawing.Size(88, 20);
             this.dateTimeSPAJBeneficiary4.TabIndex = 35;
@@ -2742,7 +2748,7 @@
             this.dateTimeSPAJBeneficiary3.Enabled = false;
             this.dateTimeSPAJBeneficiary3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeSPAJBeneficiary3.Location = new System.Drawing.Point(234, 145);
-            this.dateTimeSPAJBeneficiary3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimeSPAJBeneficiary3.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeSPAJBeneficiary3.Name = "dateTimeSPAJBeneficiary3";
             this.dateTimeSPAJBeneficiary3.Size = new System.Drawing.Size(88, 20);
             this.dateTimeSPAJBeneficiary3.TabIndex = 34;
@@ -2752,7 +2758,7 @@
             this.dateTimeSPAJBeneficiary2.Enabled = false;
             this.dateTimeSPAJBeneficiary2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeSPAJBeneficiary2.Location = new System.Drawing.Point(234, 107);
-            this.dateTimeSPAJBeneficiary2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimeSPAJBeneficiary2.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeSPAJBeneficiary2.Name = "dateTimeSPAJBeneficiary2";
             this.dateTimeSPAJBeneficiary2.Size = new System.Drawing.Size(88, 20);
             this.dateTimeSPAJBeneficiary2.TabIndex = 33;
@@ -2761,7 +2767,7 @@
             // 
             this.dateTimeSPAJBeneficiary1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeSPAJBeneficiary1.Location = new System.Drawing.Point(234, 67);
-            this.dateTimeSPAJBeneficiary1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimeSPAJBeneficiary1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeSPAJBeneficiary1.Name = "dateTimeSPAJBeneficiary1";
             this.dateTimeSPAJBeneficiary1.Size = new System.Drawing.Size(88, 20);
             this.dateTimeSPAJBeneficiary1.TabIndex = 32;
@@ -2770,7 +2776,7 @@
             // 
             this.textBoxSPAJBeneficiaryDetail6.Enabled = false;
             this.textBoxSPAJBeneficiaryDetail6.Location = new System.Drawing.Point(432, 248);
-            this.textBoxSPAJBeneficiaryDetail6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJBeneficiaryDetail6.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJBeneficiaryDetail6.Name = "textBoxSPAJBeneficiaryDetail6";
             this.textBoxSPAJBeneficiaryDetail6.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJBeneficiaryDetail6.TabIndex = 31;
@@ -2779,7 +2785,7 @@
             // 
             this.textBoxSPAJBeneficiaryDetail5.Enabled = false;
             this.textBoxSPAJBeneficiaryDetail5.Location = new System.Drawing.Point(432, 212);
-            this.textBoxSPAJBeneficiaryDetail5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJBeneficiaryDetail5.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJBeneficiaryDetail5.Name = "textBoxSPAJBeneficiaryDetail5";
             this.textBoxSPAJBeneficiaryDetail5.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJBeneficiaryDetail5.TabIndex = 30;
@@ -2788,7 +2794,7 @@
             // 
             this.textBoxSPAJBeneficiaryDetail4.Enabled = false;
             this.textBoxSPAJBeneficiaryDetail4.Location = new System.Drawing.Point(432, 178);
-            this.textBoxSPAJBeneficiaryDetail4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJBeneficiaryDetail4.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJBeneficiaryDetail4.Name = "textBoxSPAJBeneficiaryDetail4";
             this.textBoxSPAJBeneficiaryDetail4.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJBeneficiaryDetail4.TabIndex = 29;
@@ -2797,7 +2803,7 @@
             // 
             this.textBoxSPAJBeneficiaryDetail3.Enabled = false;
             this.textBoxSPAJBeneficiaryDetail3.Location = new System.Drawing.Point(432, 144);
-            this.textBoxSPAJBeneficiaryDetail3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJBeneficiaryDetail3.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJBeneficiaryDetail3.Name = "textBoxSPAJBeneficiaryDetail3";
             this.textBoxSPAJBeneficiaryDetail3.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJBeneficiaryDetail3.TabIndex = 28;
@@ -2806,7 +2812,7 @@
             // 
             this.textBoxSPAJBeneficiaryLName6.Enabled = false;
             this.textBoxSPAJBeneficiaryLName6.Location = new System.Drawing.Point(142, 246);
-            this.textBoxSPAJBeneficiaryLName6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJBeneficiaryLName6.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJBeneficiaryLName6.Name = "textBoxSPAJBeneficiaryLName6";
             this.textBoxSPAJBeneficiaryLName6.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJBeneficiaryLName6.TabIndex = 27;
@@ -2815,7 +2821,7 @@
             // 
             this.textBoxSPAJBeneficiaryLName5.Enabled = false;
             this.textBoxSPAJBeneficiaryLName5.Location = new System.Drawing.Point(142, 211);
-            this.textBoxSPAJBeneficiaryLName5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJBeneficiaryLName5.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJBeneficiaryLName5.Name = "textBoxSPAJBeneficiaryLName5";
             this.textBoxSPAJBeneficiaryLName5.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJBeneficiaryLName5.TabIndex = 26;
@@ -2824,7 +2830,7 @@
             // 
             this.textBoxSPAJBeneficiaryLName4.Enabled = false;
             this.textBoxSPAJBeneficiaryLName4.Location = new System.Drawing.Point(142, 177);
-            this.textBoxSPAJBeneficiaryLName4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJBeneficiaryLName4.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJBeneficiaryLName4.Name = "textBoxSPAJBeneficiaryLName4";
             this.textBoxSPAJBeneficiaryLName4.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJBeneficiaryLName4.TabIndex = 25;
@@ -2833,7 +2839,7 @@
             // 
             this.textBoxSPAJBeneficiaryLName3.Enabled = false;
             this.textBoxSPAJBeneficiaryLName3.Location = new System.Drawing.Point(142, 145);
-            this.textBoxSPAJBeneficiaryLName3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJBeneficiaryLName3.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJBeneficiaryLName3.Name = "textBoxSPAJBeneficiaryLName3";
             this.textBoxSPAJBeneficiaryLName3.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJBeneficiaryLName3.TabIndex = 24;
@@ -2842,7 +2848,7 @@
             // 
             this.textBoxSPAJBeneficiaryLName2.Enabled = false;
             this.textBoxSPAJBeneficiaryLName2.Location = new System.Drawing.Point(142, 107);
-            this.textBoxSPAJBeneficiaryLName2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJBeneficiaryLName2.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJBeneficiaryLName2.Name = "textBoxSPAJBeneficiaryLName2";
             this.textBoxSPAJBeneficiaryLName2.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJBeneficiaryLName2.TabIndex = 23;
@@ -2851,7 +2857,7 @@
             // 
             this.textBoxSPAJBeneficiaryFName6.Enabled = false;
             this.textBoxSPAJBeneficiaryFName6.Location = new System.Drawing.Point(49, 246);
-            this.textBoxSPAJBeneficiaryFName6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJBeneficiaryFName6.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJBeneficiaryFName6.Name = "textBoxSPAJBeneficiaryFName6";
             this.textBoxSPAJBeneficiaryFName6.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJBeneficiaryFName6.TabIndex = 22;
@@ -2860,7 +2866,7 @@
             // 
             this.textBoxSPAJBeneficiaryFName5.Enabled = false;
             this.textBoxSPAJBeneficiaryFName5.Location = new System.Drawing.Point(49, 208);
-            this.textBoxSPAJBeneficiaryFName5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJBeneficiaryFName5.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJBeneficiaryFName5.Name = "textBoxSPAJBeneficiaryFName5";
             this.textBoxSPAJBeneficiaryFName5.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJBeneficiaryFName5.TabIndex = 21;
@@ -2869,7 +2875,7 @@
             // 
             this.textBoxSPAJBeneficiaryFName4.Enabled = false;
             this.textBoxSPAJBeneficiaryFName4.Location = new System.Drawing.Point(49, 177);
-            this.textBoxSPAJBeneficiaryFName4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJBeneficiaryFName4.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJBeneficiaryFName4.Name = "textBoxSPAJBeneficiaryFName4";
             this.textBoxSPAJBeneficiaryFName4.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJBeneficiaryFName4.TabIndex = 20;
@@ -2878,7 +2884,7 @@
             // 
             this.textBoxSPAJBeneficiaryFName3.Enabled = false;
             this.textBoxSPAJBeneficiaryFName3.Location = new System.Drawing.Point(49, 145);
-            this.textBoxSPAJBeneficiaryFName3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJBeneficiaryFName3.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJBeneficiaryFName3.Name = "textBoxSPAJBeneficiaryFName3";
             this.textBoxSPAJBeneficiaryFName3.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJBeneficiaryFName3.TabIndex = 19;
@@ -2887,56 +2893,62 @@
             // 
             this.checkBoxSPAJBeneficiary6.AutoSize = true;
             this.checkBoxSPAJBeneficiary6.Location = new System.Drawing.Point(23, 248);
-            this.checkBoxSPAJBeneficiary6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxSPAJBeneficiary6.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSPAJBeneficiary6.Name = "checkBoxSPAJBeneficiary6";
             this.checkBoxSPAJBeneficiary6.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJBeneficiary6.TabIndex = 18;
             this.checkBoxSPAJBeneficiary6.UseVisualStyleBackColor = true;
+            this.checkBoxSPAJBeneficiary6.CheckedChanged += new System.EventHandler(this.checkBoxSPAJBeneficiary6_CheckedChanged);
             // 
             // checkBoxSPAJBeneficiary5
             // 
             this.checkBoxSPAJBeneficiary5.AutoSize = true;
             this.checkBoxSPAJBeneficiary5.Location = new System.Drawing.Point(23, 211);
-            this.checkBoxSPAJBeneficiary5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxSPAJBeneficiary5.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSPAJBeneficiary5.Name = "checkBoxSPAJBeneficiary5";
             this.checkBoxSPAJBeneficiary5.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJBeneficiary5.TabIndex = 17;
             this.checkBoxSPAJBeneficiary5.UseVisualStyleBackColor = true;
+            this.checkBoxSPAJBeneficiary5.CheckedChanged += new System.EventHandler(this.checkBoxSPAJBeneficiary5_CheckedChanged);
             // 
             // checkBoxSPAJBeneficiary4
             // 
             this.checkBoxSPAJBeneficiary4.AutoSize = true;
             this.checkBoxSPAJBeneficiary4.Location = new System.Drawing.Point(23, 177);
-            this.checkBoxSPAJBeneficiary4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxSPAJBeneficiary4.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSPAJBeneficiary4.Name = "checkBoxSPAJBeneficiary4";
             this.checkBoxSPAJBeneficiary4.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJBeneficiary4.TabIndex = 16;
             this.checkBoxSPAJBeneficiary4.UseVisualStyleBackColor = true;
+            this.checkBoxSPAJBeneficiary4.CheckedChanged += new System.EventHandler(this.checkBoxSPAJBeneficiary4_CheckedChanged);
             // 
             // checkBoxSPAJBeneficiary3
             // 
             this.checkBoxSPAJBeneficiary3.AutoSize = true;
             this.checkBoxSPAJBeneficiary3.Location = new System.Drawing.Point(23, 145);
-            this.checkBoxSPAJBeneficiary3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxSPAJBeneficiary3.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSPAJBeneficiary3.Name = "checkBoxSPAJBeneficiary3";
             this.checkBoxSPAJBeneficiary3.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJBeneficiary3.TabIndex = 15;
             this.checkBoxSPAJBeneficiary3.UseVisualStyleBackColor = true;
+            this.checkBoxSPAJBeneficiary3.CheckedChanged += new System.EventHandler(this.checkBoxSPAJBeneficiary3_CheckedChanged);
             // 
             // checkBoxSPAJBeneficiary2
             // 
             this.checkBoxSPAJBeneficiary2.AutoSize = true;
             this.checkBoxSPAJBeneficiary2.Location = new System.Drawing.Point(23, 106);
-            this.checkBoxSPAJBeneficiary2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxSPAJBeneficiary2.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSPAJBeneficiary2.Name = "checkBoxSPAJBeneficiary2";
             this.checkBoxSPAJBeneficiary2.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJBeneficiary2.TabIndex = 14;
             this.checkBoxSPAJBeneficiary2.UseVisualStyleBackColor = true;
+            this.checkBoxSPAJBeneficiary2.CheckedChanged += new System.EventHandler(this.checkBoxSPAJBeneficiary2_CheckedChanged);
             // 
             // textBoxSPAJBeneficiaryDetail1
             // 
+            this.textBoxSPAJBeneficiaryDetail1.Enabled = false;
             this.textBoxSPAJBeneficiaryDetail1.Location = new System.Drawing.Point(432, 67);
-            this.textBoxSPAJBeneficiaryDetail1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJBeneficiaryDetail1.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJBeneficiaryDetail1.Name = "textBoxSPAJBeneficiaryDetail1";
             this.textBoxSPAJBeneficiaryDetail1.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJBeneficiaryDetail1.TabIndex = 13;
@@ -2945,7 +2957,7 @@
             // 
             this.textBoxSPAJBeneficiaryFName2.Enabled = false;
             this.textBoxSPAJBeneficiaryFName2.Location = new System.Drawing.Point(49, 106);
-            this.textBoxSPAJBeneficiaryFName2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJBeneficiaryFName2.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJBeneficiaryFName2.Name = "textBoxSPAJBeneficiaryFName2";
             this.textBoxSPAJBeneficiaryFName2.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJBeneficiaryFName2.TabIndex = 12;
@@ -2954,7 +2966,7 @@
             // 
             this.textBoxSPAJBeneficiaryDetail2.Enabled = false;
             this.textBoxSPAJBeneficiaryDetail2.Location = new System.Drawing.Point(432, 107);
-            this.textBoxSPAJBeneficiaryDetail2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJBeneficiaryDetail2.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJBeneficiaryDetail2.Name = "textBoxSPAJBeneficiaryDetail2";
             this.textBoxSPAJBeneficiaryDetail2.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJBeneficiaryDetail2.TabIndex = 11;
@@ -2962,7 +2974,7 @@
             // textBoxSPAJBeneficiaryLName1
             // 
             this.textBoxSPAJBeneficiaryLName1.Location = new System.Drawing.Point(142, 67);
-            this.textBoxSPAJBeneficiaryLName1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJBeneficiaryLName1.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJBeneficiaryLName1.Name = "textBoxSPAJBeneficiaryLName1";
             this.textBoxSPAJBeneficiaryLName1.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJBeneficiaryLName1.TabIndex = 10;
@@ -2970,7 +2982,7 @@
             // textBoxSPAJBeneficiaryFName1
             // 
             this.textBoxSPAJBeneficiaryFName1.Location = new System.Drawing.Point(49, 67);
-            this.textBoxSPAJBeneficiaryFName1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJBeneficiaryFName1.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJBeneficiaryFName1.Name = "textBoxSPAJBeneficiaryFName1";
             this.textBoxSPAJBeneficiaryFName1.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJBeneficiaryFName1.TabIndex = 9;
@@ -2978,12 +2990,15 @@
             // checkBoxSPAJBeneficiary1
             // 
             this.checkBoxSPAJBeneficiary1.AutoSize = true;
+            this.checkBoxSPAJBeneficiary1.Checked = true;
+            this.checkBoxSPAJBeneficiary1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxSPAJBeneficiary1.Location = new System.Drawing.Point(23, 69);
-            this.checkBoxSPAJBeneficiary1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxSPAJBeneficiary1.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSPAJBeneficiary1.Name = "checkBoxSPAJBeneficiary1";
             this.checkBoxSPAJBeneficiary1.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJBeneficiary1.TabIndex = 8;
             this.checkBoxSPAJBeneficiary1.UseVisualStyleBackColor = true;
+            this.checkBoxSPAJBeneficiary1.CheckedChanged += new System.EventHandler(this.checkBoxSPAJBeneficiary1_CheckedChanged);
             // 
             // label44
             // 
@@ -3060,7 +3075,7 @@
             // textBoxSPAJANum
             // 
             this.textBoxSPAJANum.Location = new System.Drawing.Point(102, 163);
-            this.textBoxSPAJANum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJANum.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJANum.Name = "textBoxSPAJANum";
             this.textBoxSPAJANum.Size = new System.Drawing.Size(95, 20);
             this.textBoxSPAJANum.TabIndex = 10;
@@ -3100,7 +3115,7 @@
             // textBoxSPAJAName
             // 
             this.textBoxSPAJAName.Location = new System.Drawing.Point(102, 124);
-            this.textBoxSPAJAName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJAName.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJAName.Name = "textBoxSPAJAName";
             this.textBoxSPAJAName.Size = new System.Drawing.Size(95, 20);
             this.textBoxSPAJAName.TabIndex = 9;
@@ -3108,7 +3123,7 @@
             // textBoxSPAJNum
             // 
             this.textBoxSPAJNum.Location = new System.Drawing.Point(102, 58);
-            this.textBoxSPAJNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJNum.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJNum.Name = "textBoxSPAJNum";
             this.textBoxSPAJNum.Size = new System.Drawing.Size(95, 20);
             this.textBoxSPAJNum.TabIndex = 8;
@@ -3144,10 +3159,10 @@
             this.tabPageSPAJEdit.Controls.Add(this.textBoxSPAJEditNumber);
             this.tabPageSPAJEdit.Controls.Add(this.label139);
             this.tabPageSPAJEdit.Location = new System.Drawing.Point(4, 22);
-            this.tabPageSPAJEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageSPAJEdit.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageSPAJEdit.Name = "tabPageSPAJEdit";
-            this.tabPageSPAJEdit.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPageSPAJEdit.Size = new System.Drawing.Size(745, 351);
+            this.tabPageSPAJEdit.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPageSPAJEdit.Size = new System.Drawing.Size(744, 351);
             this.tabPageSPAJEdit.TabIndex = 3;
             this.tabPageSPAJEdit.Text = "Edit SPAJ";
             this.tabPageSPAJEdit.UseVisualStyleBackColor = true;
@@ -3155,7 +3170,7 @@
             // buttonSPAJEditLoad
             // 
             this.buttonSPAJEditLoad.Location = new System.Drawing.Point(178, 53);
-            this.buttonSPAJEditLoad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSPAJEditLoad.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSPAJEditLoad.Name = "buttonSPAJEditLoad";
             this.buttonSPAJEditLoad.Size = new System.Drawing.Size(54, 20);
             this.buttonSPAJEditLoad.TabIndex = 18;
@@ -3166,7 +3181,7 @@
             // 
             this.buttonSPAJEditStoreFiles.Enabled = false;
             this.buttonSPAJEditStoreFiles.Location = new System.Drawing.Point(56, 307);
-            this.buttonSPAJEditStoreFiles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSPAJEditStoreFiles.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSPAJEditStoreFiles.Name = "buttonSPAJEditStoreFiles";
             this.buttonSPAJEditStoreFiles.Size = new System.Drawing.Size(96, 20);
             this.buttonSPAJEditStoreFiles.TabIndex = 17;
@@ -3177,7 +3192,7 @@
             // 
             this.buttonSPAJEditUpdate.Enabled = false;
             this.buttonSPAJEditUpdate.Location = new System.Drawing.Point(136, 268);
-            this.buttonSPAJEditUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSPAJEditUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSPAJEditUpdate.Name = "buttonSPAJEditUpdate";
             this.buttonSPAJEditUpdate.Size = new System.Drawing.Size(54, 20);
             this.buttonSPAJEditUpdate.TabIndex = 16;
@@ -3188,7 +3203,7 @@
             // 
             this.buttonSPAJEditClear.Enabled = false;
             this.buttonSPAJEditClear.Location = new System.Drawing.Point(21, 268);
-            this.buttonSPAJEditClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSPAJEditClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSPAJEditClear.Name = "buttonSPAJEditClear";
             this.buttonSPAJEditClear.Size = new System.Drawing.Size(54, 20);
             this.buttonSPAJEditClear.TabIndex = 15;
@@ -3199,7 +3214,7 @@
             // 
             this.dateTimeSPAJEditSubmit.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeSPAJEditSubmit.Location = new System.Drawing.Point(102, 228);
-            this.dateTimeSPAJEditSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimeSPAJEditSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeSPAJEditSubmit.Name = "dateTimeSPAJEditSubmit";
             this.dateTimeSPAJEditSubmit.Size = new System.Drawing.Size(95, 20);
             this.dateTimeSPAJEditSubmit.TabIndex = 12;
@@ -3236,7 +3251,7 @@
             "PIA",
             "PIA Syariah"});
             this.comboBoxSPAJEditType.Location = new System.Drawing.Point(102, 87);
-            this.comboBoxSPAJEditType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJEditType.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJEditType.Name = "comboBoxSPAJEditType";
             this.comboBoxSPAJEditType.Size = new System.Drawing.Size(95, 21);
             this.comboBoxSPAJEditType.TabIndex = 13;
@@ -3244,7 +3259,7 @@
             // textBoxEditPruFlyerNum
             // 
             this.textBoxEditPruFlyerNum.Location = new System.Drawing.Point(102, 195);
-            this.textBoxEditPruFlyerNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxEditPruFlyerNum.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxEditPruFlyerNum.Name = "textBoxEditPruFlyerNum";
             this.textBoxEditPruFlyerNum.Size = new System.Drawing.Size(95, 20);
             this.textBoxEditPruFlyerNum.TabIndex = 11;
@@ -3259,7 +3274,7 @@
             this.tabControl1.Controls.Add(this.tabPageEditPengajuanInfo);
             this.tabControl1.Controls.Add(this.tabPageEditBeneficiaryInfo);
             this.tabControl1.Location = new System.Drawing.Point(240, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(512, 352);
@@ -3292,9 +3307,9 @@
             this.tabPageEditInsInfo.Controls.Add(this.label57);
             this.tabPageEditInsInfo.Controls.Add(this.label58);
             this.tabPageEditInsInfo.Location = new System.Drawing.Point(4, 22);
-            this.tabPageEditInsInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageEditInsInfo.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageEditInsInfo.Name = "tabPageEditInsInfo";
-            this.tabPageEditInsInfo.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageEditInsInfo.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageEditInsInfo.Size = new System.Drawing.Size(504, 326);
             this.tabPageEditInsInfo.TabIndex = 1;
             this.tabPageEditInsInfo.Text = "Insurer Info";
@@ -3323,7 +3338,7 @@
             // buttonInsInfoEdit
             // 
             this.buttonInsInfoEdit.Location = new System.Drawing.Point(264, 248);
-            this.buttonInsInfoEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonInsInfoEdit.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInsInfoEdit.Name = "buttonInsInfoEdit";
             this.buttonInsInfoEdit.Size = new System.Drawing.Size(72, 24);
             this.buttonInsInfoEdit.TabIndex = 22;
@@ -3334,7 +3349,7 @@
             // 
             this.buttonSPAJEditInsrClear.Enabled = false;
             this.buttonSPAJEditInsrClear.Location = new System.Drawing.Point(164, 248);
-            this.buttonSPAJEditInsrClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSPAJEditInsrClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSPAJEditInsrClear.Name = "buttonSPAJEditInsrClear";
             this.buttonSPAJEditInsrClear.Size = new System.Drawing.Size(72, 24);
             this.buttonSPAJEditInsrClear.TabIndex = 21;
@@ -3559,7 +3574,7 @@
             // buttonPolisInfoEdit
             // 
             this.buttonPolisInfoEdit.Location = new System.Drawing.Point(266, 243);
-            this.buttonPolisInfoEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonPolisInfoEdit.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPolisInfoEdit.Name = "buttonPolisInfoEdit";
             this.buttonPolisInfoEdit.Size = new System.Drawing.Size(60, 25);
             this.buttonPolisInfoEdit.TabIndex = 14;
@@ -3570,7 +3585,7 @@
             // 
             this.button9.Enabled = false;
             this.button9.Location = new System.Drawing.Point(160, 243);
-            this.button9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button9.Margin = new System.Windows.Forms.Padding(2);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(60, 25);
             this.button9.TabIndex = 13;
@@ -3581,7 +3596,7 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(326, 42);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(137, 17);
             this.radioButton2.TabIndex = 12;
@@ -3724,9 +3739,9 @@
             this.tabPageEditSpouseInfo.Controls.Add(this.label73);
             this.tabPageEditSpouseInfo.Controls.Add(this.label74);
             this.tabPageEditSpouseInfo.Location = new System.Drawing.Point(4, 22);
-            this.tabPageEditSpouseInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageEditSpouseInfo.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageEditSpouseInfo.Name = "tabPageEditSpouseInfo";
-            this.tabPageEditSpouseInfo.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageEditSpouseInfo.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageEditSpouseInfo.Size = new System.Drawing.Size(504, 326);
             this.tabPageEditSpouseInfo.TabIndex = 4;
             this.tabPageEditSpouseInfo.Text = "Spouse/Parent 1 Info";
@@ -3756,7 +3771,7 @@
             // 
             this.buttonSpouseEditIgnore.Enabled = false;
             this.buttonSpouseEditIgnore.Location = new System.Drawing.Point(89, 243);
-            this.buttonSpouseEditIgnore.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSpouseEditIgnore.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSpouseEditIgnore.Name = "buttonSpouseEditIgnore";
             this.buttonSpouseEditIgnore.Size = new System.Drawing.Size(60, 25);
             this.buttonSpouseEditIgnore.TabIndex = 25;
@@ -3766,7 +3781,7 @@
             // buttonSpouseEdit
             // 
             this.buttonSpouseEdit.Location = new System.Drawing.Point(298, 243);
-            this.buttonSpouseEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSpouseEdit.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSpouseEdit.Name = "buttonSpouseEdit";
             this.buttonSpouseEdit.Size = new System.Drawing.Size(60, 25);
             this.buttonSpouseEdit.TabIndex = 24;
@@ -3777,7 +3792,7 @@
             // 
             this.button12.Enabled = false;
             this.button12.Location = new System.Drawing.Point(190, 243);
-            this.button12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button12.Margin = new System.Windows.Forms.Padding(2);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(64, 25);
             this.button12.TabIndex = 23;
@@ -3980,9 +3995,9 @@
             this.tabPageEditParentInfo.Controls.Add(this.label107);
             this.tabPageEditParentInfo.Controls.Add(this.label108);
             this.tabPageEditParentInfo.Location = new System.Drawing.Point(4, 22);
-            this.tabPageEditParentInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageEditParentInfo.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageEditParentInfo.Name = "tabPageEditParentInfo";
-            this.tabPageEditParentInfo.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageEditParentInfo.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageEditParentInfo.Size = new System.Drawing.Size(504, 326);
             this.tabPageEditParentInfo.TabIndex = 6;
             this.tabPageEditParentInfo.Text = "Parent 2 Info";
@@ -4011,7 +4026,7 @@
             // buttonParentEditIgnore
             // 
             this.buttonParentEditIgnore.Location = new System.Drawing.Point(100, 243);
-            this.buttonParentEditIgnore.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonParentEditIgnore.Margin = new System.Windows.Forms.Padding(2);
             this.buttonParentEditIgnore.Name = "buttonParentEditIgnore";
             this.buttonParentEditIgnore.Size = new System.Drawing.Size(60, 25);
             this.buttonParentEditIgnore.TabIndex = 23;
@@ -4021,7 +4036,7 @@
             // buttonParentEdit
             // 
             this.buttonParentEdit.Location = new System.Drawing.Point(300, 243);
-            this.buttonParentEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonParentEdit.Margin = new System.Windows.Forms.Padding(2);
             this.buttonParentEdit.Name = "buttonParentEdit";
             this.buttonParentEdit.Size = new System.Drawing.Size(60, 25);
             this.buttonParentEdit.TabIndex = 22;
@@ -4032,7 +4047,7 @@
             // 
             this.button15.Enabled = false;
             this.button15.Location = new System.Drawing.Point(201, 243);
-            this.button15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button15.Margin = new System.Windows.Forms.Padding(2);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(60, 25);
             this.button15.TabIndex = 21;
@@ -4227,7 +4242,7 @@
             this.tabPageEditAddrInfo.Controls.Add(this.textBoxSPAJEditAddressAddr);
             this.tabPageEditAddrInfo.Controls.Add(this.label115);
             this.tabPageEditAddrInfo.Location = new System.Drawing.Point(4, 22);
-            this.tabPageEditAddrInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageEditAddrInfo.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageEditAddrInfo.Name = "tabPageEditAddrInfo";
             this.tabPageEditAddrInfo.Size = new System.Drawing.Size(504, 326);
             this.tabPageEditAddrInfo.TabIndex = 5;
@@ -4237,7 +4252,7 @@
             // buttonAddressEdit
             // 
             this.buttonAddressEdit.Location = new System.Drawing.Point(276, 263);
-            this.buttonAddressEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAddressEdit.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAddressEdit.Name = "buttonAddressEdit";
             this.buttonAddressEdit.Size = new System.Drawing.Size(60, 25);
             this.buttonAddressEdit.TabIndex = 17;
@@ -4248,7 +4263,7 @@
             // 
             this.button17.Enabled = false;
             this.button17.Location = new System.Drawing.Point(174, 263);
-            this.button17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button17.Margin = new System.Windows.Forms.Padding(2);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(60, 25);
             this.button17.TabIndex = 16;
@@ -4318,7 +4333,7 @@
             // textBoxSPAJEditAddrOP
             // 
             this.textBoxSPAJEditAddrOP.Location = new System.Drawing.Point(237, 208);
-            this.textBoxSPAJEditAddrOP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditAddrOP.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditAddrOP.Name = "textBoxSPAJEditAddrOP";
             this.textBoxSPAJEditAddrOP.Size = new System.Drawing.Size(102, 20);
             this.textBoxSPAJEditAddrOP.TabIndex = 8;
@@ -4326,7 +4341,7 @@
             // textBoxSPAJEditAddrHP
             // 
             this.textBoxSPAJEditAddrHP.Location = new System.Drawing.Point(237, 175);
-            this.textBoxSPAJEditAddrHP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditAddrHP.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditAddrHP.Name = "textBoxSPAJEditAddrHP";
             this.textBoxSPAJEditAddrHP.Size = new System.Drawing.Size(102, 20);
             this.textBoxSPAJEditAddrHP.TabIndex = 7;
@@ -4334,7 +4349,7 @@
             // textBoxSPAJEditAddrEmail
             // 
             this.textBoxSPAJEditAddrEmail.Location = new System.Drawing.Point(237, 144);
-            this.textBoxSPAJEditAddrEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditAddrEmail.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditAddrEmail.Name = "textBoxSPAJEditAddrEmail";
             this.textBoxSPAJEditAddrEmail.Size = new System.Drawing.Size(102, 20);
             this.textBoxSPAJEditAddrEmail.TabIndex = 6;
@@ -4342,7 +4357,7 @@
             // textBoxSPAJEditAddrZip
             // 
             this.textBoxSPAJEditAddrZip.Location = new System.Drawing.Point(237, 115);
-            this.textBoxSPAJEditAddrZip.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditAddrZip.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditAddrZip.Name = "textBoxSPAJEditAddrZip";
             this.textBoxSPAJEditAddrZip.Size = new System.Drawing.Size(102, 20);
             this.textBoxSPAJEditAddrZip.TabIndex = 5;
@@ -4350,7 +4365,7 @@
             // textBoxSPAJEditAddrCity
             // 
             this.textBoxSPAJEditAddrCity.Location = new System.Drawing.Point(237, 84);
-            this.textBoxSPAJEditAddrCity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditAddrCity.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditAddrCity.Name = "textBoxSPAJEditAddrCity";
             this.textBoxSPAJEditAddrCity.Size = new System.Drawing.Size(102, 20);
             this.textBoxSPAJEditAddrCity.TabIndex = 4;
@@ -4358,7 +4373,7 @@
             // textBoxSPAJEditAddressAddr
             // 
             this.textBoxSPAJEditAddressAddr.Location = new System.Drawing.Point(237, 54);
-            this.textBoxSPAJEditAddressAddr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditAddressAddr.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditAddressAddr.Name = "textBoxSPAJEditAddressAddr";
             this.textBoxSPAJEditAddressAddr.Size = new System.Drawing.Size(102, 20);
             this.textBoxSPAJEditAddressAddr.TabIndex = 3;
@@ -4422,7 +4437,7 @@
             this.tabPageEditPengajuanInfo.Controls.Add(this.label127);
             this.tabPageEditPengajuanInfo.Controls.Add(this.label128);
             this.tabPageEditPengajuanInfo.Location = new System.Drawing.Point(4, 22);
-            this.tabPageEditPengajuanInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageEditPengajuanInfo.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageEditPengajuanInfo.Name = "tabPageEditPengajuanInfo";
             this.tabPageEditPengajuanInfo.Size = new System.Drawing.Size(504, 326);
             this.tabPageEditPengajuanInfo.TabIndex = 7;
@@ -4443,7 +4458,7 @@
             // buttonPengajuanEdit
             // 
             this.buttonPengajuanEdit.Location = new System.Drawing.Point(275, 295);
-            this.buttonPengajuanEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonPengajuanEdit.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPengajuanEdit.Name = "buttonPengajuanEdit";
             this.buttonPengajuanEdit.Size = new System.Drawing.Size(60, 25);
             this.buttonPengajuanEdit.TabIndex = 43;
@@ -4454,7 +4469,7 @@
             // 
             this.button19.Enabled = false;
             this.button19.Location = new System.Drawing.Point(170, 295);
-            this.button19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button19.Margin = new System.Windows.Forms.Padding(2);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(60, 25);
             this.button19.TabIndex = 42;
@@ -4464,7 +4479,7 @@
             // textBoxSPAJEditPengajuanPremiTotal
             // 
             this.textBoxSPAJEditPengajuanPremiTotal.Location = new System.Drawing.Point(386, 271);
-            this.textBoxSPAJEditPengajuanPremiTotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditPengajuanPremiTotal.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditPengajuanPremiTotal.Name = "textBoxSPAJEditPengajuanPremiTotal";
             this.textBoxSPAJEditPengajuanPremiTotal.Size = new System.Drawing.Size(100, 20);
             this.textBoxSPAJEditPengajuanPremiTotal.TabIndex = 41;
@@ -4505,7 +4520,7 @@
             // textBoxSPAJEditPengajuanPruSaver
             // 
             this.textBoxSPAJEditPengajuanPruSaver.Location = new System.Drawing.Point(386, 239);
-            this.textBoxSPAJEditPengajuanPruSaver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditPengajuanPruSaver.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditPengajuanPruSaver.Name = "textBoxSPAJEditPengajuanPruSaver";
             this.textBoxSPAJEditPengajuanPruSaver.Size = new System.Drawing.Size(100, 20);
             this.textBoxSPAJEditPengajuanPruSaver.TabIndex = 37;
@@ -4513,7 +4528,7 @@
             // textBoxSPAJEditPengajuanPremi
             // 
             this.textBoxSPAJEditPengajuanPremi.Location = new System.Drawing.Point(384, 211);
-            this.textBoxSPAJEditPengajuanPremi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditPengajuanPremi.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditPengajuanPremi.Name = "textBoxSPAJEditPengajuanPremi";
             this.textBoxSPAJEditPengajuanPremi.Size = new System.Drawing.Size(100, 20);
             this.textBoxSPAJEditPengajuanPremi.TabIndex = 36;
@@ -4521,7 +4536,7 @@
             // textBoxSPAJEditPengajuanPrtanggung
             // 
             this.textBoxSPAJEditPengajuanPrtanggung.Location = new System.Drawing.Point(155, 222);
-            this.textBoxSPAJEditPengajuanPrtanggung.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditPengajuanPrtanggung.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditPengajuanPrtanggung.Name = "textBoxSPAJEditPengajuanPrtanggung";
             this.textBoxSPAJEditPengajuanPrtanggung.Size = new System.Drawing.Size(106, 20);
             this.textBoxSPAJEditPengajuanPrtanggung.TabIndex = 35;
@@ -4530,7 +4545,7 @@
             // 
             this.textBoxSPAJEditPengajuanExchange.Enabled = false;
             this.textBoxSPAJEditPengajuanExchange.Location = new System.Drawing.Point(154, 175);
-            this.textBoxSPAJEditPengajuanExchange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditPengajuanExchange.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditPengajuanExchange.Name = "textBoxSPAJEditPengajuanExchange";
             this.textBoxSPAJEditPengajuanExchange.Size = new System.Drawing.Size(106, 20);
             this.textBoxSPAJEditPengajuanExchange.TabIndex = 34;
@@ -4539,7 +4554,7 @@
             // 
             this.textBoxSPAJEditPengajuanExpDate.Enabled = false;
             this.textBoxSPAJEditPengajuanExpDate.Location = new System.Drawing.Point(155, 118);
-            this.textBoxSPAJEditPengajuanExpDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditPengajuanExpDate.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditPengajuanExpDate.Name = "textBoxSPAJEditPengajuanExpDate";
             this.textBoxSPAJEditPengajuanExpDate.Size = new System.Drawing.Size(106, 20);
             this.textBoxSPAJEditPengajuanExpDate.TabIndex = 33;
@@ -4548,7 +4563,7 @@
             // 
             this.textBoxSPAJEditPengajuanCCBank.Enabled = false;
             this.textBoxSPAJEditPengajuanCCBank.Location = new System.Drawing.Point(155, 99);
-            this.textBoxSPAJEditPengajuanCCBank.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditPengajuanCCBank.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditPengajuanCCBank.Name = "textBoxSPAJEditPengajuanCCBank";
             this.textBoxSPAJEditPengajuanCCBank.Size = new System.Drawing.Size(106, 20);
             this.textBoxSPAJEditPengajuanCCBank.TabIndex = 32;
@@ -4557,7 +4572,7 @@
             // 
             this.textBoxSPAJEditPengajuanPruPPayor.Enabled = false;
             this.textBoxSPAJEditPengajuanPruPPayor.Location = new System.Drawing.Point(386, 178);
-            this.textBoxSPAJEditPengajuanPruPPayor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditPengajuanPruPPayor.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditPengajuanPruPPayor.Name = "textBoxSPAJEditPengajuanPruPPayor";
             this.textBoxSPAJEditPengajuanPruPPayor.Size = new System.Drawing.Size(100, 20);
             this.textBoxSPAJEditPengajuanPruPPayor.TabIndex = 31;
@@ -4566,7 +4581,7 @@
             // 
             this.textBoxSPAJEditPengajuanPRUMed.Enabled = false;
             this.textBoxSPAJEditPengajuanPRUMed.Location = new System.Drawing.Point(386, 151);
-            this.textBoxSPAJEditPengajuanPRUMed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditPengajuanPRUMed.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditPengajuanPRUMed.Name = "textBoxSPAJEditPengajuanPRUMed";
             this.textBoxSPAJEditPengajuanPRUMed.Size = new System.Drawing.Size(100, 20);
             this.textBoxSPAJEditPengajuanPRUMed.TabIndex = 30;
@@ -4575,7 +4590,7 @@
             // 
             this.textBoxSPAJEditPengajuanPruADD.Enabled = false;
             this.textBoxSPAJEditPengajuanPruADD.Location = new System.Drawing.Point(386, 127);
-            this.textBoxSPAJEditPengajuanPruADD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditPengajuanPruADD.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditPengajuanPruADD.Name = "textBoxSPAJEditPengajuanPruADD";
             this.textBoxSPAJEditPengajuanPruADD.Size = new System.Drawing.Size(100, 20);
             this.textBoxSPAJEditPengajuanPruADD.TabIndex = 29;
@@ -4584,7 +4599,7 @@
             // 
             this.textBoxSPAJEditPengajuanPruCC.Enabled = false;
             this.textBoxSPAJEditPengajuanPruCC.Location = new System.Drawing.Point(386, 95);
-            this.textBoxSPAJEditPengajuanPruCC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditPengajuanPruCC.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditPengajuanPruCC.Name = "textBoxSPAJEditPengajuanPruCC";
             this.textBoxSPAJEditPengajuanPruCC.Size = new System.Drawing.Size(100, 20);
             this.textBoxSPAJEditPengajuanPruCC.TabIndex = 28;
@@ -4593,7 +4608,7 @@
             // 
             this.textBoxSPAJEditPengajuanPruPayor.Enabled = false;
             this.textBoxSPAJEditPengajuanPruPayor.Location = new System.Drawing.Point(386, 66);
-            this.textBoxSPAJEditPengajuanPruPayor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditPengajuanPruPayor.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditPengajuanPruPayor.Name = "textBoxSPAJEditPengajuanPruPayor";
             this.textBoxSPAJEditPengajuanPruPayor.Size = new System.Drawing.Size(100, 20);
             this.textBoxSPAJEditPengajuanPruPayor.TabIndex = 27;
@@ -4611,7 +4626,7 @@
             "PIA",
             "PIA Syariah"});
             this.comboBoxSPAJEditPengajuanPruPPayor.Location = new System.Drawing.Point(292, 177);
-            this.comboBoxSPAJEditPengajuanPruPPayor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJEditPengajuanPruPPayor.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJEditPengajuanPruPPayor.Name = "comboBoxSPAJEditPengajuanPruPPayor";
             this.comboBoxSPAJEditPengajuanPruPPayor.Size = new System.Drawing.Size(90, 21);
             this.comboBoxSPAJEditPengajuanPruPPayor.TabIndex = 26;
@@ -4629,7 +4644,7 @@
             "PIA",
             "PIA Syariah"});
             this.comboBoxSPAJEditPengajuanPRUMed.Location = new System.Drawing.Point(292, 150);
-            this.comboBoxSPAJEditPengajuanPRUMed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJEditPengajuanPRUMed.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJEditPengajuanPRUMed.Name = "comboBoxSPAJEditPengajuanPRUMed";
             this.comboBoxSPAJEditPengajuanPRUMed.Size = new System.Drawing.Size(90, 21);
             this.comboBoxSPAJEditPengajuanPRUMed.TabIndex = 25;
@@ -4647,7 +4662,7 @@
             "PIA",
             "PIA Syariah"});
             this.comboBoxSPAJEditPengajuanPruADD.Location = new System.Drawing.Point(292, 125);
-            this.comboBoxSPAJEditPengajuanPruADD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJEditPengajuanPruADD.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJEditPengajuanPruADD.Name = "comboBoxSPAJEditPengajuanPruADD";
             this.comboBoxSPAJEditPengajuanPruADD.Size = new System.Drawing.Size(90, 21);
             this.comboBoxSPAJEditPengajuanPruADD.TabIndex = 24;
@@ -4665,7 +4680,7 @@
             "PIA",
             "PIA Syariah"});
             this.comboBoxSPAJEditPengajuanPruCC.Location = new System.Drawing.Point(292, 95);
-            this.comboBoxSPAJEditPengajuanPruCC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJEditPengajuanPruCC.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJEditPengajuanPruCC.Name = "comboBoxSPAJEditPengajuanPruCC";
             this.comboBoxSPAJEditPengajuanPruCC.Size = new System.Drawing.Size(90, 21);
             this.comboBoxSPAJEditPengajuanPruCC.TabIndex = 23;
@@ -4674,7 +4689,7 @@
             // 
             this.checkBoxSPAJEditPengajuanPruPPayor.AutoSize = true;
             this.checkBoxSPAJEditPengajuanPruPPayor.Location = new System.Drawing.Point(275, 177);
-            this.checkBoxSPAJEditPengajuanPruPPayor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxSPAJEditPengajuanPruPPayor.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSPAJEditPengajuanPruPPayor.Name = "checkBoxSPAJEditPengajuanPruPPayor";
             this.checkBoxSPAJEditPengajuanPruPPayor.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJEditPengajuanPruPPayor.TabIndex = 22;
@@ -4684,7 +4699,7 @@
             // 
             this.checkBoxSPAJEditPengajuanPRUMed.AutoSize = true;
             this.checkBoxSPAJEditPengajuanPRUMed.Location = new System.Drawing.Point(275, 149);
-            this.checkBoxSPAJEditPengajuanPRUMed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxSPAJEditPengajuanPRUMed.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSPAJEditPengajuanPRUMed.Name = "checkBoxSPAJEditPengajuanPRUMed";
             this.checkBoxSPAJEditPengajuanPRUMed.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJEditPengajuanPRUMed.TabIndex = 21;
@@ -4694,7 +4709,7 @@
             // 
             this.checkBoxSPAJEditPengajuanADD.AutoSize = true;
             this.checkBoxSPAJEditPengajuanADD.Location = new System.Drawing.Point(275, 125);
-            this.checkBoxSPAJEditPengajuanADD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxSPAJEditPengajuanADD.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSPAJEditPengajuanADD.Name = "checkBoxSPAJEditPengajuanADD";
             this.checkBoxSPAJEditPengajuanADD.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJEditPengajuanADD.TabIndex = 20;
@@ -4704,7 +4719,7 @@
             // 
             this.checkBoxSPAJEditPengajuanPruCC.AutoSize = true;
             this.checkBoxSPAJEditPengajuanPruCC.Location = new System.Drawing.Point(275, 98);
-            this.checkBoxSPAJEditPengajuanPruCC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxSPAJEditPengajuanPruCC.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSPAJEditPengajuanPruCC.Name = "checkBoxSPAJEditPengajuanPruCC";
             this.checkBoxSPAJEditPengajuanPruCC.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJEditPengajuanPruCC.TabIndex = 19;
@@ -4717,7 +4732,7 @@
             this.comboBoxSPAJEditPengajuanPruPayor.Items.AddRange(new object[] {
             "PRUpayor 33 ("});
             this.comboBoxSPAJEditPengajuanPruPayor.Location = new System.Drawing.Point(292, 66);
-            this.comboBoxSPAJEditPengajuanPruPayor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJEditPengajuanPruPayor.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJEditPengajuanPruPayor.Name = "comboBoxSPAJEditPengajuanPruPayor";
             this.comboBoxSPAJEditPengajuanPruPayor.Size = new System.Drawing.Size(90, 21);
             this.comboBoxSPAJEditPengajuanPruPayor.TabIndex = 18;
@@ -4726,7 +4741,7 @@
             // 
             this.checkBoxSPAJEditPengajuanPruPayor.AutoSize = true;
             this.checkBoxSPAJEditPengajuanPruPayor.Location = new System.Drawing.Point(275, 69);
-            this.checkBoxSPAJEditPengajuanPruPayor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxSPAJEditPengajuanPruPayor.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSPAJEditPengajuanPruPayor.Name = "checkBoxSPAJEditPengajuanPruPayor";
             this.checkBoxSPAJEditPengajuanPruPayor.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJEditPengajuanPruPayor.TabIndex = 17;
@@ -4736,7 +4751,7 @@
             // 
             this.checkBoxSPAJEditPengajuanPruHosp.AutoSize = true;
             this.checkBoxSPAJEditPengajuanPruHosp.Location = new System.Drawing.Point(275, 37);
-            this.checkBoxSPAJEditPengajuanPruHosp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxSPAJEditPengajuanPruHosp.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSPAJEditPengajuanPruHosp.Name = "checkBoxSPAJEditPengajuanPruHosp";
             this.checkBoxSPAJEditPengajuanPruHosp.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJEditPengajuanPruHosp.TabIndex = 16;
@@ -4754,7 +4769,7 @@
             "PIA",
             "PIA Syariah"});
             this.comboBoxSPAJEditPengajuanBasic.Location = new System.Drawing.Point(42, 220);
-            this.comboBoxSPAJEditPengajuanBasic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJEditPengajuanBasic.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJEditPengajuanBasic.Name = "comboBoxSPAJEditPengajuanBasic";
             this.comboBoxSPAJEditPengajuanBasic.Size = new System.Drawing.Size(93, 21);
             this.comboBoxSPAJEditPengajuanBasic.TabIndex = 14;
@@ -4769,7 +4784,7 @@
             "Quarterly",
             "Monthly"});
             this.comboBoxSPAJEditPengajuanPruHosp.Location = new System.Drawing.Point(384, 37);
-            this.comboBoxSPAJEditPengajuanPruHosp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJEditPengajuanPruHosp.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJEditPengajuanPruHosp.Name = "comboBoxSPAJEditPengajuanPruHosp";
             this.comboBoxSPAJEditPengajuanPruHosp.Size = new System.Drawing.Size(100, 21);
             this.comboBoxSPAJEditPengajuanPruHosp.TabIndex = 13;
@@ -4781,7 +4796,7 @@
             "Rupiah",
             "USD"});
             this.comboBoxSPAJEditPengajuanCurrency.Location = new System.Drawing.Point(155, 144);
-            this.comboBoxSPAJEditPengajuanCurrency.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJEditPengajuanCurrency.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJEditPengajuanCurrency.Name = "comboBoxSPAJEditPengajuanCurrency";
             this.comboBoxSPAJEditPengajuanCurrency.Size = new System.Drawing.Size(106, 21);
             this.comboBoxSPAJEditPengajuanCurrency.TabIndex = 12;
@@ -4794,7 +4809,7 @@
             "Bank Transfer",
             "Other"});
             this.comboBoxSPAJEditPengajuanPay.Location = new System.Drawing.Point(154, 75);
-            this.comboBoxSPAJEditPengajuanPay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJEditPengajuanPay.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJEditPengajuanPay.Name = "comboBoxSPAJEditPengajuanPay";
             this.comboBoxSPAJEditPengajuanPay.Size = new System.Drawing.Size(106, 21);
             this.comboBoxSPAJEditPengajuanPay.TabIndex = 11;
@@ -4808,7 +4823,7 @@
             "Quarterly",
             "Monthly"});
             this.comboBoxSPAJEditPengajuanFreq.Location = new System.Drawing.Point(154, 53);
-            this.comboBoxSPAJEditPengajuanFreq.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJEditPengajuanFreq.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJEditPengajuanFreq.Name = "comboBoxSPAJEditPengajuanFreq";
             this.comboBoxSPAJEditPengajuanFreq.Size = new System.Drawing.Size(106, 21);
             this.comboBoxSPAJEditPengajuanFreq.TabIndex = 10;
@@ -4970,7 +4985,7 @@
             this.tabPageEditBeneficiaryInfo.Controls.Add(this.label133);
             this.tabPageEditBeneficiaryInfo.Controls.Add(this.label134);
             this.tabPageEditBeneficiaryInfo.Location = new System.Drawing.Point(4, 22);
-            this.tabPageEditBeneficiaryInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageEditBeneficiaryInfo.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageEditBeneficiaryInfo.Name = "tabPageEditBeneficiaryInfo";
             this.tabPageEditBeneficiaryInfo.Size = new System.Drawing.Size(504, 326);
             this.tabPageEditBeneficiaryInfo.TabIndex = 8;
@@ -4980,7 +4995,7 @@
             // buttonBeneficiaryEdit
             // 
             this.buttonBeneficiaryEdit.Location = new System.Drawing.Point(274, 284);
-            this.buttonBeneficiaryEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBeneficiaryEdit.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBeneficiaryEdit.Name = "buttonBeneficiaryEdit";
             this.buttonBeneficiaryEdit.Size = new System.Drawing.Size(60, 25);
             this.buttonBeneficiaryEdit.TabIndex = 45;
@@ -4991,7 +5006,7 @@
             // 
             this.button21.Enabled = false;
             this.button21.Location = new System.Drawing.Point(178, 284);
-            this.button21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button21.Margin = new System.Windows.Forms.Padding(2);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(60, 25);
             this.button21.TabIndex = 44;
@@ -5010,7 +5025,7 @@
             "Spouse",
             "Other"});
             this.comboBoxSPAJEditBeneficiaryRs6.Location = new System.Drawing.Point(338, 248);
-            this.comboBoxSPAJEditBeneficiaryRs6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJEditBeneficiaryRs6.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJEditBeneficiaryRs6.Name = "comboBoxSPAJEditBeneficiaryRs6";
             this.comboBoxSPAJEditBeneficiaryRs6.Size = new System.Drawing.Size(76, 21);
             this.comboBoxSPAJEditBeneficiaryRs6.TabIndex = 43;
@@ -5027,7 +5042,7 @@
             "Spouse",
             "Other"});
             this.comboBoxSPAJEditBeneficiaryRs5.Location = new System.Drawing.Point(338, 210);
-            this.comboBoxSPAJEditBeneficiaryRs5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJEditBeneficiaryRs5.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJEditBeneficiaryRs5.Name = "comboBoxSPAJEditBeneficiaryRs5";
             this.comboBoxSPAJEditBeneficiaryRs5.Size = new System.Drawing.Size(76, 21);
             this.comboBoxSPAJEditBeneficiaryRs5.TabIndex = 42;
@@ -5044,7 +5059,7 @@
             "Spouse",
             "Other"});
             this.comboBoxSPAJEditBeneficiaryRs4.Location = new System.Drawing.Point(338, 177);
-            this.comboBoxSPAJEditBeneficiaryRs4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJEditBeneficiaryRs4.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJEditBeneficiaryRs4.Name = "comboBoxSPAJEditBeneficiaryRs4";
             this.comboBoxSPAJEditBeneficiaryRs4.Size = new System.Drawing.Size(76, 21);
             this.comboBoxSPAJEditBeneficiaryRs4.TabIndex = 41;
@@ -5061,7 +5076,7 @@
             "Spouse",
             "Other"});
             this.comboBoxSPAJEditBeneficiaryRs3.Location = new System.Drawing.Point(338, 144);
-            this.comboBoxSPAJEditBeneficiaryRs3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJEditBeneficiaryRs3.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJEditBeneficiaryRs3.Name = "comboBoxSPAJEditBeneficiaryRs3";
             this.comboBoxSPAJEditBeneficiaryRs3.Size = new System.Drawing.Size(76, 21);
             this.comboBoxSPAJEditBeneficiaryRs3.TabIndex = 40;
@@ -5078,7 +5093,7 @@
             "Spouse",
             "Other"});
             this.comboBoxSPAJEditBeneficiaryRs2.Location = new System.Drawing.Point(338, 106);
-            this.comboBoxSPAJEditBeneficiaryRs2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJEditBeneficiaryRs2.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJEditBeneficiaryRs2.Name = "comboBoxSPAJEditBeneficiaryRs2";
             this.comboBoxSPAJEditBeneficiaryRs2.Size = new System.Drawing.Size(76, 21);
             this.comboBoxSPAJEditBeneficiaryRs2.TabIndex = 39;
@@ -5094,7 +5109,7 @@
             "Spouse",
             "Other"});
             this.comboBoxSPAJEditBeneficiaryRs1.Location = new System.Drawing.Point(338, 69);
-            this.comboBoxSPAJEditBeneficiaryRs1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJEditBeneficiaryRs1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJEditBeneficiaryRs1.Name = "comboBoxSPAJEditBeneficiaryRs1";
             this.comboBoxSPAJEditBeneficiaryRs1.Size = new System.Drawing.Size(76, 21);
             this.comboBoxSPAJEditBeneficiaryRs1.TabIndex = 38;
@@ -5104,7 +5119,7 @@
             this.dateTimeSPAJEditBeneficiary6.Enabled = false;
             this.dateTimeSPAJEditBeneficiary6.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeSPAJEditBeneficiary6.Location = new System.Drawing.Point(234, 246);
-            this.dateTimeSPAJEditBeneficiary6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimeSPAJEditBeneficiary6.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeSPAJEditBeneficiary6.Name = "dateTimeSPAJEditBeneficiary6";
             this.dateTimeSPAJEditBeneficiary6.Size = new System.Drawing.Size(88, 20);
             this.dateTimeSPAJEditBeneficiary6.TabIndex = 37;
@@ -5114,7 +5129,7 @@
             this.dateTimeSPAJEditBeneficiary5.Enabled = false;
             this.dateTimeSPAJEditBeneficiary5.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeSPAJEditBeneficiary5.Location = new System.Drawing.Point(234, 211);
-            this.dateTimeSPAJEditBeneficiary5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimeSPAJEditBeneficiary5.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeSPAJEditBeneficiary5.Name = "dateTimeSPAJEditBeneficiary5";
             this.dateTimeSPAJEditBeneficiary5.Size = new System.Drawing.Size(88, 20);
             this.dateTimeSPAJEditBeneficiary5.TabIndex = 36;
@@ -5124,7 +5139,7 @@
             this.dateTimeSPAJEditBeneficiary4.Enabled = false;
             this.dateTimeSPAJEditBeneficiary4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeSPAJEditBeneficiary4.Location = new System.Drawing.Point(234, 177);
-            this.dateTimeSPAJEditBeneficiary4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimeSPAJEditBeneficiary4.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeSPAJEditBeneficiary4.Name = "dateTimeSPAJEditBeneficiary4";
             this.dateTimeSPAJEditBeneficiary4.Size = new System.Drawing.Size(88, 20);
             this.dateTimeSPAJEditBeneficiary4.TabIndex = 35;
@@ -5134,7 +5149,7 @@
             this.dateTimeSPAJEditBeneficiary3.Enabled = false;
             this.dateTimeSPAJEditBeneficiary3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeSPAJEditBeneficiary3.Location = new System.Drawing.Point(234, 145);
-            this.dateTimeSPAJEditBeneficiary3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimeSPAJEditBeneficiary3.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeSPAJEditBeneficiary3.Name = "dateTimeSPAJEditBeneficiary3";
             this.dateTimeSPAJEditBeneficiary3.Size = new System.Drawing.Size(88, 20);
             this.dateTimeSPAJEditBeneficiary3.TabIndex = 34;
@@ -5144,7 +5159,7 @@
             this.dateTimeSPAJEditBeneficiary2.Enabled = false;
             this.dateTimeSPAJEditBeneficiary2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeSPAJEditBeneficiary2.Location = new System.Drawing.Point(234, 107);
-            this.dateTimeSPAJEditBeneficiary2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimeSPAJEditBeneficiary2.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeSPAJEditBeneficiary2.Name = "dateTimeSPAJEditBeneficiary2";
             this.dateTimeSPAJEditBeneficiary2.Size = new System.Drawing.Size(88, 20);
             this.dateTimeSPAJEditBeneficiary2.TabIndex = 33;
@@ -5153,7 +5168,7 @@
             // 
             this.dateTimeSPAJEditBeneficiary1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeSPAJEditBeneficiary1.Location = new System.Drawing.Point(234, 67);
-            this.dateTimeSPAJEditBeneficiary1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimeSPAJEditBeneficiary1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeSPAJEditBeneficiary1.Name = "dateTimeSPAJEditBeneficiary1";
             this.dateTimeSPAJEditBeneficiary1.Size = new System.Drawing.Size(88, 20);
             this.dateTimeSPAJEditBeneficiary1.TabIndex = 32;
@@ -5162,7 +5177,7 @@
             // 
             this.textBoxSPAJEditBeneficiaryDetail6.Enabled = false;
             this.textBoxSPAJEditBeneficiaryDetail6.Location = new System.Drawing.Point(432, 248);
-            this.textBoxSPAJEditBeneficiaryDetail6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditBeneficiaryDetail6.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditBeneficiaryDetail6.Name = "textBoxSPAJEditBeneficiaryDetail6";
             this.textBoxSPAJEditBeneficiaryDetail6.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJEditBeneficiaryDetail6.TabIndex = 31;
@@ -5170,7 +5185,7 @@
             // textBoxSPAJEditBeneficiaryDetail5
             // 
             this.textBoxSPAJEditBeneficiaryDetail5.Location = new System.Drawing.Point(432, 212);
-            this.textBoxSPAJEditBeneficiaryDetail5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditBeneficiaryDetail5.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditBeneficiaryDetail5.Name = "textBoxSPAJEditBeneficiaryDetail5";
             this.textBoxSPAJEditBeneficiaryDetail5.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJEditBeneficiaryDetail5.TabIndex = 30;
@@ -5179,7 +5194,7 @@
             // 
             this.textBoxSPAJEditBeneficiaryDetail4.Enabled = false;
             this.textBoxSPAJEditBeneficiaryDetail4.Location = new System.Drawing.Point(432, 178);
-            this.textBoxSPAJEditBeneficiaryDetail4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditBeneficiaryDetail4.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditBeneficiaryDetail4.Name = "textBoxSPAJEditBeneficiaryDetail4";
             this.textBoxSPAJEditBeneficiaryDetail4.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJEditBeneficiaryDetail4.TabIndex = 29;
@@ -5188,7 +5203,7 @@
             // 
             this.textBoxSPAJEditBeneficiaryDetail3.Enabled = false;
             this.textBoxSPAJEditBeneficiaryDetail3.Location = new System.Drawing.Point(432, 144);
-            this.textBoxSPAJEditBeneficiaryDetail3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditBeneficiaryDetail3.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditBeneficiaryDetail3.Name = "textBoxSPAJEditBeneficiaryDetail3";
             this.textBoxSPAJEditBeneficiaryDetail3.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJEditBeneficiaryDetail3.TabIndex = 28;
@@ -5197,7 +5212,7 @@
             // 
             this.textBoxSPAJEditBeneficiaryLName6.Enabled = false;
             this.textBoxSPAJEditBeneficiaryLName6.Location = new System.Drawing.Point(142, 246);
-            this.textBoxSPAJEditBeneficiaryLName6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditBeneficiaryLName6.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditBeneficiaryLName6.Name = "textBoxSPAJEditBeneficiaryLName6";
             this.textBoxSPAJEditBeneficiaryLName6.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJEditBeneficiaryLName6.TabIndex = 27;
@@ -5206,7 +5221,7 @@
             // 
             this.textBoxSPAJEditBeneficiaryLName5.Enabled = false;
             this.textBoxSPAJEditBeneficiaryLName5.Location = new System.Drawing.Point(142, 211);
-            this.textBoxSPAJEditBeneficiaryLName5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditBeneficiaryLName5.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditBeneficiaryLName5.Name = "textBoxSPAJEditBeneficiaryLName5";
             this.textBoxSPAJEditBeneficiaryLName5.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJEditBeneficiaryLName5.TabIndex = 26;
@@ -5215,7 +5230,7 @@
             // 
             this.textBoxSPAJEditBeneficiaryLName4.Enabled = false;
             this.textBoxSPAJEditBeneficiaryLName4.Location = new System.Drawing.Point(142, 177);
-            this.textBoxSPAJEditBeneficiaryLName4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditBeneficiaryLName4.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditBeneficiaryLName4.Name = "textBoxSPAJEditBeneficiaryLName4";
             this.textBoxSPAJEditBeneficiaryLName4.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJEditBeneficiaryLName4.TabIndex = 25;
@@ -5224,7 +5239,7 @@
             // 
             this.textBoxSPAJEditBeneficiaryLName3.Enabled = false;
             this.textBoxSPAJEditBeneficiaryLName3.Location = new System.Drawing.Point(142, 145);
-            this.textBoxSPAJEditBeneficiaryLName3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditBeneficiaryLName3.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditBeneficiaryLName3.Name = "textBoxSPAJEditBeneficiaryLName3";
             this.textBoxSPAJEditBeneficiaryLName3.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJEditBeneficiaryLName3.TabIndex = 24;
@@ -5233,7 +5248,7 @@
             // 
             this.textBoxSPAJEditBeneficiaryLName2.Enabled = false;
             this.textBoxSPAJEditBeneficiaryLName2.Location = new System.Drawing.Point(142, 107);
-            this.textBoxSPAJEditBeneficiaryLName2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditBeneficiaryLName2.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditBeneficiaryLName2.Name = "textBoxSPAJEditBeneficiaryLName2";
             this.textBoxSPAJEditBeneficiaryLName2.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJEditBeneficiaryLName2.TabIndex = 23;
@@ -5242,7 +5257,7 @@
             // 
             this.textBoxSPAJEditBeneficiaryFName6.Enabled = false;
             this.textBoxSPAJEditBeneficiaryFName6.Location = new System.Drawing.Point(49, 246);
-            this.textBoxSPAJEditBeneficiaryFName6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditBeneficiaryFName6.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditBeneficiaryFName6.Name = "textBoxSPAJEditBeneficiaryFName6";
             this.textBoxSPAJEditBeneficiaryFName6.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJEditBeneficiaryFName6.TabIndex = 22;
@@ -5251,7 +5266,7 @@
             // 
             this.textBoxSPAJEditBeneficiaryFName5.Enabled = false;
             this.textBoxSPAJEditBeneficiaryFName5.Location = new System.Drawing.Point(49, 208);
-            this.textBoxSPAJEditBeneficiaryFName5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditBeneficiaryFName5.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditBeneficiaryFName5.Name = "textBoxSPAJEditBeneficiaryFName5";
             this.textBoxSPAJEditBeneficiaryFName5.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJEditBeneficiaryFName5.TabIndex = 21;
@@ -5260,7 +5275,7 @@
             // 
             this.textBoxSPAJEditBeneficiaryFName4.Enabled = false;
             this.textBoxSPAJEditBeneficiaryFName4.Location = new System.Drawing.Point(49, 177);
-            this.textBoxSPAJEditBeneficiaryFName4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditBeneficiaryFName4.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditBeneficiaryFName4.Name = "textBoxSPAJEditBeneficiaryFName4";
             this.textBoxSPAJEditBeneficiaryFName4.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJEditBeneficiaryFName4.TabIndex = 20;
@@ -5269,7 +5284,7 @@
             // 
             this.textBoxSPAJEditBeneficiaryFName3.Enabled = false;
             this.textBoxSPAJEditBeneficiaryFName3.Location = new System.Drawing.Point(49, 145);
-            this.textBoxSPAJEditBeneficiaryFName3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditBeneficiaryFName3.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditBeneficiaryFName3.Name = "textBoxSPAJEditBeneficiaryFName3";
             this.textBoxSPAJEditBeneficiaryFName3.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJEditBeneficiaryFName3.TabIndex = 19;
@@ -5278,7 +5293,7 @@
             // 
             this.checkBoxSPAJEditBeneficiary6.AutoSize = true;
             this.checkBoxSPAJEditBeneficiary6.Location = new System.Drawing.Point(23, 248);
-            this.checkBoxSPAJEditBeneficiary6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxSPAJEditBeneficiary6.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSPAJEditBeneficiary6.Name = "checkBoxSPAJEditBeneficiary6";
             this.checkBoxSPAJEditBeneficiary6.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJEditBeneficiary6.TabIndex = 18;
@@ -5288,7 +5303,7 @@
             // 
             this.checkBoxSPAJEditBeneficiary5.AutoSize = true;
             this.checkBoxSPAJEditBeneficiary5.Location = new System.Drawing.Point(23, 211);
-            this.checkBoxSPAJEditBeneficiary5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxSPAJEditBeneficiary5.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSPAJEditBeneficiary5.Name = "checkBoxSPAJEditBeneficiary5";
             this.checkBoxSPAJEditBeneficiary5.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJEditBeneficiary5.TabIndex = 17;
@@ -5298,7 +5313,7 @@
             // 
             this.checkBoxSPAJEditBeneficiary4.AutoSize = true;
             this.checkBoxSPAJEditBeneficiary4.Location = new System.Drawing.Point(23, 177);
-            this.checkBoxSPAJEditBeneficiary4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxSPAJEditBeneficiary4.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSPAJEditBeneficiary4.Name = "checkBoxSPAJEditBeneficiary4";
             this.checkBoxSPAJEditBeneficiary4.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJEditBeneficiary4.TabIndex = 16;
@@ -5308,7 +5323,7 @@
             // 
             this.checkBoxSPAJEditBeneficiary3.AutoSize = true;
             this.checkBoxSPAJEditBeneficiary3.Location = new System.Drawing.Point(23, 145);
-            this.checkBoxSPAJEditBeneficiary3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxSPAJEditBeneficiary3.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSPAJEditBeneficiary3.Name = "checkBoxSPAJEditBeneficiary3";
             this.checkBoxSPAJEditBeneficiary3.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJEditBeneficiary3.TabIndex = 15;
@@ -5318,7 +5333,7 @@
             // 
             this.checkBoxSPAJEditBeneficiary2.AutoSize = true;
             this.checkBoxSPAJEditBeneficiary2.Location = new System.Drawing.Point(23, 106);
-            this.checkBoxSPAJEditBeneficiary2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxSPAJEditBeneficiary2.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSPAJEditBeneficiary2.Name = "checkBoxSPAJEditBeneficiary2";
             this.checkBoxSPAJEditBeneficiary2.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJEditBeneficiary2.TabIndex = 14;
@@ -5327,7 +5342,7 @@
             // textBoxSPAJEditBeneficiaryDetail1
             // 
             this.textBoxSPAJEditBeneficiaryDetail1.Location = new System.Drawing.Point(432, 67);
-            this.textBoxSPAJEditBeneficiaryDetail1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditBeneficiaryDetail1.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditBeneficiaryDetail1.Name = "textBoxSPAJEditBeneficiaryDetail1";
             this.textBoxSPAJEditBeneficiaryDetail1.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJEditBeneficiaryDetail1.TabIndex = 13;
@@ -5336,7 +5351,7 @@
             // 
             this.textBoxSPAJEditBeneficiaryFName2.Enabled = false;
             this.textBoxSPAJEditBeneficiaryFName2.Location = new System.Drawing.Point(49, 106);
-            this.textBoxSPAJEditBeneficiaryFName2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditBeneficiaryFName2.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditBeneficiaryFName2.Name = "textBoxSPAJEditBeneficiaryFName2";
             this.textBoxSPAJEditBeneficiaryFName2.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJEditBeneficiaryFName2.TabIndex = 12;
@@ -5345,7 +5360,7 @@
             // 
             this.textBoxSPAJEditBeneficiaryDetail2.Enabled = false;
             this.textBoxSPAJEditBeneficiaryDetail2.Location = new System.Drawing.Point(432, 107);
-            this.textBoxSPAJEditBeneficiaryDetail2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditBeneficiaryDetail2.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditBeneficiaryDetail2.Name = "textBoxSPAJEditBeneficiaryDetail2";
             this.textBoxSPAJEditBeneficiaryDetail2.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJEditBeneficiaryDetail2.TabIndex = 11;
@@ -5353,7 +5368,7 @@
             // textBoxSPAJEditBeneficiaryLName1
             // 
             this.textBoxSPAJEditBeneficiaryLName1.Location = new System.Drawing.Point(142, 67);
-            this.textBoxSPAJEditBeneficiaryLName1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditBeneficiaryLName1.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditBeneficiaryLName1.Name = "textBoxSPAJEditBeneficiaryLName1";
             this.textBoxSPAJEditBeneficiaryLName1.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJEditBeneficiaryLName1.TabIndex = 10;
@@ -5361,7 +5376,7 @@
             // textBoxSPAJEditBeneficiaryFName1
             // 
             this.textBoxSPAJEditBeneficiaryFName1.Location = new System.Drawing.Point(49, 67);
-            this.textBoxSPAJEditBeneficiaryFName1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditBeneficiaryFName1.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditBeneficiaryFName1.Name = "textBoxSPAJEditBeneficiaryFName1";
             this.textBoxSPAJEditBeneficiaryFName1.Size = new System.Drawing.Size(68, 20);
             this.textBoxSPAJEditBeneficiaryFName1.TabIndex = 9;
@@ -5370,7 +5385,7 @@
             // 
             this.checkBoxSPAJEditBeneficiary1.AutoSize = true;
             this.checkBoxSPAJEditBeneficiary1.Location = new System.Drawing.Point(23, 69);
-            this.checkBoxSPAJEditBeneficiary1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxSPAJEditBeneficiary1.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSPAJEditBeneficiary1.Name = "checkBoxSPAJEditBeneficiary1";
             this.checkBoxSPAJEditBeneficiary1.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPAJEditBeneficiary1.TabIndex = 8;
@@ -5451,7 +5466,7 @@
             // textBoxSPAJEditANumber
             // 
             this.textBoxSPAJEditANumber.Location = new System.Drawing.Point(102, 163);
-            this.textBoxSPAJEditANumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditANumber.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditANumber.Name = "textBoxSPAJEditANumber";
             this.textBoxSPAJEditANumber.Size = new System.Drawing.Size(95, 20);
             this.textBoxSPAJEditANumber.TabIndex = 10;
@@ -5491,7 +5506,7 @@
             // textBoxSPAJEditAName
             // 
             this.textBoxSPAJEditAName.Location = new System.Drawing.Point(102, 124);
-            this.textBoxSPAJEditAName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditAName.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditAName.Name = "textBoxSPAJEditAName";
             this.textBoxSPAJEditAName.Size = new System.Drawing.Size(95, 20);
             this.textBoxSPAJEditAName.TabIndex = 9;
@@ -5499,7 +5514,7 @@
             // textBoxSPAJEditNumber
             // 
             this.textBoxSPAJEditNumber.Location = new System.Drawing.Point(72, 55);
-            this.textBoxSPAJEditNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJEditNumber.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJEditNumber.Name = "textBoxSPAJEditNumber";
             this.textBoxSPAJEditNumber.Size = new System.Drawing.Size(95, 20);
             this.textBoxSPAJEditNumber.TabIndex = 8;
@@ -5525,9 +5540,9 @@
             this.tabPageSPAJDelete.Controls.Add(this.comboBoxSPAJDeleteType);
             this.tabPageSPAJDelete.Controls.Add(this.label149);
             this.tabPageSPAJDelete.Location = new System.Drawing.Point(4, 22);
-            this.tabPageSPAJDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageSPAJDelete.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageSPAJDelete.Name = "tabPageSPAJDelete";
-            this.tabPageSPAJDelete.Size = new System.Drawing.Size(745, 351);
+            this.tabPageSPAJDelete.Size = new System.Drawing.Size(744, 351);
             this.tabPageSPAJDelete.TabIndex = 4;
             this.tabPageSPAJDelete.Text = "History/ Delete SPAJ";
             this.tabPageSPAJDelete.UseVisualStyleBackColor = true;
@@ -5536,7 +5551,7 @@
             // 
             this.dataGridViewSPAJHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewSPAJHistory.Location = new System.Drawing.Point(242, 142);
-            this.dataGridViewSPAJHistory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewSPAJHistory.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewSPAJHistory.Name = "dataGridViewSPAJHistory";
             this.dataGridViewSPAJHistory.RowTemplate.Height = 33;
             this.dataGridViewSPAJHistory.Size = new System.Drawing.Size(299, 192);
@@ -5545,7 +5560,7 @@
             // buttonSPAJHistory
             // 
             this.buttonSPAJHistory.Location = new System.Drawing.Point(350, 108);
-            this.buttonSPAJHistory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSPAJHistory.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSPAJHistory.Name = "buttonSPAJHistory";
             this.buttonSPAJHistory.Size = new System.Drawing.Size(85, 20);
             this.buttonSPAJHistory.TabIndex = 16;
@@ -5556,7 +5571,7 @@
             // 
             this.buttonSPAJDeleteDelete.Enabled = false;
             this.buttonSPAJDeleteDelete.Location = new System.Drawing.Point(470, 108);
-            this.buttonSPAJDeleteDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSPAJDeleteDelete.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSPAJDeleteDelete.Name = "buttonSPAJDeleteDelete";
             this.buttonSPAJDeleteDelete.Size = new System.Drawing.Size(62, 20);
             this.buttonSPAJDeleteDelete.TabIndex = 15;
@@ -5566,7 +5581,7 @@
             // buttonSPAJDeleteClear
             // 
             this.buttonSPAJDeleteClear.Location = new System.Drawing.Point(252, 108);
-            this.buttonSPAJDeleteClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSPAJDeleteClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSPAJDeleteClear.Name = "buttonSPAJDeleteClear";
             this.buttonSPAJDeleteClear.Size = new System.Drawing.Size(62, 20);
             this.buttonSPAJDeleteClear.TabIndex = 14;
@@ -5576,7 +5591,7 @@
             // buttonSPAJDeleteCheck
             // 
             this.buttonSPAJDeleteCheck.Location = new System.Drawing.Point(470, 60);
-            this.buttonSPAJDeleteCheck.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSPAJDeleteCheck.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSPAJDeleteCheck.Name = "buttonSPAJDeleteCheck";
             this.buttonSPAJDeleteCheck.Size = new System.Drawing.Size(58, 20);
             this.buttonSPAJDeleteCheck.TabIndex = 13;
@@ -5586,7 +5601,7 @@
             // textBoxSPAJDeleteNum
             // 
             this.textBoxSPAJDeleteNum.Location = new System.Drawing.Point(344, 64);
-            this.textBoxSPAJDeleteNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSPAJDeleteNum.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSPAJDeleteNum.Name = "textBoxSPAJDeleteNum";
             this.textBoxSPAJDeleteNum.Size = new System.Drawing.Size(110, 20);
             this.textBoxSPAJDeleteNum.TabIndex = 12;
@@ -5598,7 +5613,7 @@
             "SPAJ",
             "Polis"});
             this.comboBoxSPAJDeleteType.Location = new System.Drawing.Point(252, 63);
-            this.comboBoxSPAJDeleteType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSPAJDeleteType.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSPAJDeleteType.Name = "comboBoxSPAJDeleteType";
             this.comboBoxSPAJDeleteType.Size = new System.Drawing.Size(64, 21);
             this.comboBoxSPAJDeleteType.TabIndex = 11;
@@ -5630,7 +5645,7 @@
             // buttonSPAJClearBackMenu
             // 
             this.buttonSPAJClearBackMenu.Location = new System.Drawing.Point(1, -1);
-            this.buttonSPAJClearBackMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSPAJClearBackMenu.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSPAJClearBackMenu.Name = "buttonSPAJClearBackMenu";
             this.buttonSPAJClearBackMenu.Size = new System.Drawing.Size(87, 23);
             this.buttonSPAJClearBackMenu.TabIndex = 10;
@@ -5646,7 +5661,7 @@
             this.Controls.Add(this.buttonSPAJClearBackMenu);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControlSPAJ);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form2";
             this.Text = "AMS SPAJ ";
             this.tabControlSPAJ.ResumeLayout(false);
