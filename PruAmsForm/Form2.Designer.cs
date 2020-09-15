@@ -378,7 +378,7 @@
             this.textBoxSPAJEditAddrEmail = new System.Windows.Forms.TextBox();
             this.textBoxSPAJEditAddrZip = new System.Windows.Forms.TextBox();
             this.textBoxSPAJEditAddrCity = new System.Windows.Forms.TextBox();
-            this.textBoxSPAJEditAddressAddr = new System.Windows.Forms.TextBox();
+            this.textBoxSPAJEditAddrAddress = new System.Windows.Forms.TextBox();
             this.label115 = new System.Windows.Forms.Label();
             this.tabPageEditPengajuanInfo = new System.Windows.Forms.TabPage();
             this.labelEditPruHospitalandSurgical = new System.Windows.Forms.Label();
@@ -4264,7 +4264,7 @@
             this.tabPageEditAddrInfo.Controls.Add(this.textBoxSPAJEditAddrEmail);
             this.tabPageEditAddrInfo.Controls.Add(this.textBoxSPAJEditAddrZip);
             this.tabPageEditAddrInfo.Controls.Add(this.textBoxSPAJEditAddrCity);
-            this.tabPageEditAddrInfo.Controls.Add(this.textBoxSPAJEditAddressAddr);
+            this.tabPageEditAddrInfo.Controls.Add(this.textBoxSPAJEditAddrAddress);
             this.tabPageEditAddrInfo.Controls.Add(this.label115);
             this.tabPageEditAddrInfo.Location = new System.Drawing.Point(4, 22);
             this.tabPageEditAddrInfo.Margin = new System.Windows.Forms.Padding(2);
@@ -4395,13 +4395,13 @@
             this.textBoxSPAJEditAddrCity.Size = new System.Drawing.Size(102, 20);
             this.textBoxSPAJEditAddrCity.TabIndex = 4;
             // 
-            // textBoxSPAJEditAddressAddr
+            // textBoxSPAJEditAddrAddress
             // 
-            this.textBoxSPAJEditAddressAddr.Location = new System.Drawing.Point(237, 54);
-            this.textBoxSPAJEditAddressAddr.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxSPAJEditAddressAddr.Name = "textBoxSPAJEditAddressAddr";
-            this.textBoxSPAJEditAddressAddr.Size = new System.Drawing.Size(102, 20);
-            this.textBoxSPAJEditAddressAddr.TabIndex = 3;
+            this.textBoxSPAJEditAddrAddress.Location = new System.Drawing.Point(237, 54);
+            this.textBoxSPAJEditAddrAddress.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxSPAJEditAddrAddress.Name = "textBoxSPAJEditAddrAddress";
+            this.textBoxSPAJEditAddrAddress.Size = new System.Drawing.Size(102, 20);
+            this.textBoxSPAJEditAddrAddress.TabIndex = 3;
             // 
             // label115
             // 
@@ -6046,7 +6046,7 @@
         private System.Windows.Forms.TextBox textBoxSPAJEditAddrEmail;
         private System.Windows.Forms.TextBox textBoxSPAJEditAddrZip;
         private System.Windows.Forms.TextBox textBoxSPAJEditAddrCity;
-        private System.Windows.Forms.TextBox textBoxSPAJEditAddressAddr;
+        private System.Windows.Forms.TextBox textBoxSPAJEditAddrAddress;
         private System.Windows.Forms.Label label115;
         private System.Windows.Forms.TabPage tabPageEditPengajuanInfo;
         private System.Windows.Forms.Button buttonPengajuanEdit;
