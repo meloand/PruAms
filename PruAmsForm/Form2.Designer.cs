@@ -304,10 +304,10 @@
             this.tabPageEditPolisInfo = new System.Windows.Forms.TabPage();
             this.buttonPolisInfoEdit = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButtonSPAJEditPolisSame = new System.Windows.Forms.RadioButton();
             this.dateTimeSPAJEditPolisDOB = new System.Windows.Forms.DateTimePicker();
             this.comboBoxSPAJEditPolisRs = new System.Windows.Forms.ComboBox();
-            this.comboBoxSPAJEditPolisDOB = new System.Windows.Forms.ComboBox();
+            this.comboBoxSPAJEditPolisMarriage = new System.Windows.Forms.ComboBox();
             this.comboBoxSPAJEditPolisGender = new System.Windows.Forms.ComboBox();
             this.textBoxSPAJEditPolisName = new System.Windows.Forms.TextBox();
             this.label59 = new System.Windows.Forms.Label();
@@ -329,7 +329,7 @@
             this.radioButtonSPAJEditSpouseSmoke = new System.Windows.Forms.RadioButton();
             this.textBoxSPAJEditSpouseWeight = new System.Windows.Forms.TextBox();
             this.textBoxSPAJEditSpouseHeight = new System.Windows.Forms.TextBox();
-            this.textBox1SPAJEditSpouseName = new System.Windows.Forms.TextBox();
+            this.textBoxSPAJEditSpouseName = new System.Windows.Forms.TextBox();
             this.label65 = new System.Windows.Forms.Label();
             this.label66 = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
@@ -346,10 +346,10 @@
             this.buttonParentEditIgnore = new System.Windows.Forms.Button();
             this.buttonParentEdit = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
-            this.dateTimeSPAJEditDOB = new System.Windows.Forms.DateTimePicker();
-            this.comboBoxSPAJEditMarriage = new System.Windows.Forms.ComboBox();
+            this.dateTimeSPAJEditParentDOB = new System.Windows.Forms.DateTimePicker();
+            this.comboBoxSPAJEditParentMarriage = new System.Windows.Forms.ComboBox();
             this.comboBoxSPAJEditParentGender = new System.Windows.Forms.ComboBox();
-            this.textBoxSPAJEditAge = new System.Windows.Forms.TextBox();
+            this.textBoxSPAJEditParentNextBday = new System.Windows.Forms.TextBox();
             this.radioButtonSPAJEditParentSmoke = new System.Windows.Forms.RadioButton();
             this.textBoxSPAJEditParentWeight = new System.Windows.Forms.TextBox();
             this.textBoxSPAJEditParentHeight = new System.Windows.Forms.TextBox();
@@ -3297,6 +3297,7 @@
             this.tabControlEditSPAJ.Controls.Add(this.tabPageEditAddrInfo);
             this.tabControlEditSPAJ.Controls.Add(this.tabPageEditPengajuanInfo);
             this.tabControlEditSPAJ.Controls.Add(this.tabPageEditBeneficiaryInfo);
+            this.tabControlEditSPAJ.Enabled = false;
             this.tabControlEditSPAJ.Location = new System.Drawing.Point(240, 0);
             this.tabControlEditSPAJ.Margin = new System.Windows.Forms.Padding(2);
             this.tabControlEditSPAJ.Name = "tabControlEditSPAJ";
@@ -3576,10 +3577,10 @@
             // 
             this.tabPageEditPolisInfo.Controls.Add(this.buttonPolisInfoEdit);
             this.tabPageEditPolisInfo.Controls.Add(this.button9);
-            this.tabPageEditPolisInfo.Controls.Add(this.radioButton2);
+            this.tabPageEditPolisInfo.Controls.Add(this.radioButtonSPAJEditPolisSame);
             this.tabPageEditPolisInfo.Controls.Add(this.dateTimeSPAJEditPolisDOB);
             this.tabPageEditPolisInfo.Controls.Add(this.comboBoxSPAJEditPolisRs);
-            this.tabPageEditPolisInfo.Controls.Add(this.comboBoxSPAJEditPolisDOB);
+            this.tabPageEditPolisInfo.Controls.Add(this.comboBoxSPAJEditPolisMarriage);
             this.tabPageEditPolisInfo.Controls.Add(this.comboBoxSPAJEditPolisGender);
             this.tabPageEditPolisInfo.Controls.Add(this.textBoxSPAJEditPolisName);
             this.tabPageEditPolisInfo.Controls.Add(this.label59);
@@ -3616,17 +3617,17 @@
             this.button9.Text = "Clear";
             this.button9.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioButtonSPAJEditPolisSame
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(326, 42);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(137, 17);
-            this.radioButton2.TabIndex = 12;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Click If Same As Insurer";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonSPAJEditPolisSame.AutoSize = true;
+            this.radioButtonSPAJEditPolisSame.Location = new System.Drawing.Point(326, 42);
+            this.radioButtonSPAJEditPolisSame.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonSPAJEditPolisSame.Name = "radioButtonSPAJEditPolisSame";
+            this.radioButtonSPAJEditPolisSame.Size = new System.Drawing.Size(137, 17);
+            this.radioButtonSPAJEditPolisSame.TabIndex = 12;
+            this.radioButtonSPAJEditPolisSame.TabStop = true;
+            this.radioButtonSPAJEditPolisSame.Text = "Click If Same As Insurer";
+            this.radioButtonSPAJEditPolisSame.UseVisualStyleBackColor = true;
             // 
             // dateTimeSPAJEditPolisDOB
             // 
@@ -3651,16 +3652,16 @@
             this.comboBoxSPAJEditPolisRs.Size = new System.Drawing.Size(83, 21);
             this.comboBoxSPAJEditPolisRs.TabIndex = 10;
             // 
-            // comboBoxSPAJEditPolisDOB
+            // comboBoxSPAJEditPolisMarriage
             // 
-            this.comboBoxSPAJEditPolisDOB.FormattingEnabled = true;
-            this.comboBoxSPAJEditPolisDOB.Items.AddRange(new object[] {
+            this.comboBoxSPAJEditPolisMarriage.FormattingEnabled = true;
+            this.comboBoxSPAJEditPolisMarriage.Items.AddRange(new object[] {
             "Single",
             "Married"});
-            this.comboBoxSPAJEditPolisDOB.Location = new System.Drawing.Point(196, 154);
-            this.comboBoxSPAJEditPolisDOB.Name = "comboBoxSPAJEditPolisDOB";
-            this.comboBoxSPAJEditPolisDOB.Size = new System.Drawing.Size(83, 21);
-            this.comboBoxSPAJEditPolisDOB.TabIndex = 9;
+            this.comboBoxSPAJEditPolisMarriage.Location = new System.Drawing.Point(196, 154);
+            this.comboBoxSPAJEditPolisMarriage.Name = "comboBoxSPAJEditPolisMarriage";
+            this.comboBoxSPAJEditPolisMarriage.Size = new System.Drawing.Size(83, 21);
+            this.comboBoxSPAJEditPolisMarriage.TabIndex = 9;
             // 
             // comboBoxSPAJEditPolisGender
             // 
@@ -3751,7 +3752,7 @@
             this.tabPageEditSpouseInfo.Controls.Add(this.radioButtonSPAJEditSpouseSmoke);
             this.tabPageEditSpouseInfo.Controls.Add(this.textBoxSPAJEditSpouseWeight);
             this.tabPageEditSpouseInfo.Controls.Add(this.textBoxSPAJEditSpouseHeight);
-            this.tabPageEditSpouseInfo.Controls.Add(this.textBox1SPAJEditSpouseName);
+            this.tabPageEditSpouseInfo.Controls.Add(this.textBoxSPAJEditSpouseName);
             this.tabPageEditSpouseInfo.Controls.Add(this.label65);
             this.tabPageEditSpouseInfo.Controls.Add(this.label66);
             this.tabPageEditSpouseInfo.Controls.Add(this.label67);
@@ -3885,12 +3886,12 @@
             this.textBoxSPAJEditSpouseHeight.Size = new System.Drawing.Size(62, 20);
             this.textBoxSPAJEditSpouseHeight.TabIndex = 13;
             // 
-            // textBox1SPAJEditSpouseName
+            // textBoxSPAJEditSpouseName
             // 
-            this.textBox1SPAJEditSpouseName.Location = new System.Drawing.Point(100, 51);
-            this.textBox1SPAJEditSpouseName.Name = "textBox1SPAJEditSpouseName";
-            this.textBox1SPAJEditSpouseName.Size = new System.Drawing.Size(128, 20);
-            this.textBox1SPAJEditSpouseName.TabIndex = 12;
+            this.textBoxSPAJEditSpouseName.Location = new System.Drawing.Point(100, 51);
+            this.textBoxSPAJEditSpouseName.Name = "textBoxSPAJEditSpouseName";
+            this.textBoxSPAJEditSpouseName.Size = new System.Drawing.Size(128, 20);
+            this.textBoxSPAJEditSpouseName.TabIndex = 12;
             // 
             // label65
             // 
@@ -4000,10 +4001,10 @@
             this.tabPageEditParentInfo.Controls.Add(this.buttonParentEditIgnore);
             this.tabPageEditParentInfo.Controls.Add(this.buttonParentEdit);
             this.tabPageEditParentInfo.Controls.Add(this.button15);
-            this.tabPageEditParentInfo.Controls.Add(this.dateTimeSPAJEditDOB);
-            this.tabPageEditParentInfo.Controls.Add(this.comboBoxSPAJEditMarriage);
+            this.tabPageEditParentInfo.Controls.Add(this.dateTimeSPAJEditParentDOB);
+            this.tabPageEditParentInfo.Controls.Add(this.comboBoxSPAJEditParentMarriage);
             this.tabPageEditParentInfo.Controls.Add(this.comboBoxSPAJEditParentGender);
-            this.tabPageEditParentInfo.Controls.Add(this.textBoxSPAJEditAge);
+            this.tabPageEditParentInfo.Controls.Add(this.textBoxSPAJEditParentNextBday);
             this.tabPageEditParentInfo.Controls.Add(this.radioButtonSPAJEditParentSmoke);
             this.tabPageEditParentInfo.Controls.Add(this.textBoxSPAJEditParentWeight);
             this.tabPageEditParentInfo.Controls.Add(this.textBoxSPAJEditParentHeight);
@@ -4078,24 +4079,24 @@
             this.button15.Text = "Clear";
             this.button15.UseVisualStyleBackColor = true;
             // 
-            // dateTimeSPAJEditDOB
+            // dateTimeSPAJEditParentDOB
             // 
-            this.dateTimeSPAJEditDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimeSPAJEditDOB.Location = new System.Drawing.Point(100, 102);
-            this.dateTimeSPAJEditDOB.Name = "dateTimeSPAJEditDOB";
-            this.dateTimeSPAJEditDOB.Size = new System.Drawing.Size(126, 20);
-            this.dateTimeSPAJEditDOB.TabIndex = 20;
+            this.dateTimeSPAJEditParentDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimeSPAJEditParentDOB.Location = new System.Drawing.Point(100, 102);
+            this.dateTimeSPAJEditParentDOB.Name = "dateTimeSPAJEditParentDOB";
+            this.dateTimeSPAJEditParentDOB.Size = new System.Drawing.Size(126, 20);
+            this.dateTimeSPAJEditParentDOB.TabIndex = 20;
             // 
-            // comboBoxSPAJEditMarriage
+            // comboBoxSPAJEditParentMarriage
             // 
-            this.comboBoxSPAJEditMarriage.FormattingEnabled = true;
-            this.comboBoxSPAJEditMarriage.Items.AddRange(new object[] {
+            this.comboBoxSPAJEditParentMarriage.FormattingEnabled = true;
+            this.comboBoxSPAJEditParentMarriage.Items.AddRange(new object[] {
             "Single",
             "Married"});
-            this.comboBoxSPAJEditMarriage.Location = new System.Drawing.Point(100, 128);
-            this.comboBoxSPAJEditMarriage.Name = "comboBoxSPAJEditMarriage";
-            this.comboBoxSPAJEditMarriage.Size = new System.Drawing.Size(72, 21);
-            this.comboBoxSPAJEditMarriage.TabIndex = 18;
+            this.comboBoxSPAJEditParentMarriage.Location = new System.Drawing.Point(100, 128);
+            this.comboBoxSPAJEditParentMarriage.Name = "comboBoxSPAJEditParentMarriage";
+            this.comboBoxSPAJEditParentMarriage.Size = new System.Drawing.Size(72, 21);
+            this.comboBoxSPAJEditParentMarriage.TabIndex = 18;
             // 
             // comboBoxSPAJEditParentGender
             // 
@@ -4108,12 +4109,12 @@
             this.comboBoxSPAJEditParentGender.Size = new System.Drawing.Size(72, 21);
             this.comboBoxSPAJEditParentGender.TabIndex = 17;
             // 
-            // textBoxSPAJEditAge
+            // textBoxSPAJEditParentNextBday
             // 
-            this.textBoxSPAJEditAge.Location = new System.Drawing.Point(100, 162);
-            this.textBoxSPAJEditAge.Name = "textBoxSPAJEditAge";
-            this.textBoxSPAJEditAge.Size = new System.Drawing.Size(46, 20);
-            this.textBoxSPAJEditAge.TabIndex = 16;
+            this.textBoxSPAJEditParentNextBday.Location = new System.Drawing.Point(100, 162);
+            this.textBoxSPAJEditParentNextBday.Name = "textBoxSPAJEditParentNextBday";
+            this.textBoxSPAJEditParentNextBday.Size = new System.Drawing.Size(46, 20);
+            this.textBoxSPAJEditParentNextBday.TabIndex = 16;
             // 
             // radioButtonSPAJEditParentSmoke
             // 
@@ -5976,10 +5977,10 @@
         private System.Windows.Forms.TabPage tabPageEditPolisInfo;
         private System.Windows.Forms.Button buttonPolisInfoEdit;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButtonSPAJEditPolisSame;
         private System.Windows.Forms.DateTimePicker dateTimeSPAJEditPolisDOB;
         private System.Windows.Forms.ComboBox comboBoxSPAJEditPolisRs;
-        private System.Windows.Forms.ComboBox comboBoxSPAJEditPolisDOB;
+        private System.Windows.Forms.ComboBox comboBoxSPAJEditPolisMarriage;
         private System.Windows.Forms.ComboBox comboBoxSPAJEditPolisGender;
         private System.Windows.Forms.TextBox textBoxSPAJEditPolisName;
         private System.Windows.Forms.Label label59;
@@ -6013,10 +6014,10 @@
         private System.Windows.Forms.Button buttonParentEditIgnore;
         private System.Windows.Forms.Button buttonParentEdit;
         private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.DateTimePicker dateTimeSPAJEditDOB;
-        private System.Windows.Forms.ComboBox comboBoxSPAJEditMarriage;
+        private System.Windows.Forms.DateTimePicker dateTimeSPAJEditParentDOB;
+        private System.Windows.Forms.ComboBox comboBoxSPAJEditParentMarriage;
         private System.Windows.Forms.ComboBox comboBoxSPAJEditParentGender;
-        private System.Windows.Forms.TextBox textBoxSPAJEditAge;
+        private System.Windows.Forms.TextBox textBoxSPAJEditParentNextBday;
         private System.Windows.Forms.RadioButton radioButtonSPAJEditParentSmoke;
         private System.Windows.Forms.TextBox textBoxSPAJEditParentWeight;
         private System.Windows.Forms.TextBox textBoxSPAJEditParentHeight;
@@ -6196,6 +6197,6 @@
         private System.Windows.Forms.TextBox textBoxSPAJPengajuanPruHosp;
         private System.Windows.Forms.TextBox textBoxSPAJPengajuanBasic;
         private System.Windows.Forms.Label label161;
-        private System.Windows.Forms.TextBox textBox1SPAJEditSpouseName;
+        private System.Windows.Forms.TextBox textBoxSPAJEditSpouseName;
     }
 }
