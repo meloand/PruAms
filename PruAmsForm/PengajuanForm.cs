@@ -18,47 +18,47 @@ namespace PruAmsForm
         { get; set; }
         public string PengajuanCurrency
         { get; set;  }
-        public float PengajuanExchange
+        public double PengajuanExchange
         { get; set; }
         public string PengajuanBasic
         { get; set; }
-        public float PengajuanPertanggungan
+        public double PengajuanPertanggungan
         { get; set; }
-        public float PengajuanPruHosp
+        public double PengajuanPruHosp
         { get; set; }
         public string PengajuanPruPayor
         { get; set; }
-        public float PengajuanPruPayorAmnt
+        public double PengajuanPruPayorAmnt
         { get; set; }
         public string PengajuanPruCC
         { get; set; }
-        public float PengajuanPruCCAmnt
+        public double PengajuanPruCCAmnt
         { get; set; }
         public string PengajuanPruADD
         { get; set; }
-        public float PengajuanPruADDAmnt
+        public double PengajuanPruADDAmnt
         { get; set;  }
         public string PengajuanPruMed
         { get; set; }
-        public float PengajuanPruMedAmnt
+        public double PengajuanPruMedAmnt
         { get; set; }
         public string PengajuanPruPPayor
         { get; set; }
-        public float PengajuanPruPPayorAmnt
+        public double PengajuanPruPPayorAmnt
         { get; set; }
-        public float PengajuanPremi
+        public double PengajuanPremi
         { get; set; }
-        public float PengajuanPruSaver
+        public double PengajuanPruSaver
         { get; set; }
-        public float PengajuanTotalPremi
+        public double PengajuanTotalPremi
         { get; set; }
 
         public PengajuanForm(string PengajuanFrequency, string PengajuanPay, string PengajuanCCBankOther, 
-            string PengajuanExpDate,string PengajuanCurrency, float PengajuanExchange, string PengajuanBasic, 
-            float PengajuanPertanggungan, float PengajuanPruHosp, string PengajuanPruPayor, float PengajuanPruPayorAmnt, 
-            string PengajuanPruCC, float PengajuanPruCCAmnt, string PengajuanPruADD, float PengajuanPruADDAmnt, 
-            string PengajuanPruMed, float PengajuanPruMedAmnt, string PengajuanPruPPayor, float PengajuanPruPPayorAmnt, 
-            float PengajuanPremi, float PengajuanPruSaver, float PengajuanTotalPremi)
+            string PengajuanExpDate,string PengajuanCurrency, double PengajuanExchange, string PengajuanBasic, 
+            double PengajuanPertanggungan, double PengajuanPruHosp, string PengajuanPruPayor, double PengajuanPruPayorAmnt, 
+            string PengajuanPruCC, double PengajuanPruCCAmnt, string PengajuanPruADD, double PengajuanPruADDAmnt, 
+            string PengajuanPruMed, double PengajuanPruMedAmnt, string PengajuanPruPPayor, double PengajuanPruPPayorAmnt, 
+            double  PengajuanPremi, double PengajuanPruSaver, double PengajuanTotalPremi)
         {
             this.PengajuanFrequency = PengajuanFrequency;
             this.PengajuanPay = PengajuanPay;

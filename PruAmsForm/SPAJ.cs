@@ -16,6 +16,7 @@ namespace PruAmsForm
         public PolisForm PolisForm { get; set; }
         public SPAJForm SPAJForm { get; set; }
         public SpouseForm SpouseForm { get; set; }
+        public UpdateForm UpdateForm { get; set; }
 
         public SPAJ()
         {
@@ -33,6 +34,7 @@ namespace PruAmsForm
             this.PolisForm = polis;
             this.SPAJForm = spaj;
             this.SpouseForm = spouse;
+            this.UpdateForm = new UpdateForm(); 
         }
     }
 }
