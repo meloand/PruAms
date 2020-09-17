@@ -1138,7 +1138,112 @@ namespace PruAmsForm
 
         private void buttonSPAJEditUpdate_Click(object sender, EventArgs e)
         {
+            SPAJ spajFile = spajFiles.First(x => x.SPAJForm.SPAJNum == Int32.Parse(textBoxSPAJEditNumber.Text));
 
+            // SPAJ Form
+            spajFile.SPAJForm.SPAJType = textBoxSPAJEditType.Text;
+            spajFile.SPAJForm.AgentName = textBoxSPAJEditAName.Text;
+            spajFile.SPAJForm.AgentNum = int.Parse(textBoxSPAJEditANumber.Text);
+            spajFile.SPAJForm.PruFlyerNum = int.Parse(textBoxEditPruFlyerNum.Text);
+            spajFile.SPAJForm.SPAJSubmitDate = dateTimeSPAJEditSubmit.Text;
+            // Insurer Form
+            spajFile.InsurerForm.InsurerName = textBoxSPAJEditInsrName.Text;
+            spajFile.InsurerForm.InsurerHeight = int.Parse(textBoxSPAJEditInsrHeight.Text);
+            spajFile.InsurerForm.InsurerWeight = int.Parse(textBoxSPAJEditInsrWeight.Text);
+            spajFile.InsurerForm.InsurerNextBday = int.Parse(textBoxSPAJEditInsrNextBday.Text);
+            spajFile.InsurerForm.InsurerSmoke = radioButtonSPAJEditInsrSmoke.Checked;
+            spajFile.InsurerForm.InsurerGender = comboBoxSPAJEditInsrGender.Text;
+            spajFile.InsurerForm.InsurerJobClass = comboBoxSPAJEditInsrJobClass.Text;
+            spajFile.InsurerForm.InsurerMarried = comboBoxSPAJEditInsrMarriage.Text;
+            spajFile.InsurerForm.InsurerDOB = dateTimeSPAJEditInsrDOB.Text;
+            // Polis Form
+            spajFile.PolisForm.PolisName = textBoxSPAJEditPolisName.Text;
+            spajFile.PolisForm.PolisMarriage = comboBoxSPAJEditPolisMarriage.Text;
+            spajFile.PolisForm.PolisGender = comboBoxSPAJEditPolisGender.Text;
+            spajFile.PolisForm.PolisRs = comboBoxSPAJEditPolisRs.Text;
+            spajFile.PolisForm.PolisDOB = dateTimeSPAJEditPolisDOB.Text;
+            // Spouse Form
+            spajFile.SpouseForm.SpouseName = textBoxSPAJEditSpouseName.Text;
+            spajFile.SpouseForm.SpouseHeight = int.Parse(textBoxSPAJEditSpouseHeight.Text);
+            spajFile.SpouseForm.SpouseNextBday = int.Parse(textBoxSPAJEditSpouseNextBday.Text);
+            spajFile.SpouseForm.SpouseWeight = int.Parse(textBoxSPAJEditSpouseWeight.Text);
+            spajFile.SpouseForm.SpouseGender = comboBoxSPAJEditSpouseGender.Text;
+            spajFile.SpouseForm.SpouseMarriage = comboBoxSPAJEditSpouseMarriage.Text;
+            spajFile.SpouseForm.SpouseSmoke = radioButtonSPAJEditSpouseSmoke.Checked;
+            spajFile.SpouseForm.SpouseDOB = dateTimeSPAJEditSpouseDOB.Text;
+            // Parent Form
+            spajFile.ParentForm.ParentName = textBoxSPAJEditParentName.Text;
+            spajFile.ParentForm.ParentHeight = int.Parse(textBoxSPAJEditParentHeight.Text);
+            spajFile.ParentForm.ParentNextBday = int.Parse(textBoxSPAJEditParentNextBday.Text);
+            spajFile.ParentForm.ParentWeight = int.Parse(textBoxSPAJEditParentWeight.Text);
+            spajFile.ParentForm.ParentGender = comboBoxSPAJEditParentGender.Text;
+            spajFile.ParentForm.ParentMarriage = comboBoxSPAJEditParentMarriage.Text;
+            spajFile.ParentForm.ParentSmoke = radioButtonSPAJEditParentSmoke.Checked;
+            spajFile.ParentForm.ParentDOB = dateTimeSPAJEditParentDOB.Text;
+            // Address Form
+            spajFile.AddressForm.City = textBoxSPAJEditAddrCity.Text;
+            spajFile.AddressForm.Email = textBoxSPAJEditAddrEmail.Text;
+            spajFile.AddressForm.HPNumber = int.Parse(textBoxSPAJEditAddrHP.Text);
+            spajFile.AddressForm.Address = textBoxSPAJEditAddrAddress.Text;
+            spajFile.AddressForm.OPNumber = int.Parse(textBoxSPAJEditAddrOP.Text);
+            spajFile.AddressForm.ZipCode = int.Parse(textBoxSPAJEditAddrZip.Text);
+            // Pengajuan Form
+            spajFile.PengajuanForm.PengajuanCCBankOther = textBoxSPAJEditPengajuanCCBank.Text;
+            spajFile.PengajuanForm.PengajuanExchange = int.Parse(textBoxSPAJEditPengajuanExchange.Text);
+            spajFile.PengajuanForm.PengajuanExpDate = textBoxSPAJEditPengajuanExpDate.Text;
+            spajFile.PengajuanForm.PengajuanPertanggungan = int.Parse(textBoxSPAJEditPengajuanPrtanggung.Text);
+            spajFile.PengajuanForm.PengajuanPruADDAmnt = int.Parse(textBoxSPAJEditPengajuanPruADDAmnt.Text);
+            spajFile.PengajuanForm.PengajuanPruCCAmnt = int.Parse(textBoxSPAJEditPengajuanPruCCAmnt.Text);
+            spajFile.PengajuanForm.PengajuanPruMedAmnt = int.Parse(textBoxSPAJEditPengajuanPRUMedAmnt.Text);
+            spajFile.PengajuanForm.PengajuanPruPayorAmnt = int.Parse(textBoxSPAJEditPengajuanPruPayorAmnt.Text);
+            spajFile.PengajuanForm.PengajuanPruPPayorAmnt = int.Parse(textBoxSPAJEditPengajuanPruPPayorAmnt.Text);
+            spajFile.PengajuanForm.PengajuanBasic = textBoxSPAJEditPengajuanBasic.Text;
+            spajFile.PengajuanForm.PengajuanCurrency = comboBoxSPAJEditPengajuanCurrency.Text;
+            spajFile.PengajuanForm.PengajuanFrequency = comboBoxSPAJEditPengajuanFreq.Text;
+            spajFile.PengajuanForm.PengajuanPay = comboBoxSPAJEditPengajuanPay.Text;
+            spajFile.PengajuanForm.PengajuanPruADD = textBoxSPAJEditPengajuanPruADD.Text;
+            spajFile.PengajuanForm.PengajuanPruCC = textBoxSPAJEditPengajuanPruCC.Text;
+            spajFile.PengajuanForm.PengajuanPruHosp = int.Parse(textBoxSPAJEditPengajuanPruHosp.Text);
+            spajFile.PengajuanForm.PengajuanPruMed = textBoxSPAJEditPengajuanPRUMed.Text;
+            spajFile.PengajuanForm.PengajuanPruPayor = textBoxSPAJEditPengajuanPruPayor.Text;
+            spajFile.PengajuanForm.PengajuanPruPPayor = textBoxSPAJEditPengajuanPruPPayor.Text;
+
+            spajFile.PengajuanForm.PengajuanPremi = int.Parse(textBoxSPAJEditPengajuanPremi.Text);
+            spajFile.PengajuanForm.PengajuanPruSaver = int.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
+            spajFile.PengajuanForm.PengajuanTotalPremi = int.Parse(textBoxSPAJEditPengajuanPremiTotal.Text);
+
+
+            // Beneficiary Form
+            spajFile.BeneficiaryForm.Beneficiary1.FirstName = textBoxSPAJEditBeneficiaryFName1.Text;
+            spajFile.BeneficiaryForm.Beneficiary1.LastName = textBoxSPAJEditBeneficiaryLName1.Text;
+            spajFile.BeneficiaryForm.Beneficiary1.Details = textBoxSPAJEditBeneficiaryDetail1.Text;
+            spajFile.BeneficiaryForm.Beneficiary1.Birthdate = dateTimeSPAJEditBeneficiary1.Text;
+            spajFile.BeneficiaryForm.Beneficiary1.Relationship = comboBoxSPAJEditBeneficiaryRs1.Text;
+            spajFile.BeneficiaryForm.Beneficiary2.FirstName = textBoxSPAJEditBeneficiaryFName2.Text;
+            spajFile.BeneficiaryForm.Beneficiary2.LastName = textBoxSPAJEditBeneficiaryLName2.Text;
+            spajFile.BeneficiaryForm.Beneficiary2.Details = textBoxSPAJEditBeneficiaryDetail2.Text;
+            spajFile.BeneficiaryForm.Beneficiary2.Birthdate = dateTimeSPAJEditBeneficiary2.Text;
+            spajFile.BeneficiaryForm.Beneficiary2.Relationship = comboBoxSPAJEditBeneficiaryRs2.Text;
+            spajFile.BeneficiaryForm.Beneficiary3.FirstName = textBoxSPAJEditBeneficiaryFName3.Text;
+            spajFile.BeneficiaryForm.Beneficiary3.LastName = textBoxSPAJEditBeneficiaryLName3.Text;
+            spajFile.BeneficiaryForm.Beneficiary3.Details = textBoxSPAJEditBeneficiaryDetail3.Text;
+            spajFile.BeneficiaryForm.Beneficiary3.Birthdate = dateTimeSPAJEditBeneficiary3.Text;
+            spajFile.BeneficiaryForm.Beneficiary3.Relationship = comboBoxSPAJEditBeneficiaryRs3.Text;
+            spajFile.BeneficiaryForm.Beneficiary4.FirstName = textBoxSPAJEditBeneficiaryFName4.Text;
+            spajFile.BeneficiaryForm.Beneficiary4.LastName = textBoxSPAJEditBeneficiaryLName4.Text;
+            spajFile.BeneficiaryForm.Beneficiary4.Details = textBoxSPAJEditBeneficiaryDetail4.Text;
+            spajFile.BeneficiaryForm.Beneficiary4.Birthdate = dateTimeSPAJEditBeneficiary4.Text;
+            spajFile.BeneficiaryForm.Beneficiary4.Relationship = comboBoxSPAJEditBeneficiaryRs4.Text;
+            spajFile.BeneficiaryForm.Beneficiary5.FirstName = textBoxSPAJEditBeneficiaryFName5.Text;
+            spajFile.BeneficiaryForm.Beneficiary5.LastName = textBoxSPAJEditBeneficiaryLName5.Text;
+            spajFile.BeneficiaryForm.Beneficiary5.Details = textBoxSPAJEditBeneficiaryDetail5.Text;
+            spajFile.BeneficiaryForm.Beneficiary5.Birthdate = dateTimeSPAJEditBeneficiary5.Text;
+            spajFile.BeneficiaryForm.Beneficiary5.Relationship = comboBoxSPAJEditBeneficiaryRs5.Text;
+            spajFile.BeneficiaryForm.Beneficiary6.FirstName = textBoxSPAJEditBeneficiaryFName6.Text;
+            spajFile.BeneficiaryForm.Beneficiary6.LastName = textBoxSPAJEditBeneficiaryLName6.Text;
+            spajFile.BeneficiaryForm.Beneficiary6.Details = textBoxSPAJEditBeneficiaryDetail6.Text;
+            spajFile.BeneficiaryForm.Beneficiary6.Birthdate = dateTimeSPAJEditBeneficiary6.Text;
+            spajFile.BeneficiaryForm.Beneficiary6.Relationship = comboBoxSPAJEditBeneficiaryRs6.Text;
         }
     }
 }
