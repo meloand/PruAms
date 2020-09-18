@@ -22,6 +22,10 @@ namespace PruAmsForm
         {
             InitializeComponent();
             dataGridViewSPAJUpdate.DataSource = SPAJStatusChanges;
+            foreach (TabPage page in tabControlAddSPAJ.TabPages)
+            {
+                
+            }
         }
 
         private void buttonSPAJClearBackMenu_Click(object sender, EventArgs e)
@@ -39,241 +43,285 @@ namespace PruAmsForm
 
         private void buttonInsInfoAccept_Click(object sender, EventArgs e)
         {
+            try
+            {
+                // Add SPAJ Form 
+                int SPAJNum = int.Parse(textBoxSPAJNum.Text);
+                string SPAJType = textBoxSPAJInsType.Text;
+                string AgentName = textBoxSPAJAName.Text;
+                int AgentNum = int.Parse(textBoxSPAJANum.Text);
+                int PruFlyerNum = int.Parse(textBoxPRUFlyerNum.Text);
+                string SPAJSubmitDate = dateTimeSPAJSubmit.Text;
+                SPAJForm NewSPAJ;
 
-            // Add SPAJ Form 
-            int SPAJNum = int.Parse(textBoxSPAJNum.Text);
-            string SPAJType = textBoxSPAJInsType.Text;
-            string AgentName = textBoxSPAJAName.Text;
-            int AgentNum = int.Parse(textBoxSPAJANum.Text);
-            int PruFlyerNum = int.Parse(textBoxPRUFlyerNum.Text);
-            string SPAJSubmitDate = dateTimeSPAJSubmit.Text;
-            SPAJForm NewSPAJ;
+                NewSPAJ = new SPAJForm(SPAJNum, SPAJType, AgentName, AgentNum, PruFlyerNum, SPAJSubmitDate);
+                spaj.SPAJForm = NewSPAJ;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please fill all required textboxes. ");
+            }
 
-            NewSPAJ = new SPAJForm(SPAJNum, SPAJType, AgentName, AgentNum, PruFlyerNum, SPAJSubmitDate);
-            spaj.SPAJForm = NewSPAJ;
+            try
+            {
+                // Insurer Info Form 
+                string InsurerName = textBoxSPAJInsrName.Text;
+                string InsurerGender = comboBoxSPAJInsrGender.Text;
+                string InsurerDOB = dateTimeSPAJInsrDOB.Text;
+                string InsurerMarried = comboBoxSPAJInsrMarriage.Text;
+                int InsurerNextBday = NextBday(InsurerDOB);
+                textBoxSPAJInsrNextBday.Text = InsurerNextBday.ToString();
+                textBoxSPAJInsrNextBday.ReadOnly = true;
 
-            // Insurer Info Form 
-            string InsurerName = textBoxSPAJInsrName.Text;
-            string InsurerGender = comboBoxSPAJInsrGender.Text;
-            string InsurerDOB = dateTimeSPAJInsrDOB.Text;
-            string InsurerMarried = comboBoxSPAJInsrMarriage.Text;
-            int InsurerNextBday = NextBday(InsurerDOB);
-            textBoxSPAJInsrNextBday.Enabled = false; 
-            textBoxSPAJInsrNextBday.Text = InsurerNextBday.ToString("N0");
+                int InsurerHeight = int.Parse(textBoxSPAJInsrHeight.Text);
+                int InsurerWeight = int.Parse(textBoxSPAJInsrWeight.Text);
+                bool InsurerSmoke = radioButtonSPAJInsrSmoke.Checked;
+                string InsurerJobClass = comboBoxSPAJJobClass.Text;
+                InsurerForm NewInsurer;
 
-            int InsurerHeight = int.Parse(textBoxSPAJInsrHeight.Text);
-            int InsurerWeight = int.Parse(textBoxSPAJInsrWeight.Text);
-            bool InsurerSmoke = radioButtonSPAJInsrSmoke.Checked;
-            string InsurerJobClass = comboBoxSPAJJobClass.Text;
-            InsurerForm NewInsurer;
+                NewInsurer = new InsurerForm(InsurerName, InsurerGender, InsurerDOB, InsurerMarried, InsurerNextBday,
+                                             InsurerHeight, InsurerWeight, InsurerSmoke, InsurerJobClass);
+                spaj.InsurerForm = NewInsurer;
 
-            NewInsurer = new InsurerForm(InsurerName,InsurerGender, InsurerDOB, InsurerMarried, InsurerNextBday, 
-                                         InsurerHeight, InsurerWeight, InsurerSmoke, InsurerJobClass);
-            spaj.InsurerForm = NewInsurer;
-
-            tabControlAddSPAJ.SelectTab(tabPagePolisHolder);
+                tabControlAddSPAJ.SelectTab(tabPagePolisHolder);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please fill all required textboxes. ");
+            }
 
         }
 
         private void buttonPolisHolderAccept_Click(object sender, EventArgs e)
         {
-            string PolisName = textBoxSPAJPolisName.Text;
-            string PolisGender = comboBoxSPAJPolisGender.Text;
-            string PolisDOB = dateTimeSPAJPolisDOB.Text;
-            string PolisMarriage = comboBoxSPAJPolisMarriage.Text;
-            string PolisRs = comboBoxSPAJPolisRs.Text;
-            PolisForm NewPolis;
+            try
+            {
+                string PolisName = textBoxSPAJPolisName.Text;
+                string PolisGender = comboBoxSPAJPolisGender.Text;
+                string PolisDOB = dateTimeSPAJPolisDOB.Text;
+                string PolisMarriage = comboBoxSPAJPolisMarriage.Text;
+                string PolisRs = comboBoxSPAJPolisRs.Text;
+                PolisForm NewPolis;
 
-           // if (radioButtonSPAJEQIns.Checked == true)
-           // {  }
 
-            NewPolis = new PolisForm(PolisName, PolisGender, PolisDOB, PolisMarriage, PolisRs);
-            spaj.PolisForm = NewPolis;
-            tabControlAddSPAJ.SelectTab(tabPageSpouseInfo);
-
+                NewPolis = new PolisForm(PolisName, PolisGender, PolisDOB, PolisMarriage, PolisRs);
+                spaj.PolisForm = NewPolis;
+                tabControlAddSPAJ.SelectTab(tabPageSpouseInfo);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please fill all required textboxes. ");
+            }
         }
 
         private void buttonSpouseAccept_Click(object sender, EventArgs e)
         {
-            string SpouseName = textBoxSPAJSpouseName.Text;
-            string SpouseGender = comboBoxSPAJSpouseGender.Text;
-            string SpouseDOB = dateTimeSPAJSpouseDOB.Text;
-            string SpouseMarriage = comboBoxSPAJSpouseMarriage.Text;
-            int SpouseNextBday = NextBday(SpouseDOB);
-            textBoxSPAJSpouseNextBday.Enabled = false; 
-            textBoxSPAJSpouseNextBday.Text = SpouseNextBday.ToString("N0");
-            int SpouseHeight = int.Parse(textBoxSPAJSpouseHeight.Text);
-            int SpouseWeight = int.Parse(textBoxSPAJSpouseWeight.Text);
-            bool SpouseSmoke = radioButtonSPAJSpouseSmoke.Checked;
-            SpouseForm NewSpouse;
+            try
+            {
+                string SpouseName = textBoxSPAJSpouseName.Text;
+                string SpouseGender = comboBoxSPAJSpouseGender.Text;
+                string SpouseDOB = dateTimeSPAJSpouseDOB.Text;
+                string SpouseMarriage = comboBoxSPAJSpouseMarriage.Text;
+                int SpouseNextBday = NextBday(SpouseDOB);
+                textBoxSPAJSpouseNextBday.ReadOnly = true;
+                textBoxSPAJSpouseNextBday.Text = SpouseNextBday.ToString("N0");
+                int SpouseHeight = int.Parse(textBoxSPAJSpouseHeight.Text);
+                int SpouseWeight = int.Parse(textBoxSPAJSpouseWeight.Text);
+                bool SpouseSmoke = radioButtonSPAJSpouseSmoke.Checked;
+                SpouseForm NewSpouse;
 
-            NewSpouse = new SpouseForm(SpouseName, SpouseGender, SpouseDOB, SpouseMarriage, SpouseNextBday,
-                SpouseHeight, SpouseWeight, SpouseSmoke);
-            spaj.SpouseForm = NewSpouse;
+                NewSpouse = new SpouseForm(SpouseName, SpouseGender, SpouseDOB, SpouseMarriage, SpouseNextBday,
+                    SpouseHeight, SpouseWeight, SpouseSmoke);
+                spaj.SpouseForm = NewSpouse;
 
-            tabControlAddSPAJ.SelectTab(tabPageParentInfo); 
+                tabControlAddSPAJ.SelectTab(tabPageParentInfo);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please fill all required textboxes. ");
+            }
         }
 
         private void buttonParentAccept_Click(object sender, EventArgs e)
         {
-            string ParentName = textBoxSPAJParentName.Text;
-            string ParentGender = comboBoxSPAJParentGender.Text;
-            string ParentDOB = dateTimeSPAJParentDOB.Text;
-            string ParentMarriage = comboBoxSPAJParentMarriage.Text;
-            int ParentNextBday = NextBday(ParentDOB);
-            textBoxSPAJParentNextBday.Enabled = false; 
-            textBoxSPAJSpouseNextBday.Text = NextBday(ParentDOB).ToString("N0");
-            int ParentHeight = int.Parse(textBoxSPAJParentHeight.Text);
-            int ParentWeight = int.Parse(textBoxSPAJParentWeight.Text);
-            bool ParentSmoke = radioButtonSPAJParentSmoke.Checked;
-            ParentForm NewParent;
+            try
+            {
+                string ParentName = textBoxSPAJParentName.Text;
+                string ParentGender = comboBoxSPAJParentGender.Text;
+                string ParentDOB = dateTimeSPAJParentDOB.Text;
+                string ParentMarriage = comboBoxSPAJParentMarriage.Text;
+                int ParentNextBday = NextBday(ParentDOB);
+                textBoxSPAJParentNextBday.ReadOnly = true;
+                textBoxSPAJSpouseNextBday.Text = NextBday(ParentDOB).ToString("N0");
+                int ParentHeight = int.Parse(textBoxSPAJParentHeight.Text);
+                int ParentWeight = int.Parse(textBoxSPAJParentWeight.Text);
+                bool ParentSmoke = radioButtonSPAJParentSmoke.Checked;
+                ParentForm NewParent;
 
-            NewParent = new ParentForm(ParentName, ParentGender, ParentDOB, ParentMarriage, ParentNextBday, ParentHeight, ParentWeight, ParentSmoke);
-            spaj.ParentForm = NewParent;
+                NewParent = new ParentForm(ParentName, ParentGender, ParentDOB, ParentMarriage, ParentNextBday, ParentHeight, ParentWeight, ParentSmoke);
+                spaj.ParentForm = NewParent;
 
-            tabControlAddSPAJ.SelectTab(tabPageAddressInfo);
+                tabControlAddSPAJ.SelectTab(tabPageAddressInfo);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please fill all required textboxes. ");
+            }
         }
 
         private void buttonAddressAccept_Click(object sender, EventArgs e)
         {
-            string Address = textBoxSPAJAddrAddress.Text;
-            string AddrCity = textBoxSPAJAddrCity.Text;
-            int AddrZipCode = int.Parse(textBoxSPAJAddrZip.Text);
-            string AddrEmail = textBoxSPAJAddrEmail.Text;
-            int AddrHPNumber = int.Parse(textBoxSPAJAddrHP.Text);
-            int AddrOPNumber = int.Parse(textBoxSPAJAddrOP.Text);
-            AddressForm NewAddress;
+            try
+            {
+                string Address = textBoxSPAJAddrAddress.Text;
+                string AddrCity = textBoxSPAJAddrCity.Text;
+                int AddrZipCode = int.Parse(textBoxSPAJAddrZip.Text);
+                string AddrEmail = textBoxSPAJAddrEmail.Text;
+                int AddrHPNumber = int.Parse(textBoxSPAJAddrHP.Text);
+                int AddrOPNumber = int.Parse(textBoxSPAJAddrOP.Text);
+                AddressForm NewAddress;
 
-            NewAddress = new AddressForm(Address, AddrCity, AddrZipCode, AddrEmail, AddrHPNumber, AddrOPNumber);
-            spaj.AddressForm = NewAddress;
+                NewAddress = new AddressForm(Address, AddrCity, AddrZipCode, AddrEmail, AddrHPNumber, AddrOPNumber);
+                spaj.AddressForm = NewAddress;
 
-            tabControlAddSPAJ.SelectTab(tabPagePengajuanInfo);
-
+                tabControlAddSPAJ.SelectTab(tabPagePengajuanInfo);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please fill all required textboxes. ");
+            }
         }
 
         private void buttonPengajuanAccept_Click(object sender, EventArgs e)
         {
-            string PengajuanFrequency = comboBoxSPAJPengajuanFreq.Text;
+            
+            
+                string PengajuanFrequency = comboBoxSPAJPengajuanFreq.Text;
 
-            string PengajuanPay = comboBoxSPAJPengajuanPay.Text;
-            string PengajuanCCBankOther = textBoxSPAJPengajuanCCBank.Text;
-            string PengajuanExpDate = textBoxSPAJPengajuanExpDate.Text; 
+                string PengajuanPay = comboBoxSPAJPengajuanPay.Text;
+                string PengajuanCCBankOther = textBoxSPAJPengajuanCCBank.Text;
+                string PengajuanExpDate = textBoxSPAJPengajuanExpDate.Text;
 
-            string PengajuanCurrency = comboBoxSPAJPengajuanCurrency.Text; 
-            double PengajuanExchange = double.Parse(textBoxSPAJPengajuanExchange.Text); 
+                string PengajuanCurrency = comboBoxSPAJPengajuanCurrency.Text;
+                double PengajuanExchange = double.Parse(textBoxSPAJPengajuanExchange.Text);
 
-            string PengajuanBasic = textBoxSPAJPengajuanBasic.Text;
-            double PengajuanPertanggungan = double.Parse(textBoxSPAJPengajuanPrtanggung.Text) / BasicPertanggungan(PengajuanFrequency); // total premi per tahun/ frequency
+                string PengajuanBasic = textBoxSPAJPengajuanBasic.Text;
+                double PengajuanPertanggungan = double.Parse(textBoxSPAJPengajuanPrtanggung.Text) / BasicPertanggungan(PengajuanFrequency);
+                textBoxSPAJPengajuanPrtanggung.Text = PengajuanPertanggungan.ToString(); 
 
- 
-            double PengajuanPruHosp = double.Parse(textBoxSPAJPengajuanPruHosp.Text) / BasicPertanggungan(PengajuanFrequency);
+                double PengajuanPruHosp = double.Parse(textBoxSPAJPengajuanPruHosp.Text) / BasicPertanggungan(PengajuanFrequency);
+                textBoxSPAJPengajuanPruHosp.Text = PengajuanPruHosp.ToString(); 
 
-            string PengajuanPruPayor = textBoxSPAJPengajuanPruPayorAmnt.Text;
-            double PengajuanPruPayorAmnt = double.Parse(textBoxSPAJPengajuanPruPayorAmnt.Text)/BasicPertanggungan(PengajuanFrequency);
 
-            string PengajuanPruCC = textBoxSPAJPengajuanPruCC.Text;
-            double PengajuanPruCCAmnt = double.Parse(textBoxSPAJPengajuanPruCCAmnt.Text)/BasicPertanggungan(PengajuanFrequency);
-  
-            string PengajuanPruADD = textBoxSPAJPengajuanPruADD.Text;
-            double PengajuanPruADDAmnt = double.Parse(textBoxSPAJPengajuanPruADDAmnt.Text)/ BasicPertanggungan(PengajuanFrequency);
+                string PengajuanPruPayor = textBoxSPAJPengajuanPruPayorAmnt.Text;
+                double PengajuanPruPayorAmnt = double.Parse(textBoxSPAJPengajuanPruPayorAmnt.Text) / BasicPertanggungan(PengajuanFrequency);
+                textBoxSPAJPengajuanPruPayorAmnt.Text = PengajuanPruPayorAmnt.ToString(); 
 
- 
-            string PengajuanPruMed = textBoxSPAJPengajuanPruMed.Text;
-            double PengajuanPruMedAmnt = double.Parse(textBoxSPAJPengajuanPruMedAmnt.Text)/ BasicPertanggungan(PengajuanFrequency); 
+                string PengajuanPruCC = textBoxSPAJPengajuanPruCC.Text;
+                double PengajuanPruCCAmnt = double.Parse(textBoxSPAJPengajuanPruCCAmnt.Text) / BasicPertanggungan(PengajuanFrequency);
+                textBoxSPAJPengajuanPruCC.Text = PengajuanPruCCAmnt.ToString(); 
+            
+                string PengajuanPruADD = textBoxSPAJPengajuanPruADD.Text;
+                double PengajuanPruADDAmnt = double.Parse(textBoxSPAJPengajuanPruADDAmnt.Text) / BasicPertanggungan(PengajuanFrequency);
+                textBoxSPAJPengajuanPruADDAmnt.Text = PengajuanPruADDAmnt.ToString(); 
 
-            string PengajuanPruPPayor = textBoxSPAJPengajuanPruPPayor.Text;
-            double PengajuanPruPPayorAmnt = double.Parse(textBoxSPAJPengajuanPruPPayorAmnt.Text) / BasicPertanggungan(PengajuanFrequency);
+
+                string PengajuanPruMed = textBoxSPAJPengajuanPruMed.Text;
+                double PengajuanPruMedAmnt = double.Parse(textBoxSPAJPengajuanPruMedAmnt.Text) / BasicPertanggungan(PengajuanFrequency);
+                textBoxSPAJPengajuanPruMedAmnt.Text = PengajuanPruMedAmnt.ToString(); 
+
+                string PengajuanPruPPayor = textBoxSPAJPengajuanPruPPayor.Text;
+                double PengajuanPruPPayorAmnt = double.Parse(textBoxSPAJPengajuanPruPPayorAmnt.Text) / BasicPertanggungan(PengajuanFrequency);
+                textBoxSPAJPengajuanPruADDAmnt.Text = PengajuanPruPPayorAmnt.ToString();
+
+                double PengajuanPremi = (PengajuanPertanggungan + PengajuanPruHosp + PengajuanPruPayorAmnt +
+                    PengajuanPruCCAmnt + PengajuanPruADDAmnt + PengajuanPruMedAmnt + PengajuanPruPPayorAmnt);
+                double PengajuanPruSaver = double.Parse(textBoxSPAJPengajuanPruSaver.Text) * 0.075;
+                double PengajuanTotalPremi = (PengajuanPremi * PremiMultiply(PengajuanFrequency)) + PengajuanPruSaver;
+                textBoxSPAJPengajuanPremi.Text = PengajuanPremi.ToString();
+                textBoxSPAJPengajuanPruSaver.Text = PengajuanPruSaver.ToString();
+                textBoxSPAJPengajuanPremiTotal.Text = PengajuanTotalPremi.ToString(); 
+                
+
+
+                PengajuanForm NewPengajuan;
+                NewPengajuan = new PengajuanForm(PengajuanFrequency, PengajuanPay, PengajuanCCBankOther,
+                PengajuanExpDate, PengajuanCurrency, PengajuanExchange, PengajuanBasic,
+                PengajuanPertanggungan, PengajuanPruHosp, PengajuanPruPayor, PengajuanPruPayorAmnt,
+                PengajuanPruCC, PengajuanPruCCAmnt, PengajuanPruADD, PengajuanPruADDAmnt,
+                PengajuanPruMed, PengajuanPruMedAmnt, PengajuanPruPPayor, PengajuanPruPPayorAmnt,
+                PengajuanPremi, PengajuanPruSaver, PengajuanTotalPremi);
+                spaj.PengajuanForm = NewPengajuan;
+
+                tabControlAddSPAJ.SelectTab(tabPageBeneficiaryInfo);
+            
            
-            // New Info from the Company 
-            // Frequencies: How many times a cust must pay per year. Yearly (1), Monthly( 12), Quarterly (4), Half- yearly(2).
-            // 2 new types of Frequency: Berkala(Periodic) and Tunggal(Single).
-            // Main formula: Premi + Prusaver
-            // Premi = Basic + Additional
-            // Berkala : (Premi)/ 11 x 12 
-            // Tunggal: Premi x  0.075 
-            // Other Frequencies: (Premi x Frequencies) + (PruSaver x 0.075)
-            // To calculate Premi: Each textbox in Basic and Additional is divided by an int designated by the BasicPertanggungan func. 
-            // To calculate Total Premi, Premi is then multiplied by another number, designated by PremiMultiply func. 
-            // Pru saver is DISABLED In Berkala and Tunggal. 
-
-            double PengajuanPremi = (PengajuanPertanggungan + PengajuanPruHosp + PengajuanPruPayorAmnt +
-                PengajuanPruCCAmnt + PengajuanPruADDAmnt + PengajuanPruMedAmnt + PengajuanPruPPayorAmnt); 
-            double PengajuanPruSaver = double.Parse(textBoxSPAJPengajuanPruSaver.Text) * 0.075;
-            double PengajuanTotalPremi = (PengajuanPremi * PremiMultiply(PengajuanFrequency)) + PengajuanPruSaver; 
-
-            PengajuanForm NewPengajuan;
-            NewPengajuan = new PengajuanForm(PengajuanFrequency, PengajuanPay, PengajuanCCBankOther,
-            PengajuanExpDate, PengajuanCurrency, PengajuanExchange, PengajuanBasic,
-            PengajuanPertanggungan, PengajuanPruHosp, PengajuanPruPayor, PengajuanPruPayorAmnt,
-            PengajuanPruCC, PengajuanPruCCAmnt, PengajuanPruADD, PengajuanPruADDAmnt,
-            PengajuanPruMed, PengajuanPruMedAmnt, PengajuanPruPPayor, PengajuanPruPPayorAmnt,
-            PengajuanPremi, PengajuanPruSaver, PengajuanTotalPremi);
-            spaj.PengajuanForm = NewPengajuan;
-
-            tabControlAddSPAJ.SelectTab(tabPageBeneficiaryInfo);
         }
 
         private void buttonBeneficiaryAccept_Click(object sender, EventArgs e)
         {
-            BeneficiaryForm beneficiaryForm = new BeneficiaryForm();
-            if (checkBoxSPAJBeneficiary1.Checked)
-            {
-                string BeneficiaryFName1 = textBoxSPAJBeneficiaryFName1.Text;
-                string BeneficiaryLName1 = textBoxSPAJBeneficiaryLName1.Text;
-                string BeneficiaryDOB1 = dateTimeSPAJBeneficiary1.Text;
-                string BeneficiaryRs1 = comboBoxSPAJBeneficiaryRs1.Text;
-                string BeneficiaryDetail1 = textBoxSPAJBeneficiaryDetail1.Text;
-                beneficiaryForm.Beneficiary1 = new Beneficiary(BeneficiaryFName1, BeneficiaryLName1, BeneficiaryDOB1, BeneficiaryRs1, BeneficiaryDetail1);
-            }
+            
+            
+                BeneficiaryForm beneficiaryForm = new BeneficiaryForm();
+                if (checkBoxSPAJBeneficiary1.Checked)
+                {
+                    string BeneficiaryFName1 = textBoxSPAJBeneficiaryFName1.Text;
+                    string BeneficiaryLName1 = textBoxSPAJBeneficiaryLName1.Text;
+                    string BeneficiaryDOB1 = dateTimeSPAJBeneficiary1.Text;
+                    string BeneficiaryRs1 = comboBoxSPAJBeneficiaryRs1.Text;
+                    string BeneficiaryDetail1 = textBoxSPAJBeneficiaryDetail1.Text;
+                    beneficiaryForm.Beneficiary1 = new Beneficiary(BeneficiaryFName1, BeneficiaryLName1, BeneficiaryDOB1, BeneficiaryRs1, BeneficiaryDetail1);
+                }
 
-            if (checkBoxSPAJBeneficiary2.Checked)
-            {
-                string BeneficiaryFName2 = textBoxSPAJBeneficiaryFName2.Text;
-                string BeneficiaryLName2 = textBoxSPAJBeneficiaryLName2.Text;
-                string BeneficiaryDOB2 = dateTimeSPAJBeneficiary2.Text;
-                string BeneficiaryRs2 = comboBoxSPAJBeneficiaryRs2.Text;
-                string BeneficiaryDetail2 = textBoxSPAJBeneficiaryDetail2.Text;
-                beneficiaryForm.Beneficiary2 = new Beneficiary(BeneficiaryFName2, BeneficiaryLName2, BeneficiaryDOB2, BeneficiaryRs2, BeneficiaryDetail2);
-            }
-            if (checkBoxSPAJBeneficiary3.Checked)
-            {
-                string BeneficiaryFName3 = textBoxSPAJBeneficiaryFName3.Text;
-                string BeneficiaryLName3 = textBoxSPAJBeneficiaryLName3.Text;
-                string BeneficiaryDOB3 = dateTimeSPAJBeneficiary3.Text;
-                string BeneficiaryRs3 = comboBoxSPAJBeneficiaryRs3.Text;
-                string BeneficiaryDetail3 = textBoxSPAJBeneficiaryDetail3.Text;
-                beneficiaryForm.Beneficiary3 = new Beneficiary(BeneficiaryFName3, BeneficiaryLName3, BeneficiaryDOB3, BeneficiaryRs3, BeneficiaryDetail3);
-            }
-            if (checkBoxSPAJBeneficiary4.Checked)
-            {
-                string BeneficiaryFName4 = textBoxSPAJBeneficiaryFName4.Text;
-                string BeneficiaryLName4 = textBoxSPAJBeneficiaryLName4.Text;
-                string BeneficiaryDOB4 = dateTimeSPAJBeneficiary4.Text;
-                string BeneficiaryRs4 = comboBoxSPAJBeneficiaryRs4.Text;
-                string BeneficiaryDetail4 = textBoxSPAJBeneficiaryDetail4.Text;
-                beneficiaryForm.Beneficiary4 = new Beneficiary(BeneficiaryFName4, BeneficiaryLName4, BeneficiaryDOB4, BeneficiaryRs4, BeneficiaryDetail4);
-            }
-            if (checkBoxSPAJBeneficiary5.Checked)
-            {
-                string BeneficiaryFName5 = textBoxSPAJBeneficiaryFName5.Text;
-                string BeneficiaryLName5 = textBoxSPAJBeneficiaryLName5.Text;
-                string BeneficiaryDOB5 = dateTimeSPAJBeneficiary5.Text;
-                string BeneficiaryRs5 = comboBoxSPAJBeneficiaryRs5.Text;
-                string BeneficiaryDetail5 = textBoxSPAJBeneficiaryDetail5.Text;
-                beneficiaryForm.Beneficiary5 = new Beneficiary(BeneficiaryFName5, BeneficiaryLName5, BeneficiaryDOB5, BeneficiaryRs5, BeneficiaryDetail5);
-            }
-            if (checkBoxSPAJBeneficiary6.Checked)
-            {
-                string BeneficiaryFName6 = textBoxSPAJBeneficiaryFName6.Text;
-                string BeneficiaryLName6 = textBoxSPAJBeneficiaryLName6.Text;
-                string BeneficiaryDOB6 = dateTimeSPAJBeneficiary6.Text;
-                string BeneficiaryRs6 = comboBoxSPAJBeneficiaryRs6.Text;
-                string BeneficiaryDetail6 = textBoxSPAJBeneficiaryDetail6.Text;
-                beneficiaryForm.Beneficiary6 = new Beneficiary(BeneficiaryFName6, BeneficiaryLName6, BeneficiaryDOB6, BeneficiaryRs6, BeneficiaryDetail6);
-            }
+                if (checkBoxSPAJBeneficiary2.Checked)
+                {
+                    string BeneficiaryFName2 = textBoxSPAJBeneficiaryFName2.Text;
+                    string BeneficiaryLName2 = textBoxSPAJBeneficiaryLName2.Text;
+                    string BeneficiaryDOB2 = dateTimeSPAJBeneficiary2.Text;
+                    string BeneficiaryRs2 = comboBoxSPAJBeneficiaryRs2.Text;
+                    string BeneficiaryDetail2 = textBoxSPAJBeneficiaryDetail2.Text;
+                    beneficiaryForm.Beneficiary2 = new Beneficiary(BeneficiaryFName2, BeneficiaryLName2, BeneficiaryDOB2, BeneficiaryRs2, BeneficiaryDetail2);
+                }
+                if (checkBoxSPAJBeneficiary3.Checked)
+                {
+                    string BeneficiaryFName3 = textBoxSPAJBeneficiaryFName3.Text;
+                    string BeneficiaryLName3 = textBoxSPAJBeneficiaryLName3.Text;
+                    string BeneficiaryDOB3 = dateTimeSPAJBeneficiary3.Text;
+                    string BeneficiaryRs3 = comboBoxSPAJBeneficiaryRs3.Text;
+                    string BeneficiaryDetail3 = textBoxSPAJBeneficiaryDetail3.Text;
+                    beneficiaryForm.Beneficiary3 = new Beneficiary(BeneficiaryFName3, BeneficiaryLName3, BeneficiaryDOB3, BeneficiaryRs3, BeneficiaryDetail3);
+                }
+                if (checkBoxSPAJBeneficiary4.Checked)
+                {
+                    string BeneficiaryFName4 = textBoxSPAJBeneficiaryFName4.Text;
+                    string BeneficiaryLName4 = textBoxSPAJBeneficiaryLName4.Text;
+                    string BeneficiaryDOB4 = dateTimeSPAJBeneficiary4.Text;
+                    string BeneficiaryRs4 = comboBoxSPAJBeneficiaryRs4.Text;
+                    string BeneficiaryDetail4 = textBoxSPAJBeneficiaryDetail4.Text;
+                    beneficiaryForm.Beneficiary4 = new Beneficiary(BeneficiaryFName4, BeneficiaryLName4, BeneficiaryDOB4, BeneficiaryRs4, BeneficiaryDetail4);
+                }
+                if (checkBoxSPAJBeneficiary5.Checked)
+                {
+                    string BeneficiaryFName5 = textBoxSPAJBeneficiaryFName5.Text;
+                    string BeneficiaryLName5 = textBoxSPAJBeneficiaryLName5.Text;
+                    string BeneficiaryDOB5 = dateTimeSPAJBeneficiary5.Text;
+                    string BeneficiaryRs5 = comboBoxSPAJBeneficiaryRs5.Text;
+                    string BeneficiaryDetail5 = textBoxSPAJBeneficiaryDetail5.Text;
+                    beneficiaryForm.Beneficiary5 = new Beneficiary(BeneficiaryFName5, BeneficiaryLName5, BeneficiaryDOB5, BeneficiaryRs5, BeneficiaryDetail5);
+                }
+                if (checkBoxSPAJBeneficiary6.Checked)
+                {
+                    string BeneficiaryFName6 = textBoxSPAJBeneficiaryFName6.Text;
+                    string BeneficiaryLName6 = textBoxSPAJBeneficiaryLName6.Text;
+                    string BeneficiaryDOB6 = dateTimeSPAJBeneficiary6.Text;
+                    string BeneficiaryRs6 = comboBoxSPAJBeneficiaryRs6.Text;
+                    string BeneficiaryDetail6 = textBoxSPAJBeneficiaryDetail6.Text;
+                    beneficiaryForm.Beneficiary6 = new Beneficiary(BeneficiaryFName6, BeneficiaryLName6, BeneficiaryDOB6, BeneficiaryRs6, BeneficiaryDetail6);
+                }
 
-            spaj.BeneficiaryForm = beneficiaryForm;
-            buttonSPAJNewCreate.Enabled = true; 
+                spaj.BeneficiaryForm = beneficiaryForm;
+                buttonSPAJNewCreate.Enabled = true;
+            
 
         }
 
@@ -648,11 +696,11 @@ namespace PruAmsForm
 
         private void comboBoxSPAJPengajuanFreq_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxSPAJPengajuanCurrency.Text == "Berkala" || comboBoxSPAJPengajuanFreq.Text == "Tunggal")
-            { textBoxSPAJPengajuanPruSaver.Enabled = false; }
+            bool enable = comboBoxSPAJPengajuanFreq.Text == "Berkala" || comboBoxSPAJPengajuanFreq.Text == "Tunggal";
+            textBoxSPAJPengajuanPruSaver.Enabled = !enable;
             
-            textBoxSPAJPengajuanPremi.ReadOnly = true;
-            textBoxSPAJPengajuanPremiTotal.ReadOnly = true; 
+            textBoxSPAJPengajuanPremi.ReadOnly = enable;
+            textBoxSPAJPengajuanPremiTotal.ReadOnly = enable; 
             
         }
 
@@ -704,6 +752,7 @@ namespace PruAmsForm
 
         private void checkBoxSPAJPengajuanPruHosp_CheckedChanged(object sender, EventArgs e)
         {
+            labelSPAJPengajuanPruHosp.Enabled = true; 
             textBoxSPAJPengajuanPruHosp.Enabled = checkBoxSPAJPengajuanPruHosp.Checked;
         }
 
@@ -740,18 +789,23 @@ namespace PruAmsForm
         private void buttonSPAJNewClear_Click(object sender, EventArgs e)
         {
             spaj = new SPAJ();
+            foreach (TabPage page in tabControlAddSPAJ.TabPages)
+            {
+                clearTabPage(page);
+            }
+            clearTabPage(tabPageSPAJAdd);
         }
 
         private void buttonSpouseIgnore_Click(object sender, EventArgs e)
         {
-            buttonSpouseClear_Click(null, null);
-            buttonSpouseAccept_Click(null, null);
+            spaj.SpouseForm = new SpouseForm();
+            tabControlAddSPAJ.SelectTab(tabPageParentInfo);
         }
 
         private void buttonParentIgnore_Click(object sender, EventArgs e)
         {
-            buttonParentClear_Click(null, null);
-            buttonParentAccept_Click(null, null);
+            spaj.ParentForm = new ParentForm();
+            tabControlAddSPAJ.SelectTab(tabPageAddressInfo);
         }
 
         private void buttonSpouseClear_Click(object sender, EventArgs e)
@@ -779,21 +833,26 @@ namespace PruAmsForm
             clearTabPage(tabPagePengajuanInfo);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonBeneficiaryClear_Click(object sender, EventArgs e)
         {
             clearTabPage(tabPageBeneficiaryInfo);
+            checkBoxSPAJBeneficiary1.Checked = true;
         }
 
         private void clearTabPage(TabPage page)
         {
             foreach (Control c in page.Controls)
             {
-                if (c is TextBox || c is ComboBox || c is DateTimePicker || c is CheckBox)
+                if (c is TextBox || c is ComboBox || c is DateTimePicker)
                 {
                     if (c.Text != "0.00")
                     {
                         c.ResetText();
                     }
+                }
+                else if (c is CheckBox)
+                {
+                    ((CheckBox)c).Checked = false;
                 }
             }
         }
@@ -834,11 +893,11 @@ namespace PruAmsForm
 
             // code below to be transferred to the EditPengajuanAccept button 
 
-            float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
-
             textBoxSPAJEditPengajuanPremi.Text = textBoxSPAJEditPengajuanPrtanggung.Text + textBoxSPAJEditPengajuanPruHosp.Text +
                 textBoxSPAJEditPengajuanPruPayorAmnt.Text + textBoxSPAJEditPengajuanPruCCAmnt.Text + textBoxSPAJEditPengajuanPruADDAmnt.Text +
                 textBoxSPAJEditPengajuanPRUMedAmnt.Text + textBoxSPAJEditPengajuanPruPPayorAmnt.Text;
+
+            float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
             textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
 
             float PremiMulti = float.Parse(textBoxSPAJEditPengajuanPremi.Text);
@@ -853,6 +912,18 @@ namespace PruAmsForm
             float a = float.Parse(textBoxSPAJEditPengajuanPrtanggung.Text);
             textBoxSPAJEditPengajuanPrtanggung.Text = (a / Divide).ToString();
 
+            textBoxSPAJEditPengajuanPremi.Text = textBoxSPAJEditPengajuanPrtanggung.Text + textBoxSPAJEditPengajuanPruHosp.Text +
+                           textBoxSPAJEditPengajuanPruPayorAmnt.Text + textBoxSPAJEditPengajuanPruCCAmnt.Text + textBoxSPAJEditPengajuanPruADDAmnt.Text +
+                           textBoxSPAJEditPengajuanPRUMedAmnt.Text + textBoxSPAJEditPengajuanPruPPayorAmnt.Text;
+
+            float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
+            textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
+
+            float PremiMulti = float.Parse(textBoxSPAJEditPengajuanPremi.Text);
+            textBoxSPAJEditPengajuanPremiTotal.Text = (PremiMulti * PremiMultiply(comboBoxSPAJEditPengajuanFreq.Text)).ToString()
+                + textBoxSPAJEditPengajuanPruSaver.Text;
+
+
         }
 
         private void textBoxSPAJEditPengajuanPruHosp_TextChanged(object sender, EventArgs e)
@@ -861,6 +932,18 @@ namespace PruAmsForm
             float a = float.Parse(textBoxSPAJEditPengajuanPruHosp.Text);
             textBoxSPAJEditPengajuanPruHosp.Text = (a / Divide).ToString();
 
+            textBoxSPAJEditPengajuanPremi.Text = textBoxSPAJEditPengajuanPrtanggung.Text + textBoxSPAJEditPengajuanPruHosp.Text +
+                           textBoxSPAJEditPengajuanPruPayorAmnt.Text + textBoxSPAJEditPengajuanPruCCAmnt.Text + textBoxSPAJEditPengajuanPruADDAmnt.Text +
+                           textBoxSPAJEditPengajuanPRUMedAmnt.Text + textBoxSPAJEditPengajuanPruPPayorAmnt.Text;
+
+            float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
+            textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
+
+            float PremiMulti = float.Parse(textBoxSPAJEditPengajuanPremi.Text);
+            textBoxSPAJEditPengajuanPremiTotal.Text = (PremiMulti * PremiMultiply(comboBoxSPAJEditPengajuanFreq.Text)).ToString()
+                + textBoxSPAJEditPengajuanPruSaver.Text;
+
+
         }
 
         private void textBoxSPAJEditPengajuanPruPayorAmnt_TextChanged(object sender, EventArgs e)
@@ -868,6 +951,18 @@ namespace PruAmsForm
             int Divide = BasicPertanggungan(comboBoxSPAJEditPengajuanFreq.Text);
             float a = float.Parse(textBoxSPAJEditPengajuanPruPayorAmnt.Text);
             textBoxSPAJEditPengajuanPruPayorAmnt.Text = (a / Divide).ToString();
+
+            textBoxSPAJEditPengajuanPremi.Text = textBoxSPAJEditPengajuanPrtanggung.Text + textBoxSPAJEditPengajuanPruHosp.Text +
+                           textBoxSPAJEditPengajuanPruPayorAmnt.Text + textBoxSPAJEditPengajuanPruCCAmnt.Text + textBoxSPAJEditPengajuanPruADDAmnt.Text +
+                           textBoxSPAJEditPengajuanPRUMedAmnt.Text + textBoxSPAJEditPengajuanPruPPayorAmnt.Text;
+
+            float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
+            textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
+
+            float PremiMulti = float.Parse(textBoxSPAJEditPengajuanPremi.Text);
+            textBoxSPAJEditPengajuanPremiTotal.Text = (PremiMulti * PremiMultiply(comboBoxSPAJEditPengajuanFreq.Text)).ToString()
+                + textBoxSPAJEditPengajuanPruSaver.Text;
+
         }
 
         private void textBoxSPAJEditPengajuanPruCCAmnt_TextChanged(object sender, EventArgs e)
@@ -875,6 +970,18 @@ namespace PruAmsForm
             int Divide = BasicPertanggungan(comboBoxSPAJEditPengajuanFreq.Text);
             float a = float.Parse(textBoxSPAJEditPengajuanPruCCAmnt.Text);
             textBoxSPAJEditPengajuanPruCCAmnt.Text = (a / Divide).ToString();
+
+            textBoxSPAJEditPengajuanPremi.Text = textBoxSPAJEditPengajuanPrtanggung.Text + textBoxSPAJEditPengajuanPruHosp.Text +
+                           textBoxSPAJEditPengajuanPruPayorAmnt.Text + textBoxSPAJEditPengajuanPruCCAmnt.Text + textBoxSPAJEditPengajuanPruADDAmnt.Text +
+                           textBoxSPAJEditPengajuanPRUMedAmnt.Text + textBoxSPAJEditPengajuanPruPPayorAmnt.Text;
+
+            float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
+            textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
+
+            float PremiMulti = float.Parse(textBoxSPAJEditPengajuanPremi.Text);
+            textBoxSPAJEditPengajuanPremiTotal.Text = (PremiMulti * PremiMultiply(comboBoxSPAJEditPengajuanFreq.Text)).ToString()
+                + textBoxSPAJEditPengajuanPruSaver.Text;
+
         }
 
         private void textBoxSPAJEditPengajuanPruADDAmnt_TextChanged(object sender, EventArgs e)
@@ -882,6 +989,18 @@ namespace PruAmsForm
             int Divide = BasicPertanggungan(comboBoxSPAJEditPengajuanFreq.Text);
             float a = float.Parse(textBoxSPAJEditPengajuanPruADDAmnt.Text);
             textBoxSPAJEditPengajuanPruADDAmnt.Text = (a / Divide).ToString();
+
+            textBoxSPAJEditPengajuanPremi.Text = textBoxSPAJEditPengajuanPrtanggung.Text + textBoxSPAJEditPengajuanPruHosp.Text +
+                           textBoxSPAJEditPengajuanPruPayorAmnt.Text + textBoxSPAJEditPengajuanPruCCAmnt.Text + textBoxSPAJEditPengajuanPruADDAmnt.Text +
+                           textBoxSPAJEditPengajuanPRUMedAmnt.Text + textBoxSPAJEditPengajuanPruPPayorAmnt.Text;
+
+            float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
+            textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
+
+            float PremiMulti = float.Parse(textBoxSPAJEditPengajuanPremi.Text);
+            textBoxSPAJEditPengajuanPremiTotal.Text = (PremiMulti * PremiMultiply(comboBoxSPAJEditPengajuanFreq.Text)).ToString()
+                + textBoxSPAJEditPengajuanPruSaver.Text;
+
         }
 
         private void textBoxSPAJEditPengajuanPRUMedAmnt_TextChanged(object sender, EventArgs e)
@@ -889,6 +1008,18 @@ namespace PruAmsForm
             int Divide = BasicPertanggungan(comboBoxSPAJEditPengajuanFreq.Text);
             float a = float.Parse(textBoxSPAJEditPengajuanPRUMedAmnt.Text);
             textBoxSPAJEditPengajuanPRUMedAmnt.Text = (a / Divide).ToString();
+
+            textBoxSPAJEditPengajuanPremi.Text = textBoxSPAJEditPengajuanPrtanggung.Text + textBoxSPAJEditPengajuanPruHosp.Text +
+                           textBoxSPAJEditPengajuanPruPayorAmnt.Text + textBoxSPAJEditPengajuanPruCCAmnt.Text + textBoxSPAJEditPengajuanPruADDAmnt.Text +
+                           textBoxSPAJEditPengajuanPRUMedAmnt.Text + textBoxSPAJEditPengajuanPruPPayorAmnt.Text;
+
+            float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
+            textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
+
+            float PremiMulti = float.Parse(textBoxSPAJEditPengajuanPremi.Text);
+            textBoxSPAJEditPengajuanPremiTotal.Text = (PremiMulti * PremiMultiply(comboBoxSPAJEditPengajuanFreq.Text)).ToString()
+                + textBoxSPAJEditPengajuanPruSaver.Text;
+
         }
 
         private void textBoxSPAJEditPengajuanPruPPayorAmnt_TextChanged(object sender, EventArgs e)
@@ -896,6 +1027,19 @@ namespace PruAmsForm
             int Divide = BasicPertanggungan(comboBoxSPAJEditPengajuanFreq.Text);
             float a = float.Parse(textBoxSPAJEditPengajuanPruPPayorAmnt.Text);
             textBoxSPAJEditPengajuanPruPPayorAmnt.Text = (a / Divide).ToString();
+
+            textBoxSPAJEditPengajuanPremi.Text = textBoxSPAJEditPengajuanPrtanggung.Text + textBoxSPAJEditPengajuanPruHosp.Text +
+                           textBoxSPAJEditPengajuanPruPayorAmnt.Text + textBoxSPAJEditPengajuanPruCCAmnt.Text + textBoxSPAJEditPengajuanPruADDAmnt.Text +
+                           textBoxSPAJEditPengajuanPRUMedAmnt.Text + textBoxSPAJEditPengajuanPruPPayorAmnt.Text;
+
+            float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
+            textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
+
+            float PremiMulti = float.Parse(textBoxSPAJEditPengajuanPremi.Text);
+            textBoxSPAJEditPengajuanPremiTotal.Text = (PremiMulti * PremiMultiply(comboBoxSPAJEditPengajuanFreq.Text)).ToString()
+                + textBoxSPAJEditPengajuanPruSaver.Text;
+
+
         }
 
 
@@ -1244,6 +1388,32 @@ namespace PruAmsForm
             spajFile.BeneficiaryForm.Beneficiary6.Details = textBoxSPAJEditBeneficiaryDetail6.Text;
             spajFile.BeneficiaryForm.Beneficiary6.Birthdate = dateTimeSPAJEditBeneficiary6.Text;
             spajFile.BeneficiaryForm.Beneficiary6.Relationship = comboBoxSPAJEditBeneficiaryRs6.Text;
+        }
+
+        private void buttonSPAJDeleteDelete_Click(object sender, EventArgs e)
+        {
+            spajFiles.Remove(spajFiles.First(x => x.SPAJForm.SPAJNum == int.Parse(textBoxSPAJDeleteNum.Text)));
+        }
+
+        private void buttonSPAJDeleteCheck_Click(object sender, EventArgs e)
+        {
+            bool exists = spajFiles.Any(x => x.SPAJForm.SPAJNum == int.Parse(textBoxSPAJDeleteNum.Text));
+            buttonSPAJDeleteDelete.Enabled = exists;
+            buttonSPAJDeleteClear.Enabled = exists;
+            if (!exists)
+            {
+                MessageBox.Show("SPAJ file with that number does not exist.");
+            }
+        }
+
+        private void buttonInsInfoClear_Click(object sender, EventArgs e)
+        {
+            clearTabPage(tabPageInsInfo);
+        }
+
+        private void textBoxSPAJPengajuanPrtanggung_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

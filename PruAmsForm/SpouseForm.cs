@@ -25,6 +25,7 @@ namespace PruAmsForm
         public bool SpouseSmoke
         { get; set; }
 
+        public SpouseForm() : this("", "", "", "", 0, 0, 0, false) { }
         public SpouseForm(string SpouseName, string SpouseGender, string SpouseDOB, string SpouseMarriage, int SpouseNextBday, 
             int SpouseHeight, int SpouseWeight, bool SpouseSmoke)
         {

@@ -25,6 +25,8 @@ namespace PruAmsForm
         public bool ParentSmoke
         { get; set; }
 
+        public ParentForm() : this("", "", "", "", 0, 0, 0, false) { }
+
         public ParentForm(string ParentName, string ParentGender, string ParentDOB, string ParentMarriage, int ParentNextBday,
             int ParentHeight, int ParentWeight, bool ParentSmoke)
         {
