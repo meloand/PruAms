@@ -485,6 +485,12 @@
             this.label149 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonSPAJClearBackMenu = new System.Windows.Forms.Button();
+            this.buttonAddSPAJPolisBack = new System.Windows.Forms.Button();
+            this.buttonAddSPAJSpouseBack = new System.Windows.Forms.Button();
+            this.buttonAddSPAJParentBack = new System.Windows.Forms.Button();
+            this.buttonAddSPAJAddressBack = new System.Windows.Forms.Button();
+            this.buttonAddSPAJPengajuanBack = new System.Windows.Forms.Button();
+            this.buttonAddSPAJBeneficiaryBack = new System.Windows.Forms.Button();
             this.tabControlSPAJ.SuspendLayout();
             this.tabPageSPAJUpdate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSPAJUpdate)).BeginInit();
@@ -892,6 +898,7 @@
             this.tabControlAddSPAJ.SelectedIndex = 0;
             this.tabControlAddSPAJ.Size = new System.Drawing.Size(526, 352);
             this.tabControlAddSPAJ.TabIndex = 14;
+            this.tabControlAddSPAJ.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControlAddSPAJ_Selecting);
             // 
             // tabPageInsInfo
             // 
@@ -1165,6 +1172,7 @@
             // 
             // tabPagePolisHolder
             // 
+            this.tabPagePolisHolder.Controls.Add(this.buttonAddSPAJPolisBack);
             this.tabPagePolisHolder.Controls.Add(this.buttonPolisHolderAccept);
             this.tabPagePolisHolder.Controls.Add(this.buttonPolisHolderClear);
             this.tabPagePolisHolder.Controls.Add(this.dateTimeSPAJPolisDOB);
@@ -1187,7 +1195,7 @@
             // 
             // buttonPolisHolderAccept
             // 
-            this.buttonPolisHolderAccept.Location = new System.Drawing.Point(266, 243);
+            this.buttonPolisHolderAccept.Location = new System.Drawing.Point(332, 241);
             this.buttonPolisHolderAccept.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPolisHolderAccept.Name = "buttonPolisHolderAccept";
             this.buttonPolisHolderAccept.Size = new System.Drawing.Size(60, 25);
@@ -1198,7 +1206,7 @@
             // 
             // buttonPolisHolderClear
             // 
-            this.buttonPolisHolderClear.Location = new System.Drawing.Point(160, 243);
+            this.buttonPolisHolderClear.Location = new System.Drawing.Point(221, 241);
             this.buttonPolisHolderClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPolisHolderClear.Name = "buttonPolisHolderClear";
             this.buttonPolisHolderClear.Size = new System.Drawing.Size(60, 25);
@@ -1318,6 +1326,7 @@
             // 
             // tabPageSpouseInfo
             // 
+            this.tabPageSpouseInfo.Controls.Add(this.buttonAddSPAJSpouseBack);
             this.tabPageSpouseInfo.Controls.Add(this.label152);
             this.tabPageSpouseInfo.Controls.Add(this.label151);
             this.tabPageSpouseInfo.Controls.Add(this.buttonSpouseIgnore);
@@ -1372,7 +1381,7 @@
             // 
             // buttonSpouseIgnore
             // 
-            this.buttonSpouseIgnore.Location = new System.Drawing.Point(89, 243);
+            this.buttonSpouseIgnore.Location = new System.Drawing.Point(173, 246);
             this.buttonSpouseIgnore.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSpouseIgnore.Name = "buttonSpouseIgnore";
             this.buttonSpouseIgnore.Size = new System.Drawing.Size(60, 25);
@@ -1383,7 +1392,7 @@
             // 
             // buttonSpouseAccept
             // 
-            this.buttonSpouseAccept.Location = new System.Drawing.Point(298, 243);
+            this.buttonSpouseAccept.Location = new System.Drawing.Point(382, 246);
             this.buttonSpouseAccept.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSpouseAccept.Name = "buttonSpouseAccept";
             this.buttonSpouseAccept.Size = new System.Drawing.Size(60, 25);
@@ -1394,7 +1403,7 @@
             // 
             // buttonSpouseClear
             // 
-            this.buttonSpouseClear.Location = new System.Drawing.Point(190, 243);
+            this.buttonSpouseClear.Location = new System.Drawing.Point(274, 246);
             this.buttonSpouseClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSpouseClear.Name = "buttonSpouseClear";
             this.buttonSpouseClear.Size = new System.Drawing.Size(64, 25);
@@ -1576,6 +1585,7 @@
             // 
             // tabPageParentInfo
             // 
+            this.tabPageParentInfo.Controls.Add(this.buttonAddSPAJParentBack);
             this.tabPageParentInfo.Controls.Add(this.label154);
             this.tabPageParentInfo.Controls.Add(this.label153);
             this.tabPageParentInfo.Controls.Add(this.buttonParentIgnore);
@@ -1630,7 +1640,7 @@
             // 
             // buttonParentIgnore
             // 
-            this.buttonParentIgnore.Location = new System.Drawing.Point(100, 243);
+            this.buttonParentIgnore.Location = new System.Drawing.Point(174, 246);
             this.buttonParentIgnore.Margin = new System.Windows.Forms.Padding(2);
             this.buttonParentIgnore.Name = "buttonParentIgnore";
             this.buttonParentIgnore.Size = new System.Drawing.Size(60, 25);
@@ -1641,7 +1651,7 @@
             // 
             // buttonParentAccept
             // 
-            this.buttonParentAccept.Location = new System.Drawing.Point(300, 243);
+            this.buttonParentAccept.Location = new System.Drawing.Point(374, 246);
             this.buttonParentAccept.Margin = new System.Windows.Forms.Padding(2);
             this.buttonParentAccept.Name = "buttonParentAccept";
             this.buttonParentAccept.Size = new System.Drawing.Size(60, 25);
@@ -1652,7 +1662,7 @@
             // 
             // buttonParentClear
             // 
-            this.buttonParentClear.Location = new System.Drawing.Point(201, 243);
+            this.buttonParentClear.Location = new System.Drawing.Point(275, 246);
             this.buttonParentClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonParentClear.Name = "buttonParentClear";
             this.buttonParentClear.Size = new System.Drawing.Size(60, 25);
@@ -1834,6 +1844,7 @@
             // 
             // tabPageAddressInfo
             // 
+            this.tabPageAddressInfo.Controls.Add(this.buttonAddSPAJAddressBack);
             this.tabPageAddressInfo.Controls.Add(this.buttonAddressAccept);
             this.tabPageAddressInfo.Controls.Add(this.buttonAddressClear);
             this.tabPageAddressInfo.Controls.Add(this.label28);
@@ -1859,7 +1870,7 @@
             // 
             // buttonAddressAccept
             // 
-            this.buttonAddressAccept.Location = new System.Drawing.Point(274, 263);
+            this.buttonAddressAccept.Location = new System.Drawing.Point(341, 265);
             this.buttonAddressAccept.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAddressAccept.Name = "buttonAddressAccept";
             this.buttonAddressAccept.Size = new System.Drawing.Size(60, 25);
@@ -1870,7 +1881,7 @@
             // 
             // buttonAddressClear
             // 
-            this.buttonAddressClear.Location = new System.Drawing.Point(174, 263);
+            this.buttonAddressClear.Location = new System.Drawing.Point(241, 265);
             this.buttonAddressClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAddressClear.Name = "buttonAddressClear";
             this.buttonAddressClear.Size = new System.Drawing.Size(60, 25);
@@ -2001,6 +2012,7 @@
             // 
             // tabPagePengajuanInfo
             // 
+            this.tabPagePengajuanInfo.Controls.Add(this.buttonAddSPAJPengajuanBack);
             this.tabPagePengajuanInfo.Controls.Add(this.label161);
             this.tabPagePengajuanInfo.Controls.Add(this.textBoxSPAJPengajuanBasic);
             this.tabPagePengajuanInfo.Controls.Add(this.textBoxSPAJPengajuanPruPPayor);
@@ -2145,7 +2157,7 @@
             // 
             // buttonPengajuanAccept
             // 
-            this.buttonPengajuanAccept.Location = new System.Drawing.Point(164, 281);
+            this.buttonPengajuanAccept.Location = new System.Drawing.Point(202, 281);
             this.buttonPengajuanAccept.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPengajuanAccept.Name = "buttonPengajuanAccept";
             this.buttonPengajuanAccept.Size = new System.Drawing.Size(60, 25);
@@ -2156,7 +2168,7 @@
             // 
             // buttonPengajuanClear
             // 
-            this.buttonPengajuanClear.Location = new System.Drawing.Point(34, 281);
+            this.buttonPengajuanClear.Location = new System.Drawing.Point(130, 281);
             this.buttonPengajuanClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPengajuanClear.Name = "buttonPengajuanClear";
             this.buttonPengajuanClear.Size = new System.Drawing.Size(60, 25);
@@ -2539,6 +2551,7 @@
             // 
             // tabPageBeneficiaryInfo
             // 
+            this.tabPageBeneficiaryInfo.Controls.Add(this.buttonAddSPAJBeneficiaryBack);
             this.tabPageBeneficiaryInfo.Controls.Add(this.buttonBeneficiaryAccept);
             this.tabPageBeneficiaryInfo.Controls.Add(this.buttonSPAJBeneficiaryClear);
             this.tabPageBeneficiaryInfo.Controls.Add(this.comboBoxSPAJBeneficiaryRs6);
@@ -2593,7 +2606,7 @@
             // 
             // buttonBeneficiaryAccept
             // 
-            this.buttonBeneficiaryAccept.Location = new System.Drawing.Point(274, 284);
+            this.buttonBeneficiaryAccept.Location = new System.Drawing.Point(341, 287);
             this.buttonBeneficiaryAccept.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBeneficiaryAccept.Name = "buttonBeneficiaryAccept";
             this.buttonBeneficiaryAccept.Size = new System.Drawing.Size(60, 25);
@@ -2604,7 +2617,7 @@
             // 
             // buttonSPAJBeneficiaryClear
             // 
-            this.buttonSPAJBeneficiaryClear.Location = new System.Drawing.Point(178, 284);
+            this.buttonSPAJBeneficiaryClear.Location = new System.Drawing.Point(245, 287);
             this.buttonSPAJBeneficiaryClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSPAJBeneficiaryClear.Name = "buttonSPAJBeneficiaryClear";
             this.buttonSPAJBeneficiaryClear.Size = new System.Drawing.Size(60, 25);
@@ -5636,6 +5649,66 @@
             this.buttonSPAJClearBackMenu.UseVisualStyleBackColor = true;
             this.buttonSPAJClearBackMenu.Click += new System.EventHandler(this.buttonSPAJClearBackMenu_Click);
             // 
+            // buttonAddSPAJPolisBack
+            // 
+            this.buttonAddSPAJPolisBack.Location = new System.Drawing.Point(105, 241);
+            this.buttonAddSPAJPolisBack.Name = "buttonAddSPAJPolisBack";
+            this.buttonAddSPAJPolisBack.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddSPAJPolisBack.TabIndex = 15;
+            this.buttonAddSPAJPolisBack.Text = "Back";
+            this.buttonAddSPAJPolisBack.UseVisualStyleBackColor = true;
+            this.buttonAddSPAJPolisBack.Click += new System.EventHandler(this.buttonAddSPAJPolisBack_Click);
+            // 
+            // buttonAddSPAJSpouseBack
+            // 
+            this.buttonAddSPAJSpouseBack.Location = new System.Drawing.Point(57, 246);
+            this.buttonAddSPAJSpouseBack.Name = "buttonAddSPAJSpouseBack";
+            this.buttonAddSPAJSpouseBack.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddSPAJSpouseBack.TabIndex = 28;
+            this.buttonAddSPAJSpouseBack.Text = "Back";
+            this.buttonAddSPAJSpouseBack.UseVisualStyleBackColor = true;
+            this.buttonAddSPAJSpouseBack.Click += new System.EventHandler(this.buttonAddSPAJSpouseBack_Click);
+            // 
+            // buttonAddSPAJParentBack
+            // 
+            this.buttonAddSPAJParentBack.Location = new System.Drawing.Point(62, 247);
+            this.buttonAddSPAJParentBack.Name = "buttonAddSPAJParentBack";
+            this.buttonAddSPAJParentBack.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddSPAJParentBack.TabIndex = 29;
+            this.buttonAddSPAJParentBack.Text = "Back";
+            this.buttonAddSPAJParentBack.UseVisualStyleBackColor = true;
+            this.buttonAddSPAJParentBack.Click += new System.EventHandler(this.buttonAddSPAJParentBack_Click);
+            // 
+            // buttonAddSPAJAddressBack
+            // 
+            this.buttonAddSPAJAddressBack.Location = new System.Drawing.Point(120, 265);
+            this.buttonAddSPAJAddressBack.Name = "buttonAddSPAJAddressBack";
+            this.buttonAddSPAJAddressBack.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddSPAJAddressBack.TabIndex = 29;
+            this.buttonAddSPAJAddressBack.Text = "Back";
+            this.buttonAddSPAJAddressBack.UseVisualStyleBackColor = true;
+            this.buttonAddSPAJAddressBack.Click += new System.EventHandler(this.buttonAddSPAJAddressBack_Click);
+            // 
+            // buttonAddSPAJPengajuanBack
+            // 
+            this.buttonAddSPAJPengajuanBack.Location = new System.Drawing.Point(53, 281);
+            this.buttonAddSPAJPengajuanBack.Name = "buttonAddSPAJPengajuanBack";
+            this.buttonAddSPAJPengajuanBack.Size = new System.Drawing.Size(66, 25);
+            this.buttonAddSPAJPengajuanBack.TabIndex = 53;
+            this.buttonAddSPAJPengajuanBack.Text = "Back";
+            this.buttonAddSPAJPengajuanBack.UseVisualStyleBackColor = true;
+            this.buttonAddSPAJPengajuanBack.Click += new System.EventHandler(this.buttonAddSPAJPengajuanBack_Click);
+            // 
+            // buttonAddSPAJBeneficiaryBack
+            // 
+            this.buttonAddSPAJBeneficiaryBack.Location = new System.Drawing.Point(135, 287);
+            this.buttonAddSPAJBeneficiaryBack.Name = "buttonAddSPAJBeneficiaryBack";
+            this.buttonAddSPAJBeneficiaryBack.Size = new System.Drawing.Size(68, 25);
+            this.buttonAddSPAJBeneficiaryBack.TabIndex = 46;
+            this.buttonAddSPAJBeneficiaryBack.Text = "Back";
+            this.buttonAddSPAJBeneficiaryBack.UseVisualStyleBackColor = true;
+            this.buttonAddSPAJBeneficiaryBack.Click += new System.EventHandler(this.buttonAddSPAJBeneficiaryBack_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -6152,5 +6225,11 @@
         private System.Windows.Forms.Label label162;
         private System.Windows.Forms.TextBox textBoxSPAJInsType;
         private System.Windows.Forms.TextBox textBoxSPAJEditType;
+        private System.Windows.Forms.Button buttonAddSPAJPolisBack;
+        private System.Windows.Forms.Button buttonAddSPAJSpouseBack;
+        private System.Windows.Forms.Button buttonAddSPAJParentBack;
+        private System.Windows.Forms.Button buttonAddSPAJAddressBack;
+        private System.Windows.Forms.Button buttonAddSPAJPengajuanBack;
+        private System.Windows.Forms.Button buttonAddSPAJBeneficiaryBack;
     }
 }

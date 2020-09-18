@@ -17,15 +17,12 @@ namespace PruAmsForm
         private SPAJ SpajFileUpd;
         private List<SPAJ> SPAJUpdate = new List<SPAJ>();
         private List<SPAJStatusChange> SPAJStatusChanges = new List<SPAJStatusChange>();
+        private int addTabCurrentlySelected = 0;
 
         public Form2()
         {
             InitializeComponent();
             dataGridViewSPAJUpdate.DataSource = SPAJStatusChanges;
-            foreach (TabPage page in tabControlAddSPAJ.TabPages)
-            {
-                
-            }
         }
 
         private void buttonSPAJClearBackMenu_Click(object sender, EventArgs e)
@@ -83,6 +80,7 @@ namespace PruAmsForm
                                              InsurerHeight, InsurerWeight, InsurerSmoke, InsurerJobClass);
                 spaj.InsurerForm = NewInsurer;
 
+                addTabCurrentlySelected++;
                 tabControlAddSPAJ.SelectTab(tabPagePolisHolder);
             }
             catch (Exception ex)
@@ -106,6 +104,7 @@ namespace PruAmsForm
 
                 NewPolis = new PolisForm(PolisName, PolisGender, PolisDOB, PolisMarriage, PolisRs);
                 spaj.PolisForm = NewPolis;
+                addTabCurrentlySelected++;
                 tabControlAddSPAJ.SelectTab(tabPageSpouseInfo);
             }
             catch (Exception ex)
@@ -134,6 +133,7 @@ namespace PruAmsForm
                     SpouseHeight, SpouseWeight, SpouseSmoke);
                 spaj.SpouseForm = NewSpouse;
 
+                addTabCurrentlySelected++;
                 tabControlAddSPAJ.SelectTab(tabPageParentInfo);
             }
             catch (Exception ex)
@@ -161,6 +161,7 @@ namespace PruAmsForm
                 NewParent = new ParentForm(ParentName, ParentGender, ParentDOB, ParentMarriage, ParentNextBday, ParentHeight, ParentWeight, ParentSmoke);
                 spaj.ParentForm = NewParent;
 
+                addTabCurrentlySelected++;
                 tabControlAddSPAJ.SelectTab(tabPageAddressInfo);
             }
             catch (Exception ex)
@@ -184,6 +185,7 @@ namespace PruAmsForm
                 NewAddress = new AddressForm(Address, AddrCity, AddrZipCode, AddrEmail, AddrHPNumber, AddrOPNumber);
                 spaj.AddressForm = NewAddress;
 
+                addTabCurrentlySelected++;
                 tabControlAddSPAJ.SelectTab(tabPagePengajuanInfo);
             }
             catch (Exception ex)
@@ -253,7 +255,8 @@ namespace PruAmsForm
                 PengajuanPremi, PengajuanPruSaver, PengajuanTotalPremi);
                 spaj.PengajuanForm = NewPengajuan;
 
-                tabControlAddSPAJ.SelectTab(tabPageBeneficiaryInfo);
+            addTabCurrentlySelected++;
+            tabControlAddSPAJ.SelectTab(tabPageBeneficiaryInfo);
             
            
         }
@@ -1415,5 +1418,51 @@ namespace PruAmsForm
         {
 
         }
+
+        private void tabControlAddSPAJ_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            int selectedTab = tabControlAddSPAJ.SelectedIndex;
+            if (addTabCurrentlySelected != selectedTab)
+            {
+                tabControlAddSPAJ.SelectTab(addTabCurrentlySelected);
+            }
+        }
+
+        private void addFormTabBack()
+        {
+            addTabCurrentlySelected--;
+            tabControlAddSPAJ.SelectTab(addTabCurrentlySelected);
+        }
+
+        private void buttonAddSPAJPolisBack_Click(object sender, EventArgs e)
+        {
+            addFormTabBack();
+        }
+
+        private void buttonAddSPAJBeneficiaryBack_Click(object sender, EventArgs e)
+        {
+            addFormTabBack();
+        }
+
+        private void buttonAddSPAJPengajuanBack_Click(object sender, EventArgs e)
+        {
+            addFormTabBack();
+        }
+
+        private void buttonAddSPAJAddressBack_Click(object sender, EventArgs e)
+        {
+            addFormTabBack();
+        }
+
+        private void buttonAddSPAJParentBack_Click(object sender, EventArgs e)
+        {
+            addFormTabBack();
+        }
+
+        private void buttonAddSPAJSpouseBack_Click(object sender, EventArgs e)
+        {
+            addFormTabBack();
+        }
     }
 }
+ 
