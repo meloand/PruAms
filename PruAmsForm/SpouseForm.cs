@@ -38,5 +38,11 @@ namespace PruAmsForm
             this.SpouseWeight = SpouseWeight;
             this.SpouseSmoke = SpouseSmoke; 
         }
+
+        public bool IsEmpty()
+        {
+            return SpouseName == "" && SpouseGender == "" && SpouseDOB == "" && SpouseMarriage == "" && SpouseNextBday == 0
+                && SpouseHeight == 0 && SpouseWeight == 0 && SpouseSmoke == false;
+        }
     }
 }

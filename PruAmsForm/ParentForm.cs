@@ -39,5 +39,11 @@ namespace PruAmsForm
             this.ParentWeight = ParentWeight;
             this.ParentSmoke = ParentSmoke; 
         }
+
+        public bool IsEmpty()
+        {
+            return ParentName == "" && ParentGender == "" && ParentDOB == "" && ParentMarriage == "" && ParentNextBday == 0
+                && ParentHeight == 0 && ParentWeight == 0 && ParentSmoke == false;
+        }
     }
 }
