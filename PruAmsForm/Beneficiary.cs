@@ -14,6 +14,8 @@ namespace PruAmsForm
         public string Relationship { get; set; }
         public string Details { get; set; }
 
+        public Beneficiary() : this("", "", "", "", "") { }
+
         public Beneficiary(string firstName, string lastName, string birthDate, string relationship, string details)
         {
             this.FirstName = firstName;

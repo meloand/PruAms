@@ -26,8 +26,6 @@ namespace PruAmsForm
 
         private void buttonAgentBackMenu_Click(object sender, EventArgs e)
         {
-            Form1 AMS_Home = new Form1();
-            AMS_Home.Show();
             this.Close();
         }
 
@@ -175,20 +173,10 @@ namespace PruAmsForm
 
         private void textBoxViewAgentNum_TextChanged(object sender, EventArgs e)
         {
-            if (textBoxViewAgentNum.Text != String.Empty)
+            foreach (Control c in new Control[] { textBoxViewAgentFirstN, textBoxViewAgentLastN, comboBoxViewAgentDateDay,
+            comboBoxViewAgentDateMonth, comboBoxViewAgentDateYear, comboBoxViewAgentLeader, comboBoxViewAgentLevel })
             {
-                foreach (Control c in new Control[] { textBoxViewAgentFirstN, textBoxViewAgentLastN, comboBoxViewAgentDateDay,
-                comboBoxViewAgentDateMonth, comboBoxViewAgentDateYear, comboBoxViewAgentLeader, comboBoxViewAgentLevel })
-                {
-                    c.Enabled = false;
-                }
-            } else
-            {
-                foreach (Control c in new Control[] { textBoxViewAgentFirstN, textBoxViewAgentLastN, comboBoxViewAgentDateDay,
-                comboBoxViewAgentDateMonth, comboBoxViewAgentDateYear, comboBoxViewAgentLeader, comboBoxViewAgentLevel })
-                {
-                    c.Enabled = true;
-                }
+                c.Enabled = textBoxViewAgentNum.Text == String.Empty;
             }
         }
 
@@ -245,6 +233,7 @@ namespace PruAmsForm
           {
              control.Text = "";
           }
+            dataGridView1.DataSource = null;
        } 
         
     }

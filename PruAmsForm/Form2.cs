@@ -27,8 +27,6 @@ namespace PruAmsForm
 
         private void buttonSPAJClearBackMenu_Click(object sender, EventArgs e)
         {
-            Form1 AMS_Home = new Form1();
-            AMS_Home.Show();
             this.Close();
         }
 
@@ -40,24 +38,7 @@ namespace PruAmsForm
 
         private void buttonInsInfoAccept_Click(object sender, EventArgs e)
         {
-            try
-            {
-                // Add SPAJ Form 
-                int SPAJNum = int.Parse(textBoxSPAJNum.Text);
-                string SPAJType = textBoxSPAJInsType.Text;
-                string AgentName = textBoxSPAJAName.Text;
-                int AgentNum = int.Parse(textBoxSPAJANum.Text);
-                int PruFlyerNum = int.Parse(textBoxPRUFlyerNum.Text);
-                string SPAJSubmitDate = dateTimeSPAJSubmit.Text;
-                SPAJForm NewSPAJ;
 
-                NewSPAJ = new SPAJForm(SPAJNum, SPAJType, AgentName, AgentNum, PruFlyerNum, SPAJSubmitDate);
-                spaj.SPAJForm = NewSPAJ;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Please fill all required textboxes. ");
-            }
 
             try
             {
@@ -98,6 +79,12 @@ namespace PruAmsForm
                 string PolisDOB = dateTimeSPAJPolisDOB.Text;
                 string PolisMarriage = comboBoxSPAJPolisMarriage.Text;
                 string PolisRs = comboBoxSPAJPolisRs.Text;
+
+                if (PolisName == "" || PolisGender == "" || PolisDOB == "" || PolisMarriage == "" || PolisRs == "")
+                {
+                    throw new ArgumentException();
+                }
+
                 PolisForm NewPolis;
 
 
@@ -324,197 +311,240 @@ namespace PruAmsForm
 
         private void buttonSPAJNewCreate_Click(object sender, EventArgs e)
         {
-            
-            buttonSPAJNewCreate.Enabled = false;
-            buttonSPAJNewClear.Enabled = true;
-            
+            try
+            {
+                if (spajFiles.Any(x => x.SPAJForm.SPAJNum == int.Parse(textBoxSPAJNum.Text)))
+                {
+                    MessageBox.Show("SPAJ file with that number already exists.");
+                }
+                else
+                {
+                    // Add SPAJ Form 
+                    int SPAJNum = int.Parse(textBoxSPAJNum.Text);
+                    string SPAJType = textBoxSPAJInsType.Text;
+                    string AgentName = textBoxSPAJAName.Text;
+                    int AgentNum = int.Parse(textBoxSPAJANum.Text);
+                    int PruFlyerNum = int.Parse(textBoxPRUFlyerNum.Text);
+                    string SPAJSubmitDate = dateTimeSPAJSubmit.Text;
+                    SPAJForm NewSPAJ;
 
-            // spaj now has all completed forms as its properties
-            spajFiles.Add(spaj);
+                    NewSPAJ = new SPAJForm(SPAJNum, SPAJType, AgentName, AgentNum, PruFlyerNum, SPAJSubmitDate);
+                    spaj.SPAJForm = NewSPAJ;
+
+
+
+                    buttonSPAJNewCreate.Enabled = false;
+                    buttonSPAJNewClear.Enabled = true;
+
+
+                    // spaj now has all completed forms as its properties
+                    spajFiles.Add(spaj);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please fill all required textboxes. ");
+            }
+
+            
         }
 
         // EDIT SPAJ 
 
         private void buttonSPAJEditLoad_Click(object sender, EventArgs e)
         {
-            SPAJ spajFile = spajFiles.First(x => x.SPAJForm.SPAJNum == Int32.Parse(textBoxSPAJEditNumber.Text));
-            tabControlEditSPAJ.Enabled = true;
+            if (spajFiles.Any(x => x.SPAJForm.SPAJNum == Int32.Parse(textBoxSPAJEditNumber.Text)))
+            {
+                SPAJ spajFile = spajFiles.First(x => x.SPAJForm.SPAJNum == Int32.Parse(textBoxSPAJEditNumber.Text));
+                tabControlEditSPAJ.Enabled = true;
 
-            // SPAJ Form
-            textBoxSPAJEditType.Text = spajFile.SPAJForm.SPAJType;
-            textBoxSPAJEditAName.Text = spajFile.SPAJForm.AgentName;
-            textBoxSPAJEditANumber.Text = spajFile.SPAJForm.AgentNum.ToString();
-            textBoxEditPruFlyerNum.Text = spajFile.SPAJForm.PruFlyerNum.ToString();
-            dateTimeSPAJEditSubmit.Text = spajFile.SPAJForm.SPAJSubmitDate;
-            // Insurer Form
-            textBoxSPAJEditInsrName.Text = spajFile.InsurerForm.InsurerName;
-            textBoxSPAJEditInsrHeight.Text = spajFile.InsurerForm.InsurerHeight.ToString();
-            textBoxSPAJEditInsrWeight.Text = spajFile.InsurerForm.InsurerWeight.ToString();
-            textBoxSPAJEditInsrNextBday.Text = spajFile.InsurerForm.InsurerNextBday.ToString();
-            radioButtonSPAJEditInsrSmoke.Checked = spajFile.InsurerForm.InsurerSmoke;
-            comboBoxSPAJEditInsrGender.Text = spajFile.InsurerForm.InsurerGender;
-            comboBoxSPAJEditInsrJobClass.Text = spajFile.InsurerForm.InsurerJobClass;
-            comboBoxSPAJEditInsrMarriage.Text = spajFile.InsurerForm.InsurerMarried;
-            dateTimeSPAJEditInsrDOB.Text = spajFile.InsurerForm.InsurerDOB;
-            // Polis Form
-            textBoxSPAJEditPolisName.Text = spajFile.PolisForm.PolisName;
-            comboBoxSPAJEditPolisMarriage.Text = spajFile.PolisForm.PolisMarriage;
-            comboBoxSPAJEditPolisGender.Text = spajFile.PolisForm.PolisGender;
-            comboBoxSPAJEditPolisRs.Text = spajFile.PolisForm.PolisRs;
-            dateTimeSPAJEditPolisDOB.Text = spajFile.PolisForm.PolisDOB;
-            // Spouse Form
-            textBoxSPAJEditSpouseName.Text = spajFile.SpouseForm.SpouseName;
-            textBoxSPAJEditSpouseHeight.Text = spajFile.SpouseForm.SpouseHeight.ToString();
-            textBoxSPAJEditSpouseNextBday.Text = spajFile.SpouseForm.SpouseNextBday.ToString();
-            textBoxSPAJEditSpouseWeight.Text = spajFile.SpouseForm.SpouseWeight.ToString();
-            comboBoxSPAJEditSpouseGender.Text = spajFile.SpouseForm.SpouseGender;
-            comboBoxSPAJEditSpouseMarriage.Text = spajFile.SpouseForm.SpouseMarriage;
-            radioButtonSPAJEditSpouseSmoke.Checked = spajFile.SpouseForm.SpouseSmoke;
-            dateTimeSPAJEditSpouseDOB.Text = spajFile.SpouseForm.SpouseDOB;
-            // Parent Form
-            textBoxSPAJEditParentName.Text = spajFile.ParentForm.ParentName;
-            textBoxSPAJEditParentHeight.Text = spajFile.ParentForm.ParentHeight.ToString();
-            textBoxSPAJEditParentNextBday.Text = spajFile.ParentForm.ParentNextBday.ToString();
-            textBoxSPAJEditParentWeight.Text = spajFile.ParentForm.ParentWeight.ToString();
-            comboBoxSPAJEditParentGender.Text = spajFile.ParentForm.ParentGender;
-            comboBoxSPAJEditParentMarriage.Text = spajFile.ParentForm.ParentMarriage;
-            radioButtonSPAJEditParentSmoke.Checked = spajFile.ParentForm.ParentSmoke;
-            dateTimeSPAJEditParentDOB.Text = spajFile.ParentForm.ParentDOB;
-            // Address Form
-            textBoxSPAJEditAddrCity.Text = spajFile.AddressForm.City;
-            textBoxSPAJEditAddrEmail.Text = spajFile.AddressForm.Email;
-            textBoxSPAJEditAddrHP.Text = spajFile.AddressForm.HPNumber.ToString();
-            textBoxSPAJEditAddrAddress.Text = spajFile.AddressForm.Address;
-            textBoxSPAJEditAddrOP.Text = spajFile.AddressForm.OPNumber.ToString();
-            textBoxSPAJEditAddrZip.Text = spajFile.AddressForm.ZipCode.ToString();
-            // Pengajuan Form
-            textBoxSPAJEditPengajuanCCBank.Text = spajFile.PengajuanForm.PengajuanCCBankOther;
-            textBoxSPAJEditPengajuanExchange.Text = spajFile.PengajuanForm.PengajuanExchange.ToString();
-            textBoxSPAJEditPengajuanExpDate.Text = spajFile.PengajuanForm.PengajuanExpDate;
-            textBoxSPAJEditPengajuanPrtanggung.Text = spajFile.PengajuanForm.PengajuanPertanggungan.ToString();
-            textBoxSPAJEditPengajuanPruADDAmnt.Text = spajFile.PengajuanForm.PengajuanPruADDAmnt.ToString();
-            textBoxSPAJEditPengajuanPruCCAmnt.Text = spajFile.PengajuanForm.PengajuanPruCCAmnt.ToString();
-            textBoxSPAJEditPengajuanPRUMedAmnt.Text = spajFile.PengajuanForm.PengajuanPruMedAmnt.ToString();
-            textBoxSPAJEditPengajuanPruPayorAmnt.Text = spajFile.PengajuanForm.PengajuanPruPayorAmnt.ToString();
-            textBoxSPAJEditPengajuanPruPPayorAmnt.Text = spajFile.PengajuanForm.PengajuanPruPPayorAmnt.ToString();
-            textBoxSPAJEditPengajuanBasic.Text = spajFile.PengajuanForm.PengajuanBasic;
-            comboBoxSPAJEditPengajuanCurrency.Text = spajFile.PengajuanForm.PengajuanCurrency;
-            comboBoxSPAJEditPengajuanFreq.Text = spajFile.PengajuanForm.PengajuanFrequency;
-            comboBoxSPAJEditPengajuanPay.Text = spajFile.PengajuanForm.PengajuanPay;
-            textBoxSPAJEditPengajuanPruADD.Text = spajFile.PengajuanForm.PengajuanPruADD;
-            textBoxSPAJEditPengajuanPruCC.Text = spajFile.PengajuanForm.PengajuanPruCC;
-            textBoxSPAJEditPengajuanPruHosp.Text = spajFile.PengajuanForm.PengajuanPruHosp.ToString();
-            textBoxSPAJEditPengajuanPRUMed.Text = spajFile.PengajuanForm.PengajuanPruMed;
-            textBoxSPAJEditPengajuanPruPayor.Text = spajFile.PengajuanForm.PengajuanPruPayor;
-            textBoxSPAJEditPengajuanPruPPayor.Text = spajFile.PengajuanForm.PengajuanPruPPayor;
+                // SPAJ Form
+                textBoxSPAJEditType.Text = spajFile.SPAJForm.SPAJType;
+                textBoxSPAJEditAName.Text = spajFile.SPAJForm.AgentName;
+                textBoxSPAJEditANumber.Text = spajFile.SPAJForm.AgentNum.ToString();
+                textBoxEditPruFlyerNum.Text = spajFile.SPAJForm.PruFlyerNum.ToString();
+                dateTimeSPAJEditSubmit.Text = spajFile.SPAJForm.SPAJSubmitDate;
+                // Insurer Form
+                textBoxSPAJEditInsrName.Text = spajFile.InsurerForm.InsurerName;
+                textBoxSPAJEditInsrHeight.Text = spajFile.InsurerForm.InsurerHeight.ToString();
+                textBoxSPAJEditInsrWeight.Text = spajFile.InsurerForm.InsurerWeight.ToString();
+                textBoxSPAJEditInsrNextBday.Text = spajFile.InsurerForm.InsurerNextBday.ToString();
+                radioButtonSPAJEditInsrSmoke.Checked = spajFile.InsurerForm.InsurerSmoke;
+                comboBoxSPAJEditInsrGender.Text = spajFile.InsurerForm.InsurerGender;
+                comboBoxSPAJEditInsrJobClass.Text = spajFile.InsurerForm.InsurerJobClass;
+                comboBoxSPAJEditInsrMarriage.Text = spajFile.InsurerForm.InsurerMarried;
+                dateTimeSPAJEditInsrDOB.Text = spajFile.InsurerForm.InsurerDOB;
+                // Polis Form
+                textBoxSPAJEditPolisName.Text = spajFile.PolisForm.PolisName;
+                comboBoxSPAJEditPolisMarriage.Text = spajFile.PolisForm.PolisMarriage;
+                comboBoxSPAJEditPolisGender.Text = spajFile.PolisForm.PolisGender;
+                comboBoxSPAJEditPolisRs.Text = spajFile.PolisForm.PolisRs;
+                dateTimeSPAJEditPolisDOB.Text = spajFile.PolisForm.PolisDOB;
+                // Spouse Form
+                textBoxSPAJEditSpouseName.Text = spajFile.SpouseForm.SpouseName;
+                textBoxSPAJEditSpouseHeight.Text = spajFile.SpouseForm.SpouseHeight.ToString();
+                textBoxSPAJEditSpouseNextBday.Text = spajFile.SpouseForm.SpouseNextBday.ToString();
+                textBoxSPAJEditSpouseWeight.Text = spajFile.SpouseForm.SpouseWeight.ToString();
+                comboBoxSPAJEditSpouseGender.Text = spajFile.SpouseForm.SpouseGender;
+                comboBoxSPAJEditSpouseMarriage.Text = spajFile.SpouseForm.SpouseMarriage;
+                radioButtonSPAJEditSpouseSmoke.Checked = spajFile.SpouseForm.SpouseSmoke;
+                dateTimeSPAJEditSpouseDOB.Text = spajFile.SpouseForm.SpouseDOB;
+                // Parent Form
+                textBoxSPAJEditParentName.Text = spajFile.ParentForm.ParentName;
+                textBoxSPAJEditParentHeight.Text = spajFile.ParentForm.ParentHeight.ToString();
+                textBoxSPAJEditParentNextBday.Text = spajFile.ParentForm.ParentNextBday.ToString();
+                textBoxSPAJEditParentWeight.Text = spajFile.ParentForm.ParentWeight.ToString();
+                comboBoxSPAJEditParentGender.Text = spajFile.ParentForm.ParentGender;
+                comboBoxSPAJEditParentMarriage.Text = spajFile.ParentForm.ParentMarriage;
+                radioButtonSPAJEditParentSmoke.Checked = spajFile.ParentForm.ParentSmoke;
+                dateTimeSPAJEditParentDOB.Text = spajFile.ParentForm.ParentDOB;
+                // Address Form
+                textBoxSPAJEditAddrCity.Text = spajFile.AddressForm.City;
+                textBoxSPAJEditAddrEmail.Text = spajFile.AddressForm.Email;
+                textBoxSPAJEditAddrHP.Text = spajFile.AddressForm.HPNumber.ToString();
+                textBoxSPAJEditAddrAddress.Text = spajFile.AddressForm.Address;
+                textBoxSPAJEditAddrOP.Text = spajFile.AddressForm.OPNumber.ToString();
+                textBoxSPAJEditAddrZip.Text = spajFile.AddressForm.ZipCode.ToString();
+                // Pengajuan Form
+                textBoxSPAJEditPengajuanCCBank.Text = spajFile.PengajuanForm.PengajuanCCBankOther;
+                textBoxSPAJEditPengajuanExchange.Text = spajFile.PengajuanForm.PengajuanExchange.ToString();
+                textBoxSPAJEditPengajuanExpDate.Text = spajFile.PengajuanForm.PengajuanExpDate;
+                textBoxSPAJEditPengajuanPrtanggung.Text = spajFile.PengajuanForm.PengajuanPertanggungan.ToString();
+                textBoxSPAJEditPengajuanPruADDAmnt.Text = spajFile.PengajuanForm.PengajuanPruADDAmnt.ToString();
+                textBoxSPAJEditPengajuanPruCCAmnt.Text = spajFile.PengajuanForm.PengajuanPruCCAmnt.ToString();
+                textBoxSPAJEditPengajuanPRUMedAmnt.Text = spajFile.PengajuanForm.PengajuanPruMedAmnt.ToString();
+                textBoxSPAJEditPengajuanPruPayorAmnt.Text = spajFile.PengajuanForm.PengajuanPruPayorAmnt.ToString();
+                textBoxSPAJEditPengajuanPruPPayorAmnt.Text = spajFile.PengajuanForm.PengajuanPruPPayorAmnt.ToString();
+                textBoxSPAJEditPengajuanBasic.Text = spajFile.PengajuanForm.PengajuanBasic;
+                comboBoxSPAJEditPengajuanCurrency.Text = spajFile.PengajuanForm.PengajuanCurrency;
+                comboBoxSPAJEditPengajuanFreq.Text = spajFile.PengajuanForm.PengajuanFrequency;
+                comboBoxSPAJEditPengajuanPay.Text = spajFile.PengajuanForm.PengajuanPay;
+                textBoxSPAJEditPengajuanPruADD.Text = spajFile.PengajuanForm.PengajuanPruADD;
+                textBoxSPAJEditPengajuanPruCC.Text = spajFile.PengajuanForm.PengajuanPruCC;
+                textBoxSPAJEditPengajuanPruHosp.Text = spajFile.PengajuanForm.PengajuanPruHosp.ToString();
+                textBoxSPAJEditPengajuanPRUMed.Text = spajFile.PengajuanForm.PengajuanPruMed;
+                textBoxSPAJEditPengajuanPruPayor.Text = spajFile.PengajuanForm.PengajuanPruPayor;
+                textBoxSPAJEditPengajuanPruPPayor.Text = spajFile.PengajuanForm.PengajuanPruPPayor;
 
-            textBoxSPAJEditPengajuanPremi.Text = spajFile.PengajuanForm.PengajuanPremi.ToString();
-            textBoxSPAJEditPengajuanPruSaver.Text = spajFile.PengajuanForm.PengajuanPruSaver.ToString();
-            textBoxSPAJEditPengajuanPremiTotal.Text = spajFile.PengajuanForm.PengajuanTotalPremi.ToString();
+                textBoxSPAJEditPengajuanPremi.Text = spajFile.PengajuanForm.PengajuanPremi.ToString();
+                textBoxSPAJEditPengajuanPruSaver.Text = spajFile.PengajuanForm.PengajuanPruSaver.ToString();
+                textBoxSPAJEditPengajuanPremiTotal.Text = spajFile.PengajuanForm.PengajuanTotalPremi.ToString();
 
-            // controls: 
-            // currency : if idr disables exch rate 
-            if (comboBoxSPAJEditPengajuanCurrency.Text == "Rupiah")
-            { textBoxSPAJEditPengajuanExchange.Enabled = false;  }
-            //  pay: if other disables the exp date textbox. 
-            if (comboBoxSPAJEditPengajuanPay.Text == "Other")
-            { textBoxSPAJEditPengajuanExpDate.Enabled = false; }
-            // checkboxes: if textbox and textbox amnt != "", checkbox.checked 
-            if(textBoxSPAJEditPengajuanPruHosp.Text != "0.00")
-            { checkBoxSPAJEditPengajuanPruHosp.Checked = true; }
-            else
-            { checkBoxSPAJEditPengajuanPruHosp.Checked = false;
-               textBoxSPAJEditPengajuanPruHosp.Enabled = false; }
+                // controls: 
+                // currency : if idr disables exch rate 
+                if (comboBoxSPAJEditPengajuanCurrency.Text == "Rupiah")
+                { textBoxSPAJEditPengajuanExchange.Enabled = false; }
+                //  pay: if other disables the exp date textbox. 
+                if (comboBoxSPAJEditPengajuanPay.Text == "Other")
+                { textBoxSPAJEditPengajuanExpDate.Enabled = false; }
+                // checkboxes: if textbox and textbox amnt != "", checkbox.checked 
+                if (textBoxSPAJEditPengajuanPruHosp.Text != "0.00")
+                { checkBoxSPAJEditPengajuanPruHosp.Checked = true; }
+                else
+                {
+                    checkBoxSPAJEditPengajuanPruHosp.Checked = false;
+                    textBoxSPAJEditPengajuanPruHosp.Enabled = false;
+                }
 
-            if (textBoxSPAJEditPengajuanPruPayor.Text != "" && textBoxSPAJEditPengajuanPruPayorAmnt.Text != "0.00")
-            { checkBoxSPAJEditPengajuanPruPPayor.Checked = true; }
-            else
-            { checkBoxSPAJEditPengajuanPruPPayor.Checked = false;
-              textBoxSPAJEditPengajuanPruPayor.Enabled = false;
-              textBoxSPAJEditPengajuanPruPayorAmnt.Enabled = false;
+                if (textBoxSPAJEditPengajuanPruPayor.Text != "" && textBoxSPAJEditPengajuanPruPayorAmnt.Text != "0.00")
+                { checkBoxSPAJEditPengajuanPruPPayor.Checked = true; }
+                else
+                {
+                    checkBoxSPAJEditPengajuanPruPPayor.Checked = false;
+                    textBoxSPAJEditPengajuanPruPayor.Enabled = false;
+                    textBoxSPAJEditPengajuanPruPayorAmnt.Enabled = false;
+                }
+
+                if (textBoxSPAJEditPengajuanPruCC.Text != "" && textBoxSPAJEditPengajuanPruCCAmnt.Text != "0.00")
+                { checkBoxSPAJEditPengajuanPruCC.Checked = true; }
+                else
+                {
+                    checkBoxSPAJEditPengajuanPruCC.Checked = false;
+                    textBoxSPAJEditPengajuanPruCC.Enabled = false;
+                    textBoxSPAJEditPengajuanPruCCAmnt.Enabled = false;
+                }
+
+                if (textBoxSPAJEditPengajuanPruADD.Text != "" && textBoxSPAJEditPengajuanPruADDAmnt.Text != "0.00")
+                { checkBoxSPAJEditPengajuanADD.Checked = true; }
+                else
+                {
+                    checkBoxSPAJEditPengajuanADD.Checked = false;
+                    textBoxSPAJEditPengajuanPruADD.Enabled = false;
+                    textBoxSPAJEditPengajuanPruADDAmnt.Enabled = false;
+                }
+                if (textBoxSPAJEditPengajuanPRUMed.Text != "" && textBoxSPAJEditPengajuanPRUMedAmnt.Text != "0.00")
+                { checkBoxSPAJEditPengajuanPRUMed.Checked = true; }
+                else
+                {
+                    checkBoxSPAJEditPengajuanPRUMed.Checked = false;
+                    textBoxSPAJEditPengajuanPRUMed.Enabled = false;
+                    textBoxSPAJEditPengajuanPRUMedAmnt.Enabled = false;
+                }
+                if (textBoxSPAJEditPengajuanPruPPayor.Text != "" && textBoxSPAJEditPengajuanPruPPayor.Text != "0.00")
+                { checkBoxSPAJEditPengajuanPruPPayor.Checked = true; }
+                else
+                {
+                    checkBoxSPAJEditPengajuanPruPPayor.Checked = false;
+                    textBoxSPAJEditPengajuanPruPPayor.Enabled = false;
+                    textBoxSPAJEditPengajuanPruPPayorAmnt.Enabled = false;
+                }
+                // premi + total premi is readonly, prusaver only enabled if frequency == berkala || tunggal. 
+                textBoxSPAJEditPengajuanPremi.ReadOnly = true;
+                textBoxSPAJEditPengajuanPruSaver.ReadOnly = true;
+                textBoxSPAJEditPengajuanPremiTotal.ReadOnly = true;
+                if (comboBoxSPAJEditPengajuanFreq.Text == "Berkala" || comboBoxSPAJEditPengajuanFreq.Text == "Tunggal")
+                { textBoxSPAJEditPengajuanPruSaver.ReadOnly = false; }
+
+
+                // Beneficiary Form
+                textBoxSPAJEditBeneficiaryFName1.Text = spajFile.BeneficiaryForm.Beneficiary1.FirstName;
+                textBoxSPAJEditBeneficiaryLName1.Text = spajFile.BeneficiaryForm.Beneficiary1.LastName;
+                textBoxSPAJEditBeneficiaryDetail1.Text = spajFile.BeneficiaryForm.Beneficiary1.Details;
+                dateTimeSPAJEditBeneficiary1.Text = spajFile.BeneficiaryForm.Beneficiary1.Birthdate;
+                comboBoxSPAJEditBeneficiaryRs1.Text = spajFile.BeneficiaryForm.Beneficiary1.Relationship;
+                textBoxSPAJEditBeneficiaryFName2.Text = spajFile.BeneficiaryForm.Beneficiary2.FirstName;
+                textBoxSPAJEditBeneficiaryLName2.Text = spajFile.BeneficiaryForm.Beneficiary2.LastName;
+                textBoxSPAJEditBeneficiaryDetail2.Text = spajFile.BeneficiaryForm.Beneficiary2.Details;
+                dateTimeSPAJEditBeneficiary2.Text = spajFile.BeneficiaryForm.Beneficiary2.Birthdate;
+                comboBoxSPAJEditBeneficiaryRs2.Text = spajFile.BeneficiaryForm.Beneficiary2.Relationship;
+                textBoxSPAJEditBeneficiaryFName3.Text = spajFile.BeneficiaryForm.Beneficiary3.FirstName;
+                textBoxSPAJEditBeneficiaryLName3.Text = spajFile.BeneficiaryForm.Beneficiary3.LastName;
+                textBoxSPAJEditBeneficiaryDetail3.Text = spajFile.BeneficiaryForm.Beneficiary3.Details;
+                dateTimeSPAJEditBeneficiary3.Text = spajFile.BeneficiaryForm.Beneficiary3.Birthdate;
+                comboBoxSPAJEditBeneficiaryRs3.Text = spajFile.BeneficiaryForm.Beneficiary3.Relationship;
+                textBoxSPAJEditBeneficiaryFName4.Text = spajFile.BeneficiaryForm.Beneficiary4.FirstName;
+                textBoxSPAJEditBeneficiaryLName4.Text = spajFile.BeneficiaryForm.Beneficiary4.LastName;
+                textBoxSPAJEditBeneficiaryDetail4.Text = spajFile.BeneficiaryForm.Beneficiary4.Details;
+                dateTimeSPAJEditBeneficiary4.Text = spajFile.BeneficiaryForm.Beneficiary4.Birthdate;
+                comboBoxSPAJEditBeneficiaryRs4.Text = spajFile.BeneficiaryForm.Beneficiary4.Relationship;
+                textBoxSPAJEditBeneficiaryFName5.Text = spajFile.BeneficiaryForm.Beneficiary5.FirstName;
+                textBoxSPAJEditBeneficiaryLName5.Text = spajFile.BeneficiaryForm.Beneficiary5.LastName;
+                textBoxSPAJEditBeneficiaryDetail5.Text = spajFile.BeneficiaryForm.Beneficiary5.Details;
+                dateTimeSPAJEditBeneficiary5.Text = spajFile.BeneficiaryForm.Beneficiary5.Birthdate;
+                comboBoxSPAJEditBeneficiaryRs5.Text = spajFile.BeneficiaryForm.Beneficiary5.Relationship;
+                textBoxSPAJEditBeneficiaryFName6.Text = spajFile.BeneficiaryForm.Beneficiary6.FirstName;
+                textBoxSPAJEditBeneficiaryLName6.Text = spajFile.BeneficiaryForm.Beneficiary6.LastName;
+                textBoxSPAJEditBeneficiaryDetail6.Text = spajFile.BeneficiaryForm.Beneficiary6.Details;
+                dateTimeSPAJEditBeneficiary6.Text = spajFile.BeneficiaryForm.Beneficiary6.Birthdate;
+                comboBoxSPAJEditBeneficiaryRs6.Text = spajFile.BeneficiaryForm.Beneficiary6.Relationship;
+                // Enabling/disabling behavior for Beneficiary Form
+                if (textBoxSPAJEditBeneficiaryFName1.Text != "")
+                    checkBoxSPAJEditBeneficiary1.Checked = true;
+                if (textBoxSPAJEditBeneficiaryFName2.Text != "")
+                    checkBoxSPAJEditBeneficiary2.Checked = true;
+                if (textBoxSPAJEditBeneficiaryFName3.Text != "")
+                    checkBoxSPAJEditBeneficiary2.Checked = true;
+                if (textBoxSPAJEditBeneficiaryFName4.Text != "")
+                    checkBoxSPAJEditBeneficiary2.Checked = true;
+                if (textBoxSPAJEditBeneficiaryFName5.Text != "")
+                    checkBoxSPAJEditBeneficiary2.Checked = true;
+                if (textBoxSPAJEditBeneficiaryFName6.Text != "")
+                    checkBoxSPAJEditBeneficiary2.Checked = true;
             }
-
-            if (textBoxSPAJEditPengajuanPruCC.Text != "" && textBoxSPAJEditPengajuanPruCCAmnt.Text != "0.00")
-            { checkBoxSPAJEditPengajuanPruCC.Checked = true; }
             else
-            { checkBoxSPAJEditPengajuanPruCC.Checked = false;
-              textBoxSPAJEditPengajuanPruCC.Enabled = false;
-              textBoxSPAJEditPengajuanPruCCAmnt.Enabled = false;
+            {
+                MessageBox.Show("SPAJ file of that number does not exist.");
             }
-
-            if (textBoxSPAJEditPengajuanPruADD.Text != "" && textBoxSPAJEditPengajuanPruADDAmnt.Text != "0.00")
-            { checkBoxSPAJEditPengajuanADD.Checked = true; }
-            else
-            { checkBoxSPAJEditPengajuanADD.Checked = false;
-              textBoxSPAJEditPengajuanPruADD.Enabled = false;
-              textBoxSPAJEditPengajuanPruADDAmnt.Enabled = false;
-            }
-            if (textBoxSPAJEditPengajuanPRUMed.Text != "" && textBoxSPAJEditPengajuanPRUMedAmnt.Text != "0.00")
-            { checkBoxSPAJEditPengajuanPRUMed.Checked = true;  }
-            else
-            { checkBoxSPAJEditPengajuanPRUMed.Checked = false;
-              textBoxSPAJEditPengajuanPRUMed.Enabled = false;
-              textBoxSPAJEditPengajuanPRUMedAmnt.Enabled = false;
-            }
-            if (textBoxSPAJEditPengajuanPruPPayor.Text != "" && textBoxSPAJEditPengajuanPruPPayor.Text != "0.00")
-            { checkBoxSPAJEditPengajuanPruPPayor.Checked = true; }
-            else
-            { checkBoxSPAJEditPengajuanPruPPayor.Checked = false;
-              textBoxSPAJEditPengajuanPruPPayor.Enabled = false;
-              textBoxSPAJEditPengajuanPruPPayorAmnt.Enabled = false; 
-            }
-            // premi + total premi is readonly, prusaver only enabled if frequency == berkala || tunggal. 
-            textBoxSPAJEditPengajuanPremi.ReadOnly = true;
-            textBoxSPAJEditPengajuanPruSaver.ReadOnly = true;
-            textBoxSPAJEditPengajuanPremiTotal.ReadOnly = true; 
-            if (comboBoxSPAJEditPengajuanFreq.Text == "Berkala" || comboBoxSPAJEditPengajuanFreq.Text == "Tunggal")
-            { textBoxSPAJEditPengajuanPruSaver.ReadOnly = false; }
-
-
-            // Beneficiary Form
-            textBoxSPAJEditBeneficiaryFName1.Text = spajFile.BeneficiaryForm.Beneficiary1.FirstName;
-            textBoxSPAJEditBeneficiaryLName1.Text = spajFile.BeneficiaryForm.Beneficiary1.LastName;
-            textBoxSPAJEditBeneficiaryDetail1.Text = spajFile.BeneficiaryForm.Beneficiary1.Details;
-            dateTimeSPAJEditBeneficiary1.Text = spajFile.BeneficiaryForm.Beneficiary1.Birthdate;
-            comboBoxSPAJEditBeneficiaryRs1.Text = spajFile.BeneficiaryForm.Beneficiary1.Relationship;
-            textBoxSPAJEditBeneficiaryFName2.Text = spajFile.BeneficiaryForm.Beneficiary2.FirstName;
-            textBoxSPAJEditBeneficiaryLName2.Text = spajFile.BeneficiaryForm.Beneficiary2.LastName;
-            textBoxSPAJEditBeneficiaryDetail2.Text = spajFile.BeneficiaryForm.Beneficiary2.Details;
-            dateTimeSPAJEditBeneficiary2.Text = spajFile.BeneficiaryForm.Beneficiary2.Birthdate;
-            comboBoxSPAJEditBeneficiaryRs2.Text = spajFile.BeneficiaryForm.Beneficiary2.Relationship;
-            textBoxSPAJEditBeneficiaryFName3.Text = spajFile.BeneficiaryForm.Beneficiary3.FirstName;
-            textBoxSPAJEditBeneficiaryLName3.Text = spajFile.BeneficiaryForm.Beneficiary3.LastName;
-            textBoxSPAJEditBeneficiaryDetail3.Text = spajFile.BeneficiaryForm.Beneficiary3.Details;
-            dateTimeSPAJEditBeneficiary3.Text = spajFile.BeneficiaryForm.Beneficiary3.Birthdate;
-            comboBoxSPAJEditBeneficiaryRs3.Text = spajFile.BeneficiaryForm.Beneficiary3.Relationship;
-            textBoxSPAJEditBeneficiaryFName4.Text = spajFile.BeneficiaryForm.Beneficiary4.FirstName;
-            textBoxSPAJEditBeneficiaryLName4.Text = spajFile.BeneficiaryForm.Beneficiary4.LastName;
-            textBoxSPAJEditBeneficiaryDetail4.Text = spajFile.BeneficiaryForm.Beneficiary4.Details;
-            dateTimeSPAJEditBeneficiary4.Text = spajFile.BeneficiaryForm.Beneficiary4.Birthdate;
-            comboBoxSPAJEditBeneficiaryRs4.Text = spajFile.BeneficiaryForm.Beneficiary4.Relationship;
-            textBoxSPAJEditBeneficiaryFName5.Text = spajFile.BeneficiaryForm.Beneficiary5.FirstName;
-            textBoxSPAJEditBeneficiaryLName5.Text = spajFile.BeneficiaryForm.Beneficiary5.LastName;
-            textBoxSPAJEditBeneficiaryDetail5.Text = spajFile.BeneficiaryForm.Beneficiary5.Details;
-            dateTimeSPAJEditBeneficiary5.Text = spajFile.BeneficiaryForm.Beneficiary5.Birthdate;
-            comboBoxSPAJEditBeneficiaryRs5.Text = spajFile.BeneficiaryForm.Beneficiary5.Relationship;
-            textBoxSPAJEditBeneficiaryFName6.Text = spajFile.BeneficiaryForm.Beneficiary6.FirstName;
-            textBoxSPAJEditBeneficiaryLName6.Text = spajFile.BeneficiaryForm.Beneficiary6.LastName;
-            textBoxSPAJEditBeneficiaryDetail6.Text = spajFile.BeneficiaryForm.Beneficiary6.Details;
-            dateTimeSPAJEditBeneficiary6.Text = spajFile.BeneficiaryForm.Beneficiary6.Birthdate;
-            comboBoxSPAJEditBeneficiaryRs6.Text = spajFile.BeneficiaryForm.Beneficiary6.Relationship;
-            // Enabling/disabling behavior for Beneficiary Form
-            if (textBoxSPAJEditBeneficiaryFName1.Text != "")
-                checkBoxSPAJEditBeneficiary1.Checked = true;
-            if (textBoxSPAJEditBeneficiaryFName2.Text != "")
-                checkBoxSPAJEditBeneficiary2.Checked = true;
-            if (textBoxSPAJEditBeneficiaryFName3.Text != "")
-                checkBoxSPAJEditBeneficiary2.Checked = true;
-            if (textBoxSPAJEditBeneficiaryFName4.Text != "")
-                checkBoxSPAJEditBeneficiary2.Checked = true;
-            if (textBoxSPAJEditBeneficiaryFName5.Text != "")
-                checkBoxSPAJEditBeneficiary2.Checked = true;
-            if (textBoxSPAJEditBeneficiaryFName6.Text != "")
-                checkBoxSPAJEditBeneficiary2.Checked = true;
         }
 
 
@@ -523,16 +553,22 @@ namespace PruAmsForm
 
         private void buttonSPAJUpdateLoad_Click(object sender, EventArgs e)
         {
-            SpajFileUpd = SPAJUpdate.First(x => x.SPAJForm.SPAJNum == Int32.Parse(textBoxSPAJUpdateNumber.Text));
+            if (SPAJUpdate.Any(x => x.SPAJForm.SPAJNum == Int32.Parse(textBoxSPAJUpdateNumber.Text)))
+            {
+                SpajFileUpd = SPAJUpdate.First(x => x.SPAJForm.SPAJNum == Int32.Parse(textBoxSPAJUpdateNumber.Text));
 
-            textBoxSPAJUpdateInsName.Text = SpajFileUpd.InsurerForm.InsurerName;
-            textBoxSPAJUpdateInsDOB.Text = SpajFileUpd.InsurerForm.InsurerDOB;
-            comboBoxSPAJUpdateStatus.Text = SpajFileUpd.UpdateForm.UpdateStatus;
-            dateTimeSPAJUpdateInforce.Text = SpajFileUpd.UpdateForm.UpdateInsDOB;
-            textBoxSPAJUpdatePolisNum.Text = SpajFileUpd.UpdateForm.UpdatePolis;
-            textBoxSPAJUpdateInfo.Text = SpajFileUpd.UpdateForm.UpdateInfo;
-            
-           
+                textBoxSPAJUpdateInsName.Text = SpajFileUpd.InsurerForm.InsurerName;
+                textBoxSPAJUpdateInsDOB.Text = SpajFileUpd.InsurerForm.InsurerDOB;
+                comboBoxSPAJUpdateStatus.Text = SpajFileUpd.UpdateForm.UpdateStatus;
+                dateTimeSPAJUpdateInforce.Text = SpajFileUpd.UpdateForm.UpdateInsDOB;
+                textBoxSPAJUpdatePolisNum.Text = SpajFileUpd.UpdateForm.UpdatePolis;
+                textBoxSPAJUpdateInfo.Text = SpajFileUpd.UpdateForm.UpdateInfo;
+
+            }
+            else
+            {
+                MessageBox.Show("No updates for given SPAJ file number.");
+            }
         }
 
         private void comboBoxSPAJUpdateStatus_SelectedIndexChanged(object sender, EventArgs e)
