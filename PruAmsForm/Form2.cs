@@ -80,8 +80,7 @@ namespace PruAmsForm
                                              InsurerHeight, InsurerWeight, InsurerSmoke, InsurerJobClass);
                 spaj.InsurerForm = NewInsurer;
 
-                addTabCurrentlySelected++;
-                tabControlAddSPAJ.SelectTab(tabPagePolisHolder);
+                addTabNext();
             }
             catch (Exception ex)
             {
@@ -104,8 +103,7 @@ namespace PruAmsForm
 
                 NewPolis = new PolisForm(PolisName, PolisGender, PolisDOB, PolisMarriage, PolisRs);
                 spaj.PolisForm = NewPolis;
-                addTabCurrentlySelected++;
-                tabControlAddSPAJ.SelectTab(tabPageSpouseInfo);
+                addTabNext();
             }
             catch (Exception ex)
             {
@@ -133,8 +131,7 @@ namespace PruAmsForm
                     SpouseHeight, SpouseWeight, SpouseSmoke);
                 spaj.SpouseForm = NewSpouse;
 
-                addTabCurrentlySelected++;
-                tabControlAddSPAJ.SelectTab(tabPageParentInfo);
+                addTabNext();
             }
             catch (Exception ex)
             {
@@ -161,8 +158,7 @@ namespace PruAmsForm
                 NewParent = new ParentForm(ParentName, ParentGender, ParentDOB, ParentMarriage, ParentNextBday, ParentHeight, ParentWeight, ParentSmoke);
                 spaj.ParentForm = NewParent;
 
-                addTabCurrentlySelected++;
-                tabControlAddSPAJ.SelectTab(tabPageAddressInfo);
+                addTabNext();
             }
             catch (Exception ex)
             {
@@ -185,8 +181,7 @@ namespace PruAmsForm
                 NewAddress = new AddressForm(Address, AddrCity, AddrZipCode, AddrEmail, AddrHPNumber, AddrOPNumber);
                 spaj.AddressForm = NewAddress;
 
-                addTabCurrentlySelected++;
-                tabControlAddSPAJ.SelectTab(tabPagePengajuanInfo);
+                addTabNext();
             }
             catch (Exception ex)
             {
@@ -255,10 +250,9 @@ namespace PruAmsForm
                 PengajuanPremi, PengajuanPruSaver, PengajuanTotalPremi);
                 spaj.PengajuanForm = NewPengajuan;
 
-            addTabCurrentlySelected++;
-            tabControlAddSPAJ.SelectTab(tabPageBeneficiaryInfo);
-            
-           
+            addTabNext();
+
+
         }
 
         private void buttonBeneficiaryAccept_Click(object sender, EventArgs e)
@@ -802,13 +796,19 @@ namespace PruAmsForm
         private void buttonSpouseIgnore_Click(object sender, EventArgs e)
         {
             spaj.SpouseForm = new SpouseForm();
-            tabControlAddSPAJ.SelectTab(tabPageParentInfo);
+            addTabNext();
+        }
+
+        private void addTabNext()
+        {
+            addTabCurrentlySelected++;
+            tabControlAddSPAJ.SelectTab(addTabCurrentlySelected);
         }
 
         private void buttonParentIgnore_Click(object sender, EventArgs e)
         {
             spaj.ParentForm = new ParentForm();
-            tabControlAddSPAJ.SelectTab(tabPageAddressInfo);
+            addTabNext();
         }
 
         private void buttonSpouseClear_Click(object sender, EventArgs e)
@@ -896,9 +896,7 @@ namespace PruAmsForm
 
             // code below to be transferred to the EditPengajuanAccept button 
 
-            textBoxSPAJEditPengajuanPremi.Text = textBoxSPAJEditPengajuanPrtanggung.Text + textBoxSPAJEditPengajuanPruHosp.Text +
-                textBoxSPAJEditPengajuanPruPayorAmnt.Text + textBoxSPAJEditPengajuanPruCCAmnt.Text + textBoxSPAJEditPengajuanPruADDAmnt.Text +
-                textBoxSPAJEditPengajuanPRUMedAmnt.Text + textBoxSPAJEditPengajuanPruPPayorAmnt.Text;
+            textBoxSPAJEditPengajuanPremi.Text = calculatePremi().ToString();
 
             float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
             textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
@@ -909,15 +907,20 @@ namespace PruAmsForm
 
         }
 
+        private float calculatePremi()
+        {
+            return float.Parse(textBoxSPAJEditPengajuanPrtanggung.Text) + float.Parse(textBoxSPAJEditPengajuanPruHosp.Text) +
+                                       float.Parse(textBoxSPAJEditPengajuanPruPayorAmnt.Text) + float.Parse(textBoxSPAJEditPengajuanPruCCAmnt.Text) + float.Parse(textBoxSPAJEditPengajuanPruADDAmnt.Text) +
+                                       float.Parse(textBoxSPAJEditPengajuanPRUMedAmnt.Text) + float.Parse(textBoxSPAJEditPengajuanPruPPayorAmnt.Text);
+        }
+
         private void textBoxSPAJEditPengajuanPrtanggung_TextChanged(object sender, EventArgs e)
         {
-            int Divide = BasicPertanggungan(comboBoxSPAJEditPengajuanFreq.Text); 
+            int Divide = BasicPertanggungan(comboBoxSPAJEditPengajuanFreq.Text);
             float a = float.Parse(textBoxSPAJEditPengajuanPrtanggung.Text);
             textBoxSPAJEditPengajuanPrtanggung.Text = (a / Divide).ToString();
 
-            textBoxSPAJEditPengajuanPremi.Text = textBoxSPAJEditPengajuanPrtanggung.Text + textBoxSPAJEditPengajuanPruHosp.Text +
-                           textBoxSPAJEditPengajuanPruPayorAmnt.Text + textBoxSPAJEditPengajuanPruCCAmnt.Text + textBoxSPAJEditPengajuanPruADDAmnt.Text +
-                           textBoxSPAJEditPengajuanPRUMedAmnt.Text + textBoxSPAJEditPengajuanPruPPayorAmnt.Text;
+            textBoxSPAJEditPengajuanPremi.Text = calculatePremi().ToString();
 
             float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
             textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
@@ -929,15 +932,15 @@ namespace PruAmsForm
 
         }
 
+
+
         private void textBoxSPAJEditPengajuanPruHosp_TextChanged(object sender, EventArgs e)
         {
             int Divide = BasicPertanggungan(comboBoxSPAJEditPengajuanFreq.Text);
             float a = float.Parse(textBoxSPAJEditPengajuanPruHosp.Text);
             textBoxSPAJEditPengajuanPruHosp.Text = (a / Divide).ToString();
 
-            textBoxSPAJEditPengajuanPremi.Text = textBoxSPAJEditPengajuanPrtanggung.Text + textBoxSPAJEditPengajuanPruHosp.Text +
-                           textBoxSPAJEditPengajuanPruPayorAmnt.Text + textBoxSPAJEditPengajuanPruCCAmnt.Text + textBoxSPAJEditPengajuanPruADDAmnt.Text +
-                           textBoxSPAJEditPengajuanPRUMedAmnt.Text + textBoxSPAJEditPengajuanPruPPayorAmnt.Text;
+            textBoxSPAJEditPengajuanPremi.Text = calculatePremi().ToString();
 
             float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
             textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
@@ -955,9 +958,7 @@ namespace PruAmsForm
             float a = float.Parse(textBoxSPAJEditPengajuanPruPayorAmnt.Text);
             textBoxSPAJEditPengajuanPruPayorAmnt.Text = (a / Divide).ToString();
 
-            textBoxSPAJEditPengajuanPremi.Text = textBoxSPAJEditPengajuanPrtanggung.Text + textBoxSPAJEditPengajuanPruHosp.Text +
-                           textBoxSPAJEditPengajuanPruPayorAmnt.Text + textBoxSPAJEditPengajuanPruCCAmnt.Text + textBoxSPAJEditPengajuanPruADDAmnt.Text +
-                           textBoxSPAJEditPengajuanPRUMedAmnt.Text + textBoxSPAJEditPengajuanPruPPayorAmnt.Text;
+            textBoxSPAJEditPengajuanPremi.Text = calculatePremi().ToString();
 
             float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
             textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
@@ -974,9 +975,7 @@ namespace PruAmsForm
             float a = float.Parse(textBoxSPAJEditPengajuanPruCCAmnt.Text);
             textBoxSPAJEditPengajuanPruCCAmnt.Text = (a / Divide).ToString();
 
-            textBoxSPAJEditPengajuanPremi.Text = textBoxSPAJEditPengajuanPrtanggung.Text + textBoxSPAJEditPengajuanPruHosp.Text +
-                           textBoxSPAJEditPengajuanPruPayorAmnt.Text + textBoxSPAJEditPengajuanPruCCAmnt.Text + textBoxSPAJEditPengajuanPruADDAmnt.Text +
-                           textBoxSPAJEditPengajuanPRUMedAmnt.Text + textBoxSPAJEditPengajuanPruPPayorAmnt.Text;
+            textBoxSPAJEditPengajuanPremi.Text = calculatePremi().ToString();
 
             float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
             textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
@@ -993,9 +992,7 @@ namespace PruAmsForm
             float a = float.Parse(textBoxSPAJEditPengajuanPruADDAmnt.Text);
             textBoxSPAJEditPengajuanPruADDAmnt.Text = (a / Divide).ToString();
 
-            textBoxSPAJEditPengajuanPremi.Text = textBoxSPAJEditPengajuanPrtanggung.Text + textBoxSPAJEditPengajuanPruHosp.Text +
-                           textBoxSPAJEditPengajuanPruPayorAmnt.Text + textBoxSPAJEditPengajuanPruCCAmnt.Text + textBoxSPAJEditPengajuanPruADDAmnt.Text +
-                           textBoxSPAJEditPengajuanPRUMedAmnt.Text + textBoxSPAJEditPengajuanPruPPayorAmnt.Text;
+            textBoxSPAJEditPengajuanPremi.Text = calculatePremi().ToString();
 
             float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
             textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
@@ -1012,9 +1009,7 @@ namespace PruAmsForm
             float a = float.Parse(textBoxSPAJEditPengajuanPRUMedAmnt.Text);
             textBoxSPAJEditPengajuanPRUMedAmnt.Text = (a / Divide).ToString();
 
-            textBoxSPAJEditPengajuanPremi.Text = textBoxSPAJEditPengajuanPrtanggung.Text + textBoxSPAJEditPengajuanPruHosp.Text +
-                           textBoxSPAJEditPengajuanPruPayorAmnt.Text + textBoxSPAJEditPengajuanPruCCAmnt.Text + textBoxSPAJEditPengajuanPruADDAmnt.Text +
-                           textBoxSPAJEditPengajuanPRUMedAmnt.Text + textBoxSPAJEditPengajuanPruPPayorAmnt.Text;
+            textBoxSPAJEditPengajuanPremi.Text = calculatePremi().ToString();
 
             float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
             textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
@@ -1031,9 +1026,7 @@ namespace PruAmsForm
             float a = float.Parse(textBoxSPAJEditPengajuanPruPPayorAmnt.Text);
             textBoxSPAJEditPengajuanPruPPayorAmnt.Text = (a / Divide).ToString();
 
-            textBoxSPAJEditPengajuanPremi.Text = textBoxSPAJEditPengajuanPrtanggung.Text + textBoxSPAJEditPengajuanPruHosp.Text +
-                           textBoxSPAJEditPengajuanPruPayorAmnt.Text + textBoxSPAJEditPengajuanPruCCAmnt.Text + textBoxSPAJEditPengajuanPruADDAmnt.Text +
-                           textBoxSPAJEditPengajuanPRUMedAmnt.Text + textBoxSPAJEditPengajuanPruPPayorAmnt.Text;
+            textBoxSPAJEditPengajuanPremi.Text = calculatePremi().ToString();
 
             float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
             textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
@@ -1044,6 +1037,8 @@ namespace PruAmsForm
 
 
         }
+
+
 
 
 
@@ -1240,12 +1235,24 @@ namespace PruAmsForm
 
         private void dateTimeSPAJEditSpouseDOB_ValueChanged(object sender, EventArgs e)
         {
-            textBoxSPAJEditSpouseNextBday.Text = (NextBday(dateTimeSPAJEditSpouseDOB.Text)).ToString(); 
+            try
+            {
+                textBoxSPAJEditSpouseNextBday.Text = (NextBday(dateTimeSPAJEditSpouseDOB.Text)).ToString();
+            } catch (Exception ex)
+            {
+                
+            }
         }
 
         private void dateTimeSPAJEditParentDOB_ValueChanged(object sender, EventArgs e)
         {
-            textBoxSPAJEditParentNextBday.Text = (NextBday(dateTimeSPAJEditParentDOB.Text)).ToString(); 
+            try
+            {
+                textBoxSPAJEditParentNextBday.Text = (NextBday(dateTimeSPAJEditParentDOB.Text)).ToString();
+            } catch (Exception ex)
+            {
+
+            }
         }
 
         private void buttonInsInfoEdit_Click(object sender, EventArgs e)
@@ -1462,6 +1469,11 @@ namespace PruAmsForm
         private void buttonAddSPAJSpouseBack_Click(object sender, EventArgs e)
         {
             addFormTabBack();
+        }
+
+        private void buttonSpouseEditIgnore_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -87,6 +87,7 @@
             this.label87 = new System.Windows.Forms.Label();
             this.label91 = new System.Windows.Forms.Label();
             this.tabPagePolisHolder = new System.Windows.Forms.TabPage();
+            this.buttonAddSPAJPolisBack = new System.Windows.Forms.Button();
             this.buttonPolisHolderAccept = new System.Windows.Forms.Button();
             this.buttonPolisHolderClear = new System.Windows.Forms.Button();
             this.dateTimeSPAJPolisDOB = new System.Windows.Forms.DateTimePicker();
@@ -101,6 +102,7 @@
             this.label96 = new System.Windows.Forms.Label();
             this.label97 = new System.Windows.Forms.Label();
             this.tabPageSpouseInfo = new System.Windows.Forms.TabPage();
+            this.buttonAddSPAJSpouseBack = new System.Windows.Forms.Button();
             this.label152 = new System.Windows.Forms.Label();
             this.label151 = new System.Windows.Forms.Label();
             this.buttonSpouseIgnore = new System.Windows.Forms.Button();
@@ -125,6 +127,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.tabPageParentInfo = new System.Windows.Forms.TabPage();
+            this.buttonAddSPAJParentBack = new System.Windows.Forms.Button();
             this.label154 = new System.Windows.Forms.Label();
             this.label153 = new System.Windows.Forms.Label();
             this.buttonParentIgnore = new System.Windows.Forms.Button();
@@ -149,6 +152,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.tabPageAddressInfo = new System.Windows.Forms.TabPage();
+            this.buttonAddSPAJAddressBack = new System.Windows.Forms.Button();
             this.buttonAddressAccept = new System.Windows.Forms.Button();
             this.buttonAddressClear = new System.Windows.Forms.Button();
             this.label28 = new System.Windows.Forms.Label();
@@ -165,6 +169,7 @@
             this.textBoxSPAJAddrAddress = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.tabPagePengajuanInfo = new System.Windows.Forms.TabPage();
+            this.buttonAddSPAJPengajuanBack = new System.Windows.Forms.Button();
             this.label161 = new System.Windows.Forms.Label();
             this.textBoxSPAJPengajuanBasic = new System.Windows.Forms.TextBox();
             this.textBoxSPAJPengajuanPruPPayor = new System.Windows.Forms.TextBox();
@@ -211,6 +216,7 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.tabPageBeneficiaryInfo = new System.Windows.Forms.TabPage();
+            this.buttonAddSPAJBeneficiaryBack = new System.Windows.Forms.Button();
             this.buttonBeneficiaryAccept = new System.Windows.Forms.Button();
             this.buttonSPAJBeneficiaryClear = new System.Windows.Forms.Button();
             this.comboBoxSPAJBeneficiaryRs6 = new System.Windows.Forms.ComboBox();
@@ -485,12 +491,6 @@
             this.label149 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonSPAJClearBackMenu = new System.Windows.Forms.Button();
-            this.buttonAddSPAJPolisBack = new System.Windows.Forms.Button();
-            this.buttonAddSPAJSpouseBack = new System.Windows.Forms.Button();
-            this.buttonAddSPAJParentBack = new System.Windows.Forms.Button();
-            this.buttonAddSPAJAddressBack = new System.Windows.Forms.Button();
-            this.buttonAddSPAJPengajuanBack = new System.Windows.Forms.Button();
-            this.buttonAddSPAJBeneficiaryBack = new System.Windows.Forms.Button();
             this.tabControlSPAJ.SuspendLayout();
             this.tabPageSPAJUpdate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSPAJUpdate)).BeginInit();
@@ -1193,6 +1193,16 @@
             this.tabPagePolisHolder.Text = "Polis Holder Info";
             this.tabPagePolisHolder.UseVisualStyleBackColor = true;
             // 
+            // buttonAddSPAJPolisBack
+            // 
+            this.buttonAddSPAJPolisBack.Location = new System.Drawing.Point(105, 241);
+            this.buttonAddSPAJPolisBack.Name = "buttonAddSPAJPolisBack";
+            this.buttonAddSPAJPolisBack.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddSPAJPolisBack.TabIndex = 15;
+            this.buttonAddSPAJPolisBack.Text = "Back";
+            this.buttonAddSPAJPolisBack.UseVisualStyleBackColor = true;
+            this.buttonAddSPAJPolisBack.Click += new System.EventHandler(this.buttonAddSPAJPolisBack_Click);
+            // 
             // buttonPolisHolderAccept
             // 
             this.buttonPolisHolderAccept.Location = new System.Drawing.Point(332, 241);
@@ -1358,6 +1368,16 @@
             this.tabPageSpouseInfo.TabIndex = 4;
             this.tabPageSpouseInfo.Text = "Spouse/Parent 1 Info";
             this.tabPageSpouseInfo.UseVisualStyleBackColor = true;
+            // 
+            // buttonAddSPAJSpouseBack
+            // 
+            this.buttonAddSPAJSpouseBack.Location = new System.Drawing.Point(57, 246);
+            this.buttonAddSPAJSpouseBack.Name = "buttonAddSPAJSpouseBack";
+            this.buttonAddSPAJSpouseBack.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddSPAJSpouseBack.TabIndex = 28;
+            this.buttonAddSPAJSpouseBack.Text = "Back";
+            this.buttonAddSPAJSpouseBack.UseVisualStyleBackColor = true;
+            this.buttonAddSPAJSpouseBack.Click += new System.EventHandler(this.buttonAddSPAJSpouseBack_Click);
             // 
             // label152
             // 
@@ -1618,6 +1638,16 @@
             this.tabPageParentInfo.Text = "Parent 2 Info";
             this.tabPageParentInfo.UseVisualStyleBackColor = true;
             // 
+            // buttonAddSPAJParentBack
+            // 
+            this.buttonAddSPAJParentBack.Location = new System.Drawing.Point(62, 247);
+            this.buttonAddSPAJParentBack.Name = "buttonAddSPAJParentBack";
+            this.buttonAddSPAJParentBack.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddSPAJParentBack.TabIndex = 29;
+            this.buttonAddSPAJParentBack.Text = "Back";
+            this.buttonAddSPAJParentBack.UseVisualStyleBackColor = true;
+            this.buttonAddSPAJParentBack.Click += new System.EventHandler(this.buttonAddSPAJParentBack_Click);
+            // 
             // label154
             // 
             this.label154.AutoSize = true;
@@ -1868,6 +1898,16 @@
             this.tabPageAddressInfo.Text = "Address Info";
             this.tabPageAddressInfo.UseVisualStyleBackColor = true;
             // 
+            // buttonAddSPAJAddressBack
+            // 
+            this.buttonAddSPAJAddressBack.Location = new System.Drawing.Point(120, 265);
+            this.buttonAddSPAJAddressBack.Name = "buttonAddSPAJAddressBack";
+            this.buttonAddSPAJAddressBack.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddSPAJAddressBack.TabIndex = 29;
+            this.buttonAddSPAJAddressBack.Text = "Back";
+            this.buttonAddSPAJAddressBack.UseVisualStyleBackColor = true;
+            this.buttonAddSPAJAddressBack.Click += new System.EventHandler(this.buttonAddSPAJAddressBack_Click);
+            // 
             // buttonAddressAccept
             // 
             this.buttonAddressAccept.Location = new System.Drawing.Point(341, 265);
@@ -2065,6 +2105,16 @@
             this.tabPagePengajuanInfo.TabIndex = 7;
             this.tabPagePengajuanInfo.Text = "Pengajuan";
             this.tabPagePengajuanInfo.UseVisualStyleBackColor = true;
+            // 
+            // buttonAddSPAJPengajuanBack
+            // 
+            this.buttonAddSPAJPengajuanBack.Location = new System.Drawing.Point(53, 281);
+            this.buttonAddSPAJPengajuanBack.Name = "buttonAddSPAJPengajuanBack";
+            this.buttonAddSPAJPengajuanBack.Size = new System.Drawing.Size(66, 25);
+            this.buttonAddSPAJPengajuanBack.TabIndex = 53;
+            this.buttonAddSPAJPengajuanBack.Text = "Back";
+            this.buttonAddSPAJPengajuanBack.UseVisualStyleBackColor = true;
+            this.buttonAddSPAJPengajuanBack.Click += new System.EventHandler(this.buttonAddSPAJPengajuanBack_Click);
             // 
             // label161
             // 
@@ -2603,6 +2653,16 @@
             this.tabPageBeneficiaryInfo.TabIndex = 8;
             this.tabPageBeneficiaryInfo.Text = "Beneficiary";
             this.tabPageBeneficiaryInfo.UseVisualStyleBackColor = true;
+            // 
+            // buttonAddSPAJBeneficiaryBack
+            // 
+            this.buttonAddSPAJBeneficiaryBack.Location = new System.Drawing.Point(135, 287);
+            this.buttonAddSPAJBeneficiaryBack.Name = "buttonAddSPAJBeneficiaryBack";
+            this.buttonAddSPAJBeneficiaryBack.Size = new System.Drawing.Size(68, 25);
+            this.buttonAddSPAJBeneficiaryBack.TabIndex = 46;
+            this.buttonAddSPAJBeneficiaryBack.Text = "Back";
+            this.buttonAddSPAJBeneficiaryBack.UseVisualStyleBackColor = true;
+            this.buttonAddSPAJBeneficiaryBack.Click += new System.EventHandler(this.buttonAddSPAJBeneficiaryBack_Click);
             // 
             // buttonBeneficiaryAccept
             // 
@@ -3279,7 +3339,7 @@
             this.tabControlEditSPAJ.Margin = new System.Windows.Forms.Padding(2);
             this.tabControlEditSPAJ.Name = "tabControlEditSPAJ";
             this.tabControlEditSPAJ.SelectedIndex = 0;
-            this.tabControlEditSPAJ.Size = new System.Drawing.Size(512, 352);
+            this.tabControlEditSPAJ.Size = new System.Drawing.Size(508, 352);
             this.tabControlEditSPAJ.TabIndex = 14;
             // 
             // tabPageEditInsInfo
@@ -3571,7 +3631,7 @@
             this.tabPageEditPolisInfo.Controls.Add(this.label64);
             this.tabPageEditPolisInfo.Location = new System.Drawing.Point(4, 22);
             this.tabPageEditPolisInfo.Name = "tabPageEditPolisInfo";
-            this.tabPageEditPolisInfo.Size = new System.Drawing.Size(504, 326);
+            this.tabPageEditPolisInfo.Size = new System.Drawing.Size(500, 326);
             this.tabPageEditPolisInfo.TabIndex = 2;
             this.tabPageEditPolisInfo.Text = "Polis Holder Info";
             this.tabPageEditPolisInfo.UseVisualStyleBackColor = true;
@@ -3737,7 +3797,7 @@
             this.tabPageEditSpouseInfo.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageEditSpouseInfo.Name = "tabPageEditSpouseInfo";
             this.tabPageEditSpouseInfo.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPageEditSpouseInfo.Size = new System.Drawing.Size(504, 326);
+            this.tabPageEditSpouseInfo.Size = new System.Drawing.Size(500, 326);
             this.tabPageEditSpouseInfo.TabIndex = 4;
             this.tabPageEditSpouseInfo.Text = "Spouse/Parent 1 Info";
             this.tabPageEditSpouseInfo.UseVisualStyleBackColor = true;
@@ -3772,6 +3832,7 @@
             this.buttonSpouseEditIgnore.TabIndex = 25;
             this.buttonSpouseEditIgnore.Text = "Ignore";
             this.buttonSpouseEditIgnore.UseVisualStyleBackColor = true;
+            this.buttonSpouseEditIgnore.Click += new System.EventHandler(this.buttonSpouseEditIgnore_Click);
             // 
             // buttonSpouseEdit
             // 
@@ -5648,66 +5709,6 @@
             this.buttonSPAJClearBackMenu.Text = "Back to Menu ";
             this.buttonSPAJClearBackMenu.UseVisualStyleBackColor = true;
             this.buttonSPAJClearBackMenu.Click += new System.EventHandler(this.buttonSPAJClearBackMenu_Click);
-            // 
-            // buttonAddSPAJPolisBack
-            // 
-            this.buttonAddSPAJPolisBack.Location = new System.Drawing.Point(105, 241);
-            this.buttonAddSPAJPolisBack.Name = "buttonAddSPAJPolisBack";
-            this.buttonAddSPAJPolisBack.Size = new System.Drawing.Size(75, 23);
-            this.buttonAddSPAJPolisBack.TabIndex = 15;
-            this.buttonAddSPAJPolisBack.Text = "Back";
-            this.buttonAddSPAJPolisBack.UseVisualStyleBackColor = true;
-            this.buttonAddSPAJPolisBack.Click += new System.EventHandler(this.buttonAddSPAJPolisBack_Click);
-            // 
-            // buttonAddSPAJSpouseBack
-            // 
-            this.buttonAddSPAJSpouseBack.Location = new System.Drawing.Point(57, 246);
-            this.buttonAddSPAJSpouseBack.Name = "buttonAddSPAJSpouseBack";
-            this.buttonAddSPAJSpouseBack.Size = new System.Drawing.Size(75, 23);
-            this.buttonAddSPAJSpouseBack.TabIndex = 28;
-            this.buttonAddSPAJSpouseBack.Text = "Back";
-            this.buttonAddSPAJSpouseBack.UseVisualStyleBackColor = true;
-            this.buttonAddSPAJSpouseBack.Click += new System.EventHandler(this.buttonAddSPAJSpouseBack_Click);
-            // 
-            // buttonAddSPAJParentBack
-            // 
-            this.buttonAddSPAJParentBack.Location = new System.Drawing.Point(62, 247);
-            this.buttonAddSPAJParentBack.Name = "buttonAddSPAJParentBack";
-            this.buttonAddSPAJParentBack.Size = new System.Drawing.Size(75, 23);
-            this.buttonAddSPAJParentBack.TabIndex = 29;
-            this.buttonAddSPAJParentBack.Text = "Back";
-            this.buttonAddSPAJParentBack.UseVisualStyleBackColor = true;
-            this.buttonAddSPAJParentBack.Click += new System.EventHandler(this.buttonAddSPAJParentBack_Click);
-            // 
-            // buttonAddSPAJAddressBack
-            // 
-            this.buttonAddSPAJAddressBack.Location = new System.Drawing.Point(120, 265);
-            this.buttonAddSPAJAddressBack.Name = "buttonAddSPAJAddressBack";
-            this.buttonAddSPAJAddressBack.Size = new System.Drawing.Size(75, 23);
-            this.buttonAddSPAJAddressBack.TabIndex = 29;
-            this.buttonAddSPAJAddressBack.Text = "Back";
-            this.buttonAddSPAJAddressBack.UseVisualStyleBackColor = true;
-            this.buttonAddSPAJAddressBack.Click += new System.EventHandler(this.buttonAddSPAJAddressBack_Click);
-            // 
-            // buttonAddSPAJPengajuanBack
-            // 
-            this.buttonAddSPAJPengajuanBack.Location = new System.Drawing.Point(53, 281);
-            this.buttonAddSPAJPengajuanBack.Name = "buttonAddSPAJPengajuanBack";
-            this.buttonAddSPAJPengajuanBack.Size = new System.Drawing.Size(66, 25);
-            this.buttonAddSPAJPengajuanBack.TabIndex = 53;
-            this.buttonAddSPAJPengajuanBack.Text = "Back";
-            this.buttonAddSPAJPengajuanBack.UseVisualStyleBackColor = true;
-            this.buttonAddSPAJPengajuanBack.Click += new System.EventHandler(this.buttonAddSPAJPengajuanBack_Click);
-            // 
-            // buttonAddSPAJBeneficiaryBack
-            // 
-            this.buttonAddSPAJBeneficiaryBack.Location = new System.Drawing.Point(135, 287);
-            this.buttonAddSPAJBeneficiaryBack.Name = "buttonAddSPAJBeneficiaryBack";
-            this.buttonAddSPAJBeneficiaryBack.Size = new System.Drawing.Size(68, 25);
-            this.buttonAddSPAJBeneficiaryBack.TabIndex = 46;
-            this.buttonAddSPAJBeneficiaryBack.Text = "Back";
-            this.buttonAddSPAJBeneficiaryBack.UseVisualStyleBackColor = true;
-            this.buttonAddSPAJBeneficiaryBack.Click += new System.EventHandler(this.buttonAddSPAJBeneficiaryBack_Click);
             // 
             // Form2
             // 
