@@ -559,7 +559,7 @@ namespace PruAmsForm
                     return;
                 }
 
-                SpajFileUpd = SPAJUpdate.First(x => x.SPAJForm.SPAJNum == Int32.Parse(textBoxSPAJUpdateNumber.Text));
+                SpajFileUpd = spajFiles.First(x => x.SPAJForm.SPAJNum == Int32.Parse(textBoxSPAJUpdateNumber.Text));
 
                 if (SPAJUpdate.Any(x => x.SPAJForm.SPAJNum == Int32.Parse(textBoxSPAJUpdateNumber.Text)))
                 {
@@ -570,6 +570,10 @@ namespace PruAmsForm
                     dateTimeSPAJUpdateInforce.Text = SpajFileUpd.UpdateForm.UpdateInsDOB;
                     textBoxSPAJUpdatePolisNum.Text = SpajFileUpd.UpdateForm.UpdatePolis;
                     textBoxSPAJUpdateInfo.Text = SpajFileUpd.UpdateForm.UpdateInfo;
+
+                    bool shouldEnable = SpajFileUpd.UpdateForm.UpdatePolis != "";
+                    textBoxSPAJUpdateInsName.Enabled = shouldEnable;
+                    textBoxSPAJUpdateInsDOB.Enabled = shouldEnable;
 
                 }
                 else
@@ -604,7 +608,12 @@ namespace PruAmsForm
                 string UpdatePolis = textBoxSPAJUpdatePolisNum.Text;
                 string UpdateInfo = textBoxSPAJUpdateInfo.Text;
 
-                if (UpdateStatus != SpajFileUpd.UpdateForm.UpdateStatus)
+                if (UpdatePolis != "")
+                {
+                    SpajFileUpd.SPAJForm.SPAJNum = int.Parse(UpdatePolis);
+                }
+
+                if (SpajFileUpd.UpdateForm == null || UpdateStatus != SpajFileUpd.UpdateForm.UpdateStatus)
                 {
                     SPAJStatusChanges.Add(new SPAJStatusChange { DateTime = DateTime.Now.ToString(), StatusChangedTo = UpdateStatus });
                 }
