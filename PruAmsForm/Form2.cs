@@ -311,8 +311,8 @@ namespace PruAmsForm
 
         private void buttonSPAJNewCreate_Click(object sender, EventArgs e)
         {
-            try
-            {
+           // try
+           //{
                 if (spajFiles.Any(x => x.SPAJForm.SPAJNum == int.Parse(textBoxSPAJNum.Text)))
                 {
                     MessageBox.Show("SPAJ file with that number already exists.");
@@ -342,11 +342,12 @@ namespace PruAmsForm
                     // spaj now has all completed forms as its properties
                     spajFiles.Add(spaj);
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Please fill all required textboxes. ");
-            }
+           // }
+            
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Please fill all required textboxes. ");
+            //}
 
             
         }
