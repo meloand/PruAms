@@ -196,7 +196,7 @@ namespace PruAmsForm
                 textBoxSPAJPengajuanPruHosp.Text = PengajuanPruHosp.ToString(); 
 
 
-                string PengajuanPruPayor = textBoxSPAJPengajuanPruPayorAmnt.Text;
+                string PengajuanPruPayor = textBoxSPAJPengajuanPruPayor.Text;
                 double PengajuanPruPayorAmnt = double.Parse(textBoxSPAJPengajuanPruPayorAmnt.Text) / BasicPertanggungan(PengajuanFrequency);
                 textBoxSPAJPengajuanPruPayorAmnt.Text = PengajuanPruPayorAmnt.ToString(); 
 
@@ -561,7 +561,7 @@ namespace PruAmsForm
 
                 SpajFileUpd = spajFiles.First(x => x.SPAJForm.SPAJNum == Int32.Parse(textBoxSPAJUpdateNumber.Text));
 
-                if (SPAJStatusChanges.Any(x => x.PolisNum == Int32.Parse(textBoxSPAJUpdateNumber.Text)))
+                if (SPAJStatusChanges.Any(x => x.PolisNumber == Int32.Parse(textBoxSPAJUpdateNumber.Text)))
                 {
 
                     textBoxSPAJUpdateInsName.Text = SpajFileUpd.InsurerForm.InsurerName;
@@ -575,7 +575,7 @@ namespace PruAmsForm
                     textBoxSPAJUpdateInsName.Enabled = shouldEnable;
                     textBoxSPAJUpdateInsDOB.Enabled = shouldEnable;
 
-                    dataGridViewSPAJUpdate.DataSource = SPAJStatusChanges.Where(x => x.PolisNum == Int32.Parse(textBoxSPAJUpdateNumber.Text)).ToList();
+                    dataGridViewSPAJUpdate.DataSource = SPAJStatusChanges.Where(x => x.PolisNumber == Int32.Parse(textBoxSPAJUpdateNumber.Text)).ToList();
                 }
                 else
                 {
@@ -613,7 +613,7 @@ namespace PruAmsForm
 
                 if (SpajFileUpd.UpdateForm == null || UpdateStatus != SpajFileUpd.UpdateForm.UpdateStatus)
                 {
-                    SPAJStatusChanges.Add(new SPAJStatusChange { DateTime = DateTime.Now.ToString(), StatusChangedTo = UpdateStatus, PolisNum = int.Parse(UpdatePolis) });
+                    SPAJStatusChanges.Add(new SPAJStatusChange { DateTime = DateTime.Now.ToString(), StatusChangedTo = UpdateStatus, PolisNumber = int.Parse(UpdatePolis), InsurerName = UpdateInsName});
                 }
 
                 UpdateForm NewUpdate;

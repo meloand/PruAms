@@ -50,8 +50,8 @@ namespace PruAmsForm
             string AddSex = comboBoxAgentSex.Text;
             string AddAddr = textBoxAgentAddr.Text;
             int AddZipCode = int.Parse(textBoxAgentZip.Text);
-            long AddHphoneNum = int.Parse(textBoxAgentHP.Text);
-            long AddOPhoneNum = int.Parse(textBoxAgentOP.Text);
+            long AddHphoneNum = long.Parse(textBoxAgentHP.Text);
+            long AddOPhoneNum = long.Parse(textBoxAgentOP.Text);
             string AddPOB = textBoxAgentPOB.Text;
             string AddDOB = dateTimeAgentDOB.Text;
             Agent NewAgent;

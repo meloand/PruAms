@@ -8,13 +8,10 @@ namespace PruAmsForm
 {
     class SPAJStatusChange
     {
-        public string AgentNumber { get; set; }
-        public string AgentFName { get; set; }
-        public string AgentLName { get; set; }
+        public int PolisNumber { get; set; }
+        public string InsurerName { get; set; }
         public string StatusChangedTo { get; set; }
         public string DateTime { get; set; }
-
-        public int PolisNum { get; set; }
 
 
     }
