@@ -8,7 +8,7 @@ namespace PruAmsForm
 {
     class SPAJForm
     {
-        public int SPAJNum
+        public long SPAJNum
         { get; set; }
         public string SPAJType
         { get; set; }
@@ -21,7 +21,7 @@ namespace PruAmsForm
         public string SPAJSubmitDate
         { get; set; }
 
-        public SPAJForm(int SPAJNum, string SPAJType, string AgentName, int AgentNum, int PruFlyerNum,
+        public SPAJForm(long SPAJNum, string SPAJType, string AgentName, int AgentNum, int PruFlyerNum,
             string SPAJSubmitDate)
         {
             this.SPAJNum = SPAJNum;

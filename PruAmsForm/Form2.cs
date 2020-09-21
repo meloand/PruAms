@@ -161,8 +161,8 @@ namespace PruAmsForm
                 string AddrCity = textBoxSPAJAddrCity.Text;
                 int AddrZipCode = int.Parse(textBoxSPAJAddrZip.Text);
                 string AddrEmail = textBoxSPAJAddrEmail.Text;
-                int AddrHPNumber = int.Parse(textBoxSPAJAddrHP.Text);
-                int AddrOPNumber = int.Parse(textBoxSPAJAddrOP.Text);
+                long AddrHPNumber = long.Parse(textBoxSPAJAddrHP.Text);
+                long AddrOPNumber = long.Parse(textBoxSPAJAddrOP.Text);
                 AddressForm NewAddress;
 
                 NewAddress = new AddressForm(Address, AddrCity, AddrZipCode, AddrEmail, AddrHPNumber, AddrOPNumber);
@@ -237,7 +237,7 @@ namespace PruAmsForm
                 PengajuanPremi, PengajuanPruSaver, PengajuanTotalPremi);
                 spaj.PengajuanForm = NewPengajuan;
 
-            addTabNext();
+            
 
 
         }
@@ -320,13 +320,15 @@ namespace PruAmsForm
                 else
                 {
                     // Add SPAJ Form 
-                    int SPAJNum = int.Parse(textBoxSPAJNum.Text);
+                    long SPAJNum = long.Parse(textBoxSPAJNum.Text);
                     string SPAJType = textBoxSPAJInsType.Text;
                     string AgentName = textBoxSPAJAName.Text;
                     int AgentNum = int.Parse(textBoxSPAJANum.Text);
                     int PruFlyerNum = int.Parse(textBoxPRUFlyerNum.Text);
                     string SPAJSubmitDate = dateTimeSPAJSubmit.Text;
-                    SPAJForm NewSPAJ;
+                    SPAJForm NewSPAJ; 
+
+                   
 
                     NewSPAJ = new SPAJForm(SPAJNum, SPAJType, AgentName, AgentNum, PruFlyerNum, SPAJSubmitDate);
                     spaj.SPAJForm = NewSPAJ;
@@ -1510,6 +1512,11 @@ namespace PruAmsForm
         private void buttonSpouseEditIgnore_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonSPAJPengajuanSave_Click(object sender, EventArgs e)
+        {
+            addTabNext();
         }
     }
 }

@@ -16,12 +16,12 @@ namespace PruAmsForm
         { get; set; }
         public string Email
         { get; set; }
-        public int HPNumber
+        public long HPNumber
         { get; set; }
-        public int OPNumber
+        public long OPNumber
         { get; set; }
 
-        public AddressForm(string Address, string City, int ZipCode, string Email, int HPNumber, int OPNumber)
+        public AddressForm(string Address, string City, int ZipCode, string Email, long HPNumber, long OPNumber)
         {
             this.Address = Address;
             this.City = City;
