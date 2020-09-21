@@ -202,7 +202,7 @@ namespace PruAmsForm
 
                 string PengajuanPruCC = textBoxSPAJPengajuanPruCC.Text;
                 double PengajuanPruCCAmnt = double.Parse(textBoxSPAJPengajuanPruCCAmnt.Text) / BasicPertanggungan(PengajuanFrequency);
-                textBoxSPAJPengajuanPruCC.Text = PengajuanPruCCAmnt.ToString(); 
+                textBoxSPAJPengajuanPruCCAmnt.Text = PengajuanPruCCAmnt.ToString(); 
             
                 string PengajuanPruADD = textBoxSPAJPengajuanPruADD.Text;
                 double PengajuanPruADDAmnt = double.Parse(textBoxSPAJPengajuanPruADDAmnt.Text) / BasicPertanggungan(PengajuanFrequency);
@@ -215,7 +215,7 @@ namespace PruAmsForm
 
                 string PengajuanPruPPayor = textBoxSPAJPengajuanPruPPayor.Text;
                 double PengajuanPruPPayorAmnt = double.Parse(textBoxSPAJPengajuanPruPPayorAmnt.Text) / BasicPertanggungan(PengajuanFrequency);
-                textBoxSPAJPengajuanPruADDAmnt.Text = PengajuanPruPPayorAmnt.ToString();
+                textBoxSPAJPengajuanPruPPayorAmnt.Text = PengajuanPruPPayorAmnt.ToString();
 
                 double PengajuanPremi = (PengajuanPertanggungan + PengajuanPruHosp + PengajuanPruPayorAmnt +
                     PengajuanPruCCAmnt + PengajuanPruADDAmnt + PengajuanPruMedAmnt + PengajuanPruPPayorAmnt);
@@ -426,7 +426,7 @@ namespace PruAmsForm
                 textBoxSPAJEditPengajuanPruHosp.Text = spajFile.PengajuanForm.PengajuanPruHosp.ToString();
                 textBoxSPAJEditPengajuanPRUMed.Text = spajFile.PengajuanForm.PengajuanPruMed;
                 textBoxSPAJEditPengajuanPruPayor.Text = spajFile.PengajuanForm.PengajuanPruPayor;
-                textBoxSPAJEditPengajuanPruPPayor.Text = spajFile.PengajuanForm.PengajuanPruPPayor;
+                textBoxSPAJEditPengajuanPruPPayor.Text = spajFile.PengajuanForm.PengajuanPruPPayor; 
 
                 textBoxSPAJEditPengajuanPremi.Text = spajFile.PengajuanForm.PengajuanPremi.ToString();
                 textBoxSPAJEditPengajuanPruSaver.Text = spajFile.PengajuanForm.PengajuanPruSaver.ToString();
@@ -604,7 +604,7 @@ namespace PruAmsForm
                 string UpdateDate = dateTimeSPAJUpdateInforce.Text;
                 string UpdatePolis = textBoxSPAJUpdatePolisNum.Text;
                 string UpdateInfo = textBoxSPAJUpdateInfo.Text;
-
+                    
                 if (UpdatePolis != "")
                 {
                     SpajFileUpd.SPAJForm.SPAJNum = int.Parse(UpdatePolis);
