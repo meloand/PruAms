@@ -550,27 +550,43 @@ namespace PruAmsForm
             }
         }
 
-
-
         // UPDATE SPAJ 
 
         private void buttonSPAJUpdateLoad_Click(object sender, EventArgs e)
         {
-            if (SPAJUpdate.Any(x => x.SPAJForm.SPAJNum == Int32.Parse(textBoxSPAJUpdateNumber.Text)))
+            if (comboBoxSPAJUpdateType.Text == "SPAJ")
             {
-                SpajFileUpd = SPAJUpdate.First(x => x.SPAJForm.SPAJNum == Int32.Parse(textBoxSPAJUpdateNumber.Text));
+                if (!spajFiles.Any(x => x.SPAJForm.SPAJNum == Int32.Parse(textBoxSPAJUpdateNumber.Text)))
+                {
+                    MessageBox.Show("No SPAJ file with that number.");
+                    return;
+                }
 
-                textBoxSPAJUpdateInsName.Text = SpajFileUpd.InsurerForm.InsurerName;
-                textBoxSPAJUpdateInsDOB.Text = SpajFileUpd.InsurerForm.InsurerDOB;
-                comboBoxSPAJUpdateStatus.Text = SpajFileUpd.UpdateForm.UpdateStatus;
-                dateTimeSPAJUpdateInforce.Text = SpajFileUpd.UpdateForm.UpdateInsDOB;
-                textBoxSPAJUpdatePolisNum.Text = SpajFileUpd.UpdateForm.UpdatePolis;
-                textBoxSPAJUpdateInfo.Text = SpajFileUpd.UpdateForm.UpdateInfo;
+                SpajFileUpd = spajFiles.First(x => x.SPAJForm.SPAJNum == Int32.Parse(textBoxSPAJUpdateNumber.Text));
 
-            }
-            else
+                if (SPAJUpdate.Any(x => x.SPAJForm.SPAJNum == Int32.Parse(textBoxSPAJUpdateNumber.Text)))
+                {
+
+                    textBoxSPAJUpdateInsName.Text = SpajFileUpd.InsurerForm.InsurerName;
+                    textBoxSPAJUpdateInsDOB.Text = SpajFileUpd.InsurerForm.InsurerDOB;
+                    comboBoxSPAJUpdateStatus.Text = SpajFileUpd.UpdateForm.UpdateStatus;
+                    dateTimeSPAJUpdateInforce.Text = SpajFileUpd.UpdateForm.UpdateInsDOB;
+                    textBoxSPAJUpdatePolisNum.Text = SpajFileUpd.UpdateForm.UpdatePolis;
+                    textBoxSPAJUpdateInfo.Text = SpajFileUpd.UpdateForm.UpdateInfo;
+
+                    bool shouldEnable = SpajFileUpd.UpdateForm.UpdatePolis != "";
+                    textBoxSPAJUpdateInsName.Enabled = shouldEnable;
+                    textBoxSPAJUpdateInsDOB.Enabled = shouldEnable;
+
+                }
+                else
+                {
+                    textBoxSPAJUpdateInsName.Text = SpajFileUpd.InsurerForm.InsurerName;
+                    textBoxSPAJUpdateInsDOB.Text = SpajFileUpd.InsurerForm.InsurerDOB;
+                }
+            } else if (comboBoxSPAJUpdateType.Text == "Polis")
             {
-                MessageBox.Show("No updates for given SPAJ file number.");
+
             }
         }
 
@@ -595,7 +611,12 @@ namespace PruAmsForm
                 string UpdatePolis = textBoxSPAJUpdatePolisNum.Text;
                 string UpdateInfo = textBoxSPAJUpdateInfo.Text;
 
-                if (UpdateStatus != SpajFileUpd.UpdateForm.UpdateStatus)
+                if (UpdatePolis != "")
+                {
+                    SpajFileUpd.SPAJForm.SPAJNum = int.Parse(UpdatePolis);
+                }
+
+                if (SpajFileUpd.UpdateForm == null || UpdateStatus != SpajFileUpd.UpdateForm.UpdateStatus)
                 {
                     SPAJStatusChanges.Add(new SPAJStatusChange { DateTime = DateTime.Now.ToString(), StatusChangedTo = UpdateStatus });
                 }
@@ -832,16 +853,16 @@ namespace PruAmsForm
             clearTabPage(tabPageSPAJAdd);
         }
 
-        private void buttonSpouseIgnore_Click(object sender, EventArgs e)
-        {
-            spaj.SpouseForm = new SpouseForm();
-            addTabNext();
-        }
-
         private void addTabNext()
         {
             addTabCurrentlySelected++;
             tabControlAddSPAJ.SelectTab(addTabCurrentlySelected);
+        }
+
+        private void buttonSpouseIgnore_Click(object sender, EventArgs e)
+        {
+            spaj.SpouseForm = new SpouseForm();
+            addTabNext();
         }
 
         private void buttonParentIgnore_Click(object sender, EventArgs e)
