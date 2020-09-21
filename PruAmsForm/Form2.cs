@@ -22,7 +22,6 @@ namespace PruAmsForm
         public Form2()
         {
             InitializeComponent();
-            dataGridViewSPAJUpdate.DataSource = SPAJStatusChanges;
         }
 
         private void buttonSPAJClearBackMenu_Click(object sender, EventArgs e)
@@ -554,8 +553,6 @@ namespace PruAmsForm
 
         private void buttonSPAJUpdateLoad_Click(object sender, EventArgs e)
         {
-            if (comboBoxSPAJUpdateType.Text == "SPAJ")
-            {
                 if (!spajFiles.Any(x => x.SPAJForm.SPAJNum == Int32.Parse(textBoxSPAJUpdateNumber.Text)))
                 {
                     MessageBox.Show("No SPAJ file with that number.");
@@ -564,7 +561,7 @@ namespace PruAmsForm
 
                 SpajFileUpd = spajFiles.First(x => x.SPAJForm.SPAJNum == Int32.Parse(textBoxSPAJUpdateNumber.Text));
 
-                if (SPAJUpdate.Any(x => x.SPAJForm.SPAJNum == Int32.Parse(textBoxSPAJUpdateNumber.Text)))
+                if (SPAJStatusChanges.Any(x => x.PolisNum == Int32.Parse(textBoxSPAJUpdateNumber.Text)))
                 {
 
                     textBoxSPAJUpdateInsName.Text = SpajFileUpd.InsurerForm.InsurerName;
@@ -578,16 +575,13 @@ namespace PruAmsForm
                     textBoxSPAJUpdateInsName.Enabled = shouldEnable;
                     textBoxSPAJUpdateInsDOB.Enabled = shouldEnable;
 
+                    dataGridViewSPAJUpdate.DataSource = SPAJStatusChanges.Where(x => x.PolisNum == Int32.Parse(textBoxSPAJUpdateNumber.Text));
                 }
                 else
                 {
                     textBoxSPAJUpdateInsName.Text = SpajFileUpd.InsurerForm.InsurerName;
                     textBoxSPAJUpdateInsDOB.Text = SpajFileUpd.InsurerForm.InsurerDOB;
                 }
-            } else if (comboBoxSPAJUpdateType.Text == "Polis")
-            {
-
-            }
         }
 
         private void comboBoxSPAJUpdateStatus_SelectedIndexChanged(object sender, EventArgs e)
@@ -614,16 +608,19 @@ namespace PruAmsForm
                 if (UpdatePolis != "")
                 {
                     SpajFileUpd.SPAJForm.SPAJNum = int.Parse(UpdatePolis);
+                    textBoxSPAJUpdateNumber.Text = SpajFileUpd.SPAJForm.SPAJNum.ToString();
                 }
 
                 if (SpajFileUpd.UpdateForm == null || UpdateStatus != SpajFileUpd.UpdateForm.UpdateStatus)
                 {
-                    SPAJStatusChanges.Add(new SPAJStatusChange { DateTime = DateTime.Now.ToString(), StatusChangedTo = UpdateStatus });
+                    SPAJStatusChanges.Add(new SPAJStatusChange { DateTime = DateTime.Now.ToString(), StatusChangedTo = UpdateStatus, PolisNum = int.Parse(UpdatePolis) });
                 }
 
                 UpdateForm NewUpdate;
                 NewUpdate = new UpdateForm(UpdateInsName, UpdateInsDOB, UpdateStatus, UpdateDate, UpdatePolis, UpdateInfo);
                 SpajFileUpd.UpdateForm = NewUpdate;
+
+                buttonSPAJUpdateLoad_Click(null, null);
             }
             else
             {

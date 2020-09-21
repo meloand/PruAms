@@ -14,5 +14,8 @@ namespace PruAmsForm
         public string StatusChangedTo { get; set; }
         public string DateTime { get; set; }
 
+        public int PolisNum { get; set; }
+
+
     }
 }
