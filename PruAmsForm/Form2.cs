@@ -575,7 +575,7 @@ namespace PruAmsForm
                     textBoxSPAJUpdateInsName.Enabled = shouldEnable;
                     textBoxSPAJUpdateInsDOB.Enabled = shouldEnable;
 
-                    dataGridViewSPAJUpdate.DataSource = SPAJStatusChanges.Where(x => x.PolisNum == Int32.Parse(textBoxSPAJUpdateNumber.Text));
+                    dataGridViewSPAJUpdate.DataSource = SPAJStatusChanges.Where(x => x.PolisNum == Int32.Parse(textBoxSPAJUpdateNumber.Text)).ToList();
                 }
                 else
                 {
