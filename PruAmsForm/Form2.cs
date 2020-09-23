@@ -355,9 +355,11 @@ namespace PruAmsForm
 
         private void buttonSPAJEditLoad_Click(object sender, EventArgs e)
         {
-            if (spajFiles.Any(x => x.SPAJForm.SPAJNum == Int32.Parse(textBoxSPAJEditNumber.Text)))
+            editPengajuanFreqPrevValue = "";
+
+            if (spajFiles.Any(x => x.SPAJForm.SPAJNum == long.Parse(textBoxSPAJEditNumber.Text)))
             {
-                SPAJ spajFile = spajFiles.First(x => x.SPAJForm.SPAJNum == Int32.Parse(textBoxSPAJEditNumber.Text));
+                SPAJ spajFile = spajFiles.First(x => x.SPAJForm.SPAJNum == long.Parse(textBoxSPAJEditNumber.Text));
                 tabControlEditSPAJ.Enabled = true;
 
                 // SPAJ Form
@@ -449,10 +451,10 @@ namespace PruAmsForm
                 }
 
                 if (textBoxSPAJEditPengajuanPruPayor.Text != "" && textBoxSPAJEditPengajuanPruPayorAmnt.Text != "0.00")
-                { checkBoxSPAJEditPengajuanPruPPayor.Checked = true; }
+                { checkBoxSPAJEditPengajuanPruPayor.Checked = true; }
                 else
                 {
-                    checkBoxSPAJEditPengajuanPruPPayor.Checked = false;
+                    checkBoxSPAJEditPengajuanPruPayor.Checked = false;
                     textBoxSPAJEditPengajuanPruPayor.Enabled = false;
                     textBoxSPAJEditPengajuanPruPayorAmnt.Enabled = false;
                 }
@@ -917,9 +919,13 @@ namespace PruAmsForm
             }
         }
 
+        // Resets to "" on each new form load
+        string editPengajuanFreqPrevValue = "";
+
         // Edit SPAJPengajuan: Frequency 
         private void comboBoxSPAJEditPengajuanFreq_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             if (comboBoxSPAJEditPengajuanCurrency.Text == "Berkala" || comboBoxSPAJEditPengajuanFreq.Text == "Tunggal")
             { textBoxSPAJEditPengajuanPruSaver.Enabled = false; }
             else
@@ -928,40 +934,52 @@ namespace PruAmsForm
                 textBoxSPAJEditPengajuanPremiTotal.ReadOnly = true;
             }
 
-            int Divide = BasicPertanggungan(comboBoxSPAJEditPengajuanFreq.Text);
+            if (editPengajuanFreqPrevValue != "" && editPengajuanFreqPrevValue != comboBoxSPAJEditPengajuanFreq.Text)
+            {
+                int Divide = BasicPertanggungan(comboBoxSPAJEditPengajuanFreq.Text);
+                if (editPengajuanFreqPrevValue == "Yearly (Tahunan)")
+                {
+                    Divide /= 12;
+                }
+                // etc.
 
-            float Pertanggung = float.Parse(textBoxSPAJEditPengajuanPrtanggung.Text);
-            textBoxSPAJEditPengajuanPrtanggung.Text = (Pertanggung / Divide).ToString();
+                    
 
-            float PruHosp = float.Parse(textBoxSPAJEditPengajuanPruHosp.Text);
-            textBoxSPAJEditPengajuanPruHosp.Text = (PruHosp / Divide).ToString();
+                float Pertanggung = float.Parse(textBoxSPAJEditPengajuanPrtanggung.Text);
+                textBoxSPAJEditPengajuanPrtanggung.Text = (Pertanggung / Divide).ToString();
 
-            float PruPayor = float.Parse(textBoxSPAJEditPengajuanPruPayorAmnt.Text);
-            textBoxSPAJEditPengajuanPruPayorAmnt.Text = (PruPayor / Divide).ToString();
+                float PruHosp = float.Parse(textBoxSPAJEditPengajuanPruHosp.Text);
+                textBoxSPAJEditPengajuanPruHosp.Text = (PruHosp / Divide).ToString();
 
-            float PruCC = float.Parse(textBoxSPAJEditPengajuanPruCCAmnt.Text);
-            textBoxSPAJEditPengajuanPruCCAmnt.Text = (PruCC / Divide).ToString();
+                float PruPayor = float.Parse(textBoxSPAJEditPengajuanPruPayorAmnt.Text);
+                textBoxSPAJEditPengajuanPruPayorAmnt.Text = (PruPayor / Divide).ToString();
 
-            float PruADD = float.Parse(textBoxSPAJEditPengajuanPruADDAmnt.Text);
-            textBoxSPAJEditPengajuanPruADDAmnt.Text = (PruADD / Divide).ToString();
+                float PruCC = float.Parse(textBoxSPAJEditPengajuanPruCCAmnt.Text);
+                textBoxSPAJEditPengajuanPruCCAmnt.Text = (PruCC / Divide).ToString();
 
-            float PruMed = float.Parse(textBoxSPAJEditPengajuanPRUMedAmnt.Text);
-            textBoxSPAJEditPengajuanPRUMedAmnt.Text = (PruMed / Divide).ToString();
+                float PruADD = float.Parse(textBoxSPAJEditPengajuanPruADDAmnt.Text);
+                textBoxSPAJEditPengajuanPruADDAmnt.Text = (PruADD / Divide).ToString();
 
-            float PruPPayor = float.Parse(textBoxSPAJEditPengajuanPruPPayorAmnt.Text);
-            textBoxSPAJEditPengajuanPruPPayorAmnt.Text = (PruPPayor / Divide).ToString();
+                float PruMed = float.Parse(textBoxSPAJEditPengajuanPRUMedAmnt.Text);
+                textBoxSPAJEditPengajuanPRUMedAmnt.Text = (PruMed / Divide).ToString();
 
-            // code below to be transferred to the EditPengajuanAccept button 
+                float PruPPayor = float.Parse(textBoxSPAJEditPengajuanPruPPayorAmnt.Text);
+                textBoxSPAJEditPengajuanPruPPayorAmnt.Text = (PruPPayor / Divide).ToString();
 
-            textBoxSPAJEditPengajuanPremi.Text = calculatePremi().ToString();
+                // code below to be transferred to the EditPengajuanAccept button 
 
-            float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
-            textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
+                textBoxSPAJEditPengajuanPremi.Text = calculatePremi().ToString();
 
-            float PremiMulti = float.Parse(textBoxSPAJEditPengajuanPremi.Text);
-            textBoxSPAJEditPengajuanPremiTotal.Text = (PremiMulti * PremiMultiply(comboBoxSPAJEditPengajuanFreq.Text)).ToString() 
-                + textBoxSPAJEditPengajuanPruSaver.Text; 
+                float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
+                textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
 
+                float PremiMulti = float.Parse(textBoxSPAJEditPengajuanPremi.Text);
+                textBoxSPAJEditPengajuanPremiTotal.Text = (PremiMulti * PremiMultiply(comboBoxSPAJEditPengajuanFreq.Text)).ToString()
+                    + textBoxSPAJEditPengajuanPruSaver.Text;
+
+            }
+
+            editPengajuanFreqPrevValue = comboBoxSPAJEditPengajuanFreq.Text;
         }
 
         private float calculatePremi()
@@ -971,129 +989,129 @@ namespace PruAmsForm
                                        float.Parse(textBoxSPAJEditPengajuanPRUMedAmnt.Text) + float.Parse(textBoxSPAJEditPengajuanPruPPayorAmnt.Text);
         }
 
-        private void textBoxSPAJEditPengajuanPrtanggung_TextChanged(object sender, EventArgs e)
-        {
-            int Divide = BasicPertanggungan(comboBoxSPAJEditPengajuanFreq.Text);
-            float a = float.Parse(textBoxSPAJEditPengajuanPrtanggung.Text);
-            textBoxSPAJEditPengajuanPrtanggung.Text = (a / Divide).ToString();
+        //private void textBoxSPAJEditPengajuanPrtanggung_TextChanged(object sender, EventArgs e)
+        //{
+        //    int Divide = BasicPertanggungan(comboBoxSPAJEditPengajuanFreq.Text);
+        //    float a = float.Parse(textBoxSPAJEditPengajuanPrtanggung.Text);
+        //    textBoxSPAJEditPengajuanPrtanggung.Text = (a / Divide).ToString();
 
-            textBoxSPAJEditPengajuanPremi.Text = calculatePremi().ToString();
+        //    textBoxSPAJEditPengajuanPremi.Text = calculatePremi().ToString();
 
-            float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
-            textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
+        //    float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
+        //    textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
 
-            float PremiMulti = float.Parse(textBoxSPAJEditPengajuanPremi.Text);
-            textBoxSPAJEditPengajuanPremiTotal.Text = (PremiMulti * PremiMultiply(comboBoxSPAJEditPengajuanFreq.Text)).ToString()
-                + textBoxSPAJEditPengajuanPruSaver.Text;
-
-
-        }
+        //    float PremiMulti = float.Parse(textBoxSPAJEditPengajuanPremi.Text);
+        //    textBoxSPAJEditPengajuanPremiTotal.Text = (PremiMulti * PremiMultiply(comboBoxSPAJEditPengajuanFreq.Text)).ToString()
+        //        + textBoxSPAJEditPengajuanPruSaver.Text;
 
 
-
-        private void textBoxSPAJEditPengajuanPruHosp_TextChanged(object sender, EventArgs e)
-        {
-            int Divide = BasicPertanggungan(comboBoxSPAJEditPengajuanFreq.Text);
-            float a = float.Parse(textBoxSPAJEditPengajuanPruHosp.Text);
-            textBoxSPAJEditPengajuanPruHosp.Text = (a / Divide).ToString();
-
-            textBoxSPAJEditPengajuanPremi.Text = calculatePremi().ToString();
-
-            float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
-            textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
-
-            float PremiMulti = float.Parse(textBoxSPAJEditPengajuanPremi.Text);
-            textBoxSPAJEditPengajuanPremiTotal.Text = (PremiMulti * PremiMultiply(comboBoxSPAJEditPengajuanFreq.Text)).ToString()
-                + textBoxSPAJEditPengajuanPruSaver.Text;
+        //}
 
 
-        }
 
-        private void textBoxSPAJEditPengajuanPruPayorAmnt_TextChanged(object sender, EventArgs e)
-        {
-            int Divide = BasicPertanggungan(comboBoxSPAJEditPengajuanFreq.Text);
-            float a = float.Parse(textBoxSPAJEditPengajuanPruPayorAmnt.Text);
-            textBoxSPAJEditPengajuanPruPayorAmnt.Text = (a / Divide).ToString();
+        //private void textBoxSPAJEditPengajuanPruHosp_TextChanged(object sender, EventArgs e)
+        //{
+        //    int Divide = BasicPertanggungan(comboBoxSPAJEditPengajuanFreq.Text);
+        //    float a = float.Parse(textBoxSPAJEditPengajuanPruHosp.Text);
+        //    textBoxSPAJEditPengajuanPruHosp.Text = (a / Divide).ToString();
 
-            textBoxSPAJEditPengajuanPremi.Text = calculatePremi().ToString();
+        //    textBoxSPAJEditPengajuanPremi.Text = calculatePremi().ToString();
 
-            float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
-            textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
+        //    float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
+        //    textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
 
-            float PremiMulti = float.Parse(textBoxSPAJEditPengajuanPremi.Text);
-            textBoxSPAJEditPengajuanPremiTotal.Text = (PremiMulti * PremiMultiply(comboBoxSPAJEditPengajuanFreq.Text)).ToString()
-                + textBoxSPAJEditPengajuanPruSaver.Text;
-
-        }
-
-        private void textBoxSPAJEditPengajuanPruCCAmnt_TextChanged(object sender, EventArgs e)
-        {
-            int Divide = BasicPertanggungan(comboBoxSPAJEditPengajuanFreq.Text);
-            float a = float.Parse(textBoxSPAJEditPengajuanPruCCAmnt.Text);
-            textBoxSPAJEditPengajuanPruCCAmnt.Text = (a / Divide).ToString();
-
-            textBoxSPAJEditPengajuanPremi.Text = calculatePremi().ToString();
-
-            float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
-            textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
-
-            float PremiMulti = float.Parse(textBoxSPAJEditPengajuanPremi.Text);
-            textBoxSPAJEditPengajuanPremiTotal.Text = (PremiMulti * PremiMultiply(comboBoxSPAJEditPengajuanFreq.Text)).ToString()
-                + textBoxSPAJEditPengajuanPruSaver.Text;
-
-        }
-
-        private void textBoxSPAJEditPengajuanPruADDAmnt_TextChanged(object sender, EventArgs e)
-        {
-            int Divide = BasicPertanggungan(comboBoxSPAJEditPengajuanFreq.Text);
-            float a = float.Parse(textBoxSPAJEditPengajuanPruADDAmnt.Text);
-            textBoxSPAJEditPengajuanPruADDAmnt.Text = (a / Divide).ToString();
-
-            textBoxSPAJEditPengajuanPremi.Text = calculatePremi().ToString();
-
-            float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
-            textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
-
-            float PremiMulti = float.Parse(textBoxSPAJEditPengajuanPremi.Text);
-            textBoxSPAJEditPengajuanPremiTotal.Text = (PremiMulti * PremiMultiply(comboBoxSPAJEditPengajuanFreq.Text)).ToString()
-                + textBoxSPAJEditPengajuanPruSaver.Text;
-
-        }
-
-        private void textBoxSPAJEditPengajuanPRUMedAmnt_TextChanged(object sender, EventArgs e)
-        {
-            int Divide = BasicPertanggungan(comboBoxSPAJEditPengajuanFreq.Text);
-            float a = float.Parse(textBoxSPAJEditPengajuanPRUMedAmnt.Text);
-            textBoxSPAJEditPengajuanPRUMedAmnt.Text = (a / Divide).ToString();
-
-            textBoxSPAJEditPengajuanPremi.Text = calculatePremi().ToString();
-
-            float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
-            textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
-
-            float PremiMulti = float.Parse(textBoxSPAJEditPengajuanPremi.Text);
-            textBoxSPAJEditPengajuanPremiTotal.Text = (PremiMulti * PremiMultiply(comboBoxSPAJEditPengajuanFreq.Text)).ToString()
-                + textBoxSPAJEditPengajuanPruSaver.Text;
-
-        }
-
-        private void textBoxSPAJEditPengajuanPruPPayorAmnt_TextChanged(object sender, EventArgs e)
-        {
-            int Divide = BasicPertanggungan(comboBoxSPAJEditPengajuanFreq.Text);
-            float a = float.Parse(textBoxSPAJEditPengajuanPruPPayorAmnt.Text);
-            textBoxSPAJEditPengajuanPruPPayorAmnt.Text = (a / Divide).ToString();
-
-            textBoxSPAJEditPengajuanPremi.Text = calculatePremi().ToString();
-
-            float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
-            textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
-
-            float PremiMulti = float.Parse(textBoxSPAJEditPengajuanPremi.Text);
-            textBoxSPAJEditPengajuanPremiTotal.Text = (PremiMulti * PremiMultiply(comboBoxSPAJEditPengajuanFreq.Text)).ToString()
-                + textBoxSPAJEditPengajuanPruSaver.Text;
+        //    float PremiMulti = float.Parse(textBoxSPAJEditPengajuanPremi.Text);
+        //    textBoxSPAJEditPengajuanPremiTotal.Text = (PremiMulti * PremiMultiply(comboBoxSPAJEditPengajuanFreq.Text)).ToString()
+        //        + textBoxSPAJEditPengajuanPruSaver.Text;
 
 
-        }
+        //}
+
+        //private void textBoxSPAJEditPengajuanPruPayorAmnt_TextChanged(object sender, EventArgs e)
+        //{
+        //    int Divide = BasicPertanggungan(comboBoxSPAJEditPengajuanFreq.Text);
+        //    float a = float.Parse(textBoxSPAJEditPengajuanPruPayorAmnt.Text);
+        //    textBoxSPAJEditPengajuanPruPayorAmnt.Text = (a / Divide).ToString();
+
+        //    textBoxSPAJEditPengajuanPremi.Text = calculatePremi().ToString();
+
+        //    float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
+        //    textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
+
+        //    float PremiMulti = float.Parse(textBoxSPAJEditPengajuanPremi.Text);
+        //    textBoxSPAJEditPengajuanPremiTotal.Text = (PremiMulti * PremiMultiply(comboBoxSPAJEditPengajuanFreq.Text)).ToString()
+        //        + textBoxSPAJEditPengajuanPruSaver.Text;
+
+        //}
+
+        //private void textBoxSPAJEditPengajuanPruCCAmnt_TextChanged(object sender, EventArgs e)
+        //{
+        //    int Divide = BasicPertanggungan(comboBoxSPAJEditPengajuanFreq.Text);
+        //    float a = float.Parse(textBoxSPAJEditPengajuanPruCCAmnt.Text);
+        //    textBoxSPAJEditPengajuanPruCCAmnt.Text = (a / Divide).ToString();
+
+        //    textBoxSPAJEditPengajuanPremi.Text = calculatePremi().ToString();
+
+        //    float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
+        //    textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
+
+        //    float PremiMulti = float.Parse(textBoxSPAJEditPengajuanPremi.Text);
+        //    textBoxSPAJEditPengajuanPremiTotal.Text = (PremiMulti * PremiMultiply(comboBoxSPAJEditPengajuanFreq.Text)).ToString()
+        //        + textBoxSPAJEditPengajuanPruSaver.Text;
+
+        //}
+
+        //private void textBoxSPAJEditPengajuanPruADDAmnt_TextChanged(object sender, EventArgs e)
+        //{
+        //    int Divide = BasicPertanggungan(comboBoxSPAJEditPengajuanFreq.Text);
+        //    float a = float.Parse(textBoxSPAJEditPengajuanPruADDAmnt.Text);
+        //    textBoxSPAJEditPengajuanPruADDAmnt.Text = (a / Divide).ToString();
+
+        //    textBoxSPAJEditPengajuanPremi.Text = calculatePremi().ToString();
+
+        //    float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
+        //    textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
+
+        //    float PremiMulti = float.Parse(textBoxSPAJEditPengajuanPremi.Text);
+        //    textBoxSPAJEditPengajuanPremiTotal.Text = (PremiMulti * PremiMultiply(comboBoxSPAJEditPengajuanFreq.Text)).ToString()
+        //        + textBoxSPAJEditPengajuanPruSaver.Text;
+
+        //}
+
+        //private void textBoxSPAJEditPengajuanPRUMedAmnt_TextChanged(object sender, EventArgs e)
+        //{
+        //    int Divide = BasicPertanggungan(comboBoxSPAJEditPengajuanFreq.Text);
+        //    float a = float.Parse(textBoxSPAJEditPengajuanPRUMedAmnt.Text);
+        //    textBoxSPAJEditPengajuanPRUMedAmnt.Text = (a / Divide).ToString();
+
+        //    textBoxSPAJEditPengajuanPremi.Text = calculatePremi().ToString();
+
+        //    float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
+        //    textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
+
+        //    float PremiMulti = float.Parse(textBoxSPAJEditPengajuanPremi.Text);
+        //    textBoxSPAJEditPengajuanPremiTotal.Text = (PremiMulti * PremiMultiply(comboBoxSPAJEditPengajuanFreq.Text)).ToString()
+        //        + textBoxSPAJEditPengajuanPruSaver.Text;
+
+        //}
+
+        //private void textBoxSPAJEditPengajuanPruPPayorAmnt_TextChanged(object sender, EventArgs e)
+        //{
+        //    int Divide = BasicPertanggungan(comboBoxSPAJEditPengajuanFreq.Text);
+        //    float a = float.Parse(textBoxSPAJEditPengajuanPruPPayorAmnt.Text);
+        //    textBoxSPAJEditPengajuanPruPPayorAmnt.Text = (a / Divide).ToString();
+
+        //    textBoxSPAJEditPengajuanPremi.Text = calculatePremi().ToString();
+
+        //    float PruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
+        //    textBoxSPAJEditPengajuanPruSaver.Text = (PruSaver * 0.0075).ToString();
+
+        //    float PremiMulti = float.Parse(textBoxSPAJEditPengajuanPremi.Text);
+        //    textBoxSPAJEditPengajuanPremiTotal.Text = (PremiMulti * PremiMultiply(comboBoxSPAJEditPengajuanFreq.Text)).ToString()
+        //        + textBoxSPAJEditPengajuanPruSaver.Text;
+
+
+        //}
 
 
 
@@ -1349,7 +1367,7 @@ namespace PruAmsForm
 
         private void buttonSPAJEditUpdate_Click(object sender, EventArgs e)
         {
-            SPAJ spajFile = spajFiles.First(x => x.SPAJForm.SPAJNum == Int32.Parse(textBoxSPAJEditNumber.Text));
+            SPAJ spajFile = spajFiles.First(x => x.SPAJForm.SPAJNum == long.Parse(textBoxSPAJEditNumber.Text));
 
             // SPAJ Form
             spajFile.SPAJForm.SPAJType = textBoxSPAJEditType.Text;
@@ -1394,34 +1412,34 @@ namespace PruAmsForm
             // Address Form
             spajFile.AddressForm.City = textBoxSPAJEditAddrCity.Text;
             spajFile.AddressForm.Email = textBoxSPAJEditAddrEmail.Text;
-            spajFile.AddressForm.HPNumber = int.Parse(textBoxSPAJEditAddrHP.Text);
+            spajFile.AddressForm.HPNumber = long.Parse(textBoxSPAJEditAddrHP.Text);
             spajFile.AddressForm.Address = textBoxSPAJEditAddrAddress.Text;
-            spajFile.AddressForm.OPNumber = int.Parse(textBoxSPAJEditAddrOP.Text);
+            spajFile.AddressForm.OPNumber = long.Parse(textBoxSPAJEditAddrOP.Text);
             spajFile.AddressForm.ZipCode = int.Parse(textBoxSPAJEditAddrZip.Text);
             // Pengajuan Form
             spajFile.PengajuanForm.PengajuanCCBankOther = textBoxSPAJEditPengajuanCCBank.Text;
-            spajFile.PengajuanForm.PengajuanExchange = int.Parse(textBoxSPAJEditPengajuanExchange.Text);
+            spajFile.PengajuanForm.PengajuanExchange = float.Parse(textBoxSPAJEditPengajuanExchange.Text);
             spajFile.PengajuanForm.PengajuanExpDate = textBoxSPAJEditPengajuanExpDate.Text;
-            spajFile.PengajuanForm.PengajuanPertanggungan = int.Parse(textBoxSPAJEditPengajuanPrtanggung.Text);
-            spajFile.PengajuanForm.PengajuanPruADDAmnt = int.Parse(textBoxSPAJEditPengajuanPruADDAmnt.Text);
-            spajFile.PengajuanForm.PengajuanPruCCAmnt = int.Parse(textBoxSPAJEditPengajuanPruCCAmnt.Text);
-            spajFile.PengajuanForm.PengajuanPruMedAmnt = int.Parse(textBoxSPAJEditPengajuanPRUMedAmnt.Text);
-            spajFile.PengajuanForm.PengajuanPruPayorAmnt = int.Parse(textBoxSPAJEditPengajuanPruPayorAmnt.Text);
-            spajFile.PengajuanForm.PengajuanPruPPayorAmnt = int.Parse(textBoxSPAJEditPengajuanPruPPayorAmnt.Text);
+            spajFile.PengajuanForm.PengajuanPertanggungan = float.Parse(textBoxSPAJEditPengajuanPrtanggung.Text);
+            spajFile.PengajuanForm.PengajuanPruADDAmnt = float.Parse(textBoxSPAJEditPengajuanPruADDAmnt.Text);
+            spajFile.PengajuanForm.PengajuanPruCCAmnt = float.Parse(textBoxSPAJEditPengajuanPruCCAmnt.Text);
+            spajFile.PengajuanForm.PengajuanPruMedAmnt = float.Parse(textBoxSPAJEditPengajuanPRUMedAmnt.Text);
+            spajFile.PengajuanForm.PengajuanPruPayorAmnt = float.Parse(textBoxSPAJEditPengajuanPruPayorAmnt.Text);
+            spajFile.PengajuanForm.PengajuanPruPPayorAmnt = float.Parse(textBoxSPAJEditPengajuanPruPPayorAmnt.Text);
             spajFile.PengajuanForm.PengajuanBasic = textBoxSPAJEditPengajuanBasic.Text;
             spajFile.PengajuanForm.PengajuanCurrency = comboBoxSPAJEditPengajuanCurrency.Text;
             spajFile.PengajuanForm.PengajuanFrequency = comboBoxSPAJEditPengajuanFreq.Text;
             spajFile.PengajuanForm.PengajuanPay = comboBoxSPAJEditPengajuanPay.Text;
             spajFile.PengajuanForm.PengajuanPruADD = textBoxSPAJEditPengajuanPruADD.Text;
             spajFile.PengajuanForm.PengajuanPruCC = textBoxSPAJEditPengajuanPruCC.Text;
-            spajFile.PengajuanForm.PengajuanPruHosp = int.Parse(textBoxSPAJEditPengajuanPruHosp.Text);
+            spajFile.PengajuanForm.PengajuanPruHosp = float.Parse(textBoxSPAJEditPengajuanPruHosp.Text);
             spajFile.PengajuanForm.PengajuanPruMed = textBoxSPAJEditPengajuanPRUMed.Text;
             spajFile.PengajuanForm.PengajuanPruPayor = textBoxSPAJEditPengajuanPruPayor.Text;
             spajFile.PengajuanForm.PengajuanPruPPayor = textBoxSPAJEditPengajuanPruPPayor.Text;
 
-            spajFile.PengajuanForm.PengajuanPremi = int.Parse(textBoxSPAJEditPengajuanPremi.Text);
-            spajFile.PengajuanForm.PengajuanPruSaver = int.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
-            spajFile.PengajuanForm.PengajuanTotalPremi = int.Parse(textBoxSPAJEditPengajuanPremiTotal.Text);
+            spajFile.PengajuanForm.PengajuanPremi = float.Parse(textBoxSPAJEditPengajuanPremi.Text);
+            spajFile.PengajuanForm.PengajuanPruSaver = float.Parse(textBoxSPAJEditPengajuanPruSaver.Text);
+            spajFile.PengajuanForm.PengajuanTotalPremi = float.Parse(textBoxSPAJEditPengajuanPremiTotal.Text);
 
 
             // Beneficiary Form
